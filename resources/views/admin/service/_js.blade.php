@@ -156,8 +156,9 @@
                     var imageTag = $("img[src='"+imageSrcUrl+"']");
                     var imageAlt = imageTag["0"].alt;
                     var imgHtml;
+                    var imageTitle = imageTag["0"].title;
                     var str = "<img src=\'" + imageSrcUrl + "\' alt=\'" + imageAlt + "\' title=\'image\'/>";
-                    if (image[2].title ) {
+                    if (imageTitle) {
                         imgHtml = CKEDITOR.dom.element.createFromHtml(str);
                     } else {
                         imgHtml = CKEDITOR.dom.element.createFromHtml("<div class='image-container'>"+str+"</div>");
