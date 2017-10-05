@@ -276,7 +276,7 @@
 		</div>
      	<!-- end image_container -->
 {{--     	<a href="" class="btn transparent_btn" id="show_more">{!! trans('messages.more_work') !!}</a>--}}
-         <a href="" class="gl-yellow-btn show-more-portfolio-btn" id="show_more">{!! trans('messages.more_work') !!}</a>
+         <a href="" class="gl-yellow-btn show-more-portfolio-btn">{!! trans('messages.more_work') !!}</a>
      </div>
      <!-- end container -->
 </section>
