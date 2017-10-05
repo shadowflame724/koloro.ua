@@ -1,0 +1,397 @@
+.blue-gradient, #rusalka .company-aims, #rusalka .company-aims-5 {
+  background-image: -moz-linear-gradient(0deg, #0a3648 0%, #154052 25%, #1b4d5d 50%, #10465a 76%, #002335 100%);
+  background-image: -webkit-linear-gradient(0deg, #0a3648 0%, #154052 25%, #1b4d5d 50%, #10465a 76%, #002335 100%);
+  background-image: -ms-linear-gradient(0deg, #0a3648 0%, #154052 25%, #1b4d5d 50%, #10465a 76%, #002335 100%); }
+
+#rusalka .header-blue {
+  color: #074c7b; }
+#rusalka .top-container {
+  position: relative;
+  background: url("../images/rusalka/water.png") center bottom no-repeat, url("../images/rusalka/sky.jpg") center top no-repeat;
+  background-size: contain, cover; }
+  #rusalka .top-container .title-container {
+    position: relative;
+    padding-top: 15vh; }
+    @media all and (max-width: 768px) {
+      #rusalka .top-container .title-container {
+        padding-top: 15vh; } }
+    #rusalka .top-container .title-container .top-title {
+      font-size: 80px;
+      font-family: "SegoeUIBold", sans-serif;
+      color: #074456;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1.2;
+      text-align: center;
+      text-shadow: 0 2px 2px #fff;
+      position: relative;
+      z-index: 5;
+      width: 100%; }
+      @media all and (max-width: 1400px) {
+        #rusalka .top-container .title-container .top-title {
+          font-size: 70px; } }
+      @media all and (max-width: 1200px) {
+        #rusalka .top-container .title-container .top-title {
+          font-size: 60px; } }
+      @media all and (max-width: 1000px) {
+        #rusalka .top-container .title-container .top-title {
+          font-size: 50px; } }
+      @media all and (max-width: 700px) {
+        #rusalka .top-container .title-container .top-title {
+          font-size: 40px; } }
+      @media all and (max-width: 500px) {
+        #rusalka .top-container .title-container .top-title {
+          font-size: 20px; } }
+    #rusalka .top-container .title-container .top-title-small {
+      padding-top: 100px;
+      font-size: 36px;
+      font-family: "SegoeUIBold", sans-serif;
+      color: #074456;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1.5;
+      text-align: center;
+      text-shadow: 0 2px 2px #fff; }
+      @media all and (max-width: 1200px) {
+        #rusalka .top-container .title-container .top-title-small {
+          font-size: 30px; } }
+      @media all and (max-width: 1000px) {
+        #rusalka .top-container .title-container .top-title-small {
+          font-size: 24px; } }
+      @media all and (max-width: 500px) {
+        #rusalka .top-container .title-container .top-title-small {
+          font-size: 16px; } }
+#rusalka .bulba-1, #rusalka .bulba-2, #rusalka .bulba-3, #rusalka .bulba-4, #rusalka .bulba-5 {
+  position: absolute;
+  width: 30%;
+  z-index: 5; }
+#rusalka .bulba-1 {
+  max-width: 378px;
+  top: 30vh;
+  left: 5%; }
+#rusalka .bulba-2 {
+  max-width: 481px;
+  top: 50%;
+  right: 5%; }
+#rusalka .bulba-3 {
+  max-width: 399px;
+  top: 50%;
+  right: 5%; }
+#rusalka .bulba-4 {
+  max-width: 435px;
+  top: 50%;
+  left: 5%; }
+#rusalka .bulba-5 {
+  max-width: 474px;
+  top: 50%;
+  left: 5%; }
+#rusalka .fishes-container {
+  position: relative;
+  height: 30vh; }
+  #rusalka .fishes-container img {
+    position: absolute;
+    width: 30%; }
+  #rusalka .fishes-container .fish-1 {
+    max-width: 228px;
+    left: 2%; }
+  #rusalka .fishes-container .fish-2 {
+    max-width: 206px;
+    left: 20%; }
+  #rusalka .fishes-container .fish-3 {
+    max-width: 457px;
+    left: 20%; }
+  #rusalka .fishes-container .fish-4 {
+    max-width: 201px;
+    left: 40%; }
+  #rusalka .fishes-container .fish-5 {
+    max-width: 183px;
+    left: 50%; }
+  #rusalka .fishes-container .fish-6 {
+    max-width: 555px;
+    left: 60%; }
+  #rusalka .fishes-container .fish-7 {
+    max-width: 404px;
+    left: 80%; }
+#rusalka .company-aims {
+  position: relative; }
+  #rusalka .company-aims .rusalka-logo-container .rusalka-logo {
+    width: 50%;
+    max-width: 736px;
+    padding: 50px 0 100px 0; }
+    @media all and (max-width: 768px) {
+      #rusalka .company-aims .rusalka-logo-container .rusalka-logo {
+        padding: 25px 0 25px 0;
+        width: 50%; } }
+  #rusalka .company-aims .bottle-rusalka {
+    position: absolute;
+    top: -50vh;
+    left: -10vw;
+    width: 50%;
+    max-width: 812px; }
+    @media all and (max-width: 768px) {
+      #rusalka .company-aims .bottle-rusalka {
+        top: -25vh; } }
+  #rusalka .company-aims .fish-logo {
+    position: absolute;
+    top: 3vh;
+    right: -15%;
+    width: 40%;
+    max-width: 815px; }
+  #rusalka .company-aims .info-block-container .gl-container .info-left .info-left-title {
+    color: #fff; }
+  #rusalka .company-aims .info-block-container .gl-container .info-right {
+    color: #fff; }
+    #rusalka .company-aims .info-block-container .gl-container .info-right span {
+      color: #31c2f0; }
+    #rusalka .company-aims .info-block-container .gl-container .info-right a.gl-link {
+      color: #31c2f0;
+      border-bottom: 2px solid #31c2f0; }
+    #rusalka .company-aims .info-block-container .gl-container .info-right .read-more-btn {
+      color: #ffd800; }
+#rusalka .bottles-container {
+  font-size: 0; }
+  #rusalka .bottles-container .bottle-cont {
+    display: inline-block;
+    width: 25%; }
+    #rusalka .bottles-container .bottle-cont img {
+      width: 100%;
+      max-width: 480px; }
+#rusalka .concepts-info {
+  padding-bottom: 0; }
+  #rusalka .concepts-info h2 {
+    font-size: 48px;
+    color: #074c7b; }
+    @media all and (max-width: 768px) {
+      #rusalka .concepts-info h2 {
+        font-size: 36px;
+        padding: 20px 0; } }
+#rusalka .concepts-info::before {
+  content: " ";
+  position: absolute;
+  z-index: 5;
+  top: 100%;
+  left: 50%;
+  margin-left: -50px;
+  border: 100px solid transparent;
+  border-top-color: #fff; }
+  @media all and (max-width: 1200px) {
+    #rusalka .concepts-info::before {
+      margin-left: -40px;
+      border-width: 80px; } }
+  @media all and (max-width: 1000px) {
+    #rusalka .concepts-info::before {
+      margin-left: -30px;
+      border-width: 60px; } }
+  @media all and (max-width: 768px) {
+    #rusalka .concepts-info::before {
+      margin-left: -20px;
+      border-width: 40px; } }
+#rusalka .concept-1 {
+  background-color: #fff; }
+  #rusalka .concept-1 h2 {
+    color: #074c7b; }
+#rusalka .concept-1::before {
+  border-top-color: #fff; }
+#rusalka .concept-2 {
+  background-color: #097a9f; }
+  #rusalka .concept-2 h2 {
+    color: white; }
+#rusalka .concept-2::before {
+  border-top-color: #097a9f; }
+#rusalka .concept-3 {
+  background-color: #132e41; }
+  #rusalka .concept-3 h2 {
+    color: white; }
+#rusalka .concept-3::before {
+  border-top-color: #132e41; }
+#rusalka .bg-wrapper {
+  overflow: hidden; }
+  #rusalka .bg-wrapper .concept-1-container {
+    background-image: url(../images/rusalka/concept-1-picture.jpg);
+    background-attachment: scroll; }
+  #rusalka .bg-wrapper .concept-2-container {
+    background-image: url(../images/rusalka/concept-2-picture.jpg);
+    background-attachment: scroll; }
+  #rusalka .bg-wrapper .concept-3-container {
+    background-image: url(../images/rusalka/concept-3-picture.jpg);
+    background-attachment: scroll; }
+  @media all and (min-width: 768px) {
+    #rusalka .bg-wrapper .bg-container:hover {
+      transform: scale(1.2) rotate(-5deg); } }
+#rusalka .company-aims-2 .gl-container .info-left .info-left-title, #rusalka .company-aims-3 .gl-container .info-left .info-left-title, #rusalka .company-aims-4 .gl-container .info-left .info-left-title {
+  color: #074c7b; }
+#rusalka .company-aims-2 .gl-container .info-right, #rusalka .company-aims-3 .gl-container .info-right, #rusalka .company-aims-4 .gl-container .info-right {
+  color: #969696; }
+  #rusalka .company-aims-2 .gl-container .info-right span, #rusalka .company-aims-3 .gl-container .info-right span, #rusalka .company-aims-4 .gl-container .info-right span {
+    color: #31c2f0; }
+  #rusalka .company-aims-2 .gl-container .info-right a.gl-link, #rusalka .company-aims-3 .gl-container .info-right a.gl-link, #rusalka .company-aims-4 .gl-container .info-right a.gl-link {
+    color: #31c2f0;
+    border-bottom: 2px solid #31c2f0; }
+  #rusalka .company-aims-2 .gl-container .info-right .read-more-btn, #rusalka .company-aims-3 .gl-container .info-right .read-more-btn, #rusalka .company-aims-4 .gl-container .info-right .read-more-btn {
+    color: #ffd800; }
+#rusalka .company-aims-5 .gl-container .info-left .info-left-title {
+  color: white; }
+#rusalka .company-aims-5 .gl-container .info-right p {
+  color: white; }
+  #rusalka .company-aims-5 .gl-container .info-right p span {
+    color: inherit; }
+#rusalka .company-aims-2 .lineage-imgs-cont .lineyka-up-cont {
+  margin: 0 auto;
+  width: 30%; }
+  #rusalka .company-aims-2 .lineage-imgs-cont .lineyka-up-cont .lineyka-up {
+    width: 100%;
+    max-width: 264px;
+    padding-bottom: 10px; }
+#rusalka .company-aims-2 .lineage-imgs-cont .lineages-conts {
+  text-align: center; }
+  #rusalka .company-aims-2 .lineage-imgs-cont .lineages-conts .lineage-cont {
+    display: inline-block;
+    width: 30%;
+    padding: 5px; }
+    #rusalka .company-aims-2 .lineage-imgs-cont .lineages-conts .lineage-cont img {
+      width: 100%; }
+    #rusalka .company-aims-2 .lineage-imgs-cont .lineages-conts .lineage-cont img:first-child {
+      padding-bottom: 30px; }
+      @media all and (max-width: 768px) {
+        #rusalka .company-aims-2 .lineage-imgs-cont .lineages-conts .lineage-cont img:first-child {
+          padding-bottom: 5px; } }
+  #rusalka .company-aims-2 .lineage-imgs-cont .lineages-conts .lineyka-middle-1, #rusalka .company-aims-2 .lineage-imgs-cont .lineages-conts .lineyka-down-1 {
+    max-width: 286px; }
+  #rusalka .company-aims-2 .lineage-imgs-cont .lineages-conts .lineyka-middle-2, #rusalka .company-aims-2 .lineage-imgs-cont .lineages-conts .lineyka-down-2 {
+    max-width: 272px; }
+  #rusalka .company-aims-2 .lineage-imgs-cont .lineages-conts .lineyka-middle-3, #rusalka .company-aims-2 .lineage-imgs-cont .lineages-conts .lineyka-down-3 {
+    max-width: 289px; }
+#rusalka .company-aims-2 .two-images-container {
+  padding-top: 50px; }
+  @media all and (max-width: 768px) {
+    #rusalka .company-aims-2 .two-images-container {
+      padding-top: 10px; } }
+  #rusalka .company-aims-2 .two-images-container .image-left .logo-left {
+    max-width: 648px; }
+  #rusalka .company-aims-2 .two-images-container .image-right .logo-right {
+    padding-left: 20px;
+    max-width: 621px; }
+#rusalka .company-aims-2 .bottle-concept-1-cont .bottle-concept-1 {
+  max-width: 1298px; }
+#rusalka .company-aims-2 .info-verbal-msg-1 .info-right p {
+  font-size: 24px;
+  font-family: "SegoeUIBold", sans-serif;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #af8727; }
+  @media all and (max-width: 768px) {
+    #rusalka .company-aims-2 .info-verbal-msg-1 .info-right p {
+      font-size: 18px; } }
+#rusalka .company-aims-3 .slogan-concept-2-cont .slogan-concept-2 {
+  width: 80%;
+  max-width: 514px; }
+#rusalka .company-aims-3 .three-images-container {
+  padding-top: 50px; }
+  @media all and (max-width: 768px) {
+    #rusalka .company-aims-3 .three-images-container {
+      padding-top: 10px; } }
+  #rusalka .company-aims-3 .three-images-container img {
+    max-width: 392px; }
+#rusalka .company-aims-3 .bottle-concept-2-cont .bottle-concept-2 {
+  max-width: 1300px; }
+#rusalka .company-aims-3 .info-concept-2-element {
+  margin-top: -10vh; }
+  #rusalka .company-aims-3 .info-concept-2-element .image-container {
+    padding-top: 50px; }
+    #rusalka .company-aims-3 .info-concept-2-element .image-container .info-concept-2 {
+      max-width: 650px; }
+#rusalka .company-aims-3 .info-verbal-msg-2 .info-right p {
+  font-size: 24px;
+  font-family: "SegoeUIBold", sans-serif;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #49bde6; }
+  @media all and (max-width: 768px) {
+    #rusalka .company-aims-3 .info-verbal-msg-2 .info-right p {
+      font-size: 18px; } }
+#rusalka .company-aims-4 .three-images-container img {
+  padding: 0 10px;
+  max-width: 400px; }
+  @media all and (max-width: 768px) {
+    #rusalka .company-aims-4 .three-images-container img {
+      padding: 0 5px; } }
+#rusalka .company-aims-4 .concept-3-slogan-cont {
+  padding: 20px 0; }
+  #rusalka .company-aims-4 .concept-3-slogan-cont .slogan-1 {
+    max-width: 742px; }
+  #rusalka .company-aims-4 .concept-3-slogan-cont .slogan-2 {
+    max-width: 893px;
+    padding: 35px 0; }
+    @media all and (max-width: 768px) {
+      #rusalka .company-aims-4 .concept-3-slogan-cont .slogan-2 {
+        padding: 10px 0; } }
+  #rusalka .company-aims-4 .concept-3-slogan-cont .slogan-3 {
+    max-width: 779px; }
+#rusalka .company-aims-4 .bottle-concept-3-cont .bottle-concept-3 {
+  max-width: 1269px; }
+#rusalka .pattern-concept-3 {
+  height: auto;
+  background-color: #000;
+  background-image: url("../images/rusalka/pattern-concept-3.png"); }
+  #rusalka .pattern-concept-3 .logo-concept-3-cont .logo-concept-3 {
+    width: 50%;
+    max-width: 738px;
+    padding: 10vh 0; }
+    @media all and (max-width: 768px) {
+      #rusalka .pattern-concept-3 .logo-concept-3-cont .logo-concept-3 {
+        padding: 5vh 0; } }
+  #rusalka .pattern-concept-3 .fish-concept-3 {
+    max-width: 2740px;
+    padding-bottom: 10vh; }
+    @media all and (max-width: 768px) {
+      #rusalka .pattern-concept-3 .fish-concept-3 {
+        padding-bottom: 5vh; } }
+#rusalka .company-aims-5 {
+  position: relative;
+  z-index: 5; }
+  #rusalka .company-aims-5 .bulba-1 {
+    top: 20%;
+    left: 5%; }
+  #rusalka .company-aims-5 .bulba-2 {
+    top: 30%;
+    right: 5%; }
+  #rusalka .company-aims-5 .bulba-3 {
+    top: 30%;
+    right: 5%; }
+  #rusalka .company-aims-5 .bulba-4 {
+    top: 50%;
+    left: 5%; }
+  #rusalka .company-aims-5 .bulba-5 {
+    top: 50%;
+    left: 5%; }
+  #rusalka .company-aims-5 .bg-underworld {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    height: 110vh;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-image: url("../images/rusalka/background-down.jpg"); }
+#rusalka .contact-us-form .gl-container .form-title {
+  color: white; }
+#rusalka .contact-us-form .gl-container p {
+  color: white; }
+  #rusalka .contact-us-form .gl-container p span {
+    color: #ffcc00; }
+  #rusalka .contact-us-form .gl-container p input {
+    color: #ffcc00;
+    border-bottom: 2px solid #fff; }
+#rusalka .contact-us-form .gl-container button {
+  color: #8a3b86;
+  background-color: #ffcc00; }
+#rusalka .contact-us-form .gl-container button:hover {
+  color: #ffcc00;
+  box-shadow: 0 100px 0 0 #000 inset; }
+#rusalka .like_it .qwestion span {
+  color: #fff; }
+#rusalka .like_it p.voice {
+  color: #fff; }
+
+/*# sourceMappingURL=rusalka.css.map */

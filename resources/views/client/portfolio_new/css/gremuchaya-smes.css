@@ -1,0 +1,187 @@
+#gremuchaya-smes .top-container {
+  position: relative;
+  background-image: url("../images/gremuchaya-smes/main-image.jpg"); }
+  #gremuchaya-smes .top-container .title-container {
+    position: relative;
+    z-index: 5;
+    padding-top: 40vh; }
+    @media all and (max-width: 768px) {
+      #gremuchaya-smes .top-container .title-container {
+        padding-top: 30vh; } }
+    #gremuchaya-smes .top-container .title-container .top-title {
+      font-size: 80px;
+      font-family: "SegoeUIBold", sans-serif;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1.2;
+      text-align: center;
+      width: 100%; }
+      @media all and (max-width: 1400px) {
+        #gremuchaya-smes .top-container .title-container .top-title {
+          font-size: 70px; } }
+      @media all and (max-width: 1200px) {
+        #gremuchaya-smes .top-container .title-container .top-title {
+          font-size: 60px; } }
+      @media all and (max-width: 1000px) {
+        #gremuchaya-smes .top-container .title-container .top-title {
+          font-size: 50px; } }
+      @media all and (max-width: 700px) {
+        #gremuchaya-smes .top-container .title-container .top-title {
+          font-size: 40px; } }
+      @media all and (max-width: 500px) {
+        #gremuchaya-smes .top-container .title-container .top-title {
+          font-size: 20px; } }
+    #gremuchaya-smes .top-container .title-container .top-title-small {
+      padding-top: 150px;
+      font-size: 48px;
+      font-family: "SegoeUIBold", sans-serif;
+      color: #fff;
+      font-weight: bold;
+      text-transform: none;
+      line-height: 1.5;
+      text-align: center; }
+      @media all and (max-width: 1200px) {
+        #gremuchaya-smes .top-container .title-container .top-title-small {
+          font-size: 36px; } }
+      @media all and (max-width: 1000px) {
+        #gremuchaya-smes .top-container .title-container .top-title-small {
+          font-size: 30px; } }
+      @media all and (max-width: 700px) {
+        #gremuchaya-smes .top-container .title-container .top-title-small {
+          font-size: 24px; } }
+      @media all and (max-width: 500px) {
+        #gremuchaya-smes .top-container .title-container .top-title-small {
+          font-size: 16px; } }
+#gremuchaya-smes .info-block-container .gl-container .info-right {
+  color: #969696; }
+#gremuchaya-smes .info-block-container .gl-container span {
+  color: #000; }
+#gremuchaya-smes .info-block-container .gl-container .read-more-btn {
+  color: #f0cf16; }
+#gremuchaya-smes .work-plan, #gremuchaya-smes .logo-utp-cont {
+  background-color: #de2c26; }
+  #gremuchaya-smes .work-plan .gl-container .info-left .info-left-title, #gremuchaya-smes .logo-utp-cont .gl-container .info-left .info-left-title {
+    color: #fff; }
+  #gremuchaya-smes .work-plan .gl-container .info-right, #gremuchaya-smes .logo-utp-cont .gl-container .info-right {
+    color: #fff; }
+  #gremuchaya-smes .work-plan .gl-container span, #gremuchaya-smes .logo-utp-cont .gl-container span {
+    color: #fff; }
+#gremuchaya-smes .packages-cont {
+  position: relative;
+  top: -25vh;
+  margin-top: 25vh;
+  margin-bottom: -25vh; }
+  #gremuchaya-smes .packages-cont .gl-container {
+    padding: 0; }
+  @media all and (max-width: 1200px) {
+    #gremuchaya-smes .packages-cont {
+      top: -10vh;
+      margin-top: 10vh;
+      margin-bottom: -10vh; } }
+  @media all and (max-width: 768px) {
+    #gremuchaya-smes .packages-cont .image-left, #gremuchaya-smes .packages-cont .image-right {
+      width: 100%; } }
+#gremuchaya-smes .mouses-cat-container {
+  background-image: url("../images/gremuchaya-smes/image-1.jpg");
+  background-attachment: scroll; }
+#gremuchaya-smes .concept-1-cont img {
+  max-width: 773px; }
+#gremuchaya-smes .concept-2-cont img {
+  max-width: 879px; }
+#gremuchaya-smes .concept-3-cont {
+  position: relative;
+  top: -25vh;
+  margin-top: 25vh;
+  margin-bottom: -25vh; }
+  @media all and (max-width: 1200px) {
+    #gremuchaya-smes .concept-3-cont {
+      top: -10vh;
+      margin-top: 10vh;
+      margin-bottom: -10vh; } }
+  #gremuchaya-smes .concept-3-cont img {
+    max-width: 799px; }
+#gremuchaya-smes .color-pink {
+  color: #b0007c; }
+#gremuchaya-smes .color-blue {
+  color: #0b9ac8; }
+#gremuchaya-smes .color-red {
+  color: #e0151a; }
+#gremuchaya-smes .logo-cont img {
+  max-width: 663px; }
+#gremuchaya-smes .infographic-1-cont img {
+  max-width: 839px; }
+#gremuchaya-smes .infographic-2-cont {
+  padding-bottom: 20px; }
+  #gremuchaya-smes .infographic-2-cont img {
+    max-width: 452px; }
+#gremuchaya-smes .naming-slider-cont {
+  position: relative; }
+  #gremuchaya-smes .naming-slider-cont .arrow-left-btn, #gremuchaya-smes .naming-slider-cont .arrow-right-btn {
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%); }
+    @media all and (max-width: 768px) {
+      #gremuchaya-smes .naming-slider-cont .arrow-left-btn, #gremuchaya-smes .naming-slider-cont .arrow-right-btn {
+        -webkit-transform: translateY(-50%) scale(0.5);
+        -moz-transform: translateY(-50%) scale(0.5);
+        transform: translateY(-50%) scale(0.5); } }
+  #gremuchaya-smes .naming-slider-cont .arrow-left-btn {
+    left: 10px; }
+    @media all and (max-width: 768px) {
+      #gremuchaya-smes .naming-slider-cont .arrow-left-btn {
+        left: -10px; } }
+  #gremuchaya-smes .naming-slider-cont .arrow-right-btn {
+    right: 10px; }
+    @media all and (max-width: 768px) {
+      #gremuchaya-smes .naming-slider-cont .arrow-right-btn {
+        right: -10px; } }
+  #gremuchaya-smes .naming-slider-cont .naming-slider .item .bg-container {
+    background-position: center top;
+    background-image: url("../images/gremuchaya-smes/naming-1.jpg");
+    background-attachment: scroll;
+    height: 100vh; }
+  #gremuchaya-smes .naming-slider-cont .naming-slider .item .info-text {
+    position: absolute;
+    bottom: 10vh;
+    font-size: 20px;
+    font-family: "SegoeUIRegular", sans-serif;
+    color: white;
+    line-height: 1.2;
+    text-align: left; }
+    @media all and (max-width: 768px) {
+      #gremuchaya-smes .naming-slider-cont .naming-slider .item .info-text {
+        bottom: 2vh; } }
+    @media all and (max-width: 768px) {
+      #gremuchaya-smes .naming-slider-cont .naming-slider .item .info-text {
+        font-size: 16px; } }
+    #gremuchaya-smes .naming-slider-cont .naming-slider .item .info-text p {
+      font: inherit;
+      text-align: left; }
+      #gremuchaya-smes .naming-slider-cont .naming-slider .item .info-text p span {
+        font: inherit;
+        font-family: "SegoeUIBold", sans-serif; }
+  #gremuchaya-smes .naming-slider-cont .owl-dots {
+    position: absolute;
+    bottom: 5vh;
+    width: 100%; }
+    @media all and (max-width: 768px) {
+      #gremuchaya-smes .naming-slider-cont .owl-dots {
+        display: none; } }
+    #gremuchaya-smes .naming-slider-cont .owl-dots .owl-dot span {
+      width: 20px;
+      height: 20px;
+      position: relative;
+      background: transparent;
+      display: block;
+      border: 2px solid #fff; }
+    #gremuchaya-smes .naming-slider-cont .owl-dots .owl-dot.active span, #gremuchaya-smes .naming-slider-cont .owl-dots .owl-dot:hover span {
+      background: #fff; }
+
+/*# sourceMappingURL=gremuchaya-smes.css.map */

@@ -1,0 +1,510 @@
+.blue-gradient, #mirovaya-tradicia {
+  background-image: -moz-radial-gradient(50% 50%, circle closest-side, #3f7dca 0%, #215ea2 55%, #3472bc 100%);
+  background-image: -webkit-radial-gradient(50% 50%, circle closest-side, #3f7dca 0%, #215ea2 55%, #3472bc 100%);
+  background-image: -ms-radial-gradient(50% 50%, circle closest-side, #3f7dca 0%, #215ea2 55%, #3472bc 100%); }
+
+#mirovaya-tradicia .bottles {
+  background-image: url("../images/mirovaya-tradiciya/picture-final-concept.jpg");
+  background-attachment: fixed; }
+#mirovaya-tradicia .bottles-2 {
+  background-image: url("../images/mirovaya-tradiciya/photo-bottles.jpg");
+  background-attachment: scroll; }
+#mirovaya-tradicia .header-white {
+  color: white; }
+#mirovaya-tradicia .image-container {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0; }
+  #mirovaya-tradicia .image-container .dark-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(60, 60, 60, 0);
+    z-index: 2; }
+  #mirovaya-tradicia .image-container .big-image {
+    width: 100%;
+    position: relative; }
+  #mirovaya-tradicia .image-container .plane {
+    width: 50%;
+    max-width: 939px;
+    left: 10%; }
+  #mirovaya-tradicia .image-container .plane-animate {
+    animation: plane-fly 20s infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-delay: -1s; }
+@keyframes plane-fly {
+  0% {
+    left: -50%;
+    transform: rotate(-15deg) scale(0.3); }
+  50% {
+    left: 100%;
+    transform: rotate(0deg) scale(1); }
+  51% {
+    left: 100%;
+    transform: rotate(0deg) scale(0.3); }
+  100% {
+    left: -50%;
+    transform: rotate(15deg) scale(1); } }
+  #mirovaya-tradicia .image-container .cloud-N2 {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    max-width: 1649px;
+    top: -10%;
+    right: -75%;
+    transition: all 2s; }
+  #mirovaya-tradicia .image-container .logo-2 {
+    position: relative;
+    z-index: 5;
+    width: 50%;
+    max-width: 856px;
+    padding-bottom: 10vh; }
+  #mirovaya-tradicia .image-container .logo-2-animate {
+    animation: logo-2-animate-circle 6s linear infinite; }
+@keyframes logo-2-animate-circle {
+  from {
+    transform: rotate(0deg) translate(-25px) rotate(0deg); }
+  to {
+    transform: rotate(360deg) translate(-25px) rotate(-360deg); } }
+  #mirovaya-tradicia .image-container .birds {
+    position: absolute;
+    width: 100%;
+    max-width: 195px;
+    left: 0; }
+    @media all and (max-width: 768px) {
+      #mirovaya-tradicia .image-container .birds {
+        width: 30%; } }
+  #mirovaya-tradicia .image-container .birds-animate {
+    animation: birds-fly 15s infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-delay: -1s; }
+@keyframes birds-fly {
+  from {
+    left: -50%;
+    transform: rotate(-15deg) scale(1); }
+  to {
+    left: 100%;
+    transform: rotate(15deg) scale(0.5); } }
+  #mirovaya-tradicia .image-container .ballon-small {
+    width: 30%;
+    max-width: 495px;
+    position: relative;
+    left: 20vw;
+    transition: all 1s;
+    transition-timing-function: linear; }
+  #mirovaya-tradicia .image-container .cloud-N4 {
+    position: absolute;
+    right: -20%;
+    top: 0;
+    width: 50%;
+    max-width: 1350px;
+    transition: all 2s; }
+  #mirovaya-tradicia .image-container .cloud-N5 {
+    position: absolute;
+    z-index: 2;
+    left: -30%;
+    top: 0;
+    width: 50%;
+    max-width: 1350px;
+    transition: all 2s; }
+#mirovaya-tradicia .top-container {
+  position: relative;
+  height: 100vh; }
+  #mirovaya-tradicia .top-container .logo-image {
+    width: 40%;
+    max-width: 780px;
+    position: relative;
+    z-index: 5;
+    top: 5vh;
+    left: 12vw;
+    transition: all 2s; }
+    @media all and (max-width: 1000px) {
+      #mirovaya-tradicia .top-container .logo-image {
+        top: 10vh; } }
+  #mirovaya-tradicia .top-container .cloud-back-1 {
+    position: absolute;
+    top: 5vh;
+    right: -50vw;
+    width: 100%;
+    max-width: 1339px;
+    z-index: 2; }
+  #mirovaya-tradicia .top-container .cloud-back-1-animate {
+    animation: cloud-back-1-move 40s infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: linear; }
+@keyframes cloud-back-1-move {
+  from {
+    right: -50vw; }
+  to {
+    right: 75vw; } }
+  #mirovaya-tradicia .top-container .cloud-N1 {
+    position: absolute;
+    top: 70vh;
+    left: -50%;
+    width: 100%;
+    max-width: 1789px;
+    z-index: 2;
+    transition: all 2s; }
+  #mirovaya-tradicia .top-container .ballon-right {
+    position: absolute;
+    top: 50vh;
+    right: 5%;
+    width: 30%;
+    max-width: 495px;
+    z-index: 3;
+    transition: all 0.5s; }
+  #mirovaya-tradicia .top-container .gl-container {
+    position: relative; }
+    #mirovaya-tradicia .top-container .gl-container h1 {
+      font-size: 80px;
+      font-family: "SegoeUIBold", sans-serif;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1.2;
+      text-align: center;
+      text-shadow: 0px 3px 2px #000;
+      position: relative;
+      top: 15vh;
+      z-index: 5;
+      width: 100%; }
+      @media all and (max-width: 1400px) {
+        #mirovaya-tradicia .top-container .gl-container h1 {
+          font-size: 70px; } }
+      @media all and (max-width: 1200px) {
+        #mirovaya-tradicia .top-container .gl-container h1 {
+          font-size: 60px; } }
+      @media all and (max-width: 1000px) {
+        #mirovaya-tradicia .top-container .gl-container h1 {
+          font-size: 50px; } }
+      @media all and (max-width: 700px) {
+        #mirovaya-tradicia .top-container .gl-container h1 {
+          font-size: 40px; } }
+      @media all and (max-width: 500px) {
+        #mirovaya-tradicia .top-container .gl-container h1 {
+          font-size: 20px; } }
+#mirovaya-tradicia .company-aims {
+  position: relative;
+  padding-top: 20vh; }
+  @media all and (max-width: 1200px) {
+    #mirovaya-tradicia .company-aims {
+      padding-top: 15vh; } }
+  @media all and (max-width: 1000px) {
+    #mirovaya-tradicia .company-aims {
+      padding-top: 10vh; } }
+  @media all and (max-width: 768px) {
+    #mirovaya-tradicia .company-aims {
+      padding-top: 5vh; } }
+  #mirovaya-tradicia .company-aims .second-image {
+    position: absolute;
+    bottom: 0;
+    left: -20%;
+    width: 50%;
+    z-index: 3; }
+#mirovaya-tradicia .company-aims-2 {
+  position: relative; }
+  #mirovaya-tradicia .company-aims-2 .cloud-N3 {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: -25%;
+    width: 50%;
+    max-width: 1350px;
+    transition: all 2s; }
+  #mirovaya-tradicia .company-aims-2 .cloud-back-2 {
+    position: absolute;
+    z-index: 2;
+    top: 50vh;
+    right: -25%;
+    width: 50%;
+    max-width: 1339px; }
+  #mirovaya-tradicia .company-aims-2 .cloud-back-2-animate {
+    animation: cloud-back-2-move 40s infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: linear; }
+@keyframes cloud-back-2-move {
+  from {
+    right: -25%; }
+  to {
+    right: 75%; } }
+  #mirovaya-tradicia .company-aims-2 .image-container {
+    text-align: center; }
+#mirovaya-tradicia .lineage-container {
+  position: relative; }
+  #mirovaya-tradicia .lineage-container .gl-container {
+    width: 80%;
+    margin: 0 auto; }
+    #mirovaya-tradicia .lineage-container .gl-container .lineage-item {
+      position: relative;
+      z-index: 5;
+      display: inline-block;
+      width: 33%;
+      text-align: center; }
+      #mirovaya-tradicia .lineage-container .gl-container .lineage-item img {
+        width: 90%;
+        max-width: 467px; }
+      @media all and (max-width: 768px) {
+        #mirovaya-tradicia .lineage-container .gl-container .lineage-item {
+          padding: 10px 0;
+          width: 100%; }
+          #mirovaya-tradicia .lineage-container .gl-container .lineage-item img {
+            width: 50%; } }
+      #mirovaya-tradicia .lineage-container .gl-container .lineage-item .lineage-item-animate {
+        animation: lineage-item-animate-circle 6s linear infinite; }
+@keyframes lineage-item-animate-circle {
+  from {
+    transform: rotate(360deg) translate(-10px) rotate(-360deg); }
+  to {
+    transform: rotate(0deg) translate(-10px) rotate(0deg); } }
+  #mirovaya-tradicia .lineage-container .cloud-back-3 {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: -25%;
+    width: 50%;
+    max-width: 1331px; }
+  #mirovaya-tradicia .lineage-container .cloud-back-3-animate {
+    animation: cloud-back-3-move 40s infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: linear; }
+@keyframes cloud-back-3-move {
+  from {
+    left: -25%; }
+  to {
+    left: 75%; } }
+#mirovaya-tradicia .company-aims-3 {
+  position: relative; }
+  #mirovaya-tradicia .company-aims-3 .third-image, #mirovaya-tradicia .company-aims-3 .fourth-image {
+    position: absolute;
+    width: 20%;
+    z-index: 3; }
+  #mirovaya-tradicia .company-aims-3 .third-image {
+    bottom: 30%;
+    left: 0; }
+  #mirovaya-tradicia .company-aims-3 .fourth-image {
+    bottom: 30%;
+    right: 0; }
+#mirovaya-tradicia .owl-carousel {
+  position: relative;
+  background-color: white; }
+  #mirovaya-tradicia .owl-carousel .item {
+    position: relative;
+    height: calc(100vh - 10px);
+    text-align: center; }
+    #mirovaya-tradicia .owl-carousel .item .img-left, #mirovaya-tradicia .owl-carousel .item .img-right {
+      display: inline-block;
+      position: absolute;
+      height: calc(100vh - 10px);
+      width: auto;
+      padding: 5vh 0; }
+      @media all and (max-width: 768px) {
+        #mirovaya-tradicia .owl-carousel .item .img-left, #mirovaya-tradicia .owl-carousel .item .img-right {
+          display: none; } }
+    #mirovaya-tradicia .owl-carousel .item .img-left {
+      left: 0; }
+    #mirovaya-tradicia .owl-carousel .item .img-right {
+      right: 0; }
+    #mirovaya-tradicia .owl-carousel .item .gl-container {
+      width: 40%; }
+      @media all and (max-width: 1200px) {
+        #mirovaya-tradicia .owl-carousel .item .gl-container {
+          width: 60%; } }
+      @media all and (max-width: 768px) {
+        #mirovaya-tradicia .owl-carousel .item .gl-container {
+          width: 80%; } }
+      #mirovaya-tradicia .owl-carousel .item .gl-container h2 {
+        font-size: 48px;
+        font-family: "SegoeUIBold", sans-serif;
+        color: #933837;
+        font-weight: bold;
+        line-height: 1.2;
+        text-align: center;
+        padding-bottom: 70px; }
+        @media all and (max-width: 768px) {
+          #mirovaya-tradicia .owl-carousel .item .gl-container h2 {
+            padding-bottom: 20px; } }
+        @media all and (max-width: 1200px) {
+          #mirovaya-tradicia .owl-carousel .item .gl-container h2 {
+            font-size: 36px; } }
+        @media all and (max-width: 1000px) {
+          #mirovaya-tradicia .owl-carousel .item .gl-container h2 {
+            font-size: 30px; } }
+        @media all and (max-width: 768px) {
+          #mirovaya-tradicia .owl-carousel .item .gl-container h2 {
+            font-size: 20px; } }
+      #mirovaya-tradicia .owl-carousel .item .gl-container .info-text {
+        font-size: 20px;
+        font-family: "SegoeUIRegular", sans-serif;
+        color: #505050;
+        line-height: 1.2;
+        text-align: left; }
+        @media all and (max-width: 768px) {
+          #mirovaya-tradicia .owl-carousel .item .gl-container .info-text {
+            font-size: 16px; } }
+        #mirovaya-tradicia .owl-carousel .item .gl-container .info-text p, #mirovaya-tradicia .owl-carousel .item .gl-container .info-text ul, #mirovaya-tradicia .owl-carousel .item .gl-container .info-text ol {
+          font: inherit;
+          color: inherit;
+          margin-bottom: 10px; }
+          #mirovaya-tradicia .owl-carousel .item .gl-container .info-text p li, #mirovaya-tradicia .owl-carousel .item .gl-container .info-text ul li, #mirovaya-tradicia .owl-carousel .item .gl-container .info-text ol li {
+            font-size: inherit; }
+          #mirovaya-tradicia .owl-carousel .item .gl-container .info-text p span, #mirovaya-tradicia .owl-carousel .item .gl-container .info-text ul span, #mirovaya-tradicia .owl-carousel .item .gl-container .info-text ol span {
+            font-family: "SegoeUIBold", sans-serif;
+            font-size: inherit;
+            color: #933837; }
+          #mirovaya-tradicia .owl-carousel .item .gl-container .info-text p br, #mirovaya-tradicia .owl-carousel .item .gl-container .info-text ul br, #mirovaya-tradicia .owl-carousel .item .gl-container .info-text ol br {
+            line-height: 1.5; }
+        #mirovaya-tradicia .owl-carousel .item .gl-container .info-text ul {
+          padding-left: 40px;
+          list-style: disc; }
+        #mirovaya-tradicia .owl-carousel .item .gl-container .info-text ol {
+          padding-left: 40px;
+          list-style: decimal; }
+  #mirovaya-tradicia .owl-carousel .owl-dots {
+    padding-bottom: 50px; }
+    @media screen and (max-width: 768px) {
+      #mirovaya-tradicia .owl-carousel .owl-dots {
+        padding-bottom: 10px; } }
+    #mirovaya-tradicia .owl-carousel .owl-dots .owl-dot {
+      zoom: 2; }
+    #mirovaya-tradicia .owl-carousel .owl-dots .owl-dot span {
+      position: relative;
+      background: transparent;
+      display: block;
+      border: 1px solid black; }
+    #mirovaya-tradicia .owl-carousel .owl-dots .owl-dot.active span, #mirovaya-tradicia .owl-carousel .owl-dots .owl-dot:hover span {
+      background: black; }
+  #mirovaya-tradicia .owl-carousel .owl-nav {
+    position: absolute;
+    width: 100%;
+    top: 45%;
+    left: 0; }
+    #mirovaya-tradicia .owl-carousel .owl-nav .owl-prev, #mirovaya-tradicia .owl-carousel .owl-nav .owl-next {
+      position: absolute;
+      width: 73px;
+      height: 145px;
+      background-color: transparent; }
+      @media screen and (max-width: 768px) {
+        #mirovaya-tradicia .owl-carousel .owl-nav .owl-prev, #mirovaya-tradicia .owl-carousel .owl-nav .owl-next {
+          width: 38px;
+          height: 72px; } }
+    #mirovaya-tradicia .owl-carousel .owl-nav .owl-prev {
+      left: 10%;
+      background-image: url("../images/general/slide_left_black.png") !important; }
+      @media screen and (max-width: 768px) {
+        #mirovaya-tradicia .owl-carousel .owl-nav .owl-prev {
+          left: 2%;
+          background-image: url("../images/general/slide_left_black_mob.png") !important; } }
+    #mirovaya-tradicia .owl-carousel .owl-nav .owl-next {
+      right: 10%;
+      background-image: url("../images/general/slide_right_black.png") !important; }
+      @media screen and (max-width: 768px) {
+        #mirovaya-tradicia .owl-carousel .owl-nav .owl-next {
+          right: 2%;
+          background-image: url("../images/general/slide_right_black_mob.png") !important; } }
+    #mirovaya-tradicia .owl-carousel .owl-nav .owl-prev:hover {
+      background-image: url("../images/general/slide_left_yellow.png") !important; }
+      @media screen and (max-width: 768px) {
+        #mirovaya-tradicia .owl-carousel .owl-nav .owl-prev:hover {
+          background-image: url("../images/general/slide_left_yellow_mob.png") !important; } }
+    #mirovaya-tradicia .owl-carousel .owl-nav .owl-next:hover {
+      background-image: url("../images/general/slide_right_yellow.png") !important; }
+      @media screen and (max-width: 768px) {
+        #mirovaya-tradicia .owl-carousel .owl-nav .owl-next:hover {
+          background-image: url("../images/general/slide_right_yellow_mob.png") !important; } }
+  #mirovaya-tradicia .owl-carousel .owl-controls .slider_left_btn, #mirovaya-tradicia .owl-carousel .owl-controls .slider_right_btn {
+    position: absolute;
+    width: 75px;
+    height: 145px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.4s; }
+    @media screen and (max-width: 768px) {
+      #mirovaya-tradicia .owl-carousel .owl-controls .slider_left_btn, #mirovaya-tradicia .owl-carousel .owl-controls .slider_right_btn {
+        width: 38px;
+        height: 72px; } }
+  #mirovaya-tradicia .owl-carousel .owl-controls .slider_left_btn {
+    bottom: 50%;
+    left: 2%;
+    background-image: url("../images/general/slide_left_black.png"); }
+    @media screen and (max-width: 768px) {
+      #mirovaya-tradicia .owl-carousel .owl-controls .slider_left_btn {
+        background-image: url("../images/general/slide_left_black_mob.png"); } }
+  #mirovaya-tradicia .owl-carousel .owl-controls .slider_right_btn {
+    bottom: 50%;
+    right: 2%;
+    background-image: url("../images/general/slide_right_black.png"); }
+    @media screen and (max-width: 768px) {
+      #mirovaya-tradicia .owl-carousel .owl-controls .slider_right_btn {
+        background-image: url("../images/general/slide_right_black_mob.png"); } }
+  #mirovaya-tradicia .owl-carousel .owl-controls .slider_left_btn:hover {
+    background-image: url("../images/general/slide_left_yellow.png"); }
+    @media screen and (max-width: 768px) {
+      #mirovaya-tradicia .owl-carousel .owl-controls .slider_left_btn:hover {
+        background-image: url("../images/general/slide_left_yellow_mob.png"); } }
+  #mirovaya-tradicia .owl-carousel .owl-controls .slider_right_btn:hover {
+    background-image: url("../images/general/slide_right_yellow.png"); }
+    @media screen and (max-width: 768px) {
+      #mirovaya-tradicia .owl-carousel .owl-controls .slider_right_btn:hover {
+        background-image: url("../images/general/slide_right_yellow_mob.png"); } }
+#mirovaya-tradicia .summary-header {
+  width: 100%;
+  background-color: white; }
+  #mirovaya-tradicia .summary-header h2 {
+    padding: 150px 0;
+    font-size: 36px;
+    font-family: "SegoeUIBold", sans-serif;
+    color: black;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center; }
+    @media all and (max-width: 1000px) {
+      #mirovaya-tradicia .summary-header h2 {
+        padding: 100px 0; } }
+    @media all and (max-width: 768px) {
+      #mirovaya-tradicia .summary-header h2 {
+        font-size: 24px;
+        padding: 50px 0; } }
+    @media all and (max-width: 600px) {
+      #mirovaya-tradicia .summary-header h2 {
+        font-size: 20px;
+        padding: 20px 0; } }
+#mirovaya-tradicia a.gl-link {
+  color: #f0cf16;
+  border-bottom: 2px solid #f0cf16; }
+#mirovaya-tradicia .info-block-container .gl-container .info-left .info-left-title {
+  color: white; }
+#mirovaya-tradicia .info-block-container .gl-container .info-right {
+  color: white; }
+#mirovaya-tradicia .concepts-info {
+  position: relative;
+  background-color: white;
+  padding-bottom: 0; }
+  #mirovaya-tradicia .concepts-info .gl-container h2 {
+    color: #f0cf16; }
+#mirovaya-tradicia .contact-us-form .gl-container .form-title {
+  color: white; }
+#mirovaya-tradicia .contact-us-form .gl-container p {
+  color: white; }
+  #mirovaya-tradicia .contact-us-form .gl-container p span {
+    color: #ffcc00; }
+  #mirovaya-tradicia .contact-us-form .gl-container p input {
+    color: #ffcc00;
+    border-bottom: 2px solid #fff; }
+#mirovaya-tradicia .contact-us-form .gl-container button {
+  color: #8a3b86;
+  background-color: #ffcc00; }
+#mirovaya-tradicia .contact-us-form .gl-container button:hover {
+  color: #ffcc00;
+  box-shadow: 0 100px 0 0 #000 inset; }
+#mirovaya-tradicia .like_it .qwestion span {
+  color: #fff; }
+#mirovaya-tradicia .like_it p.voice {
+  color: #fff; }
+
+/*# sourceMappingURL=mirovaya-tradicia.css.map */

@@ -1,0 +1,112 @@
+<?php
+
+use App\Models\Permission;
+use Illuminate\Database\Seeder;
+
+/**
+ * RBAC: create new Permissions for Roles
+ * after updating permissions check DatabaseSeeder, next make php artisan db:seed
+ */
+class PermissionTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $permission = [
+            [
+                'name' => 'role-list',
+                'display_name' => 'Display Role Listing',
+                'description' => 'See only Listing Of Role'
+            ],
+            [
+                'name' => 'role-create',
+                'display_name' => 'Create Role',
+                'description' => 'Create New Role'
+            ],
+            [
+                'name' => 'role-edit',
+                'display_name' => 'Edit Role',
+                'description' => 'Edit Role'
+            ],
+            [
+                'name' => 'role-delete',
+                'display_name' => 'Delete Role',
+                'description' => 'Delete Role'
+            ],
+            [
+                'name' => 'blog-list',
+                'display_name' => 'Display Blog Listing',
+                'description' => 'See only Listing Of Blog'
+            ],
+            [
+                'name' => 'blog-create',
+                'display_name' => 'Create Blog',
+                'description' => 'Create New Blog'
+            ],
+            [
+                'name' => 'blog-edit',
+                'display_name' => 'Edit Blog',
+                'description' => 'Edit Blog'
+            ],
+            [
+                'name' => 'blog-delete',
+                'display_name' => 'Delete Blog',
+                'description' => 'Delete Blog'
+            ],
+            [
+                'name' => 'category-list',
+                'display_name' => 'Display Category Listing',
+                'description' => 'See only Listing Of Category'
+            ],
+            [
+                'name' => 'category-create',
+                'display_name' => 'Create Category',
+                'description' => 'Create New Category'
+            ],
+            [
+                'name' => 'category-edit',
+                'display_name' => 'Edit Category',
+                'description' => 'Edit Category'
+            ],
+            [
+                'name' => 'category-delete',
+                'display_name' => 'Delete Category',
+                'description' => 'Delete Category'
+            ],
+            [
+                'name' => 'service-list',
+                'display_name' => 'Display Service Listing',
+                'description' => 'See only Listing Of Service'
+            ],
+            [
+                'name' => 'service-create',
+                'display_name' => 'Create Service',
+                'description' => 'Create New Service'
+            ],
+            [
+                'name' => 'service-edit',
+                'display_name' => 'Edit Service',
+                'description' => 'Edit Service'
+            ],
+            [
+                'name' => 'service-delete',
+                'display_name' => 'Delete Service',
+                'description' => 'Delete Service'
+            ],
+            [
+                'name' => 'meta-edit',//todo name?
+                'display_name' => 'Edit Meta',
+                'description' => 'Edit Meta'
+            ],
+
+        ];
+
+        foreach ($permission as $key => $value) {
+            Permission::create($value);
+        }
+    }
+}

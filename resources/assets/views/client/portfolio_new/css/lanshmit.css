@@ -1,0 +1,112 @@
+#lanshmit .picture-1, #lanshmit .picture-2, #lanshmit .picture-3, #lanshmit .picture-4, #lanshmit .picture-5 {
+  background-attachment: scroll; }
+#lanshmit .picture-1 {
+  background-image: url("../images/lanshmit/picture-1.jpg"); }
+#lanshmit .picture-2 {
+  background-image: url("../images/lanshmit/picture-2.jpg"); }
+#lanshmit .picture-3 {
+  background-image: url("../images/lanshmit/picture-3.jpg"); }
+#lanshmit .picture-5 {
+  background-image: url("../images/lanshmit/picture-5.jpg"); }
+#lanshmit .picture-4 {
+  height: 80vh;
+  background-image: url("../images/lanshmit/picture-4.jpg");
+  position: relative; }
+  @media all and (max-width: 768px) {
+    #lanshmit .picture-4 {
+      height: 50vh; } }
+  #lanshmit .picture-4 .logo-4 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%); }
+    @media all and (max-width: 768px) {
+      #lanshmit .picture-4 .logo-4 {
+        top: 10%; } }
+#lanshmit .logo-4 {
+  width: 100%;
+  max-width: 762px; }
+#lanshmit .picture-6, #lanshmit .picture-7 {
+  max-width: 960px; }
+#lanshmit .logo-animation-cont .logo-img {
+  width: 100%;
+  max-width: 762px; }
+#lanshmit .graphity-image-container {
+  width: 80%;
+  margin: auto; }
+  #lanshmit .graphity-image-container .graphity-image {
+    position: relative; }
+    #lanshmit .graphity-image-container .graphity-image .picture-paper {
+      max-width: 1004px; }
+    #lanshmit .graphity-image-container .graphity-image .pencil {
+      max-width: 560px;
+      position: absolute;
+      top: 60%;
+      right: 10%; }
+@media all and (max-width: 768px) {
+  #lanshmit .two-images-container .image-left, #lanshmit .two-images-container .image-right {
+    width: 100%; } }
+#lanshmit .top-container {
+  position: relative;
+  background-image: url("../images/lanshmit/picture-main.jpg"); }
+  #lanshmit .top-container .title-container {
+    position: relative;
+    z-index: 5;
+    padding-top: 40vh; }
+    @media all and (max-width: 768px) {
+      #lanshmit .top-container .title-container {
+        padding-top: 30vh; } }
+    #lanshmit .top-container .title-container .top-title {
+      font-size: 80px;
+      font-family: "SegoeUIBold", sans-serif;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1.2;
+      text-align: center;
+      width: 100%; }
+      @media all and (max-width: 1400px) {
+        #lanshmit .top-container .title-container .top-title {
+          font-size: 70px; } }
+      @media all and (max-width: 1200px) {
+        #lanshmit .top-container .title-container .top-title {
+          font-size: 60px; } }
+      @media all and (max-width: 1000px) {
+        #lanshmit .top-container .title-container .top-title {
+          font-size: 50px; } }
+      @media all and (max-width: 700px) {
+        #lanshmit .top-container .title-container .top-title {
+          font-size: 40px; } }
+      @media all and (max-width: 500px) {
+        #lanshmit .top-container .title-container .top-title {
+          font-size: 20px; } }
+    #lanshmit .top-container .title-container .top-title-small {
+      padding-top: 20px;
+      font-size: 48px;
+      font-family: "SegoeUIBold", sans-serif;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1.5;
+      text-align: center; }
+      @media all and (max-width: 1200px) {
+        #lanshmit .top-container .title-container .top-title-small {
+          font-size: 36px; } }
+      @media all and (max-width: 1000px) {
+        #lanshmit .top-container .title-container .top-title-small {
+          font-size: 30px; } }
+      @media all and (max-width: 700px) {
+        #lanshmit .top-container .title-container .top-title-small {
+          font-size: 24px; } }
+      @media all and (max-width: 500px) {
+        #lanshmit .top-container .title-container .top-title-small {
+          font-size: 16px; } }
+#lanshmit .red-block-container {
+  background-color: #d82037;
+  color: #fff; }
+  #lanshmit .red-block-container .info-left h3 {
+    color: #fff; }
+  #lanshmit .red-block-container .info-right p {
+    color: #fff; }
+
+/*# sourceMappingURL=lanshmit.css.map */
