@@ -30,13 +30,13 @@
                         @php($i = 0)
                         @foreach($serviceCategories as $serviceCategory)
                             <li class="slider-item" data-number={{ $i++ }}>
-                                <h2 class="slide-title">{{ $serviceCategory->{'name_' . App::getLocale()} }}</h2>
-                                <h3 class="slide-title-small">{{ $serviceCategory->{'description' . $langSuf} }}</h3>
+                                <h2 class="slide-title">{{ $serviceCategory['parentName' . $langSuf] }}</h2>
+                                <h3 class="slide-title-small">{{ $serviceCategory['parentDescription' . $langSuf] }}</h3>
 
                                 <div class="slide-links">
                                     <hr class="slide-hr">
-                                    @foreach($serviceCategory->services->slice(0,7) as $service)
-                                        <a href="/{{ $service->slug }}">{{ $service->{'name' . $langSuf} }}</a>
+                                    @foreach(array_slice($serviceCategory['services'], 0,7) as $service)
+                                        <a href="/{{ $service['slug'] }}">{{ $service['name' . $langSuf] }}</a>
                                     @endforeach
                                 </div>
                             </li>
@@ -90,37 +90,38 @@
             <!--<p class="name_block">Все Услуги</p>-->
             <h2 class="service-header">{{ trans('client.services.all_services') }}</h2>
 
-        @foreach($serviceCategories as $serviceCategory)
+        @foreach($serviceCategories as $item)
             <!-- begin one_category -->
                 <div class="one_category clearfix">
                     {{--<div class="promo_block" style="background-image: url('/files/images/services/usluga-1.png')">--}}
-                        <div class="promo_block" style="background-image: url('/files/images/servicecategory/@if($serviceCategory->image){{ $serviceCategory->image->link }}@endif')">
+                    <div class="promo_block"
+                         style="background-image: url('/files/images/servicecategory/{{ $item['parentImageLink'] }}')">
 
                         <!--при загрузке изображений из админки установить для блока style="background-image: url("../адрес изображения")-->
                         <h5>
-                            {{ $serviceCategory->{'name' . $langSuf} }}
+                            {{ $item['parentName'. $langSuf] }}
                         </h5>
                         <p>
-                            {{ $serviceCategory->{'description' . $langSuf} }}
+                            {{ $item['parentDescription'. $langSuf] }}
                         </p>
                     </div>
                     <div class="link_block">
                         <ul>
-                            @foreach($serviceCategory->services as $service)
+                            @foreach($item['services'] as $service)
                                 <li>
-                                    <a href="/{{ $service->slug }}">{{ $service->{'name' . $langSuf } }}</a>
+                                    <a href="/{{ $service['slug'] }}">{{ $service['name'. $langSuf ] }}</a>
                                     <div class="additional-info">
                                         <div class="image-container">
-                                            @if($service->image)
-                                                <img src="/files/images/service/thumb_{{ $service->image->link }}">
+                                            @if($service['link'])
+                                                <img src="/files/images/service/thumb_{{ $service['link'] }}">
                                             @else
                                                 <img src="/files/images/service/slide-picture.jpg">
                                             @endif
                                         </div>
                                         <p class="additional-info-text">
-                                            {!! $service->{'description' . $langSuf} !!}
+                                            {!! $service['description' . $langSuf] !!}
                                         </p>
-                                        <a href="/{{ $service->slug }}"
+                                        <a href="/{{ $service['slug'] }}"
                                            class="additional-info-btn">{{ trans('client.services.go_to_service') }}</a>
                                     </div>
                                 </li>

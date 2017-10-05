@@ -2,8 +2,8 @@
     @php($langSuf = '_' . App::getLocale())
     @foreach($portfolio as $item)
         <a href="/portfolio/{{ $item->slug }}" class="one_block animated">
-            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                 data-original="/files/images/portfolio/{{ $item->image->link }}" alt="name image" class="lazy">
+            <img src="/files/images/portfolio/{{ $item->link }}"
+                 data-original="/files/images/portfolio/{{ $item->link }}" alt="{{ $item->link }}" class="lazy">
             <!-- begin hidden_content -->
             <div class="hidden_content" style="background-color: {{ $item->bg_color }}">
                 <p class="name_content">{{ $item->{'title' . $langSuf} }}</p>

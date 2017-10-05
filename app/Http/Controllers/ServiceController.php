@@ -41,23 +41,6 @@ class ServiceController extends Controller
         $this->service = $service;
     }
 
-//    /**
-//     * @param Request $request
-//     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Symfony\Component\HttpFoundation\Response
-//     */
-//    public function incrementCount(Request $request)
-//    {
-//        $serviceId = $request->id;
-//        $service = Service::find($serviceId);
-//        $service->count++;
-//
-//        if ($service->save()) {
-//            return response('OK', 200);
-//        }
-//
-//        return response('FAIL', 400);
-//    }
-
     /**
      * @return mixed
      */
@@ -73,9 +56,42 @@ class ServiceController extends Controller
      */
     public function getServices()
     {
-        $serviceCategories = ServiceCategory::all()->sortBy('order');
+        //$serviceCategories = ServiceCategory::all()->sortBy('order');
         $page = Page::find(1);
+        $arr = DB::table('service')
+            ->join('servicecategory', 'service.category_id', '=', 'servicecategory.id')
+            ->join('file', 'service.image_id', '=', 'file.id')
+            ->join('file as categoryFile', 'servicecategory.image_id', '=', 'categoryFile.id')
+            ->select('service.name_ru', 'service.name_ua', 'service.description_ru', 'service.description_ua', 'service.slug',
+                'servicecategory.id as parentId', 'categoryFile.link as parentImageLink', 'categoryFile.link as parentImageAlt',
+                'servicecategory.order as parentOrder',
+                'servicecategory.name_ru as parentName_ru', 'servicecategory.name_ua as parentName_ua',
+                'servicecategory.description_ru as parentDescription_ru', 'servicecategory.description_ua as parentDescription_ua',
+                'file.link', 'file.alt')
+            ->orderBy('parentOrder')
+            ->get();
 
+        $serviceCategories = [];
+
+        foreach ($arr as $data) {
+            $id = $data->parentId;
+            $serviceCategories[$id]['parentName_ru'] = $data->parentName_ru;
+            $serviceCategories[$id]['parentName_ua'] = $data->parentName_ua;
+            $serviceCategories[$id]['parentDescription_ru'] = $data->parentDescription_ru;
+            $serviceCategories[$id]['parentDescription_ua'] = $data->parentDescription_ua;
+            $serviceCategories[$id]['parentDescription_ua'] = $data->parentDescription_ua;
+            $serviceCategories[$id]['parentImageLink'] = $data->parentImageLink;
+            $serviceCategories[$id]['parentImageAlt'] = $data->parentImageAlt;
+            $serviceCategories[$id]['services'][] = [
+                'name_ru' => $data->name_ru,
+                'name_ua' => $data->name_ua,
+                'description_ru' => $data->description_ru,
+                'description_ua' => $data->description_ua,
+                'slug' => $data->slug,
+                'link' => $data->link,
+                'alt' => $data->alt
+            ];
+        }
 
         return view('client.services', compact('serviceCategories', 'page'));
     }
