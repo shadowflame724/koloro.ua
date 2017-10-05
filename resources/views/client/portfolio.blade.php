@@ -9,7 +9,6 @@
 
 @section('page-style')
     <link href="/css/libs/jquery.bxslider.min.css" rel="stylesheet"/>
-
     <!-- OwlCarousel -->
     <link rel="stylesheet" href="/css/owl.carousel.min.css">
     <link rel="stylesheet" href="/css/owl.theme.default.min.css">
@@ -44,15 +43,15 @@
             <!-- begin image_container -->
             <div class="image_container image_conatainer_full">
                 @foreach($portfolios as $portfolio)
-                    <a href="{{url('/portfolio')}}/{{$portfolio->slug}}" class="one_block animated">
-                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                             data-original="{{url('files/images/portfolio')}}/{{$portfolio->image->link}}"
-                             alt="{{$portfolio->image->alt}}"
+                    <a href="{{ url('/portfolio')}}/{{ $portfolio->slug }}" class="one_block animated">
+                        <img src="/files/images/portfolio/{{ $portfolio->link }}"
+                             data-original="/files/images/portfolio/{{ $portfolio->link }}"
+                             alt="{{ $portfolio->alt }}"
                              class="lazy">
                         <!-- begin hidden_content -->
                         <div class="hidden_content" style="background-color: {{ $portfolio->bg_color }}">
                             <p class="name_content">{{ $portfolio->{'title' . $langSuf} }}</p>
-                            <p class="desc_content">{{$portfolio->{'short_desc' . $langSuf} }}</p>
+                            <p class="desc_content">{{ $portfolio->{'short_desc' . $langSuf} }}</p>
                             <i class="icon icon-portolio_row"></i>
                         </div>
                         <!-- end hidden_content -->

@@ -16,11 +16,15 @@ class PortfolioController extends Controller
     public function portfolio(Request $request)
     {
         $categories = PortfolioCategory::orderBy('id', 'DESC')->get();
-        $portfolios = Portfolio::orderBy('id', 'DESC')->get();
+        $portfolios = DB::table('portfolio')
+            ->join('file', 'portfolio.image_id', '=', 'file.id')
+            ->select('portfolio.id', 'portfolio.slug', 'portfolio.title_ru', 'portfolio.title_ua', 'portfolio.short_desc_ru', 'portfolio.short_desc_ua', 'portfolio.bg_color',
+                'file.link', 'file.alt')
+            ->orderBy('portfolio.id', 'DESC')
+            ->get();
         $page = Page::find(3);
 
         return view('client.portfolio', compact('portfolios', 'categories', 'page'));
-//            ->with('i', ($request->input('page', 1) - 1) * 5);/** todo fix 2 */
     }
 
     public function getPortfolioCategory($category)
@@ -30,7 +34,7 @@ class PortfolioController extends Controller
         $category = PortfolioCategory::where('slug', $category)->first();
         $categoryId = $category->id;
 
-        $portfolios = Portfolio::where('category_ids', 'LIKE', '%'.$categoryId.'%')->get();
+        $portfolios = Portfolio::where('category_ids', 'LIKE', '%' . $categoryId . '%')->get();
 
         $page = Page::find(3);
 
@@ -45,12 +49,12 @@ class PortfolioController extends Controller
         $portfolio = Portfolio::where('slug', $slug)->first();
 
         $previous = DB::table('portfolio')->where('id', '<', $portfolio->id)->orderBy('id', 'DESC')->first();
-        if($previous == null){
+        if ($previous == null) {
             $previous = DB::table('portfolio')->orderBy('id', 'DESC')->first();
         }
 
         $next = DB::table('portfolio')->where('id', '>', $portfolio->id)->orderBy('id', 'ASC')->first();
-        if($next == null){
+        if ($next == null) {
             $next = DB::table('portfolio')->orderBy('id', 'ASC')->first();
         }
 
