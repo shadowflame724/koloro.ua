@@ -6,7 +6,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     @yield('page-meta')
 
     <link rel="shortcut icon" href="/files/images/favicon.ico" type="image/x-icon">
@@ -49,6 +49,11 @@
             });
         });
         showmore();
+    });
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
     });
 </script>
 <!--скрипты для всех страниц конец-->

@@ -66,7 +66,7 @@ Route::get('/contacts', ['as' => 'client.contacts', 'uses' => 'ContactsControlle
 Route::get('/search', 'SearchController@search');
 
 //yellow form
-Route::get('form', ['as' => 'form', 'uses' => 'FormController@create']);
+Route::any('form', ['as' => 'form', 'uses' => 'FormController@create']);
 Route::post('form', ['as' => 'form_store', 'uses' => 'FormController@store']);
 
 //brief form
@@ -78,8 +78,8 @@ Route::get('callback', ['as' => 'callback', 'uses' => 'CallbackController@create
 Route::post('callback', ['as' => 'callback_store', 'uses' => 'CallbackController@store']);
 
 //subscription
-Route::get('subscription', ['as' => 'subscription', 'uses' => 'SubscriptionController@create']);
-Route::post('subscription', ['as' => 'subscription_store', 'uses' => 'SubscriptionController@store']);
+Route::get('/subscription', ['as' => 'subscription', 'uses' => 'SubscriptionController@create']);
+Route::post('/subscription', ['as' => 'subscription_store', 'uses' => 'SubscriptionController@store']);
 
 Route::get('about', 'Client\FrontEndPagesController@about');
 Route::get('author/{user}/{slug?}', 'Client\FrontEndPagesController@author');
