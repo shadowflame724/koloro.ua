@@ -9,8 +9,7 @@ class File extends Model
 {
     protected $table = 'file';
 
-    protected $fillable = ['link','form_id','brief_id', 'alt'];//todo
-
+    protected $fillable = ['link','form_id','brief_id', 'alt'];
     public function Form()
     {
         return $this->hasMany(Form::class);
@@ -43,7 +42,7 @@ class File extends Model
 
     protected function Folder($path)
     {
-        //todo
+
     }
 
     public function portfolio()

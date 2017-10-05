@@ -52,7 +52,6 @@ class BriefController extends Controller
 
         $id = $brief->id;
 
-        //todo pluck()?
         if (isset($request['briefservices'])) {
             $briefservices = static::map(BriefService::all()->toArray(), 'id', 'name');
             foreach ($request['briefservices'] as $briefservice) {
@@ -107,7 +106,6 @@ class BriefController extends Controller
             ->with('success', 'Brief deleted successfully');
     }
 
-    //todo pluck()?
     private static function map(array $array, $from, $to)
     {
         $new_array = [];

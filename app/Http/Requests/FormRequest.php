@@ -29,11 +29,10 @@ class FormRequest extends Request
     public function rules()
     {
         return [
-            'user-name' => 'required',
-            'user-email' => 'email',
-            'user-tel' => 'required',
-            'user-text' => 'required',
-            'user-files.*' => ['max:20000', 'mimes:x3*,txt,pdf,docx,doc,xls,jp*,png,gif,bpm,psd,cdr,jpeg'],
+            'name' => 'required',
+            'email' => 'email',
+            'phone' => 'required',
+            'files.*' => ['max:20000', 'mimes:x3*,txt,pdf,docx,doc,xls,jp*,png,gif,bpm,psd,cdr,jpeg'],
         ];
 
     }

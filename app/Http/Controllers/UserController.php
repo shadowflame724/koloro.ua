@@ -72,7 +72,7 @@ class UserController extends Controller
             //save IMAGE_ID to user_table
             $image_id = $image_link->id;
             $request['image_id'] = $image_id;
-        }/** todo fix 3 */
+        }
 
         $input = $request->all();
         $input['password'] = Hash::make($input['password']);
@@ -157,7 +157,7 @@ class UserController extends Controller
             }
             $image_id = $image_link->id;
             $request['image_id'] = $image_id;
-        }/** todo fix 3 */
+        }
 
         $input = $request->all();
         if(!empty($input['password'])){

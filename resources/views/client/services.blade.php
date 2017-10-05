@@ -144,7 +144,7 @@
             <!-- begin image_container -->
             @widget('jobs_example')
             <!-- end image_container -->
-            <a href="" class="btn transparent_btn"
+            <a href="" class="gl-yellow-btn show-more-portfolio-btn"
                id="show_more">{{ trans('client.widgets.jobs_examples.more_work') }}</a>
         </div>
         <!-- end container -->

@@ -98,7 +98,7 @@ class PermissionTableSeeder extends Seeder
                 'description' => 'Delete Service'
             ],
             [
-                'name' => 'meta-edit',//todo name?
+                'name' => 'meta-edit',
                 'display_name' => 'Edit Meta',
                 'description' => 'Edit Meta'
             ],

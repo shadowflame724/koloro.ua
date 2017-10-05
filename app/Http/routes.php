@@ -49,7 +49,7 @@ Route::group(['middleware' => ['auth']], function () {
 //Route::group(['middleware' => ['web']], function () {
 //client
 
-Route::get('/services', ['as' => 'client.services', 'uses' => 'ServiceController@getServices']);//todo page for all and for one
+Route::get('/services', ['as' => 'client.services', 'uses' => 'ServiceController@getServices']);
 
 //+++++++++++slug+++++++++++++route name++++++++++++++++++++++++++++++method
 Route::get('/blog', ['as' => 'client.blog', 'uses' => 'BlogController@getBlog']);
