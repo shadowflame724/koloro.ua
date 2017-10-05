@@ -29,7 +29,7 @@
             <div class="right-cont">
                 <div class="text-field-cont">
                     <textarea name="text" placeholder="Ваше сообщение" class="text-field"></textarea>
-                    <input type="file" name="file" id="file_write_us" multiple
+                    <input type="file" name="files" id="file_write_us" multiple
                            data-multiple-caption="{count} files selected"
                            class="inputfile inputfile-1" style="display: none">
                     <label for="file_write_us"><span>Добавить файл</span><i class="icon icon-clip-black"></i></label>

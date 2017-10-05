@@ -146,15 +146,17 @@
             var dialogDefinition = ev.data.definition;
             var editor = ev.editor;
             if (dialogName == 'image') {
-                dialogDefinition.onLoad = function () {
-                    image = $('a').find('img');
+                dialogDefinition.onLoad = function (ev) {
                 };
                 dialogDefinition.onOk = function (e) {
-                    var imageAlt = image[2].alt;
+                    //var imageAlt = image[2].alt;
                     var imageSrcUrl = e.sender.originalElement.$.src;
+                    //console.log(ev.sender.originalElement.$.currentSrc);
+                    image = $('a').find('img');
+                    var imageTag = $("img[src='"+imageSrcUrl+"']");
+                    var imageAlt = imageTag["0"].alt;
                     var imgHtml;
                     var str = "<img src=\'" + imageSrcUrl + "\' alt=\'" + imageAlt + "\' title=\'image\'/>";
-                    console.log(image[2]);
                     if (image[2].title ) {
                         imgHtml = CKEDITOR.dom.element.createFromHtml(str);
                     } else {

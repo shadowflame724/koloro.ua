@@ -18,7 +18,6 @@ class FormController extends Controller
 
     public function store(FormRequest $request)
     {
-
         $form = Form::create($request->all());
         $id = $form->id;
         if ($request->hasFile('files')) {

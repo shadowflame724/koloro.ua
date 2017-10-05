@@ -103,6 +103,7 @@ $(function () {
     $(orderForm).submit(function(event) { //устанавливаем событие отправки для формы
         event.preventDefault();
         var form_data = $(this).serialize(); //собераем все данные из формы
+        console.log(form_data);
         $.ajax({
             type: "POST", //Метод отправки
             url: "/form", //путь до php фаила отправителя
