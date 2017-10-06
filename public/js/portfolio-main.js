@@ -3,8 +3,6 @@
  */
 'use strict';
 
-var isMobileViewFlag = true;
-
 window.addEventListener('load', function() {
 
     var busyFlag = false,
@@ -13,7 +11,6 @@ window.addEventListener('load', function() {
         pageFirstLoadingFlag = true;
 
     // ********************************************************************************
-    resizeWindowHandler();
     scrollWindowHandler(); // initial call!!!
     // ********************************************************************************
 
@@ -23,14 +20,6 @@ window.addEventListener('load', function() {
         $(this.parentNode.querySelector(".for-read-more")).slideToggle();
 
         $(this).toggleText("Читать дальше", "Скрыть");
-    }
-
-    function resizeWindowHandler(event) {
-        if (window.innerWidth < mobileViewWidth) {
-            isMobileViewFlag = true;
-        } else {
-            isMobileViewFlag = false;
-        }
     }
 
     function scrollWindowHandler(event) {
@@ -63,7 +52,6 @@ window.addEventListener('load', function() {
     $(".read-more-btn").on("click", readMoreBtnHandler);
 
     window.addEventListener('scroll', scrollWindowHandler);
-    window.addEventListener('resize', resizeWindowHandler);
 
     // ************************************************************************************
 

@@ -422,6 +422,22 @@ $("input[name=subscription_email2]").on('input', function () {
 })(jQuery);
 ////= SmoothScroll.js
 
+// start of: determine is it mobile screen
+var mobileViewWidth = 768,
+    isMobileViewFlag = true;
+
+function resizeWindowHandler(event) {
+    if (window.innerWidth < mobileViewWidth) {
+        isMobileViewFlag = true;
+    } else {
+        isMobileViewFlag = false;
+    }
+}
+
+resizeWindowHandler(); // initial call
+window.addEventListener('resize', resizeWindowHandler);
+// end of: determine is it mobile screen
+
 
 var animationclasess = ".left, .right, .top, .image_container .one_block, .text_under_form, .fade";
 $(animationclasess).addClass("transparent");

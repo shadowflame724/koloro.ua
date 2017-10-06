@@ -5121,7 +5121,6 @@ a.gl-link {
 .image-container {
   width: 100%;
   max-height: 100vh;
-  overflow: hidden;
   text-align: center; }
   .image-container img {
     width: 100%; }
@@ -5789,7 +5788,7 @@ h1.top-title {
       font-size: 30px;
       padding-bottom: 20px; } }
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1200px) {
   #services .top-container {
     display: none; } }
 
@@ -5799,6 +5798,9 @@ h1.top-title {
 #services .title-container {
   position: relative;
   padding: 15vh 0 5vh 0; }
+  @media all and (max-width: 1200px) {
+    #services .title-container {
+      display: none; } }
   @media all and (max-height: 768px) {
     #services .title-container {
       padding: 10vh 0 5vh 0; } }
@@ -5811,6 +5813,9 @@ h1.top-title {
   height: 700px;
   background-image: url("../images/services/picture-main-slide.jpg");
   overflow: auto; }
+  @media all and (max-width: 1200px) {
+    #services #my-thumbs-list {
+      display: none; } }
   #services #my-thumbs-list .dark-mask {
     position: relative;
     z-index: 1; }
@@ -5882,7 +5887,8 @@ h1.top-title {
       overflow: hidden; }
       #services #my-thumbs-list .dark-mask .visual-wrapper .visual {
         position: relative;
-        display: none; }
+        display: none;
+        height: 100%; }
         #services #my-thumbs-list .dark-mask .visual-wrapper .visual video {
           height: 100%; }
       #services #my-thumbs-list .dark-mask .visual-wrapper .vis-active {
@@ -6030,7 +6036,8 @@ h1.top-title {
     font-family: "SegoeUIBold", sans-serif;
     color: #000; }
   #service-page .info-block-container .gl-container .info-right .image-container {
-    padding: 30px 0; }
+    padding: 30px 0;
+    overflow: hidden; }
     @media all and (max-width: 768px) {
       #service-page .info-block-container .gl-container .info-right .image-container {
         padding: 10px 0; } }
