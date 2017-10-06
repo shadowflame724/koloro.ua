@@ -119,7 +119,7 @@
                                             @endif
                                         </div>
                                         <p class="additional-info-text">
-                                            {!! $service['description' . $langSuf] !!}
+                                            {!! strip_tags($service['description' . $langSuf]) !!}
                                         </p>
                                         <a href="/{{ $service['slug'] }}"
                                            class="additional-info-btn">{{ trans('client.services.go_to_service') }}</a>

@@ -52,8 +52,8 @@ class ServiceRepository extends BaseRepository
             $service->name_ua = strip_tags($input['name_ua']);
             $service->name_parent_case_ru = strip_tags($input['name_parent_case_ru']);
             $service->name_parent_case_ua = strip_tags($input['name_parent_case_ua']);
-            $service->description_ru = clean($input['description_ru']);
-            $service->description_ua = clean($input['description_ua']);
+            $service->description_ru = strip_tags($input['description_ru']);
+            $service->description_ua = strip_tags($input['description_ua']);
             $service->price = $input['price'];
             $service->time_ru = $input['time_ru'];
             $service->time_ua = $input['time_ua'];
