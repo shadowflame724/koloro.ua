@@ -141,10 +141,17 @@ class BlogController extends Controller
             $image = File::find($article->image_id);
         }
 
+        $portfolios = \DB::table('portfolio')
+            ->join('file', 'portfolio.image_id', '=', 'file.id')
+            ->select('file.link', 'file.alt', 'portfolio.title_ru', 'portfolio.title_ua', 'portfolio.slug')
+            ->inRandomOrder()
+            ->limit(3)
+            ->get();
+
         $montharticles = Blog::where('created_at', '>=', Carbon::now()->subMonth())->orderBy('views', 'desc')->take(2)->get();
         $twomontharticles = Blog::where('created_at', '>=', Carbon::now()->subMonth(3))->orderBy('views', 'desc')->take(2)->get();
 
-        return view('client.article', compact('article', 'user', 'category', 'image', 'montharticles', 'twomontharticles', 'serviceCategories'));
+        return view('client.article', compact('article', 'user', 'category', 'image', 'montharticles', 'twomontharticles', 'serviceCategories', 'portfolios'));
     }
 
 

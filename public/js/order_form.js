@@ -103,10 +103,9 @@ $(function () {
     $(orderForm).submit(function(event) { //устанавливаем событие отправки для формы
         event.preventDefault();
         var form_data = $(this).serialize(); //собераем все данные из формы
-        console.log(form_data);
         $.ajax({
             type: "POST", //Метод отправки
-            url: "/form", //путь до php фаила отправителя
+            url: "/", //путь до php фаила отправителя
             data: form_data,
             success: function () {
                 //код в этом блоке выполняется при успешной отправке сообщения
@@ -116,7 +115,7 @@ $(function () {
                 koloroFormHide(orderForm);
             },
             error: function () {
-                alert("Произошла ошибка при отправке order...( Попробуйте еще раз!");
+                alert("Произошла ошибка при отправке...( Попробуйте еще раз!");
             }
         });
     });

@@ -57,12 +57,10 @@
                 <!-- begin our_jobs -->
                 <div class="our_jobs">
                     <p>Наши работы</p>
-                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                         data-original="/files/images/article/right_sidebar.jpg" alt="name image" class="lazy">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                         data-original="/files/images/article/right_sidebar.jpg" alt="name image" class="lazy">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                         data-original="/files/images/article/right_sidebar.jpg" alt="name image" class="lazy">
+                    @foreach($portfolios as $item)
+                    <img src="/files/images/portfolio/{{ $item->link }}"
+                         data-original="/files/images/portfolio/{{ $item->link }}" alt="/files/images/portfolio/{{ $item->alt }}" class="lazy">
+                    @endforeach
                     <a href="#" class="btn btn_wb">хочу также</a>
                 </div>
                 <!-- end our_jobs -->

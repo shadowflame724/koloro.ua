@@ -14,7 +14,7 @@ $(function () {
     }
     $(".read-more-btn").on("click", readMoreBtnHandler);
 
-    var bgImages = ['/files/images/company_page/company_main_1.jpg', '/files/images/company_page/company_main_2.jpg'];
+    var bgImages = ['images/company_page/company_main_1.jpg', 'images/company_page/company_main_2.jpg'];
     var slideCnt = 0;
 
     setInterval(function () {

@@ -32,7 +32,7 @@ $(function () {
         var form_data = $(this).serialize(); //собераем все данные из формы
         $.ajax({
             type: "POST", //Метод отправки
-            url: "/subscription", //путь до php фаила отправителя
+            url: "/", //путь до php фаила отправителя
             data: form_data,
             success: function () {
                 //код в этом блоке выполняется при успешной отправке сообщения
@@ -42,7 +42,7 @@ $(function () {
                 koloroFormHide(subscribeForm);
             },
             error: function () {
-                alert("Произошла ошибка при отправке subsc...( Попробуйте еще раз!");
+                alert("Произошла ошибка при отправке...( Попробуйте еще раз!");
             }
         });
     });
