@@ -64,6 +64,7 @@
 
 <!--    slider mThumbnailScroller   -->
 <script src="/js/jquery.mThumbnailScroller.min.js"></script>
+<script src="/js/order_form.js"></script>
 
 @yield('page-scripts')
 

@@ -689,7 +689,6 @@
 @stop
 
 @section('page-scripts')
-    <script src="/js/order_form.js"></script>
     <script src="/js/success_form.js"></script>
     <!-- include viewportchecker.js -->
     <!--<script src="js/viewportchecker.js"></script>-->
