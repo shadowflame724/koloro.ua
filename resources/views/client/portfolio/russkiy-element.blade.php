@@ -5,15 +5,12 @@
 @section('page-meta')
     <meta name="description" content="{{ $portfolio->meta->{'description' . $langSuf} }}">
     <meta name="keywords" content="{{ $portfolio->meta->{'keywords' . $langSuf} }}">
+    <meta property=og:image content="{{ url('images/portfolio') . '/' .$portfolio->image->link }}"/>
+
 @stop
 
 @section('page-style')
-
-    <!-- OwlCarousel -->
-    <link rel="stylesheet" href="/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="/css/portfolio-main.css">
-
 @stop
 
 
@@ -25,7 +22,7 @@
     @include('layouts.whiteheader')
 
 <section id="russkiy-element">
-    <div class="bg-container top-container" style="background-image: url('/files/images/portfolio/russkiy-element/russkiy-element-4.jpg')">
+    <div class="bg-container top-container" style="background-image: url('/images/portfolio/russkiy-element/russkiy-element-4.jpg')">
         <div class="dark-mask"></div>
         <div class="gl-container title-container">
             <h1 class="top-title">
@@ -133,7 +130,7 @@
         <h2 class="h2-title">Дизайн нового водочного бренда "Русский элемент"</h2>
     </div>
     <div class="image-container">
-        <img src="/files/images/portfolio/russkiy-element/russkiy-element-1.jpg" alt="russkiy-element-picture">
+        <img src="/images/portfolio/russkiy-element/russkiy-element-1.jpg" alt="russkiy-element-picture">
     </div>
 
     <div class="info-block-container">
@@ -173,10 +170,10 @@
         <h2 class="h2-title">POS-материалы для ТМ "Русский элемент"</h2>
     </div>
     <div class="image-container">
-        <img src="/files/images/portfolio/russkiy-element/russkiy-element-2.jpg" alt="russkiy-element-picture">
+        <img src="/images/portfolio/russkiy-element/russkiy-element-2.jpg" alt="russkiy-element-picture">
     </div>
     <div class="image-container">
-        <img src="/files/images/portfolio/russkiy-element/russkiy-element-3.jpg" alt="russkiy-element-picture">
+        <img src="/images/portfolio/russkiy-element/russkiy-element-3.jpg" alt="russkiy-element-picture">
     </div>
 
     <div class="info-block-container">
@@ -219,7 +216,7 @@
         <h2 class="h2-title">Водка "Русский Элемент"</h2>
     </div>
     <div class="image-container">
-        <img src="/files/images/portfolio/russkiy-element/russkiy-element-4.jpg" alt="russkiy-element-picture">
+        <img src="/images/portfolio/russkiy-element/russkiy-element-4.jpg" alt="russkiy-element-picture">
     </div>
 
     <div class="info-block-container">
@@ -265,23 +262,6 @@
 @stop
 @section('page-scripts')
 
-    <!-- OwlCarousel -->
-    <script src="/js/owl.carousel.min.js"></script>
-    <!--<script src="../js/owl.lazyload.js"></script>-->
-
-    <!-- SmoothScroll -->
-    <!--<script src="../js/SmoothScroll.js"></script>-->
-    <script src="../js/viewportchecker.js"></script>
-
-    <!-- star rating -->
-    <script src="/js/star-rating.js"></script>
-    <link rel="stylesheet" href="/css/star-rating.css" media="all" type="text/css"/>
-    <script type="text/javascript">
-        $(".rating").rating({min:1, max:5, step:0.5, size:'sm'});
-
-        $('.clear-rating').hide();
-        $('.caption').hide();
-    </script>
 
 
     <!-- include own JavaScript -->

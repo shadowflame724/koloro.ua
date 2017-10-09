@@ -5,13 +5,14 @@
 @section('page-meta')
     <meta name="description" content="{{ $portfolio->meta->{'description' . $langSuf} }}">
     <meta name="keywords" content="{{ $portfolio->meta->{'keywords' . $langSuf} }}">
+    <meta property=og:image content="{{ url('images/portfolio') . '/' .$portfolio->image->link }}"/>
+
 @stop
 
 @section('page-style')
 
     <!-- OwlCarousel -->
-    <link rel="stylesheet" href="/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+
     <link rel="stylesheet" href="/css/portfolio-main.css">
 
 @stop
@@ -29,8 +30,8 @@
     <!-- begin container -->
     <div class="container">
         <a href="/index.html" class="logo_link">
-            <img src="/files/images/portfolio/general/logo.png" class="logo white_logo" width="166" height="51" alt="coloro">
-            <img src="/files/images/portfolio/general/logo2.png" class="logo color_logo" width="166" height="51" alt="coloro"
+            <img src="/images/portfolio/general/logo.png" class="logo white_logo" width="166" height="51" alt="coloro">
+            <img src="/images/portfolio/general/logo2.png" class="logo color_logo" width="166" height="51" alt="coloro"
                  style="display: none;">
         </a>
 
@@ -68,7 +69,7 @@
 </header>
 
 <section id="guarand">
-    <div class="bg-container top-container" style="background-image: url('/files/images/portfolio/guarand/main-picture.jpg')">
+    <div class="bg-container top-container" style="background-image: url('/images/portfolio/guarand/main-picture.jpg')">
         <div class="dark-mask"></div>
         <div class="gl-container title-container">
             <h1 class="top-title">
@@ -172,7 +173,7 @@
     </div>
 
     <div class="image-container">
-        <img src="/files/images/portfolio/guarand/guarand-picture-1.jpg" alt="guarand-picture">
+        <img src="/images/portfolio/guarand/guarand-picture-1.jpg" alt="guarand-picture">
     </div>
 
     <div class="info-block-container">
@@ -194,7 +195,7 @@
     </div>
 
     <div class="image-container">
-        <img src="/files/images/portfolio/guarand/guarand-picture-2.jpg" alt="guarand-picture">
+        <img src="/images/portfolio/guarand/guarand-picture-2.jpg" alt="guarand-picture">
     </div>
 
     <div class="info-block-container">
@@ -214,7 +215,7 @@
     </div>
 
     <div class="image-container">
-        <img src="/files/images/portfolio/guarand/guarand-picture-3.jpg" alt="guarand-picture">
+        <img src="/images/portfolio/guarand/guarand-picture-3.jpg" alt="guarand-picture">
     </div>
 
     <div class="info-block-container">
@@ -232,7 +233,7 @@
     </div>
 
     <div class="image-container">
-        <img src="/files/images/portfolio/guarand/guarand-picture-4.jpg" alt="guarand-picture">
+        <img src="/images/portfolio/guarand/guarand-picture-4.jpg" alt="guarand-picture">
     </div>
 
     <div class="info-block-container">
@@ -253,7 +254,7 @@
     </div>
 
     <div class="image-container">
-        <img src="/files/images/portfolio/guarand/guarand-picture-5.jpg" alt="guarand-picture">
+        <img src="/images/portfolio/guarand/guarand-picture-5.jpg" alt="guarand-picture">
     </div>
 
     <div class="info-block-container">
@@ -272,7 +273,7 @@
     </div>
 
     <div class="image-container">
-        <img src="/files/images/portfolio/guarand/guarand-picture-6.jpg" alt="guarand-picture">
+        <img src="/images/portfolio/guarand/guarand-picture-6.jpg" alt="guarand-picture">
     </div>
 
     <div class="info-block-container">
@@ -291,7 +292,7 @@
     </div>
 
     <div class="image-container">
-        <img src="/files/images/portfolio/guarand/guarand-picture-7.jpg" alt="guarand-picture">
+        <img src="/images/portfolio/guarand/guarand-picture-7.jpg" alt="guarand-picture">
     </div>
 
     <div class="info-block-container">
@@ -312,7 +313,7 @@
     </div>
 
     <div class="image-container">
-        <img src="/files/images/portfolio/guarand/guarand-picture-8.jpg" alt="guarand-picture">
+        <img src="/images/portfolio/guarand/guarand-picture-8.jpg" alt="guarand-picture">
     </div>
 
     <div class="info-block-container">
@@ -334,7 +335,7 @@
     </div>
 
     <div class="image-container">
-        <img src="/files/images/portfolio/guarand/guarand-picture-9.jpg" alt="guarand-picture">
+        <img src="/images/portfolio/guarand/guarand-picture-9.jpg" alt="guarand-picture">
     </div>
 
     <div class="info-block-container">
@@ -364,21 +365,21 @@
         <h2 class="h2-title">Логотип - Магниты</h2>
     </div>
     <div class="image-container">
-        <img src="/files/images/portfolio/guarand/guarand-picture-10.jpg" alt="guarand-picture">
+        <img src="/images/portfolio/guarand/guarand-picture-10.jpg" alt="guarand-picture">
     </div>
 
     <div class="gl-container">
         <h2 class="h2-title">Логотип - Мигалка</h2>
     </div>
     <div class="image-container">
-        <img src="/files/images/portfolio/guarand/guarand-picture-11.jpg" alt="guarand-picture">
+        <img src="/images/portfolio/guarand/guarand-picture-11.jpg" alt="guarand-picture">
     </div>
 
     <div class="gl-container">
         <h2 class="h2-title">Логотип — Фара — вариант одобренный заказчиком</h2>
     </div>
     <div class="image-container">
-        <img src="/files/images/portfolio/guarand/guarand-picture-12.jpg" alt="guarand-picture">
+        <img src="/images/portfolio/guarand/guarand-picture-12.jpg" alt="guarand-picture">
     </div>
 
     <div class="info-block-container">
@@ -400,21 +401,21 @@
         <h2 class="h2-title">Концепт №1</h2>
     </div>
     <div class="image-container">
-        <img src="/files/images/portfolio/guarand/guarand-picture-13.jpg" alt="guarand-picture">
+        <img src="/images/portfolio/guarand/guarand-picture-13.jpg" alt="guarand-picture">
     </div>
 
     <div class="gl-container">
         <h2 class="h2-title">Концепт №2</h2>
     </div>
     <div class="image-container">
-        <img src="/files/images/portfolio/guarand/guarand-picture-14.jpg" alt="guarand-picture">
+        <img src="/images/portfolio/guarand/guarand-picture-14.jpg" alt="guarand-picture">
     </div>
 
     <div class="gl-container">
         <h2 class="h2-title">Концепт №3</h2>
     </div>
     <div class="image-container">
-        <img src="/files/images/portfolio/guarand/guarand-picture-15.jpg" alt="guarand-picture">
+        <img src="/images/portfolio/guarand/guarand-picture-15.jpg" alt="guarand-picture">
     </div>
 
     <div class="info-block-container">
@@ -442,7 +443,7 @@
         <h2 class="h2-title">Логотип ТМ "Guarand"</h2>
     </div>
     <div class="image-container">
-        <img src="/files/images/portfolio/guarand/guarand-picture-16.jpg" alt="guarand-picture">
+        <img src="/images/portfolio/guarand/guarand-picture-16.jpg" alt="guarand-picture">
     </div>
 
 
@@ -468,7 +469,7 @@
     </div>
 
     <div class="image-container">
-        <img src="/files/images/portfolio/guarand/guarand-picture-17.jpg" alt="guarand-picture">
+        <img src="/images/portfolio/guarand/guarand-picture-17.jpg" alt="guarand-picture">
     </div>
 
     <div class="info-block-container">
@@ -518,26 +519,6 @@
 @stop
 
 @section('page-scripts')
-    <!--скрипты для всех страниц конец-->
-
-    <script src="/js/viewportchecker.js"></script>
-
-    <!-- OwlCarousel -->
-    <script src="/js/owl.carousel.min.js"></script>
-    <!--<script src="../js/owl.lazyload.js"></script>-->
-
-    <!-- SmoothScroll -->
-    <script src="/js/SmoothScroll.js"></script>
-
-    <!-- star rating -->
-    <script src="/js/star-rating.js"></script>
-    <link rel="stylesheet" href="/css/star-rating.css" media="all" type="text/css"/>
-    <script type="text/javascript">
-        $(".rating").rating({min:1, max:5, step:0.5, size:'sm'});
-
-        $('.clear-rating').hide();
-        $('.caption').hide();
-    </script>
 
     <!-- include own JavaScript -->
     <script src="/js/portfolio-main.js"></script>

@@ -5,13 +5,12 @@
 @section('page-meta')
     <meta name="description" content="{{ $portfolio->meta->{'description' . $langSuf} }}">
     <meta name="keywords" content="{{ $portfolio->meta->{'keywords' . $langSuf} }}">
+    <meta property=og:image content="{{ url('images/portfolio') . '/' .$portfolio->image->link }}"/>
+
 @stop
 
 @section('page-style')
 
-    <!-- OwlCarousel -->
-    <link rel="stylesheet" href="/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="/css/portfolio-main.css">
 
 @stop
@@ -24,50 +23,8 @@
 
     @include('layouts.whiteheader')
 
-<header class="fixmenu">
-    <!-- begin container -->
-    <div class="container">
-        <a href="/index.html" class="logo_link">
-            <img src="/files/images/portfolio/general/logo.png" class="logo white_logo" width="166" height="51" alt="coloro">
-            <img src="/files/images/portfolio/general/logo2.png" class="logo color_logo" width="166" height="51" alt="coloro"
-                 style="display: none;">
-        </a>
-
-        <!-- begin languge -->
-        <div class="menu_triger visible_on_mobile">
-            <div class="first"></div>
-            <div class="second"></div>
-            <div class="third"></div>
-        </div>
-        <!-- end languge -->
-        <nav class="main_menu">
-            <ul>
-                <li><a href="/index.html">Главная</a></li>
-                <li><a href="/portfolio.html" class="active">портфолио</a></li>
-                <li><a href="/services.html">услуги</a></li>
-                <li><a href="/blog.html">блог</a></li>
-                <li><a href="/company_page.html">компания</a></li>
-                <li><a href="/contacts.html">контакты</a></li>
-
-            </ul>
-            <a href="/" target="_blank" class="btn_calculate order-form-btn">расcчитать проект</a>
-            <div class="languge">
-                <ul>
-                    <li>
-                        <a href="">ua</a>
-                    </li>
-                    <li>
-                        <a href="" class="active">ru</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-    <!-- end container -->
-</header>
-
 <section id="sretenka">
-    <div class="bg-container top-container" style="background-image: url('/files/images/portfolio/sretenka/sretenka-2.jpg')">
+    <div class="bg-container top-container" style="background-image: url('/images/portfolio/sretenka/sretenka-2.jpg')">
         <div class="dark-mask"></div>
         <div class="gl-container title-container">
             <h1 class="top-title">
@@ -150,7 +107,7 @@
         <h2 class="h2-title">До редизайна водка «Сретенка» имела следующий вид:</h2>
     </div>
     <div class="image-container">
-        <img src="/files/images/portfolio/sretenka/sretenka-1.jpg" alt="sretenka-picture">
+        <img src="/images/portfolio/sretenka/sretenka-1.jpg" alt="sretenka-picture">
     </div>
 
     <div class="info-block-container">
@@ -191,7 +148,7 @@
     </div>
 
     <div class="image-container">
-        <img src="/files/images/portfolio/sretenka/sretenka-2.jpg" alt="sretenka-picture">
+        <img src="/images/portfolio/sretenka/sretenka-2.jpg" alt="sretenka-picture">
     </div>
 
     <div class="info-block-container">
@@ -230,7 +187,7 @@
     </div>
 
     <div class="image-container">
-        <img src="/files/images/portfolio/sretenka/sretenka-3.jpg" alt="sretenka-picture">
+        <img src="/images/portfolio/sretenka/sretenka-3.jpg" alt="sretenka-picture">
     </div>
 
     <div class="info-block-container">
@@ -291,25 +248,6 @@
 </section>
 @stop
 @section('page-scripts')
-
-    <!-- OwlCarousel -->
-    <script src="/js/owl.carousel.min.js"></script>
-    <!--<script src="../js/owl.lazyload.js"></script>-->
-
-    <!-- SmoothScroll -->
-    <!--<script src="../js/SmoothScroll.js"></script>-->
-    <script src="../js/viewportchecker.js"></script>
-
-    <!-- star rating -->
-    <script src="/js/star-rating.js"></script>
-    <link rel="stylesheet" href="/css/star-rating.css" media="all" type="text/css"/>
-    <script type="text/javascript">
-        $(".rating").rating({min:1, max:5, step:0.5, size:'sm'});
-
-        $('.clear-rating').hide();
-        $('.caption').hide();
-    </script>
-
 
     <!-- include own JavaScript -->
     <script src="/js/portfolio-main.js"></script>

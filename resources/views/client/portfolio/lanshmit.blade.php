@@ -5,14 +5,15 @@
 @section('page-meta')
     <meta name="description" content="{{ $portfolio->meta->{'description' . $langSuf} }}">
     <meta name="keywords" content="{{ $portfolio->meta->{'keywords' . $langSuf} }}">
+    <meta property=og:image content="{{ url('images/portfolio') . '/' .$portfolio->image->link }}"/>
+
 @stop
 
 @section('page-style')
 
     <!-- OwlCarousel -->
-    <link rel="stylesheet" href="/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="/css/lanshmit.css">
+  
+    <link rel="stylesheet" href="/css/portfolio/portfolio-lanshmit.css">
 
 @stop
 
@@ -97,24 +98,24 @@
 
     <div class="two-images-container up-block-imgs">
         <div class="image-left">
-            <img src="/files/images/portfolio/lanshmit/picture-CA-1.jpg" alt="graphity-image" class="picture-ca">
+            <img src="/images/portfolio/lanshmit/picture-CA-1.jpg" alt="graphity-image" class="picture-ca">
         </div>
         <div class="image-right">
             <div class="two-images-container">
                 <div class="image-left">
-                    <img src="/files/images/portfolio/lanshmit/picture-CA-2.jpg" alt="graphity-image" class="picture-ca">
+                    <img src="/images/portfolio/lanshmit/picture-CA-2.jpg" alt="graphity-image" class="picture-ca">
                 </div>
                 <div class="image-right">
-                    <img src="/files/images/portfolio/lanshmit/picture-CA-3.jpg" alt="graphity-image" class="picture-ca">
+                    <img src="/images/portfolio/lanshmit/picture-CA-3.jpg" alt="graphity-image" class="picture-ca">
                 </div>
             </div>
 
             <div class="two-images-container">
                 <div class="image-left">
-                    <img src="/files/images/portfolio/lanshmit/picture-CA-4.jpg" alt="graphity-image" class="picture-ca">
+                    <img src="/images/portfolio/lanshmit/picture-CA-4.jpg" alt="graphity-image" class="picture-ca">
                 </div>
                 <div class="image-right">
-                    <img src="/files/images/portfolio/lanshmit/picture-CA-5.jpg" alt="graphity-image" class="picture-ca">
+                    <img src="/images/portfolio/lanshmit/picture-CA-5.jpg" alt="graphity-image" class="picture-ca">
                 </div>
             </div>
         </div>
@@ -124,16 +125,16 @@
         <div class="image-left">
             <div class="two-images-container">
                 <div class="image-left">
-                    <img src="/files/images/portfolio/lanshmit/picture-CA-6.jpg" alt="graphity-image" class="picture-ca">
+                    <img src="/images/portfolio/lanshmit/picture-CA-6.jpg" alt="graphity-image" class="picture-ca">
                 </div>
                 <div class="image-right">
-                    <img src="/files/images/portfolio/lanshmit/picture-CA-7.jpg" alt="graphity-image" class="picture-ca">
+                    <img src="/images/portfolio/lanshmit/picture-CA-7.jpg" alt="graphity-image" class="picture-ca">
                 </div>
             </div>
         </div>
 
         <div class="image-right">
-            <img src="/files/images/portfolio/lanshmit/picture-CA-8.jpg" alt="graphity-image" class="picture-ca">
+            <img src="/images/portfolio/lanshmit/picture-CA-8.jpg" alt="graphity-image" class="picture-ca">
         </div>
     </div>
 
@@ -198,13 +199,13 @@
     
     <div class="image-container graphity-image-container">
         <div class="graphity-image">
-            <img src="/files/images/portfolio/lanshmit/picture-paper.png" alt="graphity-image" class="picture-paper">
-            <img src="/files/images/portfolio/lanshmit/pencil.png" alt="pencil-image" class="pencil">
+            <img src="/images/portfolio/lanshmit/picture-paper.png" alt="graphity-image" class="picture-paper">
+            <img src="/images/portfolio/lanshmit/pencil.png" alt="pencil-image" class="pencil">
         </div>
     </div>
 
     <div class="image-container logo-animation-cont">
-        <img src="/files/images/portfolio/lanshmit/logo-1.png" alt="pencil-image" class="logo-img">
+        <img src="/images/portfolio/lanshmit/logo-1.png" alt="pencil-image" class="logo-img">
     </div>
 
     <div class="info-block-container">
@@ -239,7 +240,7 @@
     </div>
 
     <div class="bg-container picture-4 height-50-vh">
-        <img src="/files/images/portfolio/lanshmit/logo-4.png" alt="pencil-image" class="logo-4">
+        <img src="/images/portfolio/lanshmit/logo-4.png" alt="pencil-image" class="logo-4">
     </div>
 
     <div class="info-block-container red-block-container">
@@ -296,10 +297,10 @@
 
     <div class="two-images-container sausages-img-cont">
         <div class="image-left">
-            <img src="/files/images/portfolio/lanshmit/picture-6.jpg" alt="pencil-image" class="picture-6">
+            <img src="/images/portfolio/lanshmit/picture-6.jpg" alt="pencil-image" class="picture-6">
         </div>
         <div class="image-right">
-            <img src="/files/images/portfolio/lanshmit/picture-7.jpg" alt="pencil-image" class="picture-7">
+            <img src="/images/portfolio/lanshmit/picture-7.jpg" alt="pencil-image" class="picture-7">
         </div>
     </div>
 
@@ -329,28 +330,9 @@
 <!-- section lanshmit ends -->
 @stop
 @section('page-scripts')
-    <script src="/js/viewportchecker.js"></script>
-
-    <!-- OwlCarousel -->
-    <script src="/js/owl.carousel.min.js"></script>
-    <!--<script src="../js/owl.lazyload.js"></script>-->
-
-    <!-- SmoothScroll -->
-    <!--<script src="../js/SmoothScroll.js"></script>-->
-
-    <!-- star rating -->
-    <script src="/js/star-rating.js"></script>
-    <link rel="stylesheet" href="/css/star-rating.css" media="all" type="text/css"/>
-    <script type="text/javascript">
-        $(".rating").rating({min:1, max:5, step:0.5, size:'sm'});
-
-        $('.clear-rating').hide();
-        $('.caption').hide();
-    </script>
-
 
     <!-- include own JavaScript -->
     <script src="/js/portfolio-main.js"></script>
-    <script src="/js/lanshmit.js"></script>
+    <script src="/js/portfolio/portfolio-lanshmit.js"></script>
 @stop
 

@@ -3,7 +3,7 @@
     @foreach($portfolio as $item)
         <a href="/portfolio/{{ $item->slug }}" class="one_block animated">
             <img src="/files/images/portfolio/{{ $item->link }}"
-                 data-original="/files/images/portfolio/{{ $item->link }}" alt="{{ $item->link }}" class="lazy">
+                 data-original="/images/portfolio/{{ $item->link }}" alt="{{ $item->link }}" class="lazy">
             <!-- begin hidden_content -->
             <div class="hidden_content" style="background-color: {{ $item->bg_color }}">
                 <p class="name_content">{{ $item->{'title' . $langSuf} }}</p>

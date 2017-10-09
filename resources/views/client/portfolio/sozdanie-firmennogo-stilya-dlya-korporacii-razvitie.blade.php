@@ -5,13 +5,14 @@
 @section('page-meta')
     <meta name="description" content="{{ $portfolio->meta->{'description' . $langSuf} }}">
     <meta name="keywords" content="{{ $portfolio->meta->{'keywords' . $langSuf} }}">
+    <meta property=og:image content="{{ url('images/portfolio') . '/' .$portfolio->image->link }}"/>
+
 @stop
 
 @section('page-style')
 
     <!-- OwlCarousel -->
-    <link rel="stylesheet" href="/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+
     <link rel="stylesheet" href="/css/portfolio-main.css">
 
 @stop
@@ -24,7 +25,7 @@
     @include('layouts.whiteheader')
 
 <section id="korporaciya-razvitie">
-    <div class="bg-container top-container" style="background-image: url('/files/images/portfolio/korporaciya-razvitie/korporaciya-razvitie-2.jpg')">
+    <div class="bg-container top-container" style="background-image: url('/images/portfolio/korporaciya-razvitie/korporaciya-razvitie-2.jpg')">
         <div class="dark-mask"></div>
         <div class="gl-container title-container">
             <h1 class="top-title">
@@ -132,7 +133,7 @@
         <h2 class="h2-title">Концепт — «Процесс развития»</h2>
     </div>
     <div class="image-container">
-        <img src="/files/images/portfolio/korporaciya-razvitie/korporaciya-razvitie-1.jpg" alt="korporaciya-razvitie-picture">
+        <img src="/images/portfolio/korporaciya-razvitie/korporaciya-razvitie-1.jpg" alt="korporaciya-razvitie-picture">
     </div>
 
     <div class="info-block-container">
@@ -163,7 +164,7 @@
         <h2 class="h2-title">Концепт — "Новаторство и современность"</h2>
     </div>
     <div class="image-container">
-        <img src="/files/images/portfolio/korporaciya-razvitie/korporaciya-razvitie-2.jpg" alt="korporaciya-razvitie-picture">
+        <img src="/images/portfolio/korporaciya-razvitie/korporaciya-razvitie-2.jpg" alt="korporaciya-razvitie-picture">
     </div>
 
     <div class="info-block-container">
@@ -197,17 +198,17 @@
         <h2 class="h2-title">Концепт — "Прогресс"</h2>
     </div>
     <div class="image-container">
-        <img src="/files/images/portfolio/korporaciya-razvitie/korporaciya-razvitie-3.jpg" alt="korporaciya-razvitie-picture">
+        <img src="/images/portfolio/korporaciya-razvitie/korporaciya-razvitie-3.jpg" alt="korporaciya-razvitie-picture">
     </div>
 
     <div class="gl-container">
         <h2 class="h2-title">Элементы фирменного стиля для концепта "Прогресс""</h2>
     </div>
     <div class="image-container">
-        <img src="/files/images/portfolio/korporaciya-razvitie/korporaciya-razvitie-4.jpg" alt="korporaciya-razvitie-picture">
+        <img src="/images/portfolio/korporaciya-razvitie/korporaciya-razvitie-4.jpg" alt="korporaciya-razvitie-picture">
     </div>
     <div class="image-container">
-        <img src="/files/images/portfolio/korporaciya-razvitie/korporaciya-razvitie-5.jpg" alt="korporaciya-razvitie-picture">
+        <img src="/images/portfolio/korporaciya-razvitie/korporaciya-razvitie-5.jpg" alt="korporaciya-razvitie-picture">
     </div>
 
     <div class="info-block-container">
@@ -235,7 +236,7 @@
         <h2 class="h2-title">Концепт — "Дуб"</h2>
     </div>
     <div class="image-container">
-        <img src="/files/images/portfolio/korporaciya-razvitie/korporaciya-razvitie-6.jpg" alt="korporaciya-razvitie-picture">
+        <img src="/images/portfolio/korporaciya-razvitie/korporaciya-razvitie-6.jpg" alt="korporaciya-razvitie-picture">
     </div>
 
     <div class="info-block-container">
@@ -259,7 +260,7 @@
         <h2 class="h2-title">4 концепта фирменного стиля для корпорации "Развитие"</h2>
     </div>
     <div class="image-container">
-        <img src="/files/images/portfolio/korporaciya-razvitie/korporaciya-razvitie-7.jpg" alt="korporaciya-razvitie-picture">
+        <img src="/images/portfolio/korporaciya-razvitie/korporaciya-razvitie-7.jpg" alt="korporaciya-razvitie-picture">
     </div>
 
     <div class="info-block-container">
@@ -324,28 +325,7 @@
 </section>
 @stop
 
-
 @section('page-scripts')
-    <!--скрипты для всех страниц конец-->
+    <script src="/js/portfolio-main.js"></script>
 
-    <script src="/js/viewportchecker.js"></script>
-
-    <!-- OwlCarousel -->
-    <script src="/js/owl.carousel.min.js"></script>
-    <!--<script src="../js/owl.lazyload.js"></script>-->
-
-    <!-- SmoothScroll -->
-    <script src="/js/SmoothScroll.js"></script>
-
-    <!-- star rating -->
-    <script src="/js/star-rating.js"></script>
-    <link rel="stylesheet" href="/css/star-rating.css" media="all" type="text/css"/>
-    <script type="text/javascript">
-        $(".rating").rating({min:1, max:5, step:0.5, size:'sm'});
-
-        $('.clear-rating').hide();
-        $('.caption').hide();
-    </script>
-
-    <!-- include own JavaScript -->
 @stop

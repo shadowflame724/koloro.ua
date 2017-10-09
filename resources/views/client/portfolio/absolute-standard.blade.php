@@ -5,14 +5,14 @@
 @section('page-meta')
     <meta name="description" content="{{ $portfolio->meta->{'description' . $langSuf} }}">
     <meta name="keywords" content="{{ $portfolio->meta->{'keywords' . $langSuf} }}">
+    <meta property=og:image content="{{ url('images/portfolio') . '/' .$portfolio->image->link }}"/>
 @stop
 
 @section('page-style')
 
     <!-- OwlCarousel -->
-    <link rel="stylesheet" href="/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="/css/led-rodnik.css">
+
+    <link rel="stylesheet" href="/css/portfolio-main.css">
 
 @stop
 
@@ -25,7 +25,7 @@
     @include('layouts.whiteheader')
 
 <section id="absolute-standard">
-    <div class="bg-container top-container" style="background-image: url('/files/images/portfolio/absolute-standard/absolute-standard-3.jpg')">
+    <div class="bg-container top-container" style="background-image: url('/images/portfolio/absolute-standard/absolute-standard-3.jpg')">
         <div class="dark-mask"></div>
         <div class="gl-container title-container">
             <h1 class="top-title">
@@ -123,7 +123,7 @@
         <h2 class="h2-title">Дизайн упаковки для водки Absolute Standard</h2>
     </div>
     <div class="image-container">
-        <img src="/files/images/portfolio/absolute-standard/absolute-standard-1.jpg" alt="absolute-standard-picture">
+        <img src="/images/portfolio/absolute-standard/absolute-standard-1.jpg" alt="absolute-standard-picture">
     </div>
 
     <div class="info-block-container">
@@ -185,21 +185,21 @@
         <h2 class="h2-title">Новый водочный бренд — Absolute Standard</h2>
     </div>
     <div class="image-container">
-        <img src="/files/images/portfolio/absolute-standard/absolute-standard-2.jpg" alt="absolute-standard-picture">
+        <img src="/images/portfolio/absolute-standard/absolute-standard-2.jpg" alt="absolute-standard-picture">
     </div>
 
     <div class="gl-container">
         <h2 class="h2-title">Дизайн бутылки водки "Абсолютный Стандарт"</h2>
     </div>
     <div class="image-container">
-        <img src="/files/images/portfolio/absolute-standard/absolute-standard-3.jpg" alt="absolute-standard-picture">
+        <img src="/images/portfolio/absolute-standard/absolute-standard-3.jpg" alt="absolute-standard-picture">
     </div>
 
     <div class="gl-container">
         <h2 class="h2-title">Дизайн этикетки и колпака водки Absolute Standard</h2>
     </div>
     <div class="image-container">
-        <img src="/files/images/portfolio/absolute-standard/absolute-standard-4.jpg" alt="absolute-standard-picture">
+        <img src="/images/portfolio/absolute-standard/absolute-standard-4.jpg" alt="absolute-standard-picture">
     </div>
 
     <div class="info-block-container">
@@ -243,24 +243,6 @@
 </section>
 @stop
 @section('page-scripts')
-    <script src="/js/viewportchecker.js"></script>
-
-    <!-- OwlCarousel -->
-    <script src="/js/owl.carousel.min.js"></script>
-    <!--<script src="../js/owl.lazyload.js"></script>-->
-
-    <!-- SmoothScroll -->
-    <!--<script src="../js/SmoothScroll.js"></script>-->
-
-    <!-- star rating -->
-    <script src="/js/star-rating.js"></script>
-    <link rel="stylesheet" href="/css/star-rating.css" media="all" type="text/css"/>
-    <script type="text/javascript">
-        $(".rating").rating({min:1, max:5, step:0.5, size:'sm'});
-
-        $('.clear-rating').hide();
-        $('.caption').hide();
-    </script>
 
 
     <!-- include own JavaScript -->

@@ -5,13 +5,11 @@
 @section('page-meta')
     <meta name="description" content="{{ $portfolio->meta->{'description' . $langSuf} }}">
     <meta name="keywords" content="{{ $portfolio->meta->{'keywords' . $langSuf} }}">
+    <meta property=og:image content="{{ url('images/portfolio') . '/' .$portfolio->image->link }}"/>
 @stop
 
 @section('page-style')
-    <!-- OwlCarousel -->
-    <link rel="stylesheet" href="/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="/css/gremuchaya-smes.css">
+    <link rel="stylesheet" href="/css/portfolio/portfolio-gremuchaya-smes.css">
 @stop
 
 
@@ -66,10 +64,10 @@
         <div class="two-images-container packages-cont">
             <div class="gl-container">
                 <div class="image-left">
-                    <img src="/files/images/portfolio/gremuchaya-smes/packaging-1-front.png" alt="pencil-image" class="">
+                    <img src="/images/portfolio/gremuchaya-smes/packaging-1-front.png" alt="pencil-image" class="">
                 </div>
                 <div class="image-right">
-                    <img src="/files/images/portfolio/gremuchaya-smes/packaging-1-back.png" alt="pencil-image" class="">
+                    <img src="/images/portfolio/gremuchaya-smes/packaging-1-back.png" alt="pencil-image" class="">
                 </div>
             </div>
         </div>
@@ -162,16 +160,16 @@
 
     <div class="naming-slider-cont">
         <span class="arrow-left-btn">
-            <img src="/files/images/portfolio/general/slide_left_white.png">
+            <img src="/images/portfolio/general/slide_left_white.png">
         </span>
         <span class="arrow-right-btn">
-            <img src="/files/images/portfolio/general/slide_right_white.png">
+            <img src="/images/portfolio/general/slide_right_white.png">
         </span>
 
         <div class="owl-carousel owl-theme naming-slider">
-            <!--<img src="/files/images/portfolio/gremuchaya-smes/naming-1.jpg" alt="naming-photo">-->
+            <!--<img src="/images/portfolio/gremuchaya-smes/naming-1.jpg" alt="naming-photo">-->
             <div class="item">
-                <div class="bg-container" style="background-image: url('/files/images/portfolio/gremuchaya-smes/naming-1.jpg')">
+                <div class="bg-container" style="background-image: url('/images/portfolio/gremuchaya-smes/naming-1.jpg')">
                     <div class="info-text">
                         <div class="gl-container">
                             <p>
@@ -188,7 +186,7 @@
                 </div>
             </div>
             <div class="item">
-                <div class="bg-container" style="background-image: url('/files/images/portfolio/gremuchaya-smes/naming-2.jpg')">
+                <div class="bg-container" style="background-image: url('/images/portfolio/gremuchaya-smes/naming-2.jpg')">
                     <div class="info-text">
                         <div class="gl-container">
                             <p>
@@ -206,7 +204,7 @@
                 </div>
             </div>
             <div class="item">
-                <div class="bg-container" style="background-image: url('/files/images/portfolio/gremuchaya-smes/naming-3.jpg')">
+                <div class="bg-container" style="background-image: url('/images/portfolio/gremuchaya-smes/naming-3.jpg')">
                     <div class="info-text">
                         <div class="gl-container">
                             <p>
@@ -280,10 +278,10 @@
 
     <div class="two-images-container mouses-traps-cont">
         <div class="image-left">
-            <img src="/files/images/portfolio/gremuchaya-smes/image-2.jpg" alt="mouses-photo">
+            <img src="/images/portfolio/gremuchaya-smes/image-2.jpg" alt="mouses-photo">
         </div>
         <div class="image-right">
-            <img src="/files/images/portfolio/gremuchaya-smes/image-3.jpg" alt="traps-photo">
+            <img src="/images/portfolio/gremuchaya-smes/image-3.jpg" alt="traps-photo">
         </div>
     </div>
 
@@ -324,7 +322,7 @@
 
     <div class="image-container concept-1-cont">
         <div class="gl-container">
-            <img src="/files/images/portfolio/gremuchaya-smes/packaging-concept-1.png" alt="packaging-concept-photo">
+            <img src="/images/portfolio/gremuchaya-smes/packaging-concept-1.png" alt="packaging-concept-photo">
         </div>
     </div>
 
@@ -362,7 +360,7 @@
 
     <div class="image-container concept-2-cont">
         <div class="gl-container">
-            <img src="/files/images/portfolio/gremuchaya-smes/packaging-concept-2.png" alt="packaging-concept-photo">
+            <img src="/images/portfolio/gremuchaya-smes/packaging-concept-2.png" alt="packaging-concept-photo">
         </div>
     </div>
 
@@ -408,7 +406,7 @@
 
         <div class="image-container concept-3-cont">
             <div class="gl-container">
-                <img src="/files/images/portfolio/gremuchaya-smes/packaging-concept-3.png" alt="packaging-concept-photo">
+                <img src="/images/portfolio/gremuchaya-smes/packaging-concept-3.png" alt="packaging-concept-photo">
             </div>
         </div>
 
@@ -416,7 +414,7 @@
             <h2 class="h2-title header-white">Логотип</h2>
 
             <div class="image-container logo-cont">
-                <img src="/files/images/portfolio/gremuchaya-smes/logo.png" alt="logo-photo">
+                <img src="/images/portfolio/gremuchaya-smes/logo.png" alt="logo-photo">
             </div>
         </div>
 
@@ -459,7 +457,7 @@
 
         <div class="gl-container">
             <div class="image-container infographic-1-cont">
-                <img src="/files/images/portfolio/gremuchaya-smes/infographic-1.png" alt="infographic-photo">
+                <img src="/images/portfolio/gremuchaya-smes/infographic-1.png" alt="infographic-photo">
             </div>
         </div>
 
@@ -467,7 +465,7 @@
             <div class="gl-container">
                 <div class="info-left">
                     <div class="image-container infographic-2-cont">
-                        <img src="/files/images/portfolio/gremuchaya-smes/infographic-2.png" alt="infographic-photo">
+                        <img src="/images/portfolio/gremuchaya-smes/infographic-2.png" alt="infographic-photo">
                     </div>
                 </div>
                 <div class="info-right">
@@ -550,28 +548,5 @@
 @stop
 
 @section('page-scripts')
-    <!--скрипты для всех страниц конец-->
-
-    <script src="/js/viewportchecker.js"></script>
-
-    <!-- OwlCarousel -->
-    <script src="/js/owl.carousel.min.js"></script>
-    <!--<script src="../js/owl.lazyload.js"></script>-->
-
-    <!-- SmoothScroll -->
-    <script src="/js/SmoothScroll.js"></script>
-
-    <!-- star rating -->
-    <script src="/js/star-rating.js"></script>
-    <link rel="stylesheet" href="/css/star-rating.css" media="all" type="text/css"/>
-    <script type="text/javascript">
-        $(".rating").rating({min:1, max:5, step:0.5, size:'sm'});
-
-        $('.clear-rating').hide();
-        $('.caption').hide();
-    </script>
-
-    <!-- include own JavaScript -->
-    <script src="/js/portfolio-main.js"></script>
-    <script src="/js/gremuchaya-smes.js"></script>
+    <script src="/js/portfolio/portfolio-gremuchaya-smes.js"></script>
 @stop

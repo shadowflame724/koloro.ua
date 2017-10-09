@@ -1,0 +1,698 @@
+.yellow-gradient, #frau-pampe {
+  background-image: linear-gradient(90deg, #ffc600 0%, #e9b800 100%); }
+
+.red-gradient, #frau-pampe .concepts-info, #frau-pampe .company-aims-3 {
+  background-image: linear-gradient(90deg, #af292b 0%, #af292b 100%); }
+
+#frau-pampe .top-container {
+  position: relative; }
+  #frau-pampe .top-container .cereals-1, #frau-pampe .top-container .cereals-2, #frau-pampe .top-container .cereals-3 {
+    position: absolute;
+    width: 100%; }
+    @media all and (max-width: 1200px) {
+      #frau-pampe .top-container .cereals-1, #frau-pampe .top-container .cereals-2, #frau-pampe .top-container .cereals-3 {
+        width: 50%; } }
+    @media all and (max-width: 768px) {
+      #frau-pampe .top-container .cereals-1, #frau-pampe .top-container .cereals-2, #frau-pampe .top-container .cereals-3 {
+        width: 20%; } }
+  #frau-pampe .top-container .cereals-1 {
+    top: 5%;
+    left: 0;
+    max-width: 351px; }
+  #frau-pampe .top-container .cereals-2 {
+    top: 5%;
+    right: 0;
+    max-width: 480px; }
+  #frau-pampe .top-container .cereals-3 {
+    top: 5%;
+    right: 10%;
+    max-width: 171px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+  #frau-pampe .top-container .title-container {
+    position: relative;
+    padding-top: 10vh; }
+    @media all and (max-width: 768px) {
+      #frau-pampe .top-container .title-container {
+        padding-top: 15vh; } }
+    #frau-pampe .top-container .title-container h1 {
+      font-size: 80px;
+      font-family: "SegoeUIBold", sans-serif;
+      color: black;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1.2;
+      text-align: center;
+      text-shadow: 0px 2px 2px #fff;
+      position: relative;
+      z-index: 5;
+      width: 100%; }
+      @media all and (max-width: 1400px) {
+        #frau-pampe .top-container .title-container h1 {
+          font-size: 70px; } }
+      @media all and (max-width: 1200px) {
+        #frau-pampe .top-container .title-container h1 {
+          font-size: 60px; } }
+      @media all and (max-width: 1000px) {
+        #frau-pampe .top-container .title-container h1 {
+          font-size: 50px; } }
+      @media all and (max-width: 700px) {
+        #frau-pampe .top-container .title-container h1 {
+          font-size: 40px; } }
+      @media all and (max-width: 500px) {
+        #frau-pampe .top-container .title-container h1 {
+          font-size: 20px; } }
+    #frau-pampe .top-container .title-container h2 {
+      padding-top: 20px;
+      font-size: 36px;
+      font-family: "SegoeUIBold", sans-serif;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1.5;
+      text-align: center;
+      text-shadow: 0px 3px 2px #c59c01; }
+      @media all and (max-width: 1200px) {
+        #frau-pampe .top-container .title-container h2 {
+          font-size: 32px; } }
+      @media all and (max-width: 1000px) {
+        #frau-pampe .top-container .title-container h2 {
+          font-size: 26px; } }
+      @media all and (max-width: 700px) {
+        #frau-pampe .top-container .title-container h2 {
+          font-size: 24px; } }
+      @media all and (max-width: 500px) {
+        #frau-pampe .top-container .title-container h2 {
+          font-size: 16px; } }
+  #frau-pampe .top-container .boxes-imgs-container {
+    width: 100%;
+    padding-top: 50px;
+    position: relative;
+    left: 2%; }
+    @media all and (max-width: 1200px) {
+      #frau-pampe .top-container .boxes-imgs-container {
+        left: 4%; } }
+    @media all and (max-width: 768px) {
+      #frau-pampe .top-container .boxes-imgs-container {
+        left: 10%; } }
+    #frau-pampe .top-container .boxes-imgs-container .box-item {
+      position: relative;
+      display: inline-block;
+      text-align: center; }
+      #frau-pampe .top-container .boxes-imgs-container .box-item img {
+        width: 125%;
+        max-width: 653px; }
+
+#frau-pampe .image-container {
+  width: 100%;
+  position: relative;
+  text-align: center; }
+  #frau-pampe .image-container .dark-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(60, 60, 60, 0.5);
+    z-index: 2; }
+  #frau-pampe .image-container .big-image {
+    width: 100%;
+    position: relative; }
+  #frau-pampe .image-container .top-image-animate {
+    opacity: 0;
+    transition: all 2s; }
+  #frau-pampe .image-container .second-image-animate {
+    opacity: 0;
+    transition: all 2s; }
+  #frau-pampe .image-container .image-animate-active {
+    opacity: 1 !important;
+    left: 0 !important; }
+  #frau-pampe .image-container h1 {
+    font-size: 80px;
+    font-family: "SegoeUIBold", sans-serif;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.004);
+    position: absolute;
+    top: 30%;
+    z-index: 60;
+    width: 100%; }
+    @media all and (max-width: 1000px) {
+      #frau-pampe .image-container h1 {
+        font-size: 60px;
+        top: 15%; } }
+    @media all and (max-width: 700px) {
+      #frau-pampe .image-container h1 {
+        font-size: 40px;
+        top: 30%; } }
+    @media all and (max-width: 500px) {
+      #frau-pampe .image-container h1 {
+        font-size: 20px;
+        top: 30%; } }
+
+#frau-pampe .info-block-container .gl-container .info-left .info-left-title {
+  color: black; }
+
+#frau-pampe .info-block-container .gl-container .info-right {
+  padding-left: 20px; }
+  #frau-pampe .info-block-container .gl-container .info-right p {
+    color: black; }
+  #frau-pampe .info-block-container .gl-container .info-right .read-more-btn {
+    color: white; }
+
+#frau-pampe .concepts-info {
+  position: relative;
+  padding-bottom: 0; }
+  #frau-pampe .concepts-info .gl-container h2 {
+    color: #fec500; }
+  #frau-pampe .concepts-info .gl-container .info-right {
+    color: #fff; }
+  #frau-pampe .concepts-info a.gl-link {
+    color: #fec500;
+    border-bottom: 2px solid #fec500; }
+  #frau-pampe .concepts-info .cereals-19 {
+    position: absolute;
+    width: 100%;
+    top: 25%;
+    right: 0;
+    max-width: 480px; }
+    @media all and (max-width: 1200px) {
+      #frau-pampe .concepts-info .cereals-19 {
+        width: 50%; } }
+    @media all and (max-width: 768px) {
+      #frau-pampe .concepts-info .cereals-19 {
+        width: 20%; } }
+  #frau-pampe .concepts-info .image-container {
+    position: relative;
+    width: 50%;
+    display: inline-block;
+    vertical-align: top; }
+    #frau-pampe .concepts-info .image-container .frau-box {
+      position: relative;
+      left: -15%;
+      width: 100%;
+      max-width: 1062px; }
+    @media all and (max-width: 768px) {
+      #frau-pampe .concepts-info .image-container {
+        width: 100%;
+        margin: 0 auto; } }
+  #frau-pampe .concepts-info .info-key-words {
+    font-size: 0; }
+    #frau-pampe .concepts-info .info-key-words .info-right {
+      padding: 0 10px 0 20px;
+      width: 40%;
+      display: inline-block;
+      vertical-align: top;
+      color: white; }
+      #frau-pampe .concepts-info .info-key-words .info-right h2 {
+        position: relative;
+        z-index: 5;
+        font-size: 36px;
+        font-family: "SegoeUIBold", sans-serif;
+        color: white;
+        font-weight: bold;
+        line-height: 1.2;
+        text-align: center;
+        margin-bottom: 20px; }
+        @media all and (max-width: 600px) {
+          #frau-pampe .concepts-info .info-key-words .info-right h2 {
+            font-size: 20px; } }
+      #frau-pampe .concepts-info .info-key-words .info-right p {
+        position: relative;
+        z-index: 5;
+        font-size: 20px;
+        font-family: "SegoeUILight", sans-serif;
+        color: white;
+        line-height: 1.2;
+        text-align: left; }
+        @media all and (max-width: 600px) {
+          #frau-pampe .concepts-info .info-key-words .info-right p {
+            font-size: 16px; } }
+  #frau-pampe .concepts-info .info-block-container .info-left .info-left-title {
+    color: #fff; }
+  #frau-pampe .concepts-info .info-block-container .info-right p {
+    color: #fff; }
+  #frau-pampe .concepts-info .info-block-container .info-right .read-more-btn {
+    color: #fec500; }
+  #frau-pampe .concepts-info .logo-container, #frau-pampe .concepts-info .clock-container {
+    display: block;
+    margin: 0 auto;
+    text-align: center; }
+    #frau-pampe .concepts-info .logo-container img, #frau-pampe .concepts-info .clock-container img {
+      width: 100%; }
+  #frau-pampe .concepts-info .logo-container img {
+    max-width: 503px; }
+    @media all and (max-width: 768px) {
+      #frau-pampe .concepts-info .logo-container img {
+        width: 50%; } }
+  #frau-pampe .concepts-info .clock-container {
+    padding-bottom: 50px; }
+    #frau-pampe .concepts-info .clock-container img {
+      max-width: 154px; }
+    @media all and (max-width: 768px) {
+      #frau-pampe .concepts-info .clock-container {
+        padding-bottom: 20px; }
+        #frau-pampe .concepts-info .clock-container img {
+          width: 30%; } }
+  #frau-pampe .concepts-info .info-graphic .gl-container .info-left h2 {
+    color: #fff; }
+  #frau-pampe .concepts-info .food-icons-container {
+    width: 40%;
+    margin: 0 auto;
+    padding-bottom: 10vh;
+    font-size: 0; }
+    @media all and (max-width: 1600px) {
+      #frau-pampe .concepts-info .food-icons-container {
+        width: 60%; } }
+    @media all and (max-width: 1200px) {
+      #frau-pampe .concepts-info .food-icons-container {
+        width: 80%; } }
+    @media all and (max-width: 768px) {
+      #frau-pampe .concepts-info .food-icons-container {
+        width: 100%;
+        padding-bottom: 5vh; } }
+    #frau-pampe .concepts-info .food-icons-container .food-icon {
+      width: 25%;
+      display: inline-block;
+      text-align: center;
+      padding: 0 10px;
+      /*.sik-title {
+                    max-width: 56px;
+                }
+                .yogurt-title {
+
+                }
+                .voda-title {
+                    max-width: 93px;
+                }
+                .moloko-title {
+                    max-width: 145px;
+                }*/ }
+      #frau-pampe .concepts-info .food-icons-container .food-icon .food-title, #frau-pampe .concepts-info .food-icons-container .food-icon .food-img {
+        display: block;
+        margin: 0 auto;
+        width: 100%; }
+      #frau-pampe .concepts-info .food-icons-container .food-icon .food-title {
+        padding-bottom: 30px;
+        max-width: 145px; }
+        @media all and (max-width: 768px) {
+          #frau-pampe .concepts-info .food-icons-container .food-icon .food-title {
+            padding-bottom: 10px; } }
+      #frau-pampe .concepts-info .food-icons-container .food-icon .food-img {
+        max-width: 141px;
+        padding: 10px; }
+
+#frau-pampe .company-aims {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 30vh; }
+  @media all and (max-width: 768px) {
+    #frau-pampe .company-aims {
+      padding-top: 20px; } }
+  #frau-pampe .company-aims a.gl-link {
+    color: #af292b;
+    border-bottom: 2px solid #af292b; }
+  #frau-pampe .company-aims .cereals-4, #frau-pampe .company-aims .cereals-5, #frau-pampe .company-aims .cereals-6, #frau-pampe .company-aims .cereals-7, #frau-pampe .company-aims .cereals-8, #frau-pampe .company-aims .cereals-9, #frau-pampe .company-aims .chery-1 {
+    position: absolute;
+    width: 100%; }
+    @media all and (max-width: 1200px) {
+      #frau-pampe .company-aims .cereals-4, #frau-pampe .company-aims .cereals-5, #frau-pampe .company-aims .cereals-6, #frau-pampe .company-aims .cereals-7, #frau-pampe .company-aims .cereals-8, #frau-pampe .company-aims .cereals-9, #frau-pampe .company-aims .chery-1 {
+        width: 50%; } }
+    @media all and (max-width: 768px) {
+      #frau-pampe .company-aims .cereals-4, #frau-pampe .company-aims .cereals-5, #frau-pampe .company-aims .cereals-6, #frau-pampe .company-aims .cereals-7, #frau-pampe .company-aims .cereals-8, #frau-pampe .company-aims .cereals-9, #frau-pampe .company-aims .chery-1 {
+        width: 20%; } }
+  #frau-pampe .company-aims .cereals-4 {
+    left: 10%;
+    top: 10%;
+    max-width: 284px; }
+  #frau-pampe .company-aims .cereals-5 {
+    left: 0;
+    top: 70%;
+    max-width: 351px; }
+  #frau-pampe .company-aims .cereals-6 {
+    right: 0;
+    top: -10%;
+    max-width: 480px; }
+  #frau-pampe .company-aims .cereals-7 {
+    right: 2%;
+    top: 10%;
+    max-width: 171px; }
+  #frau-pampe .company-aims .cereals-8 {
+    right: 5%;
+    top: 50%;
+    max-width: 161px; }
+  #frau-pampe .company-aims .cereals-9 {
+    right: 0;
+    bottom: -50%;
+    max-width: 480px; }
+  #frau-pampe .company-aims .chery-1 {
+    right: 5%;
+    top: 40%;
+    max-width: 242px; }
+
+#frau-pampe .company-aims-2 {
+  position: relative;
+  padding-top: 70vh;
+  padding-bottom: 70vh;
+  background-color: #fff; }
+  @media all and (max-width: 768px) {
+    #frau-pampe .company-aims-2 {
+      padding-bottom: 35vh; } }
+  @media all and (max-width: 1400px) {
+    #frau-pampe .company-aims-2 {
+      padding-top: 50vh; } }
+  @media all and (max-width: 1200px) {
+    #frau-pampe .company-aims-2 {
+      padding-top: 40vh; } }
+  @media all and (max-width: 768px) {
+    #frau-pampe .company-aims-2 {
+      padding-top: 30vh; } }
+  #frau-pampe .company-aims-2 .info-block-container .info-right p {
+    color: black; }
+  #frau-pampe .company-aims-2 .info-block-container .info-right .read-more-btn {
+    color: #fec500; }
+  #frau-pampe .company-aims-2 .box-horizontal {
+    width: 80%;
+    max-width: 1537px;
+    position: absolute;
+    top: -32vh;
+    left: 20%; }
+    @media all and (max-width: 1400px) {
+      #frau-pampe .company-aims-2 .box-horizontal {
+        top: -20vh; } }
+    @media all and (max-width: 1200px) {
+      #frau-pampe .company-aims-2 .box-horizontal {
+        top: -15vh; } }
+    @media all and (max-width: 768px) {
+      #frau-pampe .company-aims-2 .box-horizontal {
+        top: -10vh; } }
+  #frau-pampe .company-aims-2 .cereals-10, #frau-pampe .company-aims-2 .abrikos, #frau-pampe .company-aims-2 .cereals-11, #frau-pampe .company-aims-2 .metr, #frau-pampe .company-aims-2 .cereals-12 {
+    position: absolute;
+    width: 100%; }
+    @media all and (max-width: 1200px) {
+      #frau-pampe .company-aims-2 .cereals-10, #frau-pampe .company-aims-2 .abrikos, #frau-pampe .company-aims-2 .cereals-11, #frau-pampe .company-aims-2 .metr, #frau-pampe .company-aims-2 .cereals-12 {
+        width: 50%; } }
+    @media all and (max-width: 768px) {
+      #frau-pampe .company-aims-2 .cereals-10, #frau-pampe .company-aims-2 .abrikos, #frau-pampe .company-aims-2 .cereals-11, #frau-pampe .company-aims-2 .metr, #frau-pampe .company-aims-2 .cereals-12 {
+        width: 20%; } }
+  #frau-pampe .company-aims-2 .cereals-10 {
+    z-index: 5;
+    left: -5%;
+    top: 0;
+    max-width: 260px; }
+  #frau-pampe .company-aims-2 .abrikos {
+    left: 1%;
+    top: 5vh;
+    max-width: 225px; }
+  #frau-pampe .company-aims-2 .cereals-11 {
+    left: -5%;
+    top: 5vh;
+    max-width: 288px; }
+  #frau-pampe .company-aims-2 .metr {
+    z-index: 3;
+    left: -10vh;
+    bottom: 0;
+    max-width: 438px; }
+  #frau-pampe .company-aims-2 .cereals-12 {
+    top: 30vh;
+    right: -5%;
+    max-width: 480px; }
+  #frau-pampe .company-aims-2 .graphity-image-container {
+    width: 80%;
+    position: absolute;
+    z-index: 5;
+    bottom: -50vh;
+    left: 10%; }
+    @media all and (max-width: 768px) {
+      #frau-pampe .company-aims-2 .graphity-image-container {
+        bottom: -25vh; } }
+    #frau-pampe .company-aims-2 .graphity-image-container .graphity-image {
+      width: 80%;
+      margin: 0 auto;
+      position: relative; }
+      #frau-pampe .company-aims-2 .graphity-image-container .graphity-image .paper-graphity {
+        width: 100%;
+        max-width: 943px; }
+      #frau-pampe .company-aims-2 .graphity-image-container .graphity-image .paper-1, #frau-pampe .company-aims-2 .graphity-image-container .graphity-image .paper-2, #frau-pampe .company-aims-2 .graphity-image-container .graphity-image .pencil-1, #frau-pampe .company-aims-2 .graphity-image-container .graphity-image .pencil-2, #frau-pampe .company-aims-2 .graphity-image-container .graphity-image .elastic, #frau-pampe .company-aims-2 .graphity-image-container .graphity-image .apple, #frau-pampe .company-aims-2 .graphity-image-container .graphity-image .pomade {
+        position: absolute;
+        z-index: 3;
+        width: 30%; }
+      #frau-pampe .company-aims-2 .graphity-image-container .graphity-image .paper-1 {
+        top: 0;
+        left: 0;
+        max-width: 370px; }
+      #frau-pampe .company-aims-2 .graphity-image-container .graphity-image .paper-2 {
+        top: 0;
+        right: 0;
+        max-width: 312px; }
+      #frau-pampe .company-aims-2 .graphity-image-container .graphity-image .pencil-1 {
+        z-index: 2;
+        top: 0;
+        right: -5%;
+        width: 20%;
+        max-width: 132px; }
+      #frau-pampe .company-aims-2 .graphity-image-container .graphity-image .pencil-2 {
+        bottom: 0;
+        left: -10%;
+        max-width: 286px; }
+      #frau-pampe .company-aims-2 .graphity-image-container .graphity-image .elastic {
+        bottom: 35%;
+        right: 0%;
+        max-width: 209px; }
+      #frau-pampe .company-aims-2 .graphity-image-container .graphity-image .apple {
+        bottom: 0;
+        right: 10%;
+        max-width: 382px; }
+      #frau-pampe .company-aims-2 .graphity-image-container .graphity-image .pomade {
+        top: 40%;
+        right: -30%;
+        max-width: 352px; }
+
+#frau-pampe .company-aims-3 {
+  position: relative;
+  padding-top: 50vh; }
+  @media all and (max-width: 768px) {
+    #frau-pampe .company-aims-3 {
+      padding-top: 25vh; } }
+  #frau-pampe .company-aims-3 a.gl-link {
+    color: #fec500;
+    border-bottom: 2px solid #fec500; }
+  #frau-pampe .company-aims-3 .cereals-13, #frau-pampe .company-aims-3 .cereals-14, #frau-pampe .company-aims-3 .cereals-15, #frau-pampe .company-aims-3 .cereals-16, #frau-pampe .company-aims-3 .cereals-17, #frau-pampe .company-aims-3 .cereals-18 {
+    position: absolute;
+    z-index: 2;
+    width: 100%; }
+    @media all and (max-width: 1200px) {
+      #frau-pampe .company-aims-3 .cereals-13, #frau-pampe .company-aims-3 .cereals-14, #frau-pampe .company-aims-3 .cereals-15, #frau-pampe .company-aims-3 .cereals-16, #frau-pampe .company-aims-3 .cereals-17, #frau-pampe .company-aims-3 .cereals-18 {
+        width: 50%; } }
+    @media all and (max-width: 768px) {
+      #frau-pampe .company-aims-3 .cereals-13, #frau-pampe .company-aims-3 .cereals-14, #frau-pampe .company-aims-3 .cereals-15, #frau-pampe .company-aims-3 .cereals-16, #frau-pampe .company-aims-3 .cereals-17, #frau-pampe .company-aims-3 .cereals-18 {
+        width: 20%; } }
+  #frau-pampe .company-aims-3 .cereals-13 {
+    max-width: 284px;
+    top: 50vh;
+    left: 0; }
+  #frau-pampe .company-aims-3 .cereals-14 {
+    max-width: 351px;
+    top: 70vh;
+    left: 0; }
+  #frau-pampe .company-aims-3 .cereals-15 {
+    max-width: 288px;
+    top: 90vh;
+    left: 0; }
+  #frau-pampe .company-aims-3 .cereals-16 {
+    max-width: 171px;
+    top: 50vh;
+    right: 0; }
+  #frau-pampe .company-aims-3 .cereals-17 {
+    max-width: 480px;
+    top: 70vh;
+    right: 0; }
+  #frau-pampe .company-aims-3 .cereals-18 {
+    max-width: 161px;
+    top: 90vh;
+    right: 0; }
+  #frau-pampe .company-aims-3 .info-block-container .info-left .info-left-title {
+    color: #fff; }
+  #frau-pampe .company-aims-3 .info-block-container .info-right p {
+    color: #fff; }
+  #frau-pampe .company-aims-3 .info-block-container .info-right .read-more-btn {
+    color: #fec500; }
+
+#frau-pampe .company-aims-4 {
+  background-color: #fff; }
+  #frau-pampe .company-aims-4 .food-items-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 80px 0; }
+    @media all and (max-width: 768px) {
+      #frau-pampe .company-aims-4 .food-items-container {
+        padding: 20px 0; } }
+    #frau-pampe .company-aims-4 .food-items-container .food-item {
+      display: inline-block;
+      width: 16%;
+      text-align: center; }
+      @media all and (max-width: 768px) {
+        #frau-pampe .company-aims-4 .food-items-container .food-item {
+          width: 32%; } }
+      #frau-pampe .company-aims-4 .food-items-container .food-item img {
+        padding: 20px;
+        width: 100%; }
+      #frau-pampe .company-aims-4 .food-items-container .food-item .carrot {
+        max-width: 176px; }
+      #frau-pampe .company-aims-4 .food-items-container .food-item .abrikos-2 {
+        max-width: 102px; }
+      #frau-pampe .company-aims-4 .food-items-container .food-item .cherry {
+        max-width: 131px; }
+      #frau-pampe .company-aims-4 .food-items-container .food-item .peach-2 {
+        max-width: 110px; }
+      #frau-pampe .company-aims-4 .food-items-container .food-item .zerno {
+        max-width: 157px; }
+      #frau-pampe .company-aims-4 .food-items-container .food-item .apple {
+        max-width: 104px; }
+  #frau-pampe .company-aims-4 .info-block-container .info-right p {
+    color: black; }
+  #frau-pampe .company-aims-4 .info-block-container .info-right .read-more-btn {
+    color: #fec500; }
+  #frau-pampe .company-aims-4 .dodavay {
+    padding: 100px 0;
+    width: 80%;
+    max-width: 736px; }
+    @media all and (max-width: 768px) {
+      #frau-pampe .company-aims-4 .dodavay {
+        padding: 20px 0; } }
+  #frau-pampe .company-aims-4 .logo-frau-big-container {
+    position: relative;
+    width: 100%;
+    text-align: right; }
+    #frau-pampe .company-aims-4 .logo-frau-big-container .logo-frau-big {
+      width: 50%;
+      max-width: 596px; }
+    #frau-pampe .company-aims-4 .logo-frau-big-container .peach, #frau-pampe .company-aims-4 .logo-frau-big-container .cereals-19 {
+      position: absolute;
+      width: 100%; }
+      @media all and (max-width: 1200px) {
+        #frau-pampe .company-aims-4 .logo-frau-big-container .peach, #frau-pampe .company-aims-4 .logo-frau-big-container .cereals-19 {
+          width: 50%; } }
+      @media all and (max-width: 768px) {
+        #frau-pampe .company-aims-4 .logo-frau-big-container .peach, #frau-pampe .company-aims-4 .logo-frau-big-container .cereals-19 {
+          width: 20%; } }
+    #frau-pampe .company-aims-4 .logo-frau-big-container .peach {
+      max-width: 519px;
+      z-index: 3;
+      top: 10%;
+      left: 0; }
+    #frau-pampe .company-aims-4 .logo-frau-big-container .cereals-19 {
+      max-width: 335px;
+      z-index: 2;
+      top: 50%;
+      left: 0; }
+  #frau-pampe .company-aims-4 .info-utp .gl-container {
+    padding-top: 0; }
+
+#frau-pampe .company-aims-5 {
+  position: relative;
+  padding-top: 20px;
+  background-color: #000; }
+  #frau-pampe .company-aims-5 .chery-2, #frau-pampe .company-aims-5 .cereals-20, #frau-pampe .company-aims-5 .cereals-21, #frau-pampe .company-aims-5 .cereals-22, #frau-pampe .company-aims-5 .cereals-23, #frau-pampe .company-aims-5 .cereals-24 {
+    position: absolute;
+    width: 100%; }
+    @media all and (max-width: 1200px) {
+      #frau-pampe .company-aims-5 .chery-2, #frau-pampe .company-aims-5 .cereals-20, #frau-pampe .company-aims-5 .cereals-21, #frau-pampe .company-aims-5 .cereals-22, #frau-pampe .company-aims-5 .cereals-23, #frau-pampe .company-aims-5 .cereals-24 {
+        width: 50%; } }
+    @media all and (max-width: 768px) {
+      #frau-pampe .company-aims-5 .chery-2, #frau-pampe .company-aims-5 .cereals-20, #frau-pampe .company-aims-5 .cereals-21, #frau-pampe .company-aims-5 .cereals-22, #frau-pampe .company-aims-5 .cereals-23, #frau-pampe .company-aims-5 .cereals-24 {
+        width: 20%; } }
+  #frau-pampe .company-aims-5 .chery-2 {
+    max-width: 242px;
+    z-index: 3;
+    top: 2%;
+    left: 5%; }
+  #frau-pampe .company-aims-5 .cereals-20 {
+    max-width: 351px;
+    z-index: 2;
+    top: 40%;
+    left: 5%; }
+  #frau-pampe .company-aims-5 .cereals-21 {
+    max-width: 260px;
+    z-index: 3;
+    top: 40%;
+    left: 5%; }
+  #frau-pampe .company-aims-5 .cereals-22 {
+    max-width: 39px;
+    z-index: 2;
+    top: -20%;
+    right: 5%; }
+  #frau-pampe .company-aims-5 .cereals-23 {
+    max-width: 161px;
+    z-index: 3;
+    top: 20%;
+    right: 0; }
+  #frau-pampe .company-aims-5 .cereals-24 {
+    max-width: 480px;
+    z-index: 2;
+    top: 80%;
+    right: 5%; }
+  #frau-pampe .company-aims-5 .info-block-container .info-left .info-left-title {
+    color: #fff; }
+  #frau-pampe .company-aims-5 .info-block-container .info-right p {
+    color: white; }
+  #frau-pampe .company-aims-5 .info-block-container .info-right .read-more-btn {
+    color: #fec500; }
+
+#frau-pampe .contact-us-form {
+  background-color: #000; }
+  #frau-pampe .contact-us-form .cereals-25, #frau-pampe .contact-us-form .cereals-26, #frau-pampe .contact-us-form .abrikos-3, #frau-pampe .contact-us-form .cereals-27 {
+    position: absolute;
+    width: 100%; }
+    @media all and (max-width: 1200px) {
+      #frau-pampe .contact-us-form .cereals-25, #frau-pampe .contact-us-form .cereals-26, #frau-pampe .contact-us-form .abrikos-3, #frau-pampe .contact-us-form .cereals-27 {
+        width: 50%; } }
+    @media all and (max-width: 768px) {
+      #frau-pampe .contact-us-form .cereals-25, #frau-pampe .contact-us-form .cereals-26, #frau-pampe .contact-us-form .abrikos-3, #frau-pampe .contact-us-form .cereals-27 {
+        width: 20%; } }
+  #frau-pampe .contact-us-form .cereals-25 {
+    max-width: 288px;
+    z-index: 2;
+    top: 0;
+    left: -5%; }
+  #frau-pampe .contact-us-form .cereals-26 {
+    max-width: 335px;
+    z-index: 2;
+    top: 70%;
+    left: 0; }
+  #frau-pampe .contact-us-form .abrikos-3 {
+    max-width: 225px;
+    z-index: 2;
+    top: 0;
+    right: -2%; }
+  #frau-pampe .contact-us-form .cereals-27 {
+    max-width: 161px;
+    z-index: 2;
+    top: 40%;
+    right: 0; }
+  #frau-pampe .contact-us-form .gl-container .form-title {
+    color: #ffcc00; }
+  #frau-pampe .contact-us-form .gl-container p {
+    color: white; }
+    #frau-pampe .contact-us-form .gl-container p span {
+      color: white; }
+    #frau-pampe .contact-us-form .gl-container p input {
+      color: #ffcc00;
+      background-color: #000;
+      border-bottom: 2px solid #fff; }
+  #frau-pampe .contact-us-form .gl-container button {
+    color: black;
+    background-color: #ffcc00; }
+  #frau-pampe .contact-us-form .gl-container button:hover {
+    color: #ffcc00;
+    box-shadow: 0 100px 0 0 #fff inset; }
+
+#frau-pampe .like_it {
+  background-color: #000; }
+  #frau-pampe .like_it .qwestion span {
+    color: #fff; }
+  #frau-pampe .like_it p.voice {
+    color: #fff; }

@@ -5,14 +5,14 @@
 @section('page-meta')
     <meta name="description" content="{{ $portfolio->meta->{'description' . $langSuf} }}">
     <meta name="keywords" content="{{ $portfolio->meta->{'keywords' . $langSuf} }}">
+    <meta property=og:image content="{{ url('images/portfolio') . '/' .$portfolio->image->link }}"/>
+
 @stop
 
 @section('page-style')
 
-    <!-- OwlCarousel -->
-    <link rel="stylesheet" href="/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="/css/set-magazinov-myasnoi.css">
+
+    <link rel="stylesheet" href="/css/portfolio/portfolio-set-magazinov-myasnoi.css">
 
 @stop
 
@@ -187,17 +187,17 @@
     <div class="gl-container">
         <div class="naming-slider-cont">
         <span class="arrow-left-btn">
-            <img src="/files/images/portfolio/general/slide_left_black.png">
+            <img src="/images/portfolio/general/slide_left_black.png">
         </span>
             <span class="arrow-right-btn">
-            <img src="/files/images/portfolio/general/slide_right_black.png">
+            <img src="/images/portfolio/general/slide_right_black.png">
         </span>
 
             <div class="owl-carousel owl-theme naming-slider">
                 <div class="item">
                     <div class="gl-container">
                         <div class="image-container">
-                            <img src="/files/images/portfolio/set-magazinov-myasnoi/naming-1.jpg" alt="naming-photo">
+                            <img src="/images/portfolio/set-magazinov-myasnoi/naming-1.jpg" alt="naming-photo">
                         </div>
                     </div>
                 </div>
@@ -205,7 +205,7 @@
                 <div class="item">
                     <div class="gl-container">
                         <div class="image-container">
-                            <img src="/files/images/portfolio/set-magazinov-myasnoi/naming-1.jpg" alt="naming-photo">
+                            <img src="/images/portfolio/set-magazinov-myasnoi/naming-1.jpg" alt="naming-photo">
                         </div>
                     </div>
                 </div>
@@ -213,7 +213,7 @@
                 <div class="item">
                     <div class="gl-container">
                         <div class="image-container">
-                            <img src="/files/images/portfolio/set-magazinov-myasnoi/naming-1.jpg" alt="naming-photo">
+                            <img src="/images/portfolio/set-magazinov-myasnoi/naming-1.jpg" alt="naming-photo">
                         </div>
                     </div>
                 </div>
@@ -221,7 +221,7 @@
                 <div class="item">
                     <div class="gl-container">
                         <div class="image-container">
-                            <img src="/files/images/portfolio/set-magazinov-myasnoi/naming-1.jpg" alt="naming-photo">
+                            <img src="/images/portfolio/set-magazinov-myasnoi/naming-1.jpg" alt="naming-photo">
                         </div>
                     </div>
                 </div>
@@ -248,19 +248,19 @@
 
     <div class="concept-slider-cont">
         <span class="arrow-left-btn">
-            <img src="/files/images/portfolio/general/slide_left_white.png">
+            <img src="/images/portfolio/general/slide_left_white.png">
         </span>
         <span class="arrow-right-btn">
-            <img src="/files/images/portfolio/general/slide_right_white.png">
+            <img src="/images/portfolio/general/slide_right_white.png">
         </span>
 
         <div class="owl-carousel owl-theme concept-slider">
             <div class="item">
-                <div class="bg-container" style="background-image: url('/files/images/portfolio/set-magazinov-myasnoi/picture-concept-1.jpg')">
+                <div class="bg-container" style="background-image: url('/images/portfolio/set-magazinov-myasnoi/picture-concept-1.jpg')">
                     <div class="info-text">
                         <div class="gl-container">
                             <div class="image-container">
-                                <img src="/files/images/portfolio/set-magazinov-myasnoi/logo-concept-1.png" alt="logo-concept">
+                                <img src="/images/portfolio/set-magazinov-myasnoi/logo-concept-1.png" alt="logo-concept">
                             </div>
                             
                             <h2 class="info-text-header">Концепт I. «Семейные ценности»</h2>
@@ -277,11 +277,11 @@
                 </div>
             </div>
             <div class="item">
-                <div class="bg-container" style="background-image: url('/files/images/portfolio/set-magazinov-myasnoi/picture-concept-1.jpg')">
+                <div class="bg-container" style="background-image: url('/images/portfolio/set-magazinov-myasnoi/picture-concept-1.jpg')">
                     <div class="info-text">
                         <div class="gl-container">
                             <div class="image-container">
-                                <img src="/files/images/portfolio/set-magazinov-myasnoi/logo-concept-1.png" alt="logo-concept">
+                                <img src="/images/portfolio/set-magazinov-myasnoi/logo-concept-1.png" alt="logo-concept">
                             </div>
 
                             <h2 class="info-text-header">Концепт II. «Украинский»</h2>
@@ -295,11 +295,11 @@
                 </div>
             </div>
             <div class="item">
-                <div class="bg-container" style="background-image: url('/files/images/portfolio/set-magazinov-myasnoi/picture-concept-1.jpg')">
+                <div class="bg-container" style="background-image: url('/images/portfolio/set-magazinov-myasnoi/picture-concept-1.jpg')">
                     <div class="info-text">
                         <div class="gl-container">
                             <div class="image-container">
-                                <img src="/files/images/portfolio/set-magazinov-myasnoi/logo-concept-1.png" alt="logo-concept">
+                                <img src="/images/portfolio/set-magazinov-myasnoi/logo-concept-1.png" alt="logo-concept">
                             </div>
 
                             <h2 class="info-text-header">Концепт III. «Украинский, вариант 2»</h2>
@@ -318,12 +318,12 @@
         <h2 class="summary-header">Клиент долго думает ... и наконец выбирает один из вариантов</h2>
         
         <div class="image-container">
-            <img src="/files/images/portfolio/set-magazinov-myasnoi/logo-chosen.png" alt="logo-chosen" class="logo-chosen">
+            <img src="/images/portfolio/set-magazinov-myasnoi/logo-chosen.png" alt="logo-chosen" class="logo-chosen">
         </div>
     </div>
 
     <div class="image-container pattern-logo-cont">
-        <img src="/files/images/portfolio/set-magazinov-myasnoi/pattern-logo.png" alt="pattern-logo">
+        <img src="/images/portfolio/set-magazinov-myasnoi/pattern-logo.png" alt="pattern-logo">
     </div>
 
     <div class="stage-info stage-2">
@@ -342,28 +342,28 @@
     </div>
 
     <div class="image-container">
-        <img src="/files/images/portfolio/set-magazinov-myasnoi/picture-mjasnoy-1.jpg" alt="picture-mjasnoy">
+        <img src="/images/portfolio/set-magazinov-myasnoi/picture-mjasnoy-1.jpg" alt="picture-mjasnoy">
     </div>
 
     <div class="two-images-container pictures-mjasnoy-cont">
         <div class="image-left">
-            <img src="/files/images/portfolio/set-magazinov-myasnoi/picture-mjasnoy-2.jpg" alt="picture-mjasnoy">
+            <img src="/images/portfolio/set-magazinov-myasnoi/picture-mjasnoy-2.jpg" alt="picture-mjasnoy">
         </div>
         <div class="image-right">
-            <img src="/files/images/portfolio/set-magazinov-myasnoi/picture-mjasnoy-3.jpg" alt="picture-mjasnoy">
+            <img src="/images/portfolio/set-magazinov-myasnoi/picture-mjasnoy-3.jpg" alt="picture-mjasnoy">
         </div>
     </div>
 
     <div class="image-container">
-        <img src="/files/images/portfolio/set-magazinov-myasnoi/picture-mjasnoy-4.jpg" alt="picture-mjasnoy">
+        <img src="/images/portfolio/set-magazinov-myasnoi/picture-mjasnoy-4.jpg" alt="picture-mjasnoy">
     </div>
 
     <div class="two-images-container pictures-mjasnoy-cont-2">
         <div class="image-left">
-            <img src="/files/images/portfolio/set-magazinov-myasnoi/picture-mjasnoy-5.jpg" alt="picture-mjasnoy">
+            <img src="/images/portfolio/set-magazinov-myasnoi/picture-mjasnoy-5.jpg" alt="picture-mjasnoy">
         </div>
         <div class="image-right">
-            <img src="/files/images/portfolio/set-magazinov-myasnoi/picture-mjasnoy-6.jpg" alt="picture-mjasnoy">
+            <img src="/images/portfolio/set-magazinov-myasnoi/picture-mjasnoy-6.jpg" alt="picture-mjasnoy">
         </div>
     </div>
 
@@ -435,29 +435,11 @@
     <!-- section lanshmit ends -->
 @stop
 @section('page-scripts')
-    <script src="/js/viewportchecker.js"></script>
-
-    <!-- OwlCarousel -->
-    <script src="/js/owl.carousel.min.js"></script>
-    <!--<script src="../js/owl.lazyload.js"></script>-->
-
-    <!-- SmoothScroll -->
-    <!--<script src="../js/SmoothScroll.js"></script>-->
-
-    <!-- star rating -->
-    <script src="/js/star-rating.js"></script>
-    <link rel="stylesheet" href="/css/star-rating.css" media="all" type="text/css"/>
-    <script type="text/javascript">
-        $(".rating").rating({min:1, max:5, step:0.5, size:'sm'});
-
-        $('.clear-rating').hide();
-        $('.caption').hide();
-    </script>
 
 
     <!-- include own JavaScript -->
     <script src="/js/portfolio-main.js"></script>
-    <script src="/js/set-magazinov-myasnoi.js"></script>
+    <script src="/js/portfolio/portfolio-set-magazinov-myasnoi.js"></script>
 @stop
 
 

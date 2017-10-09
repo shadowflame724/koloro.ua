@@ -5,13 +5,14 @@
 @section('page-meta')
     <meta name="description" content="{{ $portfolio->meta->{'description' . $langSuf} }}">
     <meta name="keywords" content="{{ $portfolio->meta->{'keywords' . $langSuf} }}">
+    <meta property=og:image content="{{ url('images/portfolio') . '/' .$portfolio->image->link }}"/>
+
 @stop
 
 @section('page-style')
 
     <!-- OwlCarousel -->
-    <link rel="stylesheet" href="/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+
     <link rel="stylesheet" href="/css/portfolio-main.css">
 
 @stop
@@ -25,7 +26,7 @@
     @include('layouts.whiteheader')
 
 <section id="chistaya-pravda">
-    <div class="bg-container top-container" style="background-image: url('/files/images/portfolio/chistaya-pravda/main-picture.jpg')">
+    <div class="bg-container top-container" style="background-image: url('/images/portfolio/chistaya-pravda/main-picture.jpg')">
         <div class="dark-mask"></div>
         <div class="gl-container title-container">
             <h1 class="top-title">
@@ -138,11 +139,11 @@
     </div>
 
     <div class="image-container">
-        <img src="/files/images/portfolio/chistaya-pravda/vodka-picture-1.jpg" alt="chistaya-pravda-picture">
+        <img src="/images/portfolio/chistaya-pravda/vodka-picture-1.jpg" alt="chistaya-pravda-picture">
     </div>
 
     <div class="image-container">
-        <img src="/files/images/portfolio/chistaya-pravda/vodka-picture-2.jpg" alt="chistaya-pravda-picture">
+        <img src="/images/portfolio/chistaya-pravda/vodka-picture-2.jpg" alt="chistaya-pravda-picture">
     </div>
 
     <div class="info-block-container">
@@ -223,7 +224,7 @@
     </div>
 
     <div class="image-container">
-        <img src="/files/images/portfolio/chistaya-pravda/main-picture.jpg" alt="chistaya-pravda-picture">
+        <img src="/images/portfolio/chistaya-pravda/main-picture.jpg" alt="chistaya-pravda-picture">
     </div>
 
     <div class="info-block-container">
@@ -250,7 +251,7 @@
     </div>
 
     <div class="image-container">
-        <img src="/files/images/portfolio/chistaya-pravda/vodka-picture-3.jpg" alt="chistaya-pravda-picture">
+        <img src="/images/portfolio/chistaya-pravda/vodka-picture-3.jpg" alt="chistaya-pravda-picture">
     </div>
 
     <div class="info-block-container">
@@ -299,25 +300,6 @@
 </section>
 @stop
 @section('page-scripts')
-
-    <!-- OwlCarousel -->
-    <script src="/js/owl.carousel.min.js"></script>
-    <!--<script src="../js/owl.lazyload.js"></script>-->
-
-    <!-- SmoothScroll -->
-    <!--<script src="../js/SmoothScroll.js"></script>-->
-    <script src="../js/viewportchecker.js"></script>
-
-    <!-- star rating -->
-    <script src="/js/star-rating.js"></script>
-    <link rel="stylesheet" href="/css/star-rating.css" media="all" type="text/css"/>
-    <script type="text/javascript">
-        $(".rating").rating({min:1, max:5, step:0.5, size:'sm'});
-
-        $('.clear-rating').hide();
-        $('.caption').hide();
-    </script>
-
 
     <!-- include own JavaScript -->
     <script src="/js/portfolio-main.js"></script>

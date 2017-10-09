@@ -5,13 +5,14 @@
 @section('page-meta')
     <meta name="description" content="{{ $portfolio->meta->{'description' . $langSuf} }}">
     <meta name="keywords" content="{{ $portfolio->meta->{'keywords' . $langSuf} }}">
+    <meta property=og:image content="{{ url('images/portfolio') . '/' .$portfolio->image->link }}"/>
+
 @stop
 
 @section('page-style')
     <!-- OwlCarousel -->
-    <link rel="stylesheet" href="/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="/css/led-rodnik.css">
+
+    <link rel="stylesheet" href="/css/portfolio/portfolio-led-rodnik.css">
 @stop
 
 
@@ -31,8 +32,8 @@
             </h2>
         </div>
 
-        <img src="/files/images/portfolio/led-rodnik/bottle-slide.png" alt="photo-image" class="bottle-slide">
-        <img src="/files/images/portfolio/led-rodnik/clouds-1.png" alt="photo-image" class="clouds-1">
+        <img src="/images/portfolio/led-rodnik/bottle-slide.png" alt="photo-image" class="bottle-slide">
+        <img src="/images/portfolio/led-rodnik/clouds-1.png" alt="photo-image" class="clouds-1">
 
     </div>
 
@@ -138,14 +139,14 @@
     </div>
 
     <div class="bg-container led-rodnik-2-container">
-        <img src="/files/images/portfolio/led-rodnik/snow-1.png" alt="photo-image" class="snow-1">
-        <img src="/files/images/portfolio/led-rodnik/snow-2.png" alt="photo-image" class="snow-2">
-        <img src="/files/images/portfolio/led-rodnik/snow-3.png" alt="photo-image" class="snow-3">
-        <img src="/files/images/portfolio/led-rodnik/snow-4.png" alt="photo-image" class="snow-4">
+        <img src="/images/portfolio/led-rodnik/snow-1.png" alt="photo-image" class="snow-1">
+        <img src="/images/portfolio/led-rodnik/snow-2.png" alt="photo-image" class="snow-2">
+        <img src="/images/portfolio/led-rodnik/snow-3.png" alt="photo-image" class="snow-3">
+        <img src="/images/portfolio/led-rodnik/snow-4.png" alt="photo-image" class="snow-4">
 
-        <img src="/files/images/portfolio/led-rodnik/snow-glow-1.png" alt="photo-image" class="snow-glow-1">
-        <img src="/files/images/portfolio/led-rodnik/snow-glow-2.png" alt="photo-image" class="snow-glow-2">
-        <img src="/files/images/portfolio/led-rodnik/snow-glow-3.png" alt="photo-image" class="snow-glow-3">
+        <img src="/images/portfolio/led-rodnik/snow-glow-1.png" alt="photo-image" class="snow-glow-1">
+        <img src="/images/portfolio/led-rodnik/snow-glow-2.png" alt="photo-image" class="snow-glow-2">
+        <img src="/images/portfolio/led-rodnik/snow-glow-3.png" alt="photo-image" class="snow-glow-3">
     </div>
 
     <div class="info-block-container info-dev-logo">
@@ -206,7 +207,7 @@
 
         <div class="image-container bottle-concept-1-cont">
             <div class="gl-container">
-                <img src="/files/images/portfolio/led-rodnik/bottle.png" alt="photo-image" class="bottle-concept-1">
+                <img src="/images/portfolio/led-rodnik/bottle.png" alt="photo-image" class="bottle-concept-1">
             </div>
         </div>
 
@@ -237,19 +238,19 @@
 
     <div class="two-images-container">
         <div class="image-left">
-            <img src="/files/images/portfolio/led-rodnik/photo-1.jpg" alt="photo-image" class="photo-1">
+            <img src="/images/portfolio/led-rodnik/photo-1.jpg" alt="photo-image" class="photo-1">
         </div>
         <div class="image-right">
-            <img src="/files/images/portfolio/led-rodnik/photo-2.jpg" alt="photo-image" class="photo-2">
+            <img src="/images/portfolio/led-rodnik/photo-2.jpg" alt="photo-image" class="photo-2">
         </div>
     </div>
 
     <div class="two-images-container">
         <div class="image-left">
-            <img src="/files/images/portfolio/led-rodnik/photo-3.jpg" alt="photo-image" class="photo-3">
+            <img src="/images/portfolio/led-rodnik/photo-3.jpg" alt="photo-image" class="photo-3">
         </div>
         <div class="image-right">
-            <img src="/files/images/portfolio/led-rodnik/photo-4.jpg" alt="photo-image" class="photo-4">
+            <img src="/images/portfolio/led-rodnik/photo-4.jpg" alt="photo-image" class="photo-4">
         </div>
     </div>
 
@@ -327,25 +328,6 @@
 @stop
 @section('page-scripts')
 
-    <!-- OwlCarousel -->
-    <script src="/js/owl.carousel.min.js"></script>
-    <!--<script src="../js/owl.lazyload.js"></script>-->
-
-    <!-- SmoothScroll -->
-    <!--<script src="../js/SmoothScroll.js"></script>-->
-
-    <!-- star rating -->
-    <script src="/js/star-rating.js"></script>
-    <link rel="stylesheet" href="/css/star-rating.css" media="all" type="text/css"/>
-    <script type="text/javascript">
-        $(".rating").rating({min:1, max:5, step:0.5, size:'sm'});
-
-        $('.clear-rating').hide();
-        $('.caption').hide();
-    </script>
-
-
-    <!-- include own JavaScript -->
-    <script src="/js/led-rodnik.js"></script>
+    <script src="/js/portfolio/portfolio-led-rodnik.js"></script>
 
 @stop

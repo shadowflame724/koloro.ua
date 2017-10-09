@@ -1,6 +1,5 @@
 .top-container {
-  position: relative;
-  background-image: url("../images/portfolio/main-picture.jpg"); }
+  position: relative; }
   .top-container .title-container {
     position: relative;
     z-index: 5;
@@ -53,3 +52,6 @@
       @media all and (max-width: 500px) {
         .top-container .title-container .top-title-small {
           font-size: 16px; } }
+
+.image-container {
+  max-height: inherit; }

@@ -4,15 +4,16 @@
 @section('page-meta')
     <meta name="description" content="{{ $portfolio->meta->{'description' . $langSuf} }}">
     <meta name="keywords" content="{{ $portfolio->meta->{'keywords' . $langSuf} }}">
+    <meta property=og:image content="{{ url('images/portfolio') . '/' .$portfolio->image->link }}"/>
+
 @stop
 
 @section('page-style')
 
     <!-- OwlCarousel -->
-    <link rel="stylesheet" href="/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+
     <link rel="stylesheet" href="/css/portfolio-main.css">
-    <link rel="stylesheet" href="/css/frau-pampe.css">
+    <link rel="stylesheet" href="/css/portfolio/portfolio-frau-pampe.css">
 @stop
 
 
@@ -29,9 +30,9 @@
     <!--class="portfolio_block"-->
 
     <div class="image-container top-container">
-        <img src="/files/images/frau-pampe/coc-9.png" alt="photo-image" class="cereals-1">
-        <img src="/files/images/frau-pampe/coc-1.png" alt="photo-image" class="cereals-2">
-        <img src="/files/images/frau-pampe/coc-2.png" alt="photo-image" class="cereals-3">
+        <img src="/images/portfolio/frau-pampe/coc-9.png" alt="photo-image" class="cereals-1">
+        <img src="/images/portfolio/frau-pampe/coc-1.png" alt="photo-image" class="cereals-2">
+        <img src="/images/portfolio/frau-pampe/coc-2.png" alt="photo-image" class="cereals-3">
 
         <div class="container title-container">
             <h1 class="top-title">Frau Pampe</h1>
@@ -40,36 +41,36 @@
 
         <div class="boxes-imgs-container owl-carousel">
             <div class="item box-item">
-                <img src="/files/images/frau-pampe/white-box1.png" alt="photo-image">
+                <img src="/images/portfolio/frau-pampe/white-box1.png" alt="photo-image">
             </div>
             <div class="item box-item">
-                <img src="/files/images/frau-pampe/white-box2.png" alt="photo-image">
+                <img src="/images/portfolio/frau-pampe/white-box2.png" alt="photo-image">
             </div>
             <div class="item box-item">
-                <img src="/files/images/frau-pampe/white-box3.png" alt="photo-image">
+                <img src="/images/portfolio/frau-pampe/white-box3.png" alt="photo-image">
             </div>
             <div class="item box-item">
-                <img src="/files/images/frau-pampe/white-box4.png" alt="photo-image">
+                <img src="/images/portfolio/frau-pampe/white-box4.png" alt="photo-image">
             </div>
             <div class="item box-item">
-                <img src="/files/images/frau-pampe/white-box5.png" alt="photo-image">
+                <img src="/images/portfolio/frau-pampe/white-box5.png" alt="photo-image">
             </div>
             <div class="item box-item">
-                <img src="/files/images/frau-pampe/white-box6.png" alt="photo-image">
+                <img src="/images/portfolio/frau-pampe/white-box6.png" alt="photo-image">
             </div>
         </div>
 
     </div>
 
     <div class="company-aims">
-        <img src="/files/images/frau-pampe/coc-7.png" alt="photo-image" class="cereals-4">
-        <img src="/files/images/frau-pampe/coc-9.png" alt="photo-image" class="cereals-5">
+        <img src="/images/portfolio/frau-pampe/coc-7.png" alt="photo-image" class="cereals-4">
+        <img src="/images/portfolio/frau-pampe/coc-9.png" alt="photo-image" class="cereals-5">
 
-        <img src="/files/images/frau-pampe/coc-1.png" alt="photo-image" class="cereals-6">
-        <img src="/files/images/frau-pampe/coc-2.png" alt="photo-image" class="cereals-7">
-        <img src="/files/images/frau-pampe/coc-4.png" alt="photo-image" class="cereals-8">
-        <img src="/files/images/frau-pampe/cherry-89.png" alt="photo-image" class="chery-1">
-        <img src="/files/images/frau-pampe/coc-3.png" alt="photo-image" class="cereals-9">
+        <img src="/images/portfolio/frau-pampe/coc-1.png" alt="photo-image" class="cereals-6">
+        <img src="/images/portfolio/frau-pampe/coc-2.png" alt="photo-image" class="cereals-7">
+        <img src="/images/portfolio/frau-pampe/coc-4.png" alt="photo-image" class="cereals-8">
+        <img src="/images/portfolio/frau-pampe/cherry-89.png" alt="photo-image" class="chery-1">
+        <img src="/images/portfolio/frau-pampe/coc-3.png" alt="photo-image" class="cereals-9">
 
         <div class="info-block-container info-history">
             <div class="gl-container">
@@ -118,14 +119,14 @@
     </div>
 
     <div class="company-aims-2">
-        <img src="/files/images/frau-pampe/coc-6.png" alt="photo-image" class="cereals-10">
-        <img src="/files/images/frau-pampe/abrikos.png" alt="photo-image" class="abrikos">
-        <img src="/files/images/frau-pampe/coc-5.png" alt="photo-image" class="cereals-11">
-        <img src="/files/images/frau-pampe/metr.png" alt="photo-image" class="metr">
+        <img src="/images/portfolio/frau-pampe/coc-6.png" alt="photo-image" class="cereals-10">
+        <img src="/images/portfolio/frau-pampe/abrikos.png" alt="photo-image" class="abrikos">
+        <img src="/images/portfolio/frau-pampe/coc-5.png" alt="photo-image" class="cereals-11">
+        <img src="/images/portfolio/frau-pampe/metr.png" alt="photo-image" class="metr">
 
-        <img src="/files/images/frau-pampe/box-lezhachiy.png" alt="photo-image" class="box-horizontal">
+        <img src="/images/portfolio/frau-pampe/box-lezhachiy.png" alt="photo-image" class="box-horizontal">
 
-        <img src="/files/images/frau-pampe/coc-3.png" alt="photo-image" class="cereals-12">
+        <img src="/images/portfolio/frau-pampe/coc-3.png" alt="photo-image" class="cereals-12">
 
         <div class="info-block-container info-solution">
             <div class="gl-container">
@@ -175,27 +176,27 @@
 
         <div class="graphity-image-container">
             <div class="graphity-image">
-                <img src="/files/images/frau-pampe/featured-4-7.png" alt="photo-image" class="paper-graphity">
-                <img src="/files/images/frau-pampe/featured-4-1.png" alt="photo-image" class="paper-1">
-                <img src="/files/images/frau-pampe/featured-4-2.png" alt="photo-image" class="paper-2">
-                <img src="/files/images/frau-pampe/featured-4-6.png" alt="photo-image" class="pencil-1">
-                <img src="/files/images/frau-pampe/featured-4-3.png" alt="photo-image" class="pencil-2">
-                <img src="/files/images/frau-pampe/featured-4-4.png" alt="photo-image" class="elastic">
-                <img src="/files/images/frau-pampe/featured-4-5.png" alt="photo-image" class="apple">
-                <img src="/files/images/frau-pampe/pomada.png" alt="photo-image" class="pomade">
+                <img src="/images/portfolio/frau-pampe/featured-4-7.png" alt="photo-image" class="paper-graphity">
+                <img src="/images/portfolio/frau-pampe/featured-4-1.png" alt="photo-image" class="paper-1">
+                <img src="/images/portfolio/frau-pampe/featured-4-2.png" alt="photo-image" class="paper-2">
+                <img src="/images/portfolio/frau-pampe/featured-4-6.png" alt="photo-image" class="pencil-1">
+                <img src="/images/portfolio/frau-pampe/featured-4-3.png" alt="photo-image" class="pencil-2">
+                <img src="/images/portfolio/frau-pampe/featured-4-4.png" alt="photo-image" class="elastic">
+                <img src="/images/portfolio/frau-pampe/featured-4-5.png" alt="photo-image" class="apple">
+                <img src="/images/portfolio/frau-pampe/pomada.png" alt="photo-image" class="pomade">
             </div>
         </div>
     </div>
 
     <div class="company-aims-3">
 
-        <img src="/files/images/frau-pampe/coc-7.png" alt="photo-image" class="cereals-13">
-        <img src="/files/images/frau-pampe/coc-9.png" alt="photo-image" class="cereals-14">
-        <img src="/files/images/frau-pampe/coc-5.png" alt="photo-image" class="cereals-15">
+        <img src="/images/portfolio/frau-pampe/coc-7.png" alt="photo-image" class="cereals-13">
+        <img src="/images/portfolio/frau-pampe/coc-9.png" alt="photo-image" class="cereals-14">
+        <img src="/images/portfolio/frau-pampe/coc-5.png" alt="photo-image" class="cereals-15">
 
-        <img src="/files/images/frau-pampe/coc-2.png" alt="photo-image" class="cereals-16">
-        <img src="/files/images/frau-pampe/coc-1.png" alt="photo-image" class="cereals-17">
-        <img src="/files/images/frau-pampe/coc-4.png" alt="photo-image" class="cereals-18">
+        <img src="/images/portfolio/frau-pampe/coc-2.png" alt="photo-image" class="cereals-16">
+        <img src="/images/portfolio/frau-pampe/coc-1.png" alt="photo-image" class="cereals-17">
+        <img src="/images/portfolio/frau-pampe/coc-4.png" alt="photo-image" class="cereals-18">
 
         <div class="info-block-container info-prices">
             <div class="gl-container">
@@ -261,7 +262,7 @@
     </div>
 
     <div class="concepts-info">
-        <img src="/files/images/frau-pampe/coc-3.png" alt="photo-image" class="cereals-19">
+        <img src="/images/portfolio/frau-pampe/coc-3.png" alt="photo-image" class="cereals-19">
 
         <div class="gl-container">
             <h2>Концепт: Девушка (Frau)</h2>
@@ -269,7 +270,7 @@
 
         <div class="info-block-container info-key-words">
             <div class="image-container">
-                <img src="/files/images/frau-pampe/frau-box.png" alt="photo-image" class="frau-box">
+                <img src="/images/portfolio/frau-pampe/frau-box.png" alt="photo-image" class="frau-box">
             </div><!--
             --><div class="info-right">
                 <h2>Ключевые слова:</h2>
@@ -302,7 +303,7 @@
         <h2 class="h2-title header-white">Логотип</h2>
 
         <div class="logo-container">
-            <img src="/files/images/frau-pampe/logo-frau.png" alt="photo-image" class="logo-frau">
+            <img src="/images/portfolio/frau-pampe/logo-frau.png" alt="photo-image" class="logo-frau">
         </div>
 
         <div class="info-block-container info-graphic">
@@ -331,25 +332,25 @@
         </div>
 
         <div class="clock-container">
-            <img src="/files/images/frau-pampe/clock.png" alt="photo-image" class="clock">
+            <img src="/images/portfolio/frau-pampe/clock.png" alt="photo-image" class="clock">
         </div>
 
         <div class="food-icons-container">
             <div class="food-icon">
-                <img src="/files/images/frau-pampe/sik.png" alt="photo-image" class="food-title sik-title">
-                <img src="/files/images/frau-pampe/sik-ikonka.jpg" alt="photo-image" class="food-img">
+                <img src="/images/portfolio/frau-pampe/sik.png" alt="photo-image" class="food-title sik-title">
+                <img src="/images/portfolio/frau-pampe/sik-ikonka.jpg" alt="photo-image" class="food-img">
             </div><!--
             --><div class="food-icon">
-                <img src="/files/images/frau-pampe/yogurt.png" alt="photo-image" class="food-title yogurt-title">
-                <img src="/files/images/frau-pampe/yogurt-ikonka.jpg" alt="photo-image" class="food-img">
+                <img src="/images/portfolio/frau-pampe/yogurt.png" alt="photo-image" class="food-title yogurt-title">
+                <img src="/images/portfolio/frau-pampe/yogurt-ikonka.jpg" alt="photo-image" class="food-img">
             </div><!--
             --><div class="food-icon">
-                <img src="/files/images/frau-pampe/voda.png" alt="photo-image" class="food-title voda-title">
-                <img src="/files/images/frau-pampe/voda-ikonka.jpg" alt="photo-image" class="food-img">
+                <img src="/images/portfolio/frau-pampe/voda.png" alt="photo-image" class="food-title voda-title">
+                <img src="/images/portfolio/frau-pampe/voda-ikonka.jpg" alt="photo-image" class="food-img">
             </div><!--
             --><div class="food-icon">
-                <img src="/files/images/frau-pampe/moloko.png" alt="photo-image" class="food-title moloko-title">
-                <img src="/files/images/frau-pampe/moloko-ikonka.jpg" alt="photo-image" class="food-img">
+                <img src="/images/portfolio/frau-pampe/moloko.png" alt="photo-image" class="food-title moloko-title">
+                <img src="/images/portfolio/frau-pampe/moloko-ikonka.jpg" alt="photo-image" class="food-img">
             </div>
         </div>
 
@@ -359,22 +360,22 @@
 
         <div class="food-items-container">
             <div class="food-item">
-                <img src="/files/images/frau-pampe/carrot.png" alt="photo-image" class="carrot">
+                <img src="/images/portfolio/frau-pampe/carrot.png" alt="photo-image" class="carrot">
             </div>
             <div class="food-item">
-                <img src="/files/images/frau-pampe/abrikos-2.png" alt="photo-image" class="abrikos-2">
+                <img src="/images/portfolio/frau-pampe/abrikos-2.png" alt="photo-image" class="abrikos-2">
             </div>
             <div class="food-item">
-                <img src="/files/images/frau-pampe/cherry.png" alt="photo-image" class="cherry">
+                <img src="/images/portfolio/frau-pampe/cherry.png" alt="photo-image" class="cherry">
             </div>
             <div class="food-item">
-                <img src="/files/images/frau-pampe/peach-2.png" alt="photo-image" class="peach-2">
+                <img src="/images/portfolio/frau-pampe/peach-2.png" alt="photo-image" class="peach-2">
             </div>
             <div class="food-item">
-                <img src="/files/images/frau-pampe/zerno.png" alt="photo-image" class="zerno">
+                <img src="/images/portfolio/frau-pampe/zerno.png" alt="photo-image" class="zerno">
             </div>
             <div class="food-item">
-                <img src="/files/images/frau-pampe/apple.png" alt="photo-image" class="apple">
+                <img src="/images/portfolio/frau-pampe/apple.png" alt="photo-image" class="apple">
             </div>
 
         </div>
@@ -409,9 +410,9 @@
         </div>
 
         <div class="logo-frau-big-container">
-            <img src="/files/images/frau-pampe/logo-frau-big.png" alt="photo-image" class="logo-frau-big">
-            <img src="/files/images/frau-pampe/peach.png" alt="photo-image" class="peach">
-            <img src="/files/images/frau-pampe/coc-8.png" alt="photo-image" class="cereals-19">
+            <img src="/images/portfolio/frau-pampe/logo-frau-big.png" alt="photo-image" class="logo-frau-big">
+            <img src="/images/portfolio/frau-pampe/peach.png" alt="photo-image" class="peach">
+            <img src="/images/portfolio/frau-pampe/coc-8.png" alt="photo-image" class="cereals-19">
         </div>
 
         <div class="info-block-container info-utp">
@@ -438,19 +439,19 @@
         </div>
 
         <div class="image-container">
-            <img src="/files/images/frau-pampe/dodavay.png" alt="photo-image" class="dodavay">
+            <img src="/images/portfolio/frau-pampe/dodavay.png" alt="photo-image" class="dodavay">
         </div>
     </div>
 
     <div class="company-aims-5">
 
-        <img src="/files/images/frau-pampe/cherry-89.png" alt="photo-image" class="chery-2">
-        <img src="/files/images/frau-pampe/coc-9.png" alt="photo-image" class="cereals-20">
-        <img src="/files/images/frau-pampe/coc-6.png" alt="photo-image" class="cereals-21">
+        <img src="/images/portfolio/frau-pampe/cherry-89.png" alt="photo-image" class="chery-2">
+        <img src="/images/portfolio/frau-pampe/coc-9.png" alt="photo-image" class="cereals-20">
+        <img src="/images/portfolio/frau-pampe/coc-6.png" alt="photo-image" class="cereals-21">
 
-        <img src="/files/images/frau-pampe/coc-6-small.png" alt="photo-image" class="cereals-22">
-        <img src="/files/images/frau-pampe/coc-4.png" alt="photo-image" class="cereals-23">
-        <img src="/files/images/frau-pampe/coc-3.png" alt="photo-image" class="cereals-24">
+        <img src="/images/portfolio/frau-pampe/coc-6-small.png" alt="photo-image" class="cereals-22">
+        <img src="/images/portfolio/frau-pampe/coc-4.png" alt="photo-image" class="cereals-23">
+        <img src="/images/portfolio/frau-pampe/coc-3.png" alt="photo-image" class="cereals-24">
 
         <div class="info-block-container info-result">
             <div class="gl-container">
@@ -523,27 +524,8 @@
 @stop
 @section('page-scripts')
 
-    <!-- OwlCarousel -->
-    <script src="/js/owl.carousel.min.js"></script>
-    <!--<script src="../js/owl.lazyload.js"></script>-->
-
-    <!-- SmoothScroll -->
-    <!--<script src="../js/SmoothScroll.js"></script>-->
-    <script src="../js/viewportchecker.js"></script>
-
-    <!-- star rating -->
-    <script src="/js/star-rating.js"></script>
-    <link rel="stylesheet" href="/css/star-rating.css" media="all" type="text/css"/>
-    <script type="text/javascript">
-        $(".rating").rating({min:1, max:5, step:0.5, size:'sm'});
-
-        $('.clear-rating').hide();
-        $('.caption').hide();
-    </script>
-
-
     <!-- include own JavaScript -->
-    <script src="/js/frau-pampe.js"></script>
+    <script src="/js/portfolio/portfolio-frau-pampe.js"></script>
 
 @stop
 <!-- end of subscribe_form -->

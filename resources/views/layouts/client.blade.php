@@ -16,7 +16,9 @@
 
     <!--    slider mThumbnailScroller   -->
     <link rel="stylesheet" href="/css/jquery.mThumbnailScroller.css">
-
+    <!-- OwlCarousel -->
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
     @yield('page-style')
 
 </head>
@@ -30,22 +32,25 @@
 
 @include('layouts.partials.up_but_search')
 <!-- arrows UP and SEARCH start -->
-
+<!--скрипты для всех страниц начало-->
 <script src="/js/font_loader.js"></script> <!-- font_loader.js -->
-<script src="{{ asset('/plugins/jQuery/jQuery-2.1.4.min.js') }}"></script>
+<script src="/js/jquery-3.1.1.min.js"></script>
+<script src="/js/viewportchecker.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<!--<script src="js/jquery-2.2.4.js"></script>-->
+
 <script src="/js/main.js"></script>
-<!-- include subscribe_form.js -->
 <script src="/js/subscribe_form.js"></script>
-<!-- include viewportchecker.js -->
-<!--<script src="js/viewportchecker.js"></script>-->
+<script src="/js/order_form.js"></script>
+<script src="/js/success_form.js"></script>
 
 <script type="text/javascript">
-    $(document).ready(function () {
+    $(document).ready(function(){
         //отложенная загрузка изображений
-        $(function () {
+        $(function() {
             $(".lazy").lazyload({
-                effect: "fadeIn",
-                threshold: 400
+                effect : "fadeIn",
+                threshold : 400
             });
         });
         showmore();
@@ -57,6 +62,17 @@
     });
 </script>
 <!--скрипты для всех страниц конец-->
+
+<script src="/js/star-rating.js"></script>
+<link rel="stylesheet" href="/css/star-rating.css" media="all" type="text/css"/>
+<script type="text/javascript">
+    $(".rating").rating({min:1, max:5, step:0.5, size:'sm'}).hide();
+
+    $('.clear-rating').hide();
+    $('.caption').hide();
+</script>
+
+<!--скрипты для всех страниц конец-->
 <!-- start of subscribe_form -->
 @include('layouts.partials.form')
 
@@ -64,7 +80,7 @@
 
 <!--    slider mThumbnailScroller   -->
 <script src="/js/jquery.mThumbnailScroller.min.js"></script>
-<script src="/js/order_form.js"></script>
+
 
 @yield('page-scripts')
 

@@ -5,14 +5,15 @@
 @section('page-meta')
     <meta name="description" content="{{ $portfolio->meta->{'description' . $langSuf} }}">
     <meta name="keywords" content="{{ $portfolio->meta->{'keywords' . $langSuf} }}">
+    <meta property=og:image content="{{ url('images/portfolio') . '/' .$portfolio->image->link }}"/>
+
 @stop
 
 @section('page-style')
 
     <!-- OwlCarousel -->
-    <link rel="stylesheet" href="/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="/css/rusalka.css">
+
+    <link rel="stylesheet" href="/css/portfolio/portfolio-rusalka.css">
 
 @stop
 
@@ -37,18 +38,18 @@
 
     <div class="company-aims">
         <div class="image-container rusalka-logo-container">
-            <img src="/files/images/rusalka/rusalka-logo.png" alt="photo-image" class="rusalka-logo">
+            <img src="/images/portfolio/rusalka/rusalka-logo.png" alt="photo-image" class="rusalka-logo">
         </div>
 
-        <img src="/files/images/rusalka/bottle-rusalka.png" alt="photo-image" class="bottle-rusalka">
-        <img src="/files/images/rusalka/fish-logo.png" alt="photo-image" class="fish-logo">
+        <img src="/images/portfolio/rusalka/bottle-rusalka.png" alt="photo-image" class="bottle-rusalka">
+        <img src="/images/portfolio/rusalka/fish-logo.png" alt="photo-image" class="fish-logo">
 
-        <img src="/files/images/rusalka/bulba-1.png" alt="photo-image" class="bulba-1">
-        <img src="/files/images/rusalka/bulba-4.png" alt="photo-image" class="bulba-4">
-        <img src="/files/images/rusalka/bulba-5.png" alt="photo-image" class="bulba-5">
+        <img src="/images/portfolio/rusalka/bulba-1.png" alt="photo-image" class="bulba-1">
+        <img src="/images/portfolio/rusalka/bulba-4.png" alt="photo-image" class="bulba-4">
+        <img src="/images/portfolio/rusalka/bulba-5.png" alt="photo-image" class="bulba-5">
 
-        <img src="/files/images/rusalka/bulba-2.png" alt="photo-image" class="bulba-2">
-        <img src="/files/images/rusalka/bulba-3.png" alt="photo-image" class="bulba-3">
+        <img src="/images/portfolio/rusalka/bulba-2.png" alt="photo-image" class="bulba-2">
+        <img src="/images/portfolio/rusalka/bulba-3.png" alt="photo-image" class="bulba-3">
 
         <div class="info-block-container info-history">
             <div class="gl-container">
@@ -113,13 +114,13 @@
         </div>
 
         <div class="fishes-container">
-            <img src="/files/images/rusalka/fish-1.png" alt="photo-image" class="fish-1">
-            <img src="/files/images/rusalka/fish-2.png" alt="photo-image" class="fish-2">
-            <img src="/files/images/rusalka/fish-3.png" alt="photo-image" class="fish-3">
-            <img src="/files/images/rusalka/fish-4.png" alt="photo-image" class="fish-4">
-            <img src="/files/images/rusalka/fish-5.png" alt="photo-image" class="fish-5">
-            <img src="/files/images/rusalka/fish-6.png" alt="photo-image" class="fish-6">
-            <img src="/files/images/rusalka/fish-7.png" alt="photo-image" class="fish-7">
+            <img src="/images/portfolio/rusalka/fish-1.png" alt="photo-image" class="fish-1">
+            <img src="/images/portfolio/rusalka/fish-2.png" alt="photo-image" class="fish-2">
+            <img src="/images/portfolio/rusalka/fish-3.png" alt="photo-image" class="fish-3">
+            <img src="/images/portfolio/rusalka/fish-4.png" alt="photo-image" class="fish-4">
+            <img src="/images/portfolio/rusalka/fish-5.png" alt="photo-image" class="fish-5">
+            <img src="/images/portfolio/rusalka/fish-6.png" alt="photo-image" class="fish-6">
+            <img src="/images/portfolio/rusalka/fish-7.png" alt="photo-image" class="fish-7">
         </div>
 
         <h2 class="h2-title header-white decision-header">Решение</h2>
@@ -197,28 +198,28 @@
 
     <div class="bottles-container">
         <div class="bottle-cont">
-            <img src="/files/images/rusalka/render-bottle-1.jpg" alt="photo-img">
+            <img src="/images/portfolio/rusalka/render-bottle-1.jpg" alt="photo-img">
         </div>
         <div class="bottle-cont">
-            <img src="/files/images/rusalka/render-bottle-2.jpg" alt="photo-img">
+            <img src="/images/portfolio/rusalka/render-bottle-2.jpg" alt="photo-img">
         </div>
         <div class="bottle-cont">
-            <img src="/files/images/rusalka/render-bottle-3.jpg" alt="photo-img">
+            <img src="/images/portfolio/rusalka/render-bottle-3.jpg" alt="photo-img">
         </div>
         <div class="bottle-cont">
-            <img src="/files/images/rusalka/render-bottle-4.jpg" alt="photo-img">
+            <img src="/images/portfolio/rusalka/render-bottle-4.jpg" alt="photo-img">
         </div>
         <div class="bottle-cont">
-            <img src="/files/images/rusalka/render-bottle-5.jpg" alt="photo-img">
+            <img src="/images/portfolio/rusalka/render-bottle-5.jpg" alt="photo-img">
         </div>
         <div class="bottle-cont">
-            <img src="/files/images/rusalka/render-bottle-6.jpg" alt="photo-img">
+            <img src="/images/portfolio/rusalka/render-bottle-6.jpg" alt="photo-img">
         </div>
         <div class="bottle-cont">
-            <img src="/files/images/rusalka/render-bottle-7.jpg" alt="photo-img">
+            <img src="/images/portfolio/rusalka/render-bottle-7.jpg" alt="photo-img">
         </div>
         <div class="bottle-cont">
-            <img src="/files/images/rusalka/render-bottle-8.jpg" alt="photo-img">
+            <img src="/images/portfolio/rusalka/render-bottle-8.jpg" alt="photo-img">
         </div>
     </div>
 
@@ -288,21 +289,21 @@
         <div class="lineage-imgs-cont">
             <div class="gl-container">
                 <div class="image-container lineyka-up-cont">
-                    <img src="/files/images/rusalka/concept-1-lineyka-up.jpg" alt="photo-img" class="lineyka-up">
+                    <img src="/images/portfolio/rusalka/concept-1-lineyka-up.jpg" alt="photo-img" class="lineyka-up">
                 </div>
 
                 <div class="lineages-conts">
                     <div class="lineage-cont lineyka-left-cont">
-                        <img src="/files/images/rusalka/concept-1-lineyka-middle-1.jpg" alt="photo-img" class="lineyka-middle-1">
-                        <img src="/files/images/rusalka/concept-1-lineyka-down-1.jpg" alt="photo-img" class="lineyka-down-1">
+                        <img src="/images/portfolio/rusalka/concept-1-lineyka-middle-1.jpg" alt="photo-img" class="lineyka-middle-1">
+                        <img src="/images/portfolio/rusalka/concept-1-lineyka-down-1.jpg" alt="photo-img" class="lineyka-down-1">
                     </div>
                     <div class="lineage-cont lineyka-middle-cont">
-                        <img src="/files/images/rusalka/concept-1-lineyka-middle-2.jpg" alt="photo-img" class="lineyka-middle-2">
-                        <img src="/files/images/rusalka/concept-1-lineyka-down-2.jpg" alt="photo-img" class="lineyka-down-2">
+                        <img src="/images/portfolio/rusalka/concept-1-lineyka-middle-2.jpg" alt="photo-img" class="lineyka-middle-2">
+                        <img src="/images/portfolio/rusalka/concept-1-lineyka-down-2.jpg" alt="photo-img" class="lineyka-down-2">
                     </div>
                     <div class="lineage-cont lineyka-right-cont">
-                        <img src="/files/images/rusalka/concept-1-lineyka-middle-3.jpg" alt="photo-img" class="lineyka-middle-3">
-                        <img src="/files/images/rusalka/concept-1-lineyka-down-3.jpg" alt="photo-img" class="lineyka-down-3">
+                        <img src="/images/portfolio/rusalka/concept-1-lineyka-middle-3.jpg" alt="photo-img" class="lineyka-middle-3">
+                        <img src="/images/portfolio/rusalka/concept-1-lineyka-down-3.jpg" alt="photo-img" class="lineyka-down-3">
                     </div>
                 </div>
             </div>
@@ -334,10 +335,10 @@
         <div class="two-images-container">
             <div class="gl-container">
                 <div class="image-left">
-                    <img src="/files/images/rusalka/concept-1-logo.jpg" alt="photo-image" class="logo-left">
+                    <img src="/images/portfolio/rusalka/concept-1-logo.jpg" alt="photo-image" class="logo-left">
                 </div>
                 <div class="image-right">
-                    <img src="/files/images/rusalka/concept-1-logo-down-bottle.jpg" alt="photo-image" class="logo-right">
+                    <img src="/images/portfolio/rusalka/concept-1-logo-down-bottle.jpg" alt="photo-image" class="logo-right">
                 </div>
             </div>
         </div>
@@ -358,7 +359,7 @@
 
         <div class="image-container bottle-concept-1-cont">
             <div class="gl-container">
-                <img src="/files/images/rusalka/bottle-concept-1.png" alt="photo-image" class="bottle-concept-1">
+                <img src="/images/portfolio/rusalka/bottle-concept-1.png" alt="photo-image" class="bottle-concept-1">
             </div>
         </div>
 
@@ -461,13 +462,13 @@
         <div class="three-images-container">
             <div class="gl-container">
                 <div class="image-left">
-                    <img src="/files/images/rusalka/concept-2-lineyka-1.png" alt="photo-image" class="">
+                    <img src="/images/portfolio/rusalka/concept-2-lineyka-1.png" alt="photo-image" class="">
                 </div>
                 <div class="image-middle">
-                    <img src="/files/images/rusalka/concept-2-lineyka-2.png" alt="photo-image" class="">
+                    <img src="/images/portfolio/rusalka/concept-2-lineyka-2.png" alt="photo-image" class="">
                 </div>
                 <div class="image-right">
-                    <img src="/files/images/rusalka/concept-2-lineyka-3.png" alt="photo-image" class="">
+                    <img src="/images/portfolio/rusalka/concept-2-lineyka-3.png" alt="photo-image" class="">
                 </div>
             </div>
         </div>
@@ -475,7 +476,7 @@
         <h2 class="h2-title header-blue">Вербальный посыл</h2>
 
         <div class="image-container slogan-concept-2-cont">
-            <img src="/files/images/rusalka/slogan-concept-2.png" alt="photo-img" class="slogan-concept-2">
+            <img src="/images/portfolio/rusalka/slogan-concept-2.png" alt="photo-img" class="slogan-concept-2">
         </div>
 
         <div class="info-block-container info-key-words-2">
@@ -492,7 +493,7 @@
         </div>
 
         <div class="image-container concept-2-logo-cont">
-            <img src="/files/images/rusalka/concept-2-logo.jpg" alt="photo-img" class="concept-2-logo">
+            <img src="/images/portfolio/rusalka/concept-2-logo.jpg" alt="photo-img" class="concept-2-logo">
         </div>
 
         <div class="info-block-container info-bottle">
@@ -512,7 +513,7 @@
 
         <div class="image-container bottle-concept-2-cont">
             <div class="gl-container">
-                <img src="/files/images/rusalka/bottle-concept-2.png" alt="photo-img" class="bottle-concept-2">
+                <img src="/images/portfolio/rusalka/bottle-concept-2.png" alt="photo-img" class="bottle-concept-2">
             </div>
         </div>
 
@@ -526,7 +527,7 @@
                         В донышке будет выдавлена морская звезда.
                     </p>
                     <div class="image-container">
-                        <img src="/files/images/rusalka/concept-2-element.jpg" alt="photo-img" class="info-concept-2">
+                        <img src="/images/portfolio/rusalka/concept-2-element.jpg" alt="photo-img" class="info-concept-2">
                     </div>
                 </div>
             </div>
@@ -638,13 +639,13 @@
         <div class="three-images-container">
             <div class="gl-container">
                 <div class="image-left">
-                    <img src="/files/images/rusalka/concept-3-lineyka-1.jpg" alt="photo-image" class="">
+                    <img src="/images/portfolio/rusalka/concept-3-lineyka-1.jpg" alt="photo-image" class="">
                 </div>
                 <div class="image-middle">
-                    <img src="/files/images/rusalka/concept-3-lineyka-2.jpg" alt="photo-image" class="">
+                    <img src="/images/portfolio/rusalka/concept-3-lineyka-2.jpg" alt="photo-image" class="">
                 </div>
                 <div class="image-right">
-                    <img src="/files/images/rusalka/concept-3-lineyka-3.jpg" alt="photo-image" class="">
+                    <img src="/images/portfolio/rusalka/concept-3-lineyka-3.jpg" alt="photo-image" class="">
                 </div>
             </div>
         </div>
@@ -664,9 +665,9 @@
 
         <div class="image-container concept-3-slogan-cont">
             <div class="gl-container">
-                <img src="/files/images/rusalka/concept-3-slogan-1.png" alt="photo-img" class="slogan-1">
-                <img src="/files/images/rusalka/concept-3-slogan-2.png" alt="photo-img" class="slogan-2">
-                <img src="/files/images/rusalka/concept-3-slogan-3.png" alt="photo-img" class="slogan-3">
+                <img src="/images/portfolio/rusalka/concept-3-slogan-1.png" alt="photo-img" class="slogan-1">
+                <img src="/images/portfolio/rusalka/concept-3-slogan-2.png" alt="photo-img" class="slogan-2">
+                <img src="/images/portfolio/rusalka/concept-3-slogan-3.png" alt="photo-img" class="slogan-3">
             </div>
         </div>
 
@@ -686,7 +687,7 @@
 
         <div class="image-container bottle-concept-3-cont">
             <div class="gl-container">
-                <img src="/files/images/rusalka/bottle-concept-3.png" alt="photo-img" class="bottle-concept-3">
+                <img src="/images/portfolio/rusalka/bottle-concept-3.png" alt="photo-img" class="bottle-concept-3">
             </div>
         </div>
 
@@ -703,21 +704,21 @@
 
     <div class="bg-container pattern-concept-3">
         <div class="image-container logo-concept-3-cont">
-            <img src="/files/images/rusalka/logo-concept-3.png" alt="photo-img" class="logo-concept-3">
+            <img src="/images/portfolio/rusalka/logo-concept-3.png" alt="photo-img" class="logo-concept-3">
         </div>
         <div class="image-container">
-            <img src="/files/images/rusalka/fish-concept-3.png" alt="photo-img" class="fish-concept-3">
+            <img src="/images/portfolio/rusalka/fish-concept-3.png" alt="photo-img" class="fish-concept-3">
         </div>
     </div>
 
     <div class="company-aims-5">
 
-        <img src="/files/images/rusalka/bulba-1.png" alt="photo-image" class="bulba-1">
-        <img src="/files/images/rusalka/bulba-4.png" alt="photo-image" class="bulba-4">
-        <img src="/files/images/rusalka/bulba-5.png" alt="photo-image" class="bulba-5">
+        <img src="/images/portfolio/rusalka/bulba-1.png" alt="photo-image" class="bulba-1">
+        <img src="/images/portfolio/rusalka/bulba-4.png" alt="photo-image" class="bulba-4">
+        <img src="/images/portfolio/rusalka/bulba-5.png" alt="photo-image" class="bulba-5">
 
-        <img src="/files/images/rusalka/bulba-2.png" alt="photo-image" class="bulba-2">
-        <img src="/files/images/rusalka/bulba-3.png" alt="photo-image" class="bulba-3">
+        <img src="/images/portfolio/rusalka/bulba-2.png" alt="photo-image" class="bulba-2">
+        <img src="/images/portfolio/rusalka/bulba-3.png" alt="photo-image" class="bulba-3">
 
         <div class="info-block-container">
             <div class="gl-container">
@@ -750,13 +751,13 @@
         </div>
 
         <div class="fishes-container">
-            <img src="/files/images/rusalka/fish-1.png" alt="photo-image" class="fish-1">
-            <img src="/files/images/rusalka/fish-2.png" alt="photo-image" class="fish-2">
-            <img src="/files/images/rusalka/fish-3.png" alt="photo-image" class="fish-3">
-            <img src="/files/images/rusalka/fish-4.png" alt="photo-image" class="fish-4">
-            <img src="/files/images/rusalka/fish-5.png" alt="photo-image" class="fish-5">
-            <img src="/files/images/rusalka/fish-6.png" alt="photo-image" class="fish-6">
-            <img src="/files/images/rusalka/fish-7.png" alt="photo-image" class="fish-7">
+            <img src="/images/portfolio/rusalka/fish-1.png" alt="photo-image" class="fish-1">
+            <img src="/images/portfolio/rusalka/fish-2.png" alt="photo-image" class="fish-2">
+            <img src="/images/portfolio/rusalka/fish-3.png" alt="photo-image" class="fish-3">
+            <img src="/images/portfolio/rusalka/fish-4.png" alt="photo-image" class="fish-4">
+            <img src="/images/portfolio/rusalka/fish-5.png" alt="photo-image" class="fish-5">
+            <img src="/images/portfolio/rusalka/fish-6.png" alt="photo-image" class="fish-6">
+            <img src="/images/portfolio/rusalka/fish-7.png" alt="photo-image" class="fish-7">
         </div>
 
         <h2 class="h2-title header-white">RUSALKA –<br>Вместе мы сильнее!</h2>
@@ -838,25 +839,8 @@
 
 @section('page-scripts')
 
-<!-- OwlCarousel -->
-<script src="/js/owl.carousel.min.js"></script>
-<!--<script src="../js/owl.lazyload.js"></script>-->
-
-<!-- SmoothScroll -->
-<!--<script src="../js/SmoothScroll.js"></script>-->
-
-<!-- star rating -->
-<script src="/js/star-rating.js"></script>
-<link rel="stylesheet" href="/css/star-rating.css" media="all" type="text/css"/>
-<script type="text/javascript">
-    $(".rating").rating({min:1, max:5, step:0.5, size:'sm'});
-
-    $('.clear-rating').hide();
-    $('.caption').hide();
-</script>
-
 
 <!-- include own JavaScript -->
-<script src="/js/rusalka.js"></script>
+<script src="/js/portfolio/portfolio-rusalka.js"></script>
 
 @stop

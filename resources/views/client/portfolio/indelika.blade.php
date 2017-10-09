@@ -5,13 +5,13 @@
 @section('page-meta')
     <meta name="description" content="{{ $portfolio->meta->{'description' . $langSuf} }}">
     <meta name="keywords" content="{{ $portfolio->meta->{'keywords' . $langSuf} }}">
+    <meta property=og:image content="{{ url('images/portfolio') . '/' .$portfolio->image->link }}"/>
 @stop
 
 @section('page-style')
     <!-- OwlCarousel -->
-    <link rel="stylesheet" href="/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="/css/indelika.css">
+
+    <link rel="stylesheet" href="/css/portfolio/portfolio-indelika.css">
 @stop
 
 
@@ -37,7 +37,7 @@
     <!--<div class="bg-container image-second"></div>-->
 
     <div class="image-container logo-container">
-        <img src="/files/images/indelika/logo-indelika.png" alt="photo-image" class="big-image image-2">
+        <img src="/images/portfolio/indelika/logo-indelika.png" alt="photo-image" class="big-image image-2">
     </div>
 
     <div class="info-block-container info-history">
@@ -121,9 +121,9 @@
         <div class="gl-container">
             <h2>Шрифты этикетки</h2>
             <div class="image-container fonts-container">
-                <img src="/files/images/indelika/font-1.png" alt="photo-image" class="font-1">
-                <img src="/files/images/indelika/font-2.png" alt="photo-image" class="font-2">
-                <img src="/files/images/indelika/font-3.png" alt="photo-image" class="font-3">
+                <img src="/images/portfolio/indelika/font-1.png" alt="photo-image" class="font-1">
+                <img src="/images/portfolio/indelika/font-2.png" alt="photo-image" class="font-2">
+                <img src="/images/portfolio/indelika/font-3.png" alt="photo-image" class="font-3">
             </div>
         </div>
     </div>
@@ -210,7 +210,7 @@
 
     <div class="owl-carousel owl-theme">
         <div class="item">
-            <!--<img src="/files/images/indelika/indelika-concept-1.jpg" alt="photo-image" class="img-right">-->
+            <!--<img src="/images/portfolio/indelika/indelika-concept-1.jpg" alt="photo-image" class="img-right">-->
             <div class="bg-container-right img-1"></div>
             <div class="gl-container">
                 <h2>Концепт № 1 - Павлиний хвост</h2>
@@ -252,7 +252,7 @@
             </div>
         </div>
         <div class="item">
-            <!--<img src="/files/images/indelika/indelika-concept-2.jpg" alt="photo-image" class="img-right">-->
+            <!--<img src="/images/portfolio/indelika/indelika-concept-2.jpg" alt="photo-image" class="img-right">-->
             <div class="bg-container-right img-2"></div>
             <div class="gl-container">
                 <h2>Концепт № 2 - Павлиний хвост</h2>
@@ -294,7 +294,7 @@
             </div>
         </div>
         <div class="item">
-            <!--<img src="/files/images/indelika/indelika-concept-3.jpg" alt="photo-image" class="img-right">-->
+            <!--<img src="/images/portfolio/indelika/indelika-concept-3.jpg" alt="photo-image" class="img-right">-->
             <div class="bg-container-right img-3"></div>
             <div class="gl-container">
                 <h2>Концепт № 3 - Павлиний хвост</h2>
@@ -340,7 +340,7 @@
     </div>
 
     <!--<div class="image-container">-->
-        <!--<img src="/files/images/ИНДЕЛИКА-ВИЗ-3.jpg" alt="photo-image" class="big-image fourth-image">-->
+        <!--<img src="/images/ИНДЕЛИКА-ВИЗ-3.jpg" alt="photo-image" class="big-image fourth-image">-->
     <!--</div>-->
 
     <div class="bg-container image-6"></div>
@@ -395,27 +395,7 @@
 
 @section('page-scripts')
     <!--скрипты для всех страниц конец-->
-
-    <script src="/js/viewportchecker.js"></script>
-
-    <!-- OwlCarousel -->
-    <script src="/js/owl.carousel.min.js"></script>
-    <!--<script src="../js/owl.lazyload.js"></script>-->
-
-    <!-- SmoothScroll -->
-    <script src="/js/SmoothScroll.js"></script>
-
-    <!-- star rating -->
-    <script src="/js/star-rating.js"></script>
-    <link rel="stylesheet" href="/css/star-rating.css" media="all" type="text/css"/>
-    <script type="text/javascript">
-        $(".rating").rating({min:1, max:5, step:0.5, size:'sm'});
-
-        $('.clear-rating').hide();
-        $('.caption').hide();
-    </script>
-
     <!-- include own JavaScript -->
-    <script src="/js/indelika.js"></script>
+    <script src="/js/portfolio/portfolio-indelika.js"></script>
 @stop
 <!-- end of subscribe_form -->

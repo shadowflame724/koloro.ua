@@ -5,14 +5,13 @@
 @section('page-meta')
     <meta name="description" content="{{ $portfolio->meta->{'description' . $langSuf} }}">
     <meta name="keywords" content="{{ $portfolio->meta->{'keywords' . $langSuf} }}">
+    <meta property=og:image content="{{ url('images/portfolio') . '/' .$portfolio->image->link }}"/>
+
 @stop
 
 @section('page-style')
-
-    <!-- OwlCarousel -->
-    <link rel="stylesheet" href="/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="/css/globino.css">
+    
+    <link rel="stylesheet" href="/css/portfolio/portfolio-globino.css">
 
 @stop
 
@@ -25,7 +24,7 @@
     @include('layouts.whiteheader')
     <!-- begin background -->
     <section class="background portfolio_page"
-             style="background-image: url('/files/images/globino/main_back_chease.jpg');">
+             style="background-image: url('/images/portfolio/globino/main_back_chease.jpg');">
         <!-- begin container -->
         <div class="container">
             <h1 class="page_name">новый зонтичный молочный бренд “Глобино”</h1>
@@ -49,11 +48,11 @@
             <!-- begin showcase -->
             <div class="showcase">
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                     data-original="/files/images/globino/gauda.png" alt="name image" class="lazy">
+                     data-original="/images/portfolio/globino/gauda.png" alt="name image" class="lazy">
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                     data-original="/files/images/globino/russians.png" alt="name image" class="lazy">
+                     data-original="/images/portfolio/globino/russians.png" alt="name image" class="lazy">
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                     data-original="/files/images/globino/edam.png" alt="name image" class="lazy">
+                     data-original="/images/portfolio/globino/edam.png" alt="name image" class="lazy">
             </div>
             <!-- end showcase -->
             <!-- begin some_text -->
@@ -129,9 +128,9 @@
             <!-- begin container -->
             <div class="container">
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                     data-original="/files/images/globino/smetankoviy.jpg" alt="name image" class="lazy">
+                     data-original="/images/portfolio/globino/smetankoviy.jpg" alt="name image" class="lazy">
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                     data-original="/files/images/globino/zvenigorodskiy.jpg" alt="name image" class="lazy">
+                     data-original="/images/portfolio/globino/zvenigorodskiy.jpg" alt="name image" class="lazy">
                 <div class="second_paralax" id="showcase2_1"></div>
                 <div class="first_paralax" id="showcase2_2"></div>
                 <div class="third_paralax" id="showcase2_3"></div>
@@ -166,7 +165,7 @@
             <!-- begin container -->
             <div class="container">
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                     data-original="/files/images/globino/globino_logo.png" alt="name image" class="lazy clientlogo">
+                     data-original="/images/portfolio/globino/globino_logo.png" alt="name image" class="lazy clientlogo">
                 <p class="intro">
                     Работа по созданию молочного бренда началась на примере дизайна твердых сыров.
                 </p>
@@ -465,11 +464,11 @@
             <!-- begin showcase_stereotip -->
             <div class="showcase_stereotip">
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                     data-original="/files/images/globino/russians_hard.png" alt="name image" class="lazy">
+                     data-original="/images/portfolio/globino/russians_hard.png" alt="name image" class="lazy">
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                     data-original="/files/images/globino/globino_chease.png" alt="name image" class="lazy">
+                     data-original="/images/portfolio/globino/globino_chease.png" alt="name image" class="lazy">
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                     data-original="/files/images/globino/globino_chease2.png" alt="name image" class="lazy">
+                     data-original="/images/portfolio/globino/globino_chease2.png" alt="name image" class="lazy">
                 <div class="first_paralax" id="showcase_stereotip_1"></div>
                 <div class="second_paralax" id="showcase_stereotip_2"></div>
                 <div class="third_paralax" id="showcase_stereotip_3"></div>
@@ -540,11 +539,11 @@
             <!-- begin showcase_stereotip -->
             <div class="showcase_stereotip bigger_padding">
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                     data-original="/files/images/globino/russians_backside.png" alt="name image" class="lazy">
+                     data-original="/images/portfolio/globino/russians_backside.png" alt="name image" class="lazy">
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                     data-original="/files/images/globino/russians_on_concept.png" alt="name image" class="lazy">
+                     data-original="/images/portfolio/globino/russians_on_concept.png" alt="name image" class="lazy">
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                     data-original="/files/images/globino/russians_backside2.png" alt="name image" class="lazy">
+                     data-original="/images/portfolio/globino/russians_backside2.png" alt="name image" class="lazy">
                 <div class="first_paralax" id="showcase_stereotip_4"></div>
                 <div class="second_paralax" id="showcase_stereotip_5"></div>
                 <div class="third_paralax" id="showcase_stereotip_6"></div>
@@ -593,7 +592,7 @@
                     </div>
                     <!-- end important_info -->
                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                         data-original="/files/images/globino/globino_blue_logo.png" alt="name image"
+                         data-original="/images/portfolio/globino/globino_blue_logo.png" alt="name image"
                          class="lazy clientlogo animated fade">
                 </div>
                 <!-- end container -->
@@ -606,7 +605,7 @@
             <!-- begin wave_block -->
             <div class="wave_block">
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                     data-original="/files/images/globino/globino_white_logo.png" alt="name image"
+                     data-original="/images/portfolio/globino/globino_white_logo.png" alt="name image"
                      class="lazy clientlogo animated top">
                 <div class="first_paralax" id="paralax_on_wave_1"></div>
                 <div class="second_paralax" id="paralax_on_wave_2"></div>
@@ -636,14 +635,14 @@
                 <!-- end some_text -->
 
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                     data-original="/files/images/globino/cards.png" alt="name image" class="lazy cards">
+                     data-original="/images/portfolio/globino/cards.png" alt="name image" class="lazy cards">
                 <p class="text_globino">
                     Поскольку производство сыра осуществляется по ДСТУ ГОСТАМ и фиксированным стандартам у нас появилась
                     идея высветить очевидную информацию, но как ни странно ни кем еще не использованную. Что на
                     производство 1 кг идет 10,5 литров…
                 </p>
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                     data-original="/files/images/globino/sketch.jpg" alt="name image" class="lazy sketch">
+                     data-original="/images/portfolio/globino/sketch.jpg" alt="name image" class="lazy sketch">
                 <!-- begin container -->
                 <div class="container">
                     <!-- begin flex_container -->
@@ -700,7 +699,7 @@
                 </section>
                 <!-- end some_text -->
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                     data-original="/files/images/globino/all_production_on_screen.jpg" alt="name image"
+                     data-original="/images/portfolio/globino/all_production_on_screen.jpg" alt="name image"
                      class="lazy fullpage">
 
             </div>
@@ -741,9 +740,9 @@
                 <!-- begin left_column -->
                 <div class="left_column">
                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                         data-original="/files/images/globino/manvschease.jpg" alt="name image" class="lazy">
+                         data-original="/images/portfolio/globino/manvschease.jpg" alt="name image" class="lazy">
                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                         data-original="/files/images/globino/productions.jpg" alt="name image" class="lazy">
+                         data-original="/images/portfolio/globino/productions.jpg" alt="name image" class="lazy">
                 </div>
                 <!-- end left_column -->
 
@@ -751,21 +750,21 @@
                 <!-- begin right_column -->
                 <div class="right_column">
                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                         data-original="/files/images/globino/milkvschease.jpg" alt="name image" class="lazy">
+                         data-original="/images/portfolio/globino/milkvschease.jpg" alt="name image" class="lazy">
                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                         data-original="/files/images/globino/naturmort.jpg" alt="name image" class="lazy">
+                         data-original="/images/portfolio/globino/naturmort.jpg" alt="name image" class="lazy">
                 </div>
                 <!-- end right_column -->
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                     data-original="/files/images/globino/nice_chease.jpg" alt="name image" class="lazy nicechease">
+                     data-original="/images/portfolio/globino/nice_chease.jpg" alt="name image" class="lazy nicechease">
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                     data-original="/files/images/globino/plungervschease.jpg" alt="name image" class="lazy plung">
+                     data-original="/images/portfolio/globino/plungervschease.jpg" alt="name image" class="lazy plung">
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                     data-original="/files/images/globino/car.jpg" alt="name image" class="lazy">
+                     data-original="/images/portfolio/globino/car.jpg" alt="name image" class="lazy">
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                     data-original="/files/images/globino/uniform.jpg" alt="name image" class="lazy uniform">
+                     data-original="/images/portfolio/globino/uniform.jpg" alt="name image" class="lazy uniform">
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                     data-original="/files/images/globino/uniform_front.jpg" alt="name image"
+                     data-original="/images/portfolio/globino/uniform_front.jpg" alt="name image"
                      class="lazy uniform_front">
 
 
@@ -846,27 +845,8 @@
     <!-- end of subscribe_form -->
     @section('page-scripts')
 
-        <!-- OwlCarousel -->
-            <script src="/js/owl.carousel.min.js"></script>
-            <!--<script src="../js/owl.lazyload.js"></script>-->
-
-            <!-- SmoothScroll -->
-            <!--<script src="../js/SmoothScroll.js"></script>-->
-            <script src="../js/viewportchecker.js"></script>
-            <script src="/js/SmoothScroll.js"></script>
-
-            <!-- star rating -->
-            <script src="/js/star-rating.js"></script>
-            <link rel="stylesheet" href="/css/star-rating.css" media="all" type="text/css"/>
-            <script type="text/javascript">
-                $(".rating").rating({min: 1, max: 5, step: 0.5, size: 'sm'});
-
-                $('.clear-rating').hide();
-                $('.caption').hide();
-            </script>
-
 
             <!-- include own JavaScript -->
-            <script src="/js/globino.js"></script>
+            <script src="/js/portfolio/portfolio-globino.js"></script>
 
 @stop
