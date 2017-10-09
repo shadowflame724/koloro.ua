@@ -9,6 +9,8 @@
 @stop
 
 @section('page-style')
+    <link rel="stylesheet" href="/css/portfolio-main.css">
+
     <link rel="stylesheet" href="/css/portfolio/portfolio-gremuchaya-smes.css">
 @stop
 
@@ -18,7 +20,7 @@
     <!--PRELOADER!!! -->
     <div id="preloader"></div>
 
-    @include('layouts.blackheader')
+    @include('layouts.whiteheader')
 
 <section id="gremuchaya-smes">
     <div class="bg-container top-container">
@@ -548,5 +550,7 @@
 @stop
 
 @section('page-scripts')
+    <script src="/js/portfolio-main.js"></script>
+
     <script src="/js/portfolio/portfolio-gremuchaya-smes.js"></script>
 @stop

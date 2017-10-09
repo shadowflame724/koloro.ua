@@ -11,7 +11,7 @@
 @section('page-style')
 
     <!-- OwlCarousel -->
-
+    <link rel="stylesheet" href="/css/portfolio-main.css">
     <link rel="stylesheet" href="/css/portfolio/portfolio-globino-maslo.css">
 
 @stop
@@ -790,6 +790,7 @@
 
 @section('page-scripts')
 <!--скрипты для всех страниц конец-->
+<script src="/js/portfolio-main.js"></script>
 
 <!-- include own JavaScript -->
 <script src="/js/portfolio/portfolio-globino-maslo.js"></script>

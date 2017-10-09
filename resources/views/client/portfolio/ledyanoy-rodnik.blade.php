@@ -11,6 +11,7 @@
 
 @section('page-style')
     <!-- OwlCarousel -->
+    <link rel="stylesheet" href="/css/portfolio-main.css">
 
     <link rel="stylesheet" href="/css/portfolio/portfolio-led-rodnik.css">
 @stop
@@ -327,6 +328,7 @@
 </section>
 @stop
 @section('page-scripts')
+    <script src="/js/portfolio-main.js"></script>
 
     <script src="/js/portfolio/portfolio-led-rodnik.js"></script>
 

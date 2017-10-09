@@ -560,6 +560,7 @@
 @stop
 @section('page-scripts')
 
+    <script src="/js/portfolio-main.js"></script>
 
     <!-- include own JavaScript -->
     <script src="/js/portfolio/portfolio-mava.js"></script>

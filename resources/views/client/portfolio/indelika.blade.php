@@ -10,7 +10,7 @@
 
 @section('page-style')
     <!-- OwlCarousel -->
-
+    <link rel="stylesheet" href="/css/portfolio-main.css">
     <link rel="stylesheet" href="/css/portfolio/portfolio-indelika.css">
 @stop
 
@@ -396,6 +396,7 @@
 @section('page-scripts')
     <!--скрипты для всех страниц конец-->
     <!-- include own JavaScript -->
+    <script src="/js/portfolio-main.js"></script>
     <script src="/js/portfolio/portfolio-indelika.js"></script>
 @stop
 <!-- end of subscribe_form -->

@@ -12,6 +12,7 @@
 @section('page-style')
 
     <!-- OwlCarousel -->
+    <link rel="stylesheet" href="/css/portfolio-main.css">
 
     <link rel="stylesheet" href="/css/portfolio/portfolio-mirovaya-tradicia.css">
 

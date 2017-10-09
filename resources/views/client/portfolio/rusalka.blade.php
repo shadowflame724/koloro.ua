@@ -12,6 +12,7 @@
 @section('page-style')
 
     <!-- OwlCarousel -->
+    <link rel="stylesheet" href="/css/portfolio-main.css">
 
     <link rel="stylesheet" href="/css/portfolio/portfolio-rusalka.css">
 
@@ -839,6 +840,7 @@
 
 @section('page-scripts')
 
+    <script src="/js/portfolio-main.js"></script>
 
 <!-- include own JavaScript -->
 <script src="/js/portfolio/portfolio-rusalka.js"></script>

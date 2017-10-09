@@ -10,7 +10,8 @@
 @stop
 
 @section('page-style')
-    
+    <link rel="stylesheet" href="/css/portfolio-main.css">
+
     <link rel="stylesheet" href="/css/portfolio/portfolio-globino.css">
 
 @stop
@@ -165,7 +166,8 @@
             <!-- begin container -->
             <div class="container">
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAkwBADs="
-                     data-original="/images/portfolio/globino/globino_logo.png" alt="name image" class="lazy clientlogo">
+                     data-original="/images/portfolio/globino/globino_logo.png" alt="name image"
+                     class="lazy clientlogo">
                 <p class="intro">
                     Работа по созданию молочного бренда началась на примере дизайна твердых сыров.
                 </p>
@@ -843,8 +845,9 @@
     @stop
 
     <!-- end of subscribe_form -->
-    @section('page-scripts')
+        @section('page-scripts')
 
+            <script src="/js/portfolio-main.js"></script>
 
             <!-- include own JavaScript -->
             <script src="/js/portfolio/portfolio-globino.js"></script>
