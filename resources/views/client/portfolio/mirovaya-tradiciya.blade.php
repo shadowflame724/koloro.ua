@@ -28,16 +28,16 @@
         <!--class="portfolio_block"-->
         <div class="image-container top-container">
             <div class="dark-mask top-mask"></div>
-            <img src="/images/mirovaya-tradiciya/logo.png" alt="photo-image" class="big-image logo-image">
+            <img src="/images/portfolio/mirovaya-tradiciya/logo.png" alt="photo-image" class="big-image logo-image">
 
             <div class="gl-container">
                 <h1 class="top-title">Мировая традиция, <br> «Отборная рецептура и лучшие традиции со всего мира»</h1>
             </div>
 
-            <img src="/images/mirovaya-tradiciya/cloud-back-1.png" alt="photo-image"
+            <img src="/images/portfolio/mirovaya-tradiciya/cloud-back-1.png" alt="photo-image"
                  class="cloud-back-1 cloud-back-1-animate">
-            <img src="/images/mirovaya-tradiciya/cloud-n1.png" alt="photo-image" class="cloud-N1">
-            <img src="/images/mirovaya-tradiciya/ballon.png" alt="photo-image" class="ballon-right">
+            <img src="/images/portfolio/mirovaya-tradiciya/cloud-n1.png" alt="photo-image" class="cloud-N1">
+            <img src="/images/portfolio/mirovaya-tradiciya/ballon.png" alt="photo-image" class="ballon-right">
         </div>
 
         <div class="company-aims">
@@ -67,8 +67,8 @@
 
             <div class="image-container plane-container">
                 <!--plane-animate-->
-                <img src="/images/mirovaya-tradiciya/plane.png" alt="photo-image" class="big-image plane">
-                <img src="/images/mirovaya-tradiciya/cloud-n2.png" alt="photo-image" class="cloud-N2">
+                <img src="/images/portfolio/mirovaya-tradiciya/plane.png" alt="photo-image" class="big-image plane">
+                <img src="/images/portfolio/mirovaya-tradiciya/cloud-n2.png" alt="photo-image" class="cloud-N2">
             </div>
 
             <div class="info-block-container info-aim">
@@ -146,8 +146,8 @@
 
         <div class="owl-carousel owl-theme">
             <div class="item">
-                <img src="/images/mirovaya-tradiciya/bottle-chasha.png" alt="photo-image" class="img-left">
-                <img src="/images/mirovaya-tradiciya/bottle-chasha-2.png" alt="photo-image" class="img-right">
+                <img src="/images/portfolio/mirovaya-tradiciya/bottle-chasha.png" alt="photo-image" class="img-left">
+                <img src="/images/portfolio/mirovaya-tradiciya/bottle-chasha-2.png" alt="photo-image" class="img-right">
 
                 <div class="gl-container">
                     <h2>Концепт «Чаша»</h2>
@@ -187,8 +187,8 @@
                 </div>
             </div>
             <div class="item">
-                <img src="/images/mirovaya-tradiciya/bottle-kolos.png" alt="photo-image" class="img-left">
-                <img src="/images/mirovaya-tradiciya/bottle-kolos-2.png" alt="photo-image" class="img-right">
+                <img src="/images/portfolio/mirovaya-tradiciya/bottle-kolos.png" alt="photo-image" class="img-left">
+                <img src="/images/portfolio/mirovaya-tradiciya/bottle-kolos-2.png" alt="photo-image" class="img-right">
                 <div class="gl-container">
                     <h2>Концепт «Чаша»</h2>
 
@@ -227,8 +227,8 @@
                 </div>
             </div>
             <div class="item">
-                <img src="/images/mirovaya-tradiciya/bottle-shar.png" alt="photo-image" class="img-left">
-                <img src="/images/mirovaya-tradiciya/bottle-2.png" alt="photo-image" class="img-right">
+                <img src="/images/portfolio/mirovaya-tradiciya/bottle-shar.png" alt="photo-image" class="img-left">
+                <img src="/images/portfolio/mirovaya-tradiciya/bottle-2.png" alt="photo-image" class="img-right">
                 <div class="gl-container">
                     <h2>Концепт «Чаша»</h2>
 
@@ -277,14 +277,14 @@
         <div class="bg-container bottles-2"></div>
 
         <div class="company-aims-2">
-            <img src="/images/mirovaya-tradiciya/cloud-n3.png" alt="photo-image" class="cloud-N3">
-            <img src="/images/mirovaya-tradiciya/cloud-back-2.png" alt="photo-image"
+            <img src="/images/portfolio/mirovaya-tradiciya/cloud-n3.png" alt="photo-image" class="cloud-N3">
+            <img src="/images/portfolio/mirovaya-tradiciya/cloud-back-2.png" alt="photo-image"
                  class="cloud-back-2 cloud-back-2-animate">
 
             <h2 class="h2-title header-white">Логотип</h2>
 
             <div class="image-container logo-container-2">
-                <img src="/images/mirovaya-tradiciya/logo-2.png" alt="photo-image" class="logo-2 logo-2-animate">
+                <img src="/images/portfolio/mirovaya-tradiciya/logo-2.png" alt="photo-image" class="logo-2 logo-2-animate">
             </div>
         </div>
 
@@ -293,20 +293,20 @@
 
             <div class="gl-container">
                 <div class="lineage-item">
-                    <img src="/images/mirovaya-tradiciya/evropa.png" alt="photo-image"
+                    <img src="/images/portfolio/mirovaya-tradiciya/evropa.png" alt="photo-image"
                          class="lineage-item-animate">
                 </div>
                 <div class="lineage-item">
-                    <img src="/images/mirovaya-tradiciya/otechestvo.png" alt="photo-image"
+                    <img src="/images/portfolio/mirovaya-tradiciya/otechestvo.png" alt="photo-image"
                          class="lineage-item-animate">
                 </div>
                 <div class="lineage-item">
-                    <img src="/images/mirovaya-tradiciya/vostok.png" alt="photo-image"
+                    <img src="/images/portfolio/mirovaya-tradiciya/vostok.png" alt="photo-image"
                          class="lineage-item-animate">
                 </div>
             </div>
 
-            <img src="/images/mirovaya-tradiciya/cloud-back-3.png" alt="photo-image"
+            <img src="/images/portfolio/mirovaya-tradiciya/cloud-back-3.png" alt="photo-image"
                  class="cloud-back-3 cloud-back-3-animate">
 
         </div>
@@ -370,9 +370,9 @@
             </div>
 
             <div class="image-container parallax-container">
-                <img src="/images/mirovaya-tradiciya/birds.png" alt="photo-image" class="birds birds-animate">
-                <img src="/images/mirovaya-tradiciya/ballon-small.png" alt="photo-image" class="ballon-small">
-                <img src="/images/mirovaya-tradiciya/cloud-n4.png" alt="photo-image" class="cloud-N4">
+                <img src="/images/portfolio/mirovaya-tradiciya/birds.png" alt="photo-image" class="birds birds-animate">
+                <img src="/images/portfolio/mirovaya-tradiciya/ballon-small.png" alt="photo-image" class="ballon-small">
+                <img src="/images/portfolio/mirovaya-tradiciya/cloud-n4.png" alt="photo-image" class="cloud-N4">
             </div>
 
             <div class="info-block-container info-result">
@@ -399,7 +399,7 @@
                 </div>
 
                 <div class="image-container">
-                    <img src="/images/mirovaya-tradiciya/cloud-n5.png" alt="photo-image" class="cloud-N5">
+                    <img src="/images/portfolio/mirovaya-tradiciya/cloud-n5.png" alt="photo-image" class="cloud-N5">
                 </div>
             </div>
 
