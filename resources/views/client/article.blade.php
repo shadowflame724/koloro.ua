@@ -26,7 +26,8 @@
                 <!-- begin info -->
                 <div class="info">
                     <p>Категория: <span>{{ $article->blogcategory->{'name' . $langSuf} }}</span></p>
-                    <p>Автор: <a href="/author.html" class="autor_link">@if($article->user){{ $article->user->name }}@endif</a></p>
+                    <p>Автор: <a href="/author/{{ $article->user->id }}"
+                                 class="autor_link">@if($article->user){{ $article->user->name }}@endif</a></p>
                     <!-- begin right_block -->
                     <div class="right_block">
                         <p><i class="icon icon-clock"></i>{{ $article->created_at->diffForHumans() }}</p>
@@ -58,8 +59,9 @@
                 <div class="our_jobs">
                     <p>Наши работы</p>
                     @foreach($portfolios as $item)
-                    <img src="/files/images/portfolio/{{ $item->link }}"
-                         data-original="/files/images/portfolio/{{ $item->link }}" alt="/files/images/portfolio/{{ $item->alt }}" class="lazy">
+                        <img src="/files/images/portfolio/{{ $item->link }}"
+                             data-original="/files/images/portfolio/{{ $item->link }}"
+                             alt="/files/images/portfolio/{{ $item->alt }}" class="lazy">
                     @endforeach
                     <a href="#" class="btn btn_wb">хочу также</a>
                 </div>
@@ -145,9 +147,12 @@
                 <!-- begin creator -->
                 <div class="creator">
                     <img src="/files/images/users/@if($user->file){{ $user->file->link }}"
-                         data-original="/files/images/users/{{ $user->file->link }}" alt="{{ $user->file->alt }}@endif" class="lazy">
+                         data-original="/files/images/users/{{ $user->file->link }}" alt="{{ $user->file->alt }}@endif"
+                         class="lazy">
                     <div class="creator_info">
-                        <p class="who">Подготовил <a href="/author/{{ $user->id }}">@if($article->user){{ $article->user->name }}@endif</a></p>
+                        <p class="who">Подготовил <a
+                                    href="/author/{{ $user->id }}">@if($article->user){{ $article->user->name }}@endif</a>
+                        </p>
                         <p>Копирайтер</p>
                     </div>
                 </div>
@@ -194,20 +199,22 @@
                 <div class="similar_material">
                     <p class="name_block">Похожие материалы</p>
                     <!-- begin one_material -->
-                    @foreach($category->blog as $similarArticle)
+                    @foreach($category->blog as $key => $similarArticle)
                         @if($similarArticle->id != $article->id)
-                            <div class="one_material">
-                                <a href="/blog/{{ $similarArticle->blogcategory->slug }}/{{ $similarArticle->slug }}"
-                                   target="_blank"
-                                   title="{{ $similarArticle->{'name' . $langSuf} }}">
+                            @if($key < 4)
+                                <div class="one_material">
+                                    <a href="/blog/{{ $similarArticle->blogcategory->slug }}/{{ $similarArticle->slug }}"
+                                       target="_blank"
+                                       title="{{ $similarArticle->{'name' . $langSuf} }}">
 
-                                    <img src="/files/images/blog/@if($similarArticle->file){{ $similarArticle->file->link }}"
-                                         data-original="/files/images/blog/{{ $similarArticle->file->link }}"
-                                         alt="{{ $similarArticle->file->alt }}@endif"
-                                         class="lazy">
-                                    <p>{{ $similarArticle->{'name' . $langSuf} }}</p>
-                                </a>
-                            </div>
+                                        <img src="/files/images/blog/@if($similarArticle->file){{ $similarArticle->file->link }}"
+                                             data-original="/files/images/blog/{{ $similarArticle->file->link }}"
+                                             alt="{{ $similarArticle->file->alt }}@endif"
+                                             class="lazy">
+                                        <p>{{ $similarArticle->{'name' . $langSuf} }}</p>
+                                    </a>
+                                </div>
+                            @endif
                         @endif
                     @endforeach
                     <div class="clear"></div>
