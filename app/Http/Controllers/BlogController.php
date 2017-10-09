@@ -90,6 +90,7 @@ class BlogController extends Controller
                 ->orderBy('created_at', 'DESC')
                 ->paginate(10);
         } else {
+            $categoryId = null;
             $blogs = \DB::table('blog')
                 ->join('blogcategory', 'blog.category_id', '=', 'blogcategory.id')
                 ->join('users as u', 'blog.user_id', '=', 'u.id')
@@ -99,7 +100,7 @@ class BlogController extends Controller
                 ->paginate(10);
         }
 
-        return view('client.blog', compact('blogs', 'blogcategories', 'page'));
+        return view('client.blog', compact('blogs', 'blogcategories', 'page', 'categoryId'));
     }
 
     public function getBlogCategory($slug)

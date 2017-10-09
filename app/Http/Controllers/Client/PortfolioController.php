@@ -23,8 +23,9 @@ class PortfolioController extends Controller
             ->orderBy('portfolio.id', 'DESC')
             ->get();
         $page = Page::find(3);
+        $categoryId = null;
 
-        return view('client.portfolio', compact('portfolios', 'categories', 'page'));
+        return view('client.portfolio', compact('portfolios', 'categories', 'page', 'categoryId'));
     }
 
     public function getPortfolioCategory($category)
@@ -44,7 +45,7 @@ class PortfolioController extends Controller
         $page = Page::find(3);
 
 
-        return view('client.portfolio', compact('portfolios', 'categories', 'page'));
+        return view('client.portfolio', compact('portfolios', 'categories', 'page', 'categoryId'));
     }
 
     public function getPortfolioPage($slug)

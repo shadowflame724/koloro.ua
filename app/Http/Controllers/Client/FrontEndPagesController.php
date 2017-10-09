@@ -64,11 +64,13 @@ class FrontEndPagesController extends Controller
         $page = Page::find(9);
         if($slug != null){
             $category = BlogCategory::where('slug', $slug)->first();
+            $categoryId = $category->id;
             $articles = Blog::where('user_id', $user->id)->where('category_id', '=', $category->id)->paginate(5);
         }else{
             $articles = Blog::where('user_id', $user->id)->paginate(5);
+            $categoryId = null;
         }
 
-        return view('client.author', compact('page', 'user', 'blogCategories', 'articles'));
+        return view('client.author', compact('page', 'user', 'blogCategories', 'articles', 'categoryId'));
     }
 }

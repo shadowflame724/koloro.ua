@@ -18,12 +18,12 @@
         <nav class="blog_nav">
             <ul class="flex">
                 <li>
-                    <a href="/author/{{ $user->id }}" class="active">Все категории</a>
+                    <a href="/author/{{ $user->id }}" @if($categoryId == null) class="active" @endif>Все категории</a>
                 </li>
                 @foreach($blogCategories as $blogCategory)
 
                 <li>
-                    <a href="/author/{{ $user->id }}/{{ $blogCategory->slug }}">{{ $blogCategory->{'name' . $langSuf} }}</a>
+                    <a href="/author/{{ $user->id }}/{{ $blogCategory->slug }}" @if($categoryId == $blogCategory->id) class="active" @endif>{{ $blogCategory->{'name' . $langSuf} }}</a>
                 </li>
 
                 @endforeach

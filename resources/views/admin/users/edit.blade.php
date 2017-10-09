@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@permission('user-edit')
+@if($user->id == Auth::user()->id OR Auth::user()->can('user-edit'))
+
 @section('main-content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
@@ -31,10 +32,10 @@
             </div>
         </div>
         {{--<div class="col-xs-12 col-sm-12 col-md-12">--}}
-            {{--<div class="form-group">--}}
-                {{--<strong>Фамилия:</strong>--}}
-                {{--{!! Form::text('surname', null, array('class' => 'form-control')) !!}--}}
-            {{--</div>--}}
+        {{--<div class="form-group">--}}
+        {{--<strong>Фамилия:</strong>--}}
+        {{--{!! Form::text('surname', null, array('class' => 'form-control')) !!}--}}
+        {{--</div>--}}
         {{--</div>--}}
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
@@ -84,16 +85,18 @@
                 {!! Form::file('image', null, ['class' => 'form-control']) !!}
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-4">
-            <div class="form-group">
-                <strong>Роль:</strong>
-                {!! Form::select('roles[]', $roles,$userRole, array('class' => 'form-control','multiple')) !!}
+        @if(Auth::user()->can('user-edit'))
+            <div class="col-xs-12 col-sm-12 col-md-4">
+                <div class="form-group">
+                    <strong>Роль:</strong>
+                    {!! Form::select('roles[]', $roles,$userRole, array('class' => 'form-control','multiple')) !!}
+                </div>
             </div>
-        </div>
+        @endif
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
             <button type="submit" class="btn btn-primary">Сохранить</button>
         </div>
     </div>
     {!! Form::close() !!}
 @endsection
-@endpermission
+@endif

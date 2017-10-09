@@ -21,11 +21,11 @@
         <nav class="blog_nav">
             <ul class="flex">
                 <li>
-                    <a href="/blog">Все категории</a>
+                    <a href="/blog" @if($categoryId == null) class="active" @endif>Все категории</a>
                 </li>
                 @foreach ($blogcategories as $blogcategory)
                     <li>
-                        <a href="/blog/{{ $blogcategory->slug }}">{{ $blogcategory->{'name' . $langSuf} }}</a>
+                        <a href="/blog/{{ $blogcategory->slug }}" @if($categoryId == $blogcategory->id) class="active" @endif>{{ $blogcategory->{'name' . $langSuf} }}</a>
                     </li>
                 @endforeach
             </ul>
@@ -72,7 +72,7 @@
                         <div class="info">
                             <div>
                                 <p>Категория: <span>{{ $blog->{'categoryName' . $langSuf} }}</span></p>
-                                <p>Автор: <a href="author/{{ $blog->userId }}"
+                                <p>Автор: <a href="/author/{{ $blog->userId }}"
                                              class="autor_link">{{ $blog->userName }}</a></p>
                             </div>
                             <a href="/blog/{{ $blog->categorySlug }}/{{$blog->slug}}"

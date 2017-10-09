@@ -25,11 +25,11 @@
         <nav class="blog_nav">
             <ul class="flex">
                 <li>
-                    <a href="{{url('portfolio')}}" class="active">Все работы</a>
+                    <a href="{{url('portfolio')}}" @if($categoryId == null) class="active" @endif>Все работы</a>
                 </li>
                 @foreach($categories as $category)
                     <li>
-                        <a href="{{url('portfolio/category')}}/{{$category->slug}}">{{ $category->{'name' . $langSuf} }}</a>
+                        <a href="{{url('portfolio/category')}}/{{$category->slug}}" @if($categoryId == $category->id) class="active" @endif>{{ $category->{'name' . $langSuf} }}</a>
                     </li>
                 @endforeach
             </ul>

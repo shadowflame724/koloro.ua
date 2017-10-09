@@ -1,15 +1,16 @@
 @extends('layouts.app')
 
-@permission('user-index')
 @section('main-content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
                 <h2>Пользователи</h2>
             </div>
+            @permission('user-create')
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('admin.users.create') }}"> Добавить</a>
             </div>
+            @endpermission
         </div>
     </div>
     @if ($message = Session::get('success'))
@@ -52,14 +53,17 @@
                 </td>
                 <td>
                     {{--<a class="btn btn-info" href="{{ route('admin.users.show',$user->id) }}">Показать</a>--}}
-                    <a class="btn btn-primary" href="{{ route('admin.users.edit',$user->id) }}">Изменить</a>
-                    {!! Form::open(['method' => 'DELETE','route' => ['admin.users.destroy', $user->id],'style'=>'display:inline']) !!}
-                    {!! Form::submit('Удалить', ['class' => 'btn btn-danger']) !!}
-                    {!! Form::close() !!}
+                    @if(Auth::user()->can('user-edit'))
+                        <a class="btn btn-primary" href="{{ route('admin.users.edit', $user->id) }}">Изменить</a>
+                        {!! Form::open(['method' => 'DELETE','route' => ['admin.users.destroy', $user->id],'style'=>'display:inline']) !!}
+                        {!! Form::submit('Удалить', ['class' => 'btn btn-danger']) !!}
+                        {!! Form::close() !!}
+                    @elseif(Auth::user()->id == $user->id)
+                        <a class="btn btn-primary" href="{{ route('admin.users.edit', $user->id) }}">Изменить</a>
+                    @endif
                 </td>
             </tr>
         @endforeach
     </table>
     {!! $users->render() !!}
 @endsection
-@endpermission
