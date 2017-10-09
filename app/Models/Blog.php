@@ -10,7 +10,8 @@ class Blog extends Model
     protected $table = 'blog';
 
     protected $fillable = ['name_ru', 'name_ua', 'description_ru', 'description_ua', 'content_ru', 'content_ua',
-        'user_id', 'category_id', 'slug', 'meta_id', 'published_at', 'image_id', 'rating', 'votes', 'views'];
+        'user_id', 'category_id', 'slug', 'meta_id', 'published_at' , 'created_at' , 'updated_at',
+        'image_id', 'rating', 'votes', 'views', 'status'];
 
 
     public function file()
