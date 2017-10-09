@@ -16,10 +16,8 @@ class UpdateServiceRequest extends Request
      */
     public function authorize()
     {
-        $role = DB::table('role_user')->where('user_id', '=', Auth::user()->id)->first();
+        return Auth::user()->can('service-edit');
 
-        if ($role->role_id === 1) return true;
-        else return false;
     }
 
     /**
