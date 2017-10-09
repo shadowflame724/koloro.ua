@@ -34,24 +34,24 @@
 
         <div class="image-container clearfix top-images-cont">
             <div class="trees-left-cont">
-                <img src="/images/globino-maslo/trees-slide-left1.png" alt="photo-image">
+                <img src="/images/portfolio/globino-maslo/trees-slide-left1.png" alt="photo-image">
             </div><!--
             --><div class="flower-cont">
-                <img src="/images/globino-maslo/flower-slide.png" alt="photo-image">
+                <img src="/images/portfolio/globino-maslo/flower-slide.png" alt="photo-image">
             </div><!--
             --><div class="camp-cont">
-                <img src="/images/globino-maslo/camp-slide.png" alt="photo-image">
+                <img src="/images/portfolio/globino-maslo/camp-slide.png" alt="photo-image">
             </div><!--
             --><div class="rabbit-cont">
-                <img src="/images/globino-maslo/rabbit-slide.png" alt="photo-image">
+                <img src="/images/portfolio/globino-maslo/rabbit-slide.png" alt="photo-image">
             </div><!--
             --><div class="trees-right-cont">
-                <img src="/images/globino-maslo/trees-slide-right1.png" alt="photo-image">
+                <img src="/images/portfolio/globino-maslo/trees-slide-right1.png" alt="photo-image">
             </div>
         </div>
 
         <div class="image-container volna-container">
-            <img src="/images/globino-maslo/volna.png" alt="photo-image" class="volna">
+            <img src="/images/portfolio/globino-maslo/volna.png" alt="photo-image" class="volna">
         </div>
     </div>
 
@@ -82,16 +82,16 @@
         </div>
 
         <div class="image-container trees-cont">
-            <img src="/images/globino-maslo/trees.png" alt="photo-image">
+            <img src="/images/portfolio/globino-maslo/trees.png" alt="photo-image">
         </div>
 
         <div class="two-images-container">
             <div class="gl-container">
                 <div class="image-left">
-                    <img src="/images/globino-maslo/sirok-drujba.png" alt="photo-image" class="sirok-drujba">
+                    <img src="/images/portfolio/globino-maslo/sirok-drujba.png" alt="photo-image" class="sirok-drujba">
                 </div>
                 <div class="image-right">
-                    <img src="/images/globino-maslo/sirok-smetanka.png" alt="photo-image" class="sirok-smetanka">
+                    <img src="/images/portfolio/globino-maslo/sirok-smetanka.png" alt="photo-image" class="sirok-smetanka">
                 </div>
             </div>
         </div>
@@ -121,7 +121,7 @@
 
         <div class="image-container splash-1-cont">
             <div class="gl-container">
-                <img src="/images/globino-maslo/picture-splash-1.png" alt="photo-image" class="picture-splash-1">
+                <img src="/images/portfolio/globino-maslo/picture-splash-1.png" alt="photo-image" class="picture-splash-1">
             </div>
         </div>
 
@@ -129,12 +129,12 @@
 
     <div class="company-stage-1">
         <div class="image-container splash-granica-cont">
-            <img src="/images/globino-maslo/splash-granica.jpg" alt="photo-image">
+            <img src="/images/portfolio/globino-maslo/splash-granica.jpg" alt="photo-image">
         </div>
 
         <div class="animation-imgs-cont">
-            <img src="/images/globino-maslo/patterns-left.png" alt="photo-image" class="patterns-left">
-            <img src="/images/globino-maslo/patterns-right.png" alt="photo-image" class="patterns-right">
+            <img src="/images/portfolio/globino-maslo/patterns-left.png" alt="photo-image" class="patterns-left">
+            <img src="/images/portfolio/globino-maslo/patterns-right.png" alt="photo-image" class="patterns-right">
         </div>
 
         <div class="container stage-header-cont">
@@ -149,7 +149,7 @@
                     <h3 class="info-left-title">Портрет потребителя</h3>
 
                     <div class="image-container portrait-cont">
-                        <img src="/images/globino-maslo/portrait1.png" alt="photo-image" class="portrait1">
+                        <img src="/images/portfolio/globino-maslo/portrait1.png" alt="photo-image" class="portrait1">
                     </div>
                 </div>
                 <div class="info-right">
@@ -279,17 +279,17 @@
             <h2 class="header-text header-white">Исходный материал - Разработанный нами ранее <br>
                 фирменный стиль зонтичного бренда Глобино
             </h2>
-            <img src="/images/globino-maslo/arrow-1.png" alt="photo-image" class="arrow-1">
+            <img src="/images/portfolio/globino-maslo/arrow-1.png" alt="photo-image" class="arrow-1">
         </div>
 
         <div class="image-container animation-landscape-cont">
-            <img src="/images/globino-maslo/landscape-painting.png" alt="photo-image" class="landscape-painting">
+            <img src="/images/portfolio/globino-maslo/landscape-painting.png" alt="photo-image" class="landscape-painting">
         </div>
     </div>
 
     <div class="company-stage-2">
         <a href="globino" class="pachka-cheese-link">
-            <img src="/images/globino-maslo/pachka-cheese.png" alt="photo-image" class="pachka-cheese">
+            <img src="/images/portfolio/globino-maslo/pachka-cheese.png" alt="photo-image" class="pachka-cheese">
         </a>
 
         <div class="container stage-header-cont">
@@ -327,11 +327,11 @@
 
         <div class="two-images-container">
             <div class="image-left papers-cont">
-                <img src="/images/globino-maslo/paper-down.png" alt="photo-image" class="paper-down">
-                <img src="/images/globino-maslo/paper-up.png" alt="photo-image" class="paper-up">
+                <img src="/images/portfolio/globino-maslo/paper-down.png" alt="photo-image" class="paper-down">
+                <img src="/images/portfolio/globino-maslo/paper-up.png" alt="photo-image" class="paper-up">
             </div>
             <div class="image-right splash-2-cont">
-                <img src="/images/globino-maslo/picture-splash-2.png" alt="photo-image" class="picture-splash-2">
+                <img src="/images/portfolio/globino-maslo/picture-splash-2.png" alt="photo-image" class="picture-splash-2">
             </div>
         </div>
 
@@ -390,14 +390,14 @@
         </div>
 
         <div class="image-container animation-sirki-cont">
-            <img src="/images/globino-maslo/rabbit-pattern.jpg" alt="photo-image" class="rabbit-pattern">
+            <img src="/images/portfolio/globino-maslo/rabbit-pattern.jpg" alt="photo-image" class="rabbit-pattern">
 
-            <img src="/images/globino-maslo/sirok-drujba-2.png" alt="photo-image" class="sirok-drujba-2">
-            <img src="/images/globino-maslo/sirok-smetanka-2.png" alt="photo-image" class="sirok-smetanka-2">
+            <img src="/images/portfolio/globino-maslo/sirok-drujba-2.png" alt="photo-image" class="sirok-drujba-2">
+            <img src="/images/portfolio/globino-maslo/sirok-smetanka-2.png" alt="photo-image" class="sirok-smetanka-2">
         </div>
 
         <div class="image-container forest-pattern-cont">
-            <img src="/images/globino-maslo/forest-pattern.png" alt="photo-image" class="forest-pattern">
+            <img src="/images/portfolio/globino-maslo/forest-pattern.png" alt="photo-image" class="forest-pattern">
         </div>
 
         <div class="info-block-container info-dev-lineage">
@@ -456,7 +456,7 @@
                     <h2>УТП</h2>
                 </div>
                 <div class="right-cont">
-                    <img src="/images/globino-maslo/icon-utp.png" alt="photo-image" class="icon-utp icon-utp-animate">
+                    <img src="/images/portfolio/globino-maslo/icon-utp.png" alt="photo-image" class="icon-utp icon-utp-animate">
                 </div>
             </div>
         </div>
@@ -466,63 +466,63 @@
         </div>
 
         <div class="image-container animation-arrow-2-cont">
-            <img src="/images/globino-maslo/arrow-2.png" alt="photo-image" class="arrow-2">
+            <img src="/images/portfolio/globino-maslo/arrow-2.png" alt="photo-image" class="arrow-2">
         </div>
 
         <div class="boxes-container">
             <div class="box-item">
-                <img src="/images/globino-maslo/sirok-4.png" alt="photo-image" class="sirok-4">
+                <img src="/images/portfolio/globino-maslo/sirok-4.png" alt="photo-image" class="sirok-4">
             </div>
             <div class="box-item">
-                <img src="/images/globino-maslo/sirok-7.png" alt="photo-image" class="sirok-7">
+                <img src="/images/portfolio/globino-maslo/sirok-7.png" alt="photo-image" class="sirok-7">
             </div>
             <div class="box-item">
-                <img src="/images/globino-maslo/sirok-10.png" alt="photo-image" class="sirok-10">
+                <img src="/images/portfolio/globino-maslo/sirok-10.png" alt="photo-image" class="sirok-10">
             </div>
             <div class="box-item">
-                <img src="/images/globino-maslo/sirok-13.png" alt="photo-image" class="sirok-13">
+                <img src="/images/portfolio/globino-maslo/sirok-13.png" alt="photo-image" class="sirok-13">
             </div>
             <div class="box-item">
-                <img src="/images/globino-maslo/sirok-16.png" alt="photo-image" class="sirok-16">
+                <img src="/images/portfolio/globino-maslo/sirok-16.png" alt="photo-image" class="sirok-16">
             </div>
             <div class="box-item">
-                <img src="/images/globino-maslo/sirok-3.png" alt="photo-image" class="sirok-3">
+                <img src="/images/portfolio/globino-maslo/sirok-3.png" alt="photo-image" class="sirok-3">
             </div>
             <div class="box-item">
-                <img src="/images/globino-maslo/sirok-6.png" alt="photo-image" class="sirok-6">
+                <img src="/images/portfolio/globino-maslo/sirok-6.png" alt="photo-image" class="sirok-6">
             </div>
             <div class="box-item">
-                <img src="/images/globino-maslo/sirok-9.png" alt="photo-image" class="sirok-9">
+                <img src="/images/portfolio/globino-maslo/sirok-9.png" alt="photo-image" class="sirok-9">
             </div>
             <div class="box-item">
-                <img src="/images/globino-maslo/sirok-12.png" alt="photo-image" class="sirok-12">
+                <img src="/images/portfolio/globino-maslo/sirok-12.png" alt="photo-image" class="sirok-12">
             </div>
             <div class="box-item">
-                <img src="/images/globino-maslo/sirok-15.png" alt="photo-image" class="sirok-15">
+                <img src="/images/portfolio/globino-maslo/sirok-15.png" alt="photo-image" class="sirok-15">
             </div>
             <div class="box-item">
-                <img src="/images/globino-maslo/sirok-2.png" alt="photo-image" class="sirok-2">
+                <img src="/images/portfolio/globino-maslo/sirok-2.png" alt="photo-image" class="sirok-2">
             </div>
             <div class="box-item">
-                <img src="/images/globino-maslo/sirok-5.png" alt="photo-image" class="sirok-5">
+                <img src="/images/portfolio/globino-maslo/sirok-5.png" alt="photo-image" class="sirok-5">
             </div>
             <div class="box-item">
-                <img src="/images/globino-maslo/sirok-8.png" alt="photo-image" class="sirok-8">
+                <img src="/images/portfolio/globino-maslo/sirok-8.png" alt="photo-image" class="sirok-8">
             </div>
             <div class="box-item">
-                <img src="/images/globino-maslo/sirok-11.png" alt="photo-image" class="sirok-11">
+                <img src="/images/portfolio/globino-maslo/sirok-11.png" alt="photo-image" class="sirok-11">
             </div>
             <div class="box-item">
-                <img src="/images/globino-maslo/sirok-14.png" alt="photo-image" class="sirok-14">
+                <img src="/images/portfolio/globino-maslo/sirok-14.png" alt="photo-image" class="sirok-14">
             </div>
             <div class="box-item sirok-1-cont">
-                <img src="/images/globino-maslo/sirok-1.png" alt="photo-image" class="sirok-1">
+                <img src="/images/portfolio/globino-maslo/sirok-1.png" alt="photo-image" class="sirok-1">
             </div>
 
         </div>
 
         <div class="image-container splash-3-cont">
-            <img src="/images/globino-maslo/picture-splash-3.png" alt="photo-image" class="picture-splash-3">
+            <img src="/images/portfolio/globino-maslo/picture-splash-3.png" alt="photo-image" class="picture-splash-3">
         </div>
     </div>
 
@@ -563,10 +563,10 @@
         <div class="two-images-container maslo-container">
             <div class="gl-container">
                 <div class="image-left">
-                    <img src="/images/globino-maslo/maslo-1.png" alt="photo-image" class="maslo-1">
+                    <img src="/images/portfolio/globino-maslo/maslo-1.png" alt="photo-image" class="maslo-1">
                 </div>
                 <div class="image-right">
-                    <img src="/images/globino-maslo/maslo-2.png" alt="photo-image" class="maslo-2">
+                    <img src="/images/portfolio/globino-maslo/maslo-2.png" alt="photo-image" class="maslo-2">
                 </div>
             </div>
         </div>
@@ -576,16 +576,16 @@
         </div>
 
         <div class="image-container animation-arrow-3-cont">
-            <img src="/images/globino-maslo/arrow-2.png" alt="photo-image" class="arrow-3">
+            <img src="/images/portfolio/globino-maslo/arrow-2.png" alt="photo-image" class="arrow-3">
         </div>
 
         <div class="two-images-container maslo-2-container">
             <div class="gl-container">
                 <div class="image-left">
-                    <img src="/images/globino-maslo/maslo-lineyka-1.png" alt="photo-image" class="maslo-lineyka-1">
+                    <img src="/images/portfolio/globino-maslo/maslo-lineyka-1.png" alt="photo-image" class="maslo-lineyka-1">
                 </div>
                 <div class="image-right">
-                    <img src="/images/globino-maslo/maslo-lineyka-2.png" alt="photo-image" class="maslo-lineyka-2">
+                    <img src="/images/portfolio/globino-maslo/maslo-lineyka-2.png" alt="photo-image" class="maslo-lineyka-2">
                 </div>
             </div>
         </div>
@@ -639,7 +639,7 @@
         </div>
 
         <div class="image-container maslo-korobka-old-cont">
-            <img src="/images/globino-maslo/maslo-korobka-old.png" alt="photo-image" class="maslo-korobka-old">
+            <img src="/images/portfolio/globino-maslo/maslo-korobka-old.png" alt="photo-image" class="maslo-korobka-old">
         </div>
 
         <div class="container stage-header-cont">
@@ -647,7 +647,7 @@
         </div>
 
         <div class="image-container maslo-korobka-new-cont">
-            <img src="/images/globino-maslo/maslo-korobka-new.png" alt="photo-image" class="maslo-korobka-new">
+            <img src="/images/portfolio/globino-maslo/maslo-korobka-new.png" alt="photo-image" class="maslo-korobka-new">
         </div>
 
         <div class="container stage-header-cont">
@@ -655,7 +655,7 @@
         </div>
 
         <!--<div class="image-container pattern-flowers-cont">-->
-            <!--<img src="/images/globino-maslo/pattern-flowers.png" alt="photo-image" class="pattern-flowers">-->
+            <!--<img src="/images/portfolio/globino-maslo/pattern-flowers.png" alt="photo-image" class="pattern-flowers">-->
         <!--</div>-->
 
         <div class="bg-container pattern-flowers"></div>
@@ -710,7 +710,7 @@
         </div>
 
         <div class="image-container maslo-back-cont">
-            <img src="/images/globino-maslo/maslo-back.png" alt="photo-image" class="maslo-back">
+            <img src="/images/portfolio/globino-maslo/maslo-back.png" alt="photo-image" class="maslo-back">
         </div>
 
         <div class="info-block-container info-approved-concept">
