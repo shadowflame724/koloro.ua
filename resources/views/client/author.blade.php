@@ -47,11 +47,11 @@
                     <p class="name">{{ $user->name }}</p>
                     <p class="views"><i class="icon icon-eye"></i> {{ $articles->sum('views') }} общих просмотров</p>
                     <form>
-                        <input id="input-id" value="2" type="number" class="rating" min=0 max=5 step=0.5 data-size="md">
+                        <input value="{{$allVotes == 0 ? 0 : $allRating/$allVotes}}" type="number" class="rating" min=0 max=5 step=0.5 data-size="md">
                     </form>
                     <p>Общий рейтинг</p>
                     <p class="voice">
-                        <span>10522</span> голосов
+                        <span>{{ $allVotes }}</span> голосов
                     </p>
                 </div>
                 <!-- end about_autor -->
@@ -88,10 +88,11 @@
                                     <p><span>{{ $article->views }}</span> просмотров</p>
                                 </div>
                                 <form>
-                                    <input id="input-id" value="2" type="number" class="rating" min=0 max=5 step=0.5
+                                    <input value="{{$article->votes == 0 ? 0 : $article->rating/$article->votes}}"
+                                           data-id="{{$article->id}}" type="number" class="rating" min=0 max=5 step=0.5
                                            data-size="sm">
+                                    <p class="reviews_count"><span>{{$article->votes}}</span> отзыв</p>
                                 </form>
-                                <p class="reviews_count"><span>0</span> отзыв</p>
 
 
                             </div>

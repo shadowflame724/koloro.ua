@@ -70,7 +70,10 @@ class FrontEndPagesController extends Controller
             $articles = Blog::where('user_id', $user->id)->paginate(5);
             $categoryId = null;
         }
+        $allViews = $articles->sum('views');
+        $allVotes =  $articles->sum('votes');
+        $allRating =  $articles->sum('rating');
 
-        return view('client.author', compact('page', 'user', 'blogCategories', 'articles', 'categoryId'));
+        return view('client.author', compact('page', 'user', 'blogCategories', 'articles', 'categoryId', 'allViews', 'allVotes', 'allRating'));
     }
 }
