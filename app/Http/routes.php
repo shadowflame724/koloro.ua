@@ -86,7 +86,7 @@ Route::get('author/{user}/{slug?}', 'Client\FrontEndPagesController@author');
 
 
 //vote
-Route::post('vote/{id}', ['as' => 'vote', 'uses' => 'VoteController@vote']);
+Route::post('vote/{type?}/{id}', ['as' => 'vote', 'uses' => 'VoteController@vote']);
 
 Route::get('setlocale/{locale}', function ($locale) {
     if (in_array($locale, Config::get('app.locales'))) {

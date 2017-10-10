@@ -841,6 +841,8 @@
             <!-- end container -->
         </section>
         <!-- end some_text -->
+    @include('client.portfolio._star_rating_form')
+
     @include('client.portfolio._form_prev_next_work')
     @stop
 
@@ -851,5 +853,10 @@
 
             <!-- include own JavaScript -->
             <script src="/js/portfolio/portfolio-globino.js"></script>
+    @php($data = [
+    'type' => 'portfolio',
+    'id' => $portfolio->id
+    ])
 
+    @include('layouts.partials.star-rating', ['data'=>$data])
 @stop

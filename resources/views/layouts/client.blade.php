@@ -19,6 +19,8 @@
     <!-- OwlCarousel -->
     <link rel="stylesheet" href="/css/owl.carousel.min.css">
     <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/star-rating.css" media="all" type="text/css"/>
+
     @yield('page-style')
 
 </head>
@@ -64,13 +66,7 @@
 <!--скрипты для всех страниц конец-->
 
 <script src="/js/star-rating.js"></script>
-<link rel="stylesheet" href="/css/star-rating.css" media="all" type="text/css"/>
-<script type="text/javascript">
-    $(".rating").rating({min:1, max:5, step:0.5, size:'sm'}).hide();
 
-    $('.clear-rating').hide();
-    $('.caption').hide();
-</script>
 
 <!--скрипты для всех страниц конец-->
 <!-- start of subscribe_form -->

@@ -87,48 +87,18 @@
             </section>
         @endforeach
         {{ $blogs->links() }}
-        {{--<!-- end news_lenght -->--}}
-        {{--<!-- begin pagination -->--}}
-        {{--<div class="pagination">--}}
-        {{--<ul>--}}
-        {{--<li>--}}
-        {{--<a href="#" class="pointer" style="display: none;"><</a>--}}
-        {{--</li>--}}
-        {{--<li>--}}
-        {{--<a href="#" class="pointer" style="display: none;"><<</a>--}}
-        {{--</li>--}}
-        {{--<li>--}}
-        {{--<a href="#" class="current_page">1</a>--}}
-        {{--</li>--}}
-        {{--<li>--}}
-        {{--<a href="#">2</a>--}}
-        {{--</li>--}}
-        {{--<li>--}}
-        {{--<a href="#">3</a>--}}
-        {{--</li>--}}
-        {{--<li>--}}
-        {{--<a href="#">4</a>--}}
-        {{--</li>--}}
-        {{--<li>--}}
-        {{--<a href="#">5</a>--}}
-        {{--</li>--}}
-        {{--<li>--}}
-        {{--<a href="#" class="pointer">></a>--}}
-        {{--</li>--}}
-        {{--<li>--}}
-        {{--<a href="#" class="pointer">>></a>--}}
-        {{--</li>--}}
-        {{--</ul>--}}
-        {{--</div>--}}
-        {{--<!-- end pagination -->--}}
     </div>
     <!-- end container -->
 @stop
 
 @section('page-scripts')
-    <script src="/js/star-rating.js"></script>
-    <link rel="stylesheet" href="/css/star-rating.css" media="all" rel="stylesheet" type="text/css"/>
+
     @if(isset($blog))
-        @include('layouts.partials.star-rating', ['data'=>$blog])
+        @php($data = [
+'type' => 'blog',
+'id' => $blog->id
+])
+
+        @include('layouts.partials.star-rating', ['data'=>$data])
     @endif
 @stop

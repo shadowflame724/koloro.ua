@@ -258,8 +258,8 @@
 
 @section('page-scripts')
     <!-- end of subscribe_form -->
-    <script src="/js/star-rating.js"></script>
-    <link rel="stylesheet" href="/css/star-rating.css" media="all" rel="stylesheet" type="text/css"/>
+    {{--<script src="/js/star-rating.js"></script>--}}
+    {{--<link rel="stylesheet" href="/css/star-rating.css" media="all" rel="stylesheet" type="text/css"/>--}}
 
     <script src="/js/tabs.js"></script>
     <script type="text/javascript">
@@ -286,6 +286,10 @@
             async defer
             src="//assets.pinterest.com/js/pinit.js"
     ></script>
+    @php($data = [
+    'type' => 'blog',
+    'id' => $article->id
+    ])
 
-    @include('layouts.partials.star-rating', ['data'=>$article])
+    @include('layouts.partials.star-rating', ['data'=>$data])
 @stop

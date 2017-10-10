@@ -367,25 +367,8 @@
         </div>
     </div>
 
-    <!-- begin like_it -->
-    <div class="like_it">
-        <!-- begin raiting_container -->
-        <div class="rating_container">
-            <form>
-                <input id="input-id" value="2" type="number" class="rating" min=0 max=5 step=0.5 data-size="md">
-            </form>
-            <p class="voice"><span class="yellow">10522</span> голосов</p>
-        </div>
-        <!-- end raiting_container -->
-        <!-- begin qwestion -->
-        <div class="qwestion">
-            <i class="icon icon-animation_arrow animated infinite pulse"></i>
-            <i class="icon icon-animation_top hidden_arrow animated infinite pulse"></i>
-            <span>Понравилась работа?<br>Оставьте свой голос:)</span>
-        </div>
-        <!-- end qwestion -->
-    </div>
-    <!-- end like_it -->
+    @include('client.portfolio._star_rating_form')
+
 
     @include('client.portfolio._form_prev_next_work')
 
@@ -398,5 +381,11 @@
     <!-- include own JavaScript -->
     <script src="/js/portfolio-main.js"></script>
     <script src="/js/portfolio/portfolio-indelika.js"></script>
+    @php($data = [
+'type' => 'portfolio',
+'id' => $portfolio->id
+])
+
+    @include('layouts.partials.star-rating', ['data'=>$data])
 @stop
 <!-- end of subscribe_form -->

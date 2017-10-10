@@ -554,6 +554,8 @@
                 <img src="/images/portfolio/mava/image-photo-2.jpg" alt="mava photo">
             </div>
         </div>
+        @include('client.portfolio._star_rating_form')
+
         @include('client.portfolio._form_prev_next_work')
 
     </section>
@@ -564,6 +566,11 @@
 
     <!-- include own JavaScript -->
     <script src="/js/portfolio/portfolio-mava.js"></script>
+    @php($data = [
+    'type' => 'portfolio',
+    'id' => $portfolio->id
+    ])
 
+    @include('layouts.partials.star-rating', ['data'=>$data])
 @stop
 <!-- end of subscribe_form -->

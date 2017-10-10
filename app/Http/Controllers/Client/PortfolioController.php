@@ -20,7 +20,7 @@ class PortfolioController extends Controller
             ->join('file', 'portfolio.image_id', '=', 'file.id')
             ->select('portfolio.id', 'portfolio.slug', 'portfolio.title_ru', 'portfolio.title_ua', 'portfolio.short_desc_ru', 'portfolio.short_desc_ua', 'portfolio.bg_color',
                 'file.link', 'file.alt')
-            ->orderBy('portfolio.id', 'DESC')
+            ->orderBy('order', 'ASC')
             ->get();
         $page = Page::find(3);
         $categoryId = null;
@@ -40,7 +40,7 @@ class PortfolioController extends Controller
             ->where('category_ids', 'LIKE', '%' . $categoryId . '%')
             ->select('portfolio.id', 'portfolio.slug', 'portfolio.title_ru', 'portfolio.title_ua', 'portfolio.short_desc_ru', 'portfolio.short_desc_ua', 'portfolio.bg_color',
                 'file.link', 'file.alt')
-            ->orderBy('portfolio.id', 'DESC')
+            ->orderBy('order', 'ASC')
             ->get();
         $page = Page::find(3);
 
