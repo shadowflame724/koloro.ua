@@ -2271,6 +2271,13 @@ footer {
 .hidden_arrow {
   display: none; }
 
+.creator_photo {
+  display: inline-block;
+  vertical-align: top; }
+  .creator_photo img {
+    width: 100px;
+    border-radius: 50%; }
+
 .creator_info {
   display: inline-block;
   vertical-align: top;
