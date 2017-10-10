@@ -64,16 +64,18 @@
             <!-- begin one_news -->
             @foreach($articles as $article)
                 <div class="one_news">
-                    <div class="preview">
+                    <a href="/blog/{{ $article->blogCategory->slug }}/{{ $article->slug }}" class="preview">
                         <img src="/files/images/blog/@if($article->file){{ $article->file->link }}"
                              data-original="/files/images/blog/{{ $article->file->link }}" alt="{{ $article->file->alt }}" @endif class="lazy">
-                    </div>
+                    </a>
                     <!-- begin news_description -->
                     <div class="news_description">
                         <!-- begin short_desc -->
                         <div>
                             <div class="short_desc">
-                                <h2>{{ $article->{'name' . $langSuf} }}</h2>
+                                <a href="/blog/{{ $article->blogCategory->slug }}/{{ $article->slug }}">
+                                    <h2>{{ $article->{'name' . $langSuf} }}</h2>
+                                </a>
                                 <p class="date">{{ $article->created_at->diffForHumans() }}</p>
                                 <p>
                                     {{ $article->{'description' . $langSuf} }}
