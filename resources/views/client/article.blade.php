@@ -65,7 +65,7 @@
                                  alt="/images/portfolio/{{ $item->alt }}" class="lazy">
                         </a>
                     @endforeach
-                    <a href="#" class="btn btn_wb">хочу также</a>
+                    <a href="#" class="btn btn_wb order-form-btn">хочу также</a>
                 </div>
                 <!-- end our_jobs -->
                 <!-- begin our_service -->
