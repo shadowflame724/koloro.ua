@@ -2161,9 +2161,16 @@ footer {
     font-size: 3.5rem;
     margin-bottom: 28px;
     color: #A34699; }
-  .our_jobs img {
+  .our_jobs .link-to-material {
+    display: block;
+    width: 100%;
+    text-align: center;
     margin-bottom: 27px;
-    max-width: 100%; }
+    transition: all 0.4s; }
+    .our_jobs .link-to-material img {
+      max-width: 100%; }
+    .our_jobs .link-to-material:hover {
+      opacity: 0.5; }
 
 .our_service, .popular {
   padding-bottom: 60px; }

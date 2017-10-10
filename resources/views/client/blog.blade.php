@@ -36,7 +36,7 @@
             <section class="news_lenght">
                 <!-- begin one_news -->
                 <div class="one_news">
-                    
+
                         <a href="/blog/{{ $blog->categorySlug }}/{{$blog->slug}}" class="preview">
                             <img src="{{ ('/files/images/blog/' . $blog->imageLink) }}"
                                  data-original="{{ ('/files/images/blog/' . $blog->imageLink) }}"

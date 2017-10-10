@@ -59,9 +59,11 @@
                 <div class="our_jobs">
                     <p>Наши работы</p>
                     @foreach($portfolios as $item)
-                        <img src="/files/images/portfolio/{{ $item->link }}"
-                             data-original="/files/images/portfolio/{{ $item->link }}"
-                             alt="/files/images/portfolio/{{ $item->alt }}" class="lazy">
+                        <a href="{{ url('/portfolio')}}/{{ $item->slug }}" class="link-to-material">
+                            <img src="/images/portfolio/{{ $item->link }}"
+                                 data-original="/images/portfolio/{{ $item->link }}"
+                                 alt="/images/portfolio/{{ $item->alt }}" class="lazy">
+                        </a>
                     @endforeach
                     <a href="#" class="btn btn_wb">хочу также</a>
                 </div>
