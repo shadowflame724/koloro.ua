@@ -20,6 +20,9 @@
         <h1 class="page_name">Блог</h1>
         <nav class="blog_nav">
             <ul class="flex">
+                <li>
+                    <a href="/blog" @if($categoryId == null) class="active" @endif>Все категории</a>
+                </li>
                 @foreach ($blogcategories as $blogcategory)
                     <li>
                         <a href="/blog/{{ $blogcategory->slug }}"
@@ -33,7 +36,7 @@
             <section class="news_lenght">
                 <!-- begin one_news -->
                 <div class="one_news">
-                    <a href="{{ 'blog/' . $blog->categorySlug . '/' . $blog->slug }}" class="preview">
+                    
                         <a href="/blog/{{ $blog->categorySlug }}/{{$blog->slug}}" class="preview">
                             <img src="{{ ('/files/images/blog/' . $blog->imageLink) }}"
                                  data-original="{{ ('/files/images/blog/' . $blog->imageLink) }}"
