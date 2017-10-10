@@ -176,7 +176,7 @@
                                 <div class="left-cont">
                                     <a href="/article_page.html" class="preview" target="_self">
                                         <div class="preview-bg-image"
-                                             style="background-image: url('/files/images/portfolio/@if($result->image){{ $result->image->link }}@endif');"></div>
+                                             style="background-image: url('/images/portfolio/@if($result->image){{ $result->image->link }}@endif');"></div>
                                     </a>
                                 </div>
                                 <div class="right-cont">
@@ -213,41 +213,7 @@
                         </div>
                     @endif
                 @endforeach
-                {{--<div class="pagination">--}}
-                {{--<ul>--}}
-                {{--<li>--}}
-                {{--<a href="#" class="pointer" style="display: none;"><</a>--}}
-                {{--</li>--}}
-                {{--<li>--}}
-                {{--<a href="#" class="pointer" style="display: none;"><<</a>--}}
-                {{--</li>--}}
-                {{--<li>--}}
-                {{--<a href="#" class="current_page">1</a>--}}
-                {{--</li>--}}
-                {{--<li>--}}
-                {{--<a href="#">2</a>--}}
-                {{--</li>--}}
-                {{--<li>--}}
-                {{--<a href="#">3</a>--}}
-                {{--</li>--}}
-                {{--<li>--}}
-                {{--<a href="#">4</a>--}}
-                {{--</li>--}}
-                {{--<li>--}}
-                {{--<a href="#">5</a>--}}
-                {{--</li>--}}
-                {{--<li>--}}
-                {{--<a href="#" class="pointer">></a>--}}
-                {{--</li>--}}
-                {{--<li>--}}
-                {{--<a href="#" class="pointer">>></a>--}}
-                {{--</li>--}}
-                {{--</ul>--}}
-                {{--</div>--}}
 
-
-
-            <!-- begin pagination -->
                 {!!  $results->links()  !!}
             </div>
         </div>
@@ -260,8 +226,7 @@
 @stop
 
 @section('page-scripts')
-    <script src="/js/star-rating.js"></script>
-    <link rel="stylesheet" href="/css/star-rating.css" media="all" rel="stylesheet" type="text/css"/>
+
     <script>
         console.log();
 
