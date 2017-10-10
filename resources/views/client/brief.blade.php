@@ -295,7 +295,7 @@
             </div>
             <!-- end image_container -->
             <!--<a href="" class="btn transparent_btn" id="show_more">Еще работы</a>-->
-            <a href="" class="gl-yellow-btn show-more-portfolio-btn" id="show_more">Еще работы</a>
+            <a href="/portfolio" class="gl-yellow-btn show-more-portfolio-btn">Еще работы</a>
 
         </div>
         <!-- end container -->

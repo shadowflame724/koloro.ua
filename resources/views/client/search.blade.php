@@ -98,8 +98,10 @@
                                                 <p>{{ $result->views }} просмотров</p>
                                             </div>
                                             <form class="stars">
-                                                <input class="rating">
-                                                <p class="reviews-count"><span>0</span> отзыв</p>
+                                                <input value="{{$result->votes == 0 ? 0 : $result->rating/$result->votes}}"
+                                                       data-id="{{$result->id}}" type="number" class="rating" min=0 max=5 step=0.5
+                                                       data-size="md">
+                                                <p class="reviews-count"><span>{{ $result->votes }}</span> отзыв</p>
                                             </form>
                                         </div>
                                     </div>
@@ -145,7 +147,7 @@
                                         <div class="raiting-cont">
                                             <div class="views">
                                                 <i class="icon icon-eye"></i>
-                                                <p>999 просмотров</p>
+                                                <p>{{ rand(100,200) }} просмотров</p>
                                             </div>
                                         </div>
                                         <div class="executed-works">
@@ -174,14 +176,13 @@
                             <h2 class="news-item-header">{{ $result->{'title' . $langSuf} }}</h2>
                             <div class="news-item">
                                 <div class="left-cont">
-                                    <a href="/article_page.html" class="preview" target="_self">
+                                    <a href="/portfolio/{{ $result->slug }}" class="preview" target="_self">
                                         <div class="preview-bg-image"
                                              style="background-image: url('/images/portfolio/@if($result->image){{ $result->image->link }}@endif');"></div>
                                     </a>
                                 </div>
                                 <div class="right-cont">
                                     <div class="left-side">
-                                        <p class="date">Вторник, 16 Май 2017 01:26</p>
                                         <p class="text">
                                             {{ strip_tags($result->{'short_desc' . $langSuf}) }}
                                         </p>
@@ -190,18 +191,19 @@
                                         <div class="raiting-cont">
                                             <div class="views">
                                                 <i class="icon icon-eye"></i>
-                                                <p>999 просмотров</p>
+                                                <p>{{ $result->views }} просмотров</p>
                                             </div>
                                             <form class="stars">
-                                                <input value="2" type="number" class="rating" min=0 max=5 step=0.5
-                                                       data-size="sm">
-                                                <p class="reviews-count"><span>0</span> отзыв</p>
+                                                <input value="{{$result->votes == 0 ? 0 : $result->rating/$result->votes}}"
+                                                       data-id="{{$result->id}}" type="number" class="rating" min=0 max=5 step=0.5
+                                                       data-size="md">
+                                                <p class="reviews-count"><span>{{ $result->votes }}</span> отзыв</p>
                                             </form>
                                         </div>
                                     </div>
                                     <div class="bottom-side">
                                         <div class="info-block">
-                                            <a href="/portfolio" class="portfolio-category">Портфолио</a>
+                                            <a href="/portfolio/{{ $result->slug }}" class="portfolio-category">Портфолио</a>
                                         </div>
                                         <div class="info-btn">
                                             <a href="/portfolio/{{ $result->slug }}" class="gl-yellow-btn">больше
@@ -226,9 +228,14 @@
 @stop
 
 @section('page-scripts')
+    <script type="text/javascript">
+        {{-- disable voting function on this page --}}
+        $(".rating").rating({min: 0, max: 5, step: 0.5, size: 'sm', disabled: true}).hide();
 
+        $('.clear-rating').hide();
+        $('.caption').hide();
+    </script>
     <script>
-        console.log();
 
         $('#search_from').on('submit', function () {
             var checkboxInHeader = $('#checkbox-in-header');
