@@ -67,8 +67,8 @@
     <div id="price_depends_data">
         @if(isset($service->price_depends_ru))
             @php
-                $dependsRu = json_decode($service->price_depends_ru);
-                $dependsUa = json_decode($service->price_depends_ua);
+                $dependsRu = json_decode($service->price_depends_ru, true);
+                $dependsUa = json_decode($service->price_depends_ua, true);
             @endphp
             @foreach($dependsRu as $i => $value)
                 <div>
@@ -80,14 +80,14 @@
                         <div id="price_depends_{{ $i }}_ru_tab" class="tab-pane fade in active">
                             <div class="form-group">
                                 <strong>Цена зависит от[RU]:</strong>
-                                {!! Form::text('price_depends_ru['.$i.']', $dependsRu->{$i}, ['class' => 'form-control']) !!}
+                                {!! Form::text('price_depends_ru['.$i.']', $dependsRu[$i], ['class' => 'form-control']) !!}
                             </div>
                         </div>
 
                         <div id="price_depends_{{ $i }}_ua_tab" class="tab-pane fade">
                             <div class="form-group">
                                 <strong>Цена зависит от[UA]:</strong>
-                                {!! Form::text('price_depends_ua['.$i.']', $dependsUa->{$i}, ['class' => 'form-control']) !!}
+                                {!! Form::text('price_depends_ua['.$i.']', $dependsUa[$i], ['class' => 'form-control']) !!}
                             </div>
                         </div>
                     </div>
