@@ -70,7 +70,7 @@
                 $dependsRu = json_decode($service->price_depends_ru);
                 $dependsUa = json_decode($service->price_depends_ua);
             @endphp
-            @for($i; $i<count($dependsRu); $i++)
+            @foreach($dependsRu as $i => $value)
                 <div>
                     <ul class="nav nav-tabs">
                         <li class="active"><a data-toggle="tab" href="#price_depends_{{ $i }}_ru_tab">RU</a></li>
@@ -80,20 +80,20 @@
                         <div id="price_depends_{{ $i }}_ru_tab" class="tab-pane fade in active">
                             <div class="form-group">
                                 <strong>Цена зависит от[RU]:</strong>
-                                {!! Form::text('price_depends_ru['.$i.']', $dependsRu[$i], ['class' => 'form-control']) !!}
+                                {!! Form::text('price_depends_ru['.$i.']', $dependsRu->{$i}, ['class' => 'form-control']) !!}
                             </div>
                         </div>
 
                         <div id="price_depends_{{ $i }}_ua_tab" class="tab-pane fade">
                             <div class="form-group">
                                 <strong>Цена зависит от[UA]:</strong>
-                                {!! Form::text('price_depends_ua['.$i.']', $dependsUa[$i], ['class' => 'form-control']) !!}
+                                {!! Form::text('price_depends_ua['.$i.']', $dependsUa->{$i}, ['class' => 'form-control']) !!}
                             </div>
                         </div>
                     </div>
                     <div class="btn btn-box-tool"><i class="fa fa-minus remove-price-depends"></i></div>
                 </div>
-            @endfor
+            @endforeach
         @else
             <div>
                 <ul class="nav nav-tabs">
