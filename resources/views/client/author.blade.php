@@ -73,7 +73,9 @@
                         <!-- begin short_desc -->
                         <div>
                             <div class="short_desc">
-                                <h2>{{ $article->{'name' . $langSuf} }}</h2>
+                                <a href="/blog/{{ $article->blogCategory->slug }}/{{ $article->slug }}">
+                                    <h2>{{ $article->{'name' . $langSuf} }}</h2>
+                                </a>
                                 <p class="date">{{ $article->created_at->diffForHumans() }}</p>
                                 <p>
                                     {{ $article->{'description' . $langSuf} }}

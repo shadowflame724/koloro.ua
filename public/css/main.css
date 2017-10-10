@@ -1941,6 +1941,8 @@ footer {
       width: 480px;
       max-width: 72.73%;
       display: inline-block; }
+      .news_lenght .one_news .short_desc a {
+        text-decoration: none; }
     .news_lenght .one_news .rating_container {
       max-width: 26%;
       display: inline-block;
