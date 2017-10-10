@@ -148,9 +148,11 @@
             <div class="article_container flex">
                 <!-- begin creator -->
                 <div class="creator">
-                    <img src="/files/images/users/@if($user->file){{ $user->file->link }}"
-                         data-original="/files/images/users/{{ $user->file->link }}" alt="{{ $user->file->alt }}@endif"
-                         class="lazy">
+                    <div class="creator_photo">
+                        <img src="/files/images/users/@if($user->file){{ $user->file->link }}"
+                             data-original="/files/images/users/{{ $user->file->link }}" alt="{{ $user->file->alt }}@endif"
+                             class="lazy">
+                    </div>
                     <div class="creator_info">
                         <p class="who">Подготовил <a
                                     href="/author/{{ $user->id }}">@if($article->user){{ $article->user->name }}@endif</a>
