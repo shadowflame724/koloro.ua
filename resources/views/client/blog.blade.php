@@ -20,9 +20,6 @@
         <h1 class="page_name">Блог</h1>
         <nav class="blog_nav">
             <ul class="flex">
-                <li>
-                    <a href="/blog" @if($categoryId == null) class="active" @endif>Все категории</a>
-                </li>
                 @foreach ($blogcategories as $blogcategory)
                     <li>
                         <a href="/blog/{{ $blogcategory->slug }}"
