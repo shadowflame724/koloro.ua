@@ -44,8 +44,8 @@
             <div class="image_container image_conatainer_full">
                 @foreach($portfolios as $portfolio)
                     <a href="{{ url('/portfolio')}}/{{ $portfolio->slug }}" class="one_block animated">
-                        <img src="/files/images/portfolio/{{ $portfolio->link }}"
-                             data-original="/files/images/portfolio/{{ $portfolio->link }}"
+                        <img src="/images/portfolio/{{ $portfolio->link }}"
+                             data-original="/images/portfolio/{{ $portfolio->link }}"
                              alt="{{ $portfolio->alt }}"
                              class="lazy">
                         <!-- begin hidden_content -->
