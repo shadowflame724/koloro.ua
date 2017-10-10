@@ -126,6 +126,7 @@
     <script src="/js/star-rating.js"></script>
     <link rel="stylesheet" href="/css/star-rating.css" media="all" rel="stylesheet" type="text/css"/>
     <script type="text/javascript">
+        {{-- disable voting function on this page --}}
         $(".rating").rating({min: 1, max: 5, step: 0.5, size: 'sm', disabled: true}).hide();
 
         $('.clear-rating').hide();

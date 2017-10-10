@@ -91,14 +91,25 @@
     <!-- end container -->
 @stop
 
+{{--@section('page-scripts')--}}
+
+    {{--@if(isset($blog))--}}
+        {{--@php($data = [--}}
+{{--'type' => 'blog',--}}
+{{--'id' => $blog->id--}}
+{{--])--}}
+
+        {{--@include('layouts.partials.star-rating', ['data'=>$data])--}}
+    {{--@endif--}}
+{{--@stop--}}
 @section('page-scripts')
+    <script src="/js/star-rating.js"></script>
+    <link rel="stylesheet" href="/css/star-rating.css" media="all" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript">
+        {{-- disable voting function on this page --}}
+        $(".rating").rating({min: 1, max: 5, step: 0.5, size: 'sm', disabled: true}).hide();
 
-    @if(isset($blog))
-        @php($data = [
-'type' => 'blog',
-'id' => $blog->id
-])
-
-        @include('layouts.partials.star-rating', ['data'=>$data])
-    @endif
+        $('.clear-rating').hide();
+        $('.caption').hide();
+    </script>
 @stop
