@@ -2083,8 +2083,8 @@ footer {
 /*page autor end   page autor end    page autor end   page autor end    page autor end  */
 /*page article_page   page article_page    page article_page    page article_page  */
 .article_container {
-  width: 1048px;
-  max-width: 69.8%; }
+  width: 900px;
+  max-width: 65%; }
 
 .article_info {
   padding-top: 25px; }
@@ -2117,15 +2117,33 @@ footer {
   font-family: "SegoeUIBold", sans-serif;
   margin-bottom: 24px; }
 
-.article p {
-  font-size: 2.4rem;
-  color: #969696;
-  margin-bottom: 37px; }
-
 .article h3 {
   font-size: 2.4rem;
   font-family: "SegoeUIBold", sans-serif;
   margin-bottom: 29px; }
+
+.article p {
+  font-size: 2.4rem;
+  color: #969696;
+  margin-bottom: 37px; }
+  @media screen and (max-width: 768px) {
+    .article p {
+      margin-bottom: 20px; } }
+
+.article ul, .article ol {
+  padding-left: 20px;
+  margin-bottom: 37px; }
+  @media screen and (max-width: 768px) {
+    .article ul, .article ol {
+      margin-bottom: 20px; } }
+  .article ul li, .article ol li {
+    font-size: 2.4rem;
+    color: #969696; }
+
+.article span, .article strong {
+  font-family: "SegoeUIBold", sans-serif;
+  font-size: inherit;
+  color: inherit; }
 
 .right_sidebar {
   float: right;
