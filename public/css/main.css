@@ -2138,7 +2138,11 @@ footer {
       margin-bottom: 20px; } }
   .article ul li, .article ol li {
     font-size: 2.4rem;
-    color: #969696; }
+    color: #969696;
+    padding-bottom: 20px; }
+    @media screen and (max-width: 768px) {
+      .article ul li, .article ol li {
+        padding-bottom: 5px; } }
 
 .article span, .article strong {
   font-family: "SegoeUIBold", sans-serif;
