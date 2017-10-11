@@ -5431,11 +5431,13 @@ a.gl-link {
           font-family: "SegoeUIBold", sans-serif;
           font-size: inherit;
           color: inherit; }
+      .info-block-container .gl-container .info-right ul, .info-block-container .gl-container .info-right ol {
+        padding-left: 40px; }
+        .info-block-container .gl-container .info-right ul li, .info-block-container .gl-container .info-right ol li {
+          padding-bottom: 10px; }
       .info-block-container .gl-container .info-right ul {
-        padding-left: 40px;
         list-style: disc; }
       .info-block-container .gl-container .info-right ol {
-        padding-left: 40px;
         list-style: decimal; }
       .info-block-container .gl-container .info-right .for-read-more {
         display: none;
