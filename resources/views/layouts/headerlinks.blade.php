@@ -15,15 +15,16 @@
 
     </ul>
     <a href="/" target="_blank" class="btn_calculate order-form-btn">{{ trans('messages.brief') }}</a>
-    <div class="languge">
-        <ul>
-            <li>
-                <a href="{{ '/setlocale/ua' }}" {{localeActive('ua')}}>ua</a>
-            </li>
-            <li>
-                <a href="{{ '/setlocale/ru' }}" {{localeActive('ru')}}>ru</a>
-            </li>
-        </ul>
-    </div>
+    {{-- hide languages tabs on koloro.RU, russian lang just only! --}}
+    {{--<div class="languge">--}}
+        {{--<ul>--}}
+            {{--<li>--}}
+                {{--<a href="{{ '/setlocale/ua' }}" {{localeActive('ua')}}>ua</a>--}}
+            {{--</li>--}}
+            {{--<li>--}}
+                {{--<a href="{{ '/setlocale/ru' }}" {{localeActive('ru')}}>ru</a>--}}
+            {{--</li>--}}
+        {{--</ul>--}}
+    {{--</div>--}}
 
 </nav>
