@@ -50,8 +50,8 @@
             <p class="col-name">{{ trans('messages.contacts') }}</p>
 
             <div class="contact-info">
-                <p class="contact-telephone">+38 (044) 223 51 20</p>
-                <p class="contact-email">info@koloro.ua</p>
+                <p class="contact-telephone">{{ env('OUR_PHONE_NUMBER') }}</p>
+                <p class="contact-email">{{ env('OUR_EMAIL') }}</p> {{-- todo trans ru+ua --}}
             </div>
 
             <div class="contact-info">

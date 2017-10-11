@@ -64,7 +64,7 @@
                 <div class="gl-container">
                     <h2 class="main-slider-header">Новый зонтичный молочный бренд “Глобино”</h2>
                     <div class="order-btns">
-                        <a href="/portfolio/globino.html" class="gl-yellow-btn view-work-btn animated bounce">Посмотреть работу</a>
+                        <a href="/portfolio/novyj-zontichnyj-molochnyj-brend-globino.html" class="gl-yellow-btn view-work-btn animated bounce">Посмотреть работу</a>
                         <a href="/" class="gl-transparent-btn want-expertise-btn order-form-btn">
                             Хочу бесплатную <br>быструю экспертизу
                         </a>
@@ -153,7 +153,7 @@
                 <div class="gl-container">
                     <h2 class="main-slider-header">«Мировая традиция» — <br>бренд-путешественник</h2>
                     <div class="order-btns">
-                        <a href="/portfolio/mirovaya-tradicia.html" class="gl-yellow-btn view-work-btn animated bounce">Посмотреть работу</a>
+                        <a href="/portfolio/mirovaya-tradiciya.html" class="gl-yellow-btn view-work-btn animated bounce">Посмотреть работу</a>
                         <a href="/" class="gl-transparent-btn want-expertise-btn order-form-btn">
                             Хочу бесплатную <br>быструю экспертизу
                         </a>
