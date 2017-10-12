@@ -17,7 +17,8 @@
     <table class="table table-bordered">
         <tr>
             {{--<th>№</th>--}}
-            <th>Услуги</th>
+            <th>Услуга</th>
+            <th>Маркет стратегия</th>
             <th>Бюджет проекта</th>
             <th>Срок запуска</th>
             <th>Пожелания</th>
@@ -35,9 +36,10 @@
             <tr>
                 {{--<td>{{ ++$i }}</td>--}}
                 <td>
-                    @foreach($brief->briefServices as $service)
-                        {{ trans('messages.'.$service->name) }}<br>
-                    @endforeach
+                    {{ $brief->service_name }}
+                </td>
+                <td>
+                    {{ $brief->market_strategy }}
                 </td>
                 <td>
                     @if (isset($brief->money))

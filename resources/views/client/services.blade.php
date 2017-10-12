@@ -102,7 +102,7 @@
                             {{ $item['parentName'. $langSuf] }}
                         </h5>
                         <p>
-                            {{ $item['parentDescription'. $langSuf] }}
+                            {{ strip_tags($item['parentDescription'. $langSuf]) }}
                         </p>
                     </div>
                     <div class="link_block">
