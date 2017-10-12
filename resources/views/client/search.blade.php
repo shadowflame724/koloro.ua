@@ -216,7 +216,7 @@
                     @endif
                 @endforeach
 
-                {!!  $results->links()  !!}
+                {!!  $results->appends(\Illuminate\Support\Facades\Input::except('page'))->links()  !!}
             </div>
         </div>
 
