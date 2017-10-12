@@ -80,8 +80,8 @@
 
 @yield('page-scripts')
 
-<script>
-    {!! $settings->amocrm_script !!}
-</script>
+
+{!! $settings->amocrm_script !!}
+
 </body>
 </html>

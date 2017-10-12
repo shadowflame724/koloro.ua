@@ -24,7 +24,7 @@
     <div id="preloader"></div>
 
     @include('layouts.whiteheader')
-    
+
 
 <section id="guarand">
     <div class="bg-container top-container" style="background-image: url('/images/portfolio/guarand/main-picture.jpg')">
