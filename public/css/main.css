@@ -5227,13 +5227,13 @@ a.gl-link {
   display: none;
   position: fixed;
   z-index: 999;
-  right: calc(10% - 65px);
+  right: calc(10% - 70px);
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   cursor: pointer;
   transition: all .35s ease;
   opacity: 1;
-  bottom: 70px; }
+  bottom: 140px; }
   @media screen and (max-width: 600px) {
     .back-to-top {
       bottom: 140px; } }
@@ -5248,9 +5248,9 @@ a.gl-link {
 
 .search-container {
   position: fixed;
-  bottom: 140px;
+  bottom: 70px;
   z-index: 999;
-  right: calc(10% - 65px); }
+  right: calc(10% - 70px); }
   @media screen and (max-width: 600px) {
     .search-container {
       bottom: 90px; } }
