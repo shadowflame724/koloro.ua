@@ -33,3 +33,46 @@
     {!! Form::close() !!}
 @endsection
 @endpermission
+@section('page-scripts')
+    <script>
+        var token = $('meta[name="csrf-token"]').attr('content');
+        var options = {
+            //filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+            filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=' + token,
+            //filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+            filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token=' + token
+//        allowedContent: 'img[!src,alt]  ;'
+        };
+
+
+        $('.ckeditor').each(function (index, el) {
+            CKEDITOR.replace(el, options);
+            //            CKEDITOR.on('dialogDefinition', function (ev) {
+            //                var image;
+            //                // Take the dialog name and its definition from the event data
+            //                var dialogName = ev.data.name;
+            //                var dialogDefinition = ev.data.definition;
+            //                var editor = ev.editor;
+            //                if (dialogName == 'image') {
+            //                    dialogDefinition.onLoad = function (ev) {
+            //                    };
+            //                    dialogDefinition.onOk = function (e) {
+            //                        //var imageAlt = image[2].alt;
+            //                        var imageSrcUrl = e.sender.originalElement.$.src;
+            //                        //console.log(ev.sender.originalElement.$.currentSrc);
+            //                        image = $('a').find('img');
+            //                        var imageTag = $("img[src='"+imageSrcUrl+"']");
+            //                        var imageAlt = imageTag["0"].alt;
+            //                        var imgHtml;
+            //                        var imageTitle = imageTag["0"].title;
+            //                        var str = "<img src=\'" + imageSrcUrl + "\' alt=\'" + imageAlt + "\' title=\'image\'/>";
+            //                        if (imageTitle) {
+            //                            imgHtml = CKEDITOR.dom.element.createFromHtml(str);
+            //                        } else {
+            //                            imgHtml = CKEDITOR.dom.element.createFromHtml("<div class='image-container'>"+str+"</div>");
+            //                        }
+            //                        editor.insertElement(imgHtml);
+            //                    };
+            //                }
+        });
+    </script>@endsection
