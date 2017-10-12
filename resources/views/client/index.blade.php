@@ -568,31 +568,6 @@
                     {{--</div>--}}
                 {{--</div>--}}
             {{--</div>--}}
-            <div class="services-item-cont" data-category="">
-                <div class="services-item">
-                    <video autoplay loop muted>
-                        <source src="video/9_cut.mp4" type="video/mp4">
-                    </video>
-                    <div class="poster-img-cont">
-                        <img src="images/main/services-poster-9.jpg" alt="services-poster">
-                    </div>
-                    <div class="hover-layer">
-                        <p class="achievments clearfix">
-                            <span class="price">30 800 грн</span>
-                            <span class="executed-works">54 выполненных работ</span>
-                        </p>
-                        <p class="header">Уникальное торговое предложение (УТП)</p>
-                        <p class="info">
-                            Уникальное торговое предложение (УТП) – это лучший способ донести информацию
-                            о продукте до потенциального клиента. В условиях современной сумасшедшей конкуренции,
-                            он работает гораздо эффективнее обычного рекламного текста.
-                        </p>
-                        <a href="https://koloro.ua/unikalnoe-torgovoe-predlozhenie.html" class="go-service-btn">Перейти
-                            к
-                            услуге</a>
-                    </div>
-                </div>
-            </div>
 
         </div>
         <a href="/services" class="see-more-services-btn">
