@@ -10,11 +10,11 @@ window.addEventListener('load', function() {
 
     var servicesCategories = [
         "all-services",
-        "creating-new-tm",
-        "brand-design-packaging",
-        "corporate-retail-branding",
-        "promotion-brand",
-        "website-development"
+        "6",
+        "5",
+        "4",
+        "3",
+        "7"
     ];
 
     var isMobileViewFlag = true,
