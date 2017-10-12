@@ -47,12 +47,12 @@
 <script src="/js/success_form.js"></script>
 
 <script type="text/javascript">
-    $(document).ready(function(){
+    $(document).ready(function () {
         //отложенная загрузка изображений
-        $(function() {
+        $(function () {
             $(".lazy").lazyload({
-                effect : "fadeIn",
-                threshold : 400
+                effect: "fadeIn",
+                threshold: 400
             });
         });
         showmore();
@@ -80,5 +80,8 @@
 
 @yield('page-scripts')
 
+<script>
+    {!! $settings->amocrm_script !!}
+</script>
 </body>
 </html>

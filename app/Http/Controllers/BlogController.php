@@ -79,6 +79,9 @@ class BlogController extends Controller
 
         if (strlen($category) > 0) {
             $category = BlogCategory::where('slug', $category)->first();
+            if($category == null){
+                return view('errors.404');
+            }
             $categoryId = $category->id;
             $blogs = \DB::table('blog')
                 ->where('category_id', '=', $categoryId)
@@ -133,6 +136,9 @@ class BlogController extends Controller
     {
         $category = BlogCategory::where('slug', $category)->first();
         $article = Blog::where('slug', $article)->where('category_id', $category->id)->first();
+        if($article == null){
+            return view('errors.404');
+        }
         $serviceCategories = ServiceCategory::all();
 
         event(new ArticleViewed($article));

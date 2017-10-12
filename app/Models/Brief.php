@@ -9,7 +9,7 @@ class Brief extends Model
     protected $table = 'brief';
 
 //    protected $fillable = ['service','money_min','money_max','currency','time','wishes','name','activity','site','city','phone','email','about'];
-    protected $fillable = ['service', 'money', 'currency', 'time', 'wishes', 'name', 'activity', 'site', 'city', 'phone', 'email', 'about'];
+    protected $fillable = ['service_name', 'market_strategy', 'money', 'currency', 'time', 'wishes', 'name', 'activity', 'site', 'city', 'phone', 'email', 'about'];
 
     public function briefServices()
     {

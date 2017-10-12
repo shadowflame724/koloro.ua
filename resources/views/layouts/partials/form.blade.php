@@ -1,4 +1,4 @@
-@if ($errors->any())
+@if (isset($errors) AND $errors->any())
 
     @foreach ($errors->all() as $error)
         <script>

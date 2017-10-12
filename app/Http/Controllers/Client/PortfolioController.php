@@ -52,6 +52,9 @@ class PortfolioController extends Controller
     {
         $viewName = str_replace('.html', '', $slug);
         $portfolio = Portfolio::where('slug', $slug)->first();
+        if($portfolio == null){
+            return view('errors.404');
+        }
 
         $previous = DB::table('portfolio')->where('id', '<', $portfolio->id)->orderBy('id', 'DESC')->first();
         if ($previous == null) {

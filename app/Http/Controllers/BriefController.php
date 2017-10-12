@@ -52,19 +52,6 @@ class BriefController extends Controller
 
         $id = $brief->id;
 
-        if (isset($request['briefservices'])) {
-            $briefservices = static::map(BriefService::all()->toArray(), 'id', 'name');
-            foreach ($request['briefservices'] as $briefservice) {
-                $briefserviceid = array_search($briefservice, $briefservices);
-                if ($briefserviceid) {
-                    BriefConnectService::create([
-                        'brief_id' => $id,
-                        'brief_service_id' => $briefserviceid,
-                    ]);
-                }
-            }
-        }
-
         if (isset($request['briefabouts'])) {
             $briefabouts = static::map(BriefAbout::all()->toArray(), 'id', 'name');
             foreach ($request['briefabouts'] as $briefabout) {

@@ -30,9 +30,9 @@ class StoreServiceCategoryRequest extends Request
     {
         return [
             'name_ru' => 'required|max:255',
-            'name_ua' => 'required|max:255',
+//            'name_ua' => 'required|max:255',
             'description_ru' => 'required',
-            'description_ua' => 'required'
+//            'description_ua' => 'required'
         ];
     }
 }

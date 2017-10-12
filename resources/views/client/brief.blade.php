@@ -26,14 +26,29 @@
             </div>
             <!-- end  -->
             <!-- begin right_colum -->
-            <div class="right_colum custom">
-                <fieldset>
-                    @foreach($briefservices as $briefservice)
-                        <input id="{{$briefservice->name}}" type="checkbox" name="briefservices[]"
-                               value="{{$briefservice->name}}" unchecked hidden/>
-                        <label for="{{$briefservice->name}}">{{trans('messages.'.$briefservice->name)}}</label>
-                    @endforeach
-                </fieldset>
+            <div class="right_colum">
+                {!! Form::text('service_name', null, [
+                'required',
+                'placeholder' => 'POS-материалы',
+                'class' => 'custom_input full greyplace_holder'
+                ]) !!}
+            </div>
+            <!-- end right_colum -->
+        </div>
+
+        <div class="one_block animated">
+            <!-- begin  -->
+            <div class="left_colum">
+                Маркетинговая стратегия на ближайшие 3 года
+            </div>
+            <!-- end  -->
+            <!-- begin right_colum -->
+            <div class="right_colum">
+                {!! Form::text('market_strategy', null, [
+                'required',
+                'placeholder' => 'market_strategy',
+                'class' => 'custom_input full greyplace_holder'
+                ]) !!}
             </div>
             <!-- end right_colum -->
         </div>

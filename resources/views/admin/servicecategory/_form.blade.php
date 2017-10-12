@@ -32,20 +32,26 @@
 
     </div>
 </div>
+<div class="col-xs-12 col-sm-12 col-md-12">
+    <div class="form-group">
+        <strong>Порядок:</strong>
+        {!! Form::number('order', null, array('class' => 'form-control')) !!}
+    </div>
+</div>
 
 
 {{--<div class="col-xs-12 col-sm-12 col-md-12">--}}
-    {{--<div class="form-group">--}}
-        {{--<strong>Изображение (фоновое):</strong>--}}
-        {{--@if(isset($serviceCategory) AND $serviceCategory->image)--}}
-            {{--<img src="/files/images/servicecategory/{{ $serviceCategory->image->link }}" class="preview">--}}
-        {{--@endif--}}
-        {{--{!! Form::file('image', null, ['class' => 'form-control']) !!}--}}
-        {{--@if(isset($serviceCategory) AND $serviceCategory->image)--}}
-            {{--<input name="image_alt" value="{{ $serviceCategory->image->alt }}" type="text" class="form-control"--}}
-                   {{--placeholder="ALT">--}}
-        {{--@else--}}
-            {{--<input name="image_alt" type="text" class="form-control" placeholder="ALT">--}}
-        {{--@endif--}}
-    {{--</div>--}}
+{{--<div class="form-group">--}}
+{{--<strong>Изображение (фоновое):</strong>--}}
+{{--@if(isset($serviceCategory) AND $serviceCategory->image)--}}
+{{--<img src="/files/images/servicecategory/{{ $serviceCategory->image->link }}" class="preview">--}}
+{{--@endif--}}
+{{--{!! Form::file('image', null, ['class' => 'form-control']) !!}--}}
+{{--@if(isset($serviceCategory) AND $serviceCategory->image)--}}
+{{--<input name="image_alt" value="{{ $serviceCategory->image->alt }}" type="text" class="form-control"--}}
+{{--placeholder="ALT">--}}
+{{--@else--}}
+{{--<input name="image_alt" type="text" class="form-control" placeholder="ALT">--}}
+{{--@endif--}}
+{{--</div>--}}
 {{--</div>--}}

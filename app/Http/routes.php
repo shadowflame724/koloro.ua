@@ -21,26 +21,25 @@ Route::group(['middleware' => ['auth']], function () {
 
         Route::resource('/users', 'UserController');
         Route::resource('/roles', 'RoleController');
-        Route::resource('/blog', 'BlogController');
+        Route::resource('/blog', 'BlogController', ['except' => ['show']]);
         Route::post('/table/blog', ['as' => 'blog-table', 'uses' => 'BlogController@table']);
-        Route::resource('/blogcategory', 'BlogCategoryController');
-        Route::resource('/servicecategory', 'ServiceCategoryController');
-        Route::resource('/service', 'ServiceController');
-//        Route::get('/create-thumbs', 'ServiceController@createThumbs');
+        Route::resource('/blogcategory', 'BlogCategoryController', ['except' => ['show']]);
+        Route::resource('/servicecategory', 'ServiceCategoryController', ['except' => ['show']]);
+        Route::resource('/service', 'ServiceController', ['except' => ['show']]);
 
         Route::post('/increment-count-service', ['as' => 'increment-count', 'uses' => 'ServiceController@incrementCount']);
-        Route::resource('/portfolio', 'PortfolioController');
+        Route::resource('/portfolio', 'PortfolioController', ['except' => ['show']]);
         Route::post('/table/portfolio', ['as' => 'portfolio-table', 'uses' => 'PortfolioController@table']);
-        Route::resource('/portfoliocategory', 'PortfolioCategoryController');
+        Route::resource('/portfoliocategory', 'PortfolioCategoryController', ['except' => ['show']]);
         Route::post('/table/portfoliocategory', ['as' => 'portfoliocategory-table', 'uses' => 'PortfolioCategoryController@table']);
-        Route::resource('/meta', 'MetaController');
-        Route::resource('/form', 'FormController');
-        Route::resource('/brief', 'BriefController');
-        Route::resource('/callback', 'CallbackController');
-        Route::resource('/subscription', 'SubscriptionController');
-        Route::resource('/servicevideo', 'ServiceVideoController');
+        Route::resource('/meta', 'MetaController', ['except' => ['show']]);
+        Route::resource('/form', 'FormController', ['except' => ['show']]);
+        Route::resource('/brief', 'BriefController', ['except' => ['show']]);
+        Route::resource('/callback', 'CallbackController', ['except' => ['show']]);
+        Route::resource('/subscription', 'SubscriptionController', ['except' => ['show']]);
+        Route::resource('/servicevideo', 'ServiceVideoController', ['except' => ['show']]);
         Route::post('/servicevideo', ['as' => 'servicevideo-table', 'uses' => 'ServiceVideoController@table']);
-        Route::resource('/page', 'PageController');
+        Route::resource('/page', 'PageController', ['except' => ['show']]);
         Route::get('/settings/edit', ['as' => 'settings.edit', 'uses' => 'SettingsController@edit']);
         Route::post('/settings/update/{settings}', ['as' => 'settings.update', 'uses' => 'SettingsController@update']);
     });
@@ -49,21 +48,30 @@ Route::group(['middleware' => ['auth']], function () {
 //Route::group(['middleware' => ['web']], function () {
 //client
 
-Route::get('/services', ['as' => 'client.services', 'uses' => 'ServiceController@getServices']);
-
-//+++++++++++slug+++++++++++++route name++++++++++++++++++++++++++++++method
-Route::get('/blog', ['as' => 'client.blog', 'uses' => 'BlogController@getBlog']);
+Route::get('/services.html', ['as' => 'client.services', 'uses' => 'ServiceController@getServices']);
+Route::get('/blog.html', ['as' => 'client.blog', 'uses' => 'BlogController@getBlog']);
 Route::get('/blog/{category}/{article}', ['as' => 'client.article', 'uses' => 'BlogController@getArticle']);
 Route::get('/blog/{category}', ['as' => 'client.blog', 'uses' => 'BlogController@getBlog']);
-
-Route::get('/portfolio', ['as' => 'client.portfolio', 'uses' => 'Client\PortfolioController@portfolio']);
+Route::get('/portfolio.html', ['as' => 'client.portfolio', 'uses' => 'Client\PortfolioController@portfolio']);
 Route::get('/portfolio/category/{category}', ['as' => 'client.portfoliocategory', 'uses' => 'Client\PortfolioController@getPortfolioCategory']);
 Route::get('/portfolio/{portfolio}', ['as' => 'client.portfoliopage', 'uses' => 'Client\PortfolioController@getPortfolioPage']);
-//Route::get('/portfolio/{slug}', ['as' => 'client.portfolio.{slug}', 'uses' => 'Client\PortfolioController@getPortfolioPage']);
-
-//    Route::get('/brief', ['as' => 'client.brief', 'uses' => 'BriefController@getBrief']);
-Route::get('/contacts', ['as' => 'client.contacts', 'uses' => 'ContactsController@getContacts']);
+Route::get('/contacts.html', ['as' => 'client.contacts', 'uses' => 'ContactsController@getContacts']);
 Route::get('/search', 'SearchController@search');
+Route::get('/services', function (){
+    return redirect('services.html');
+});
+Route::get('/blog', function (){
+    return redirect('blog.html');
+});
+Route::get('/portfolio', function (){
+    return redirect('portfolio.html');
+});
+Route::get('/contacts', function (){
+    return redirect('contacts.html');
+});
+Route::get('about', function (){
+    return redirect('company.html');
+});
 
 //yellow form
 Route::any('form', ['as' => 'form', 'uses' => 'FormController@create']);
@@ -81,9 +89,8 @@ Route::post('callback', ['as' => 'callback_store', 'uses' => 'CallbackController
 Route::get('/subscription', ['as' => 'subscription', 'uses' => 'SubscriptionController@create']);
 Route::post('/subscription', ['as' => 'subscription_store', 'uses' => 'SubscriptionController@store']);
 
-Route::get('about', 'Client\FrontEndPagesController@about');
+Route::get('company.html', 'Client\FrontEndPagesController@about');
 Route::get('author/{user}/{slug?}', 'Client\FrontEndPagesController@author');
-
 
 //vote
 Route::post('vote/{type?}/{id}', ['as' => 'vote', 'uses' => 'VoteController@vote']);
@@ -98,8 +105,6 @@ Route::get('setlocale/{locale}', function ($locale) {
 
 //admin
 Route::auth();
-
-
 
 //});
 Route::get('/{serviceSlug?}', 'Client\FrontEndPagesController@index');
