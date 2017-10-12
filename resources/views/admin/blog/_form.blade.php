@@ -1,5 +1,4 @@
 <div class="col-xs-12 col-sm-12 col-md-12">
-    {{ Html::script('ckeditor/ckeditor.js') }}
     <ul class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" href="#ru_tab">RU</a></li>
         <li><a data-toggle="tab" href="#ua_tab">UA</a></li>
