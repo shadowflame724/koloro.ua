@@ -5278,7 +5278,7 @@ a.gl-link {
         @media screen and (max-width: 600px) {
           .search-container .search-form .input-container input {
             height: 48px;
-            width: 80vw;
+            width: 70vw;
             padding: 0 2px; } }
     .search-container .search-form .search-btn {
       display: inline-block;
