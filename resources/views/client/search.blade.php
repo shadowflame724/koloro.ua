@@ -117,7 +117,7 @@
                                             </p>
                                         </div>
                                         <div class="info-btn">
-                                            <a href="/blog" class="gl-yellow-btn">больше информации</a>
+                                            <a href=/blog/{{ $result->blogcategory->slug }}" class="gl-yellow-btn">больше информации</a>
                                         </div>
                                     </div>
                                 </div>
