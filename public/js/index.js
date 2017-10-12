@@ -8,14 +8,14 @@ window.addEventListener('load', function() {
 
     // ************************************************************************************
 
-    var servicesCategories = [
-        "all-services",
-        "6",
-        "5",
-        "4",
-        "3",
-        "7"
-    ];
+    // var servicesCategories = [
+    //     "all-services",
+    //     "6",
+    //     "5",
+    //     "4",
+    //     "3",
+    //     "7"
+    // ];
 
     var isMobileViewFlag = true,
         mobileViewWidth = 768,
