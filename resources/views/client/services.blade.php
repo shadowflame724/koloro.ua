@@ -31,7 +31,7 @@
                         @foreach($serviceCategories as $serviceCategory)
                             <li class="slider-item" data-number={{ $i++ }}>
                                 <h2 class="slide-title">{{ $serviceCategory['parentName' . $langSuf] }}</h2>
-                                <h3 class="slide-title-small">{{ $serviceCategory['parentDescription' . $langSuf] }}</h3>
+                                <h3 class="slide-title-small">{{ strip_tags($serviceCategory['parentDescription' . $langSuf]) }}</h3>
 
                                 <div class="slide-links">
                                     <hr class="slide-hr">

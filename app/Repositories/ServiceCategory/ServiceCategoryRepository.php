@@ -74,8 +74,8 @@ class ServiceCategoryRepository extends BaseRepository
     {
         $serviceCategory->name_ru = strip_tags($input['name_ru']);
         $serviceCategory->name_ua = strip_tags($input['name_ua']);
-        $serviceCategory->description_ru = clean($input['description_ru']);
-        $serviceCategory->description_ua = clean($input['description_ua']);
+        $serviceCategory->description_ru = strip_tags($input['description_ru']);
+        $serviceCategory->description_ua = strip_tags($input['description_ua']);
         $serviceCategory->order = $input['order'];
 
 //        if (isset($input['image'])) {
