@@ -705,10 +705,5 @@
 
     <script src="/js/index.js"></script>
 
-    {{-- get global Array of services-categories-id from server --}}
-    <script>
-        var servicesCategories;
-    </script>
-
     <!-- скрипты только для этой страницы конец-->
 @stop

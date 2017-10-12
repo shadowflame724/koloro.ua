@@ -10,12 +10,20 @@ window.addEventListener('load', function() {
 
     // var servicesCategories = [
     //     "all-services",
-    //     "6",
-    //     "5",
-    //     "4",
-    //     "3",
-    //     "7"
+    //     "creating-new-tm",
+    //     "brand-design-packaging",
+    //     "corporate-retail-branding",
+    //     "promotion-brand",
+    //     "website-development"
     // ];
+
+    // var servicesCategories = $(".services .services-menu li a").attr("data-category");
+
+    var servicesCategories = [];
+
+    $(".services .services-menu li a").each(function (i, item) {
+        servicesCategories[i] = $(item).attr("data-category");
+    });
 
     var isMobileViewFlag = true,
         mobileViewWidth = 768,
