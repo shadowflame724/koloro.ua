@@ -5253,7 +5253,7 @@ a.gl-link {
   right: calc(10% - 65px); }
   @media screen and (max-width: 600px) {
     .search-container {
-      bottom: 80px; } }
+      bottom: 90px; } }
   .search-container .search-form {
     font-size: 0; }
     .search-container .search-form .input-container {
