@@ -376,8 +376,8 @@
         <div class="services-gallery">
 
             @foreach($serviceCategories as $id => $item)
-                @foreach($item['services'] as $key => $service)
-                    @if($service['video'] != null AND $key < 6)
+                @foreach($item['services'] as $service)
+                    @if($service['video'] != null)
                         <div class="services-item-cont" data-category="{{$id}}">
                             <div class="services-item">
                                 <video autoplay loop muted>
@@ -401,7 +401,6 @@
                                 </div>
                             </div>
                         </div>
-                        @php($key++)
                     @endif
                 @endforeach
             @endforeach
