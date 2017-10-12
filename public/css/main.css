@@ -2969,7 +2969,7 @@ textarea:focus, input:focus {
     max-width: 1200px; }
 
 .promo_block {
-  max-width: 394px;
+  width: 394px;
   display: inline-block;
   background-repeat: no-repeat;
   background-position: top 11px center;
