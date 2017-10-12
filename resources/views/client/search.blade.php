@@ -196,7 +196,7 @@
                                             <form class="stars">
                                                 <input value="{{$result->votes == 0 ? 0 : $result->rating/$result->votes}}"
                                                        data-id="{{$result->id}}" type="number" class="rating" min=0 max=5 step=0.5
-                                                       data-size="md">
+                                                       data-size="sm">
                                                 <p class="reviews-count"><span>{{ $result->votes }}</span> отзыв</p>
                                             </form>
                                         </div>
@@ -230,7 +230,7 @@
 @section('page-scripts')
     <script type="text/javascript">
         {{-- disable voting function on this page --}}
-        $(".rating").rating({min: 0, max: 5, step: 0.5, size: 'sm', disabled: true}).hide();
+        $(".rating").rating({min: 1, max: 5, step: 0.5, size: 'sm', disabled: true}).hide();
 
         $('.clear-rating').hide();
         $('.caption').hide();

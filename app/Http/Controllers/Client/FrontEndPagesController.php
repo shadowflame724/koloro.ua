@@ -56,6 +56,7 @@ class FrontEndPagesController extends Controller
             }
             $page = Page::find(2);
 
+
             return view('client.index', [
                 'serviceCategories' => $serviceCategories,
                 'page' => $page
