@@ -33,6 +33,7 @@ class FrontEndPagesController extends Controller
                     'servicecategory.order as parentOrder',
                     'servicecategory.name_ru as parentName_ru', 'servicecategory.name_ua as parentName_ua'
                     )
+                ->where('service.video', '!=', null)
                 ->orderBy('parentOrder')
                 ->get();
 

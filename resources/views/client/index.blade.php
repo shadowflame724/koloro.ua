@@ -377,7 +377,7 @@
 
             @foreach($serviceCategories as $id => $item)
                 @foreach($item['services'] as $key => $service)
-                    @if($service['video'] != null AND $key < 6)
+                    @if($key < 6)
                         <div class="services-item-cont" data-category="{{$id}}">
                             <div class="services-item">
                                 <video autoplay loop muted>
