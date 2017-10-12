@@ -5234,6 +5234,9 @@ a.gl-link {
   transition: all .35s ease;
   opacity: 1;
   bottom: 70px; }
+  @media screen and (max-width: 600px) {
+    .back-to-top {
+      bottom: 140px; } }
   .back-to-top img {
     padding: 25px 20px; }
     @media screen and (max-width: 600px) {
@@ -5250,7 +5253,7 @@ a.gl-link {
   right: calc(10% - 65px); }
   @media screen and (max-width: 600px) {
     .search-container {
-      bottom: 50px; } }
+      bottom: 80px; } }
   .search-container .search-form {
     font-size: 0; }
     .search-container .search-form .input-container {
