@@ -404,6 +404,10 @@ p, span, li, table {
   text-decoration: none;
   cursor: pointer; }
 
+a {
+  color: inherit;
+  font: inherit; }
+
 a:hover {
   cursor: pointer; }
 
