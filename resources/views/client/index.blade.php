@@ -23,35 +23,35 @@
     {{--<!-- main portfolio slider starts -->--}}
     {{--<ul class="bxslider main-slider-container">--}}
 
-        {{--@foreach($portfolioWorks as $work)--}}
-            {{--<li>--}}
-                {{--<div class="bg-container" style="background-image:--}}
-                {{--@if($work->image) url('/files/images/portfolio/img/{{ $work->image->link }}')--}}
-                {{--@else url('/files/images/portfolio/img/{{ $work->img }}')--}}
-                {{--@endif">--}}
-                    {{--<!-- NEED TO FIX -->--}}
-                    {{--<div class="dark-mask"></div>--}}
-                    {{--<div class="gl-container">--}}
-                        {{--<h2 class="main-slider-header">{{ $work->{'title' . $langSuf} }}</h2>--}}
-                        {{--<div class="order-btns">--}}
-                            {{--<a href="/portfolio/{{ $work->slug }}"--}}
-                               {{--class="gl-yellow-btn view-work-btn animated">{{trans('messages.show_work')}}</a>--}}
-                            {{--<a href="/" class="gl-transparent-btn want-expertise-btn order-form-btn">--}}
-                                {{--{{trans('messages.free_exp')}}--}}
-                            {{--</a>--}}
-                        {{--</div>--}}
-                        {{--<div class="special-offer">--}}
-                            {{--<div class="left-block">--}}
-                                {{--<p class="special-offer-bonus">{{ $work->slogan_num }}</p>--}}
-                            {{--</div>--}}
-                            {{--<div class="right-block">--}}
-                                {{--<p class="special-offer-text">{{ $work->{'slogan' . $langSuf} }}</p>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</li>--}}
-        {{--@endforeach--}}
+    {{--@foreach($portfolioWorks as $work)--}}
+    {{--<li>--}}
+    {{--<div class="bg-container" style="background-image:--}}
+    {{--@if($work->image) url('/files/images/portfolio/img/{{ $work->image->link }}')--}}
+    {{--@else url('/files/images/portfolio/img/{{ $work->img }}')--}}
+    {{--@endif">--}}
+    {{--<!-- NEED TO FIX -->--}}
+    {{--<div class="dark-mask"></div>--}}
+    {{--<div class="gl-container">--}}
+    {{--<h2 class="main-slider-header">{{ $work->{'title' . $langSuf} }}</h2>--}}
+    {{--<div class="order-btns">--}}
+    {{--<a href="/portfolio/{{ $work->slug }}"--}}
+    {{--class="gl-yellow-btn view-work-btn animated">{{trans('messages.show_work')}}</a>--}}
+    {{--<a href="/" class="gl-transparent-btn want-expertise-btn order-form-btn">--}}
+    {{--{{trans('messages.free_exp')}}--}}
+    {{--</a>--}}
+    {{--</div>--}}
+    {{--<div class="special-offer">--}}
+    {{--<div class="left-block">--}}
+    {{--<p class="special-offer-bonus">{{ $work->slogan_num }}</p>--}}
+    {{--</div>--}}
+    {{--<div class="right-block">--}}
+    {{--<p class="special-offer-text">{{ $work->{'slogan' . $langSuf} }}</p>--}}
+    {{--</div>--}}
+    {{--</div>--}}
+    {{--</div>--}}
+    {{--</div>--}}
+    {{--</li>--}}
+    {{--@endforeach--}}
 
     {{--</ul>--}}
     {{--<!-- main portfolio slider ends -->--}}
@@ -64,7 +64,8 @@
                 <div class="gl-container">
                     <h2 class="main-slider-header">Новый зонтичный молочный бренд “Глобино”</h2>
                     <div class="order-btns">
-                        <a href="/portfolio/novyj-zontichnyj-molochnyj-brend-globino.html" class="gl-yellow-btn view-work-btn animated bounce">Посмотреть работу</a>
+                        <a href="/portfolio/novyj-zontichnyj-molochnyj-brend-globino.html"
+                           class="gl-yellow-btn view-work-btn animated bounce">Посмотреть работу</a>
                         <a href="/" class="gl-transparent-btn want-expertise-btn order-form-btn">
                             Хочу бесплатную <br>быструю экспертизу
                         </a>
@@ -88,7 +89,8 @@
                 <div class="gl-container">
                     <h2 class="main-slider-header">Традиционный вкус с современным дизайном. Колбаса "Ланшмит"</h2>
                     <div class="order-btns">
-                        <a href="/portfolio/lanshmit.html" class="gl-yellow-btn view-work-btn animated bounce">Посмотреть работу</a>
+                        <a href="/portfolio/lanshmit.html" class="gl-yellow-btn view-work-btn animated bounce">Посмотреть
+                            работу</a>
                         <a href="/" class="gl-transparent-btn want-expertise-btn order-form-btn">
                             Хочу бесплатную <br>быструю экспертизу
                         </a>
@@ -130,7 +132,8 @@
                 <div class="gl-container">
                     <h2 class="main-slider-header">СЕТЬ МАГАЗИНОВ «МЯСНОЙ» <br>САМОБЫТНЫЙ УКРАИНСКИЙ БРЕНД</h2>
                     <div class="order-btns">
-                        <a href="/portfolio/set-magazinov-myasnoi.html" class="gl-yellow-btn view-work-btn animated bounce">Посмотреть работу</a>
+                        <a href="/portfolio/set-magazinov-myasnoi.html"
+                           class="gl-yellow-btn view-work-btn animated bounce">Посмотреть работу</a>
                         <a href="/" class="gl-transparent-btn want-expertise-btn order-form-btn">
                             Хочу бесплатную <br>быструю экспертизу
                         </a>
@@ -153,7 +156,8 @@
                 <div class="gl-container">
                     <h2 class="main-slider-header">«Мировая традиция» — <br>бренд-путешественник</h2>
                     <div class="order-btns">
-                        <a href="/portfolio/mirovaya-tradiciya.html" class="gl-yellow-btn view-work-btn animated bounce">Посмотреть работу</a>
+                        <a href="/portfolio/mirovaya-tradiciya.html"
+                           class="gl-yellow-btn view-work-btn animated bounce">Посмотреть работу</a>
                         <a href="/" class="gl-transparent-btn want-expertise-btn order-form-btn">
                             Хочу бесплатную <br>быструю экспертизу
                         </a>
@@ -175,7 +179,8 @@
                 <div class="gl-container">
                     <h2 class="main-slider-header">«Инделика». Мясо — индейки,<br> этикетка — КОЛОРО</h2>
                     <div class="order-btns">
-                        <a href="/portfolio/indelika.html" class="gl-yellow-btn view-work-btn animated bounce">Посмотреть работу</a>
+                        <a href="/portfolio/indelika.html" class="gl-yellow-btn view-work-btn animated bounce">Посмотреть
+                            работу</a>
                         <a href="/" class="gl-transparent-btn want-expertise-btn order-form-btn">
                             Хочу бесплатную <br>быструю экспертизу
                         </a>
@@ -359,201 +364,210 @@
                         <a href="#" data-category="all-services"><span>Основные услуги</span></a>
                     </li>
 
-                    @foreach($serviceCategories as $serviceCategory)
+                    @foreach($serviceCategories as $id => $serviceCategory)
                         <li>
                             <a href="#"
-                               data-category="{{ $serviceCategory->id }}"><span>{{ $serviceCategory->{'name' . $langSuf} }}</span></a>
+                               data-category="{{$id}}"><span>{{ $serviceCategory['parentName' . $langSuf] }}</span></a>
                         </li>
                     @endforeach
                 </ul>
             </nav>
         </div>
         <div class="services-gallery">
-            <div class="services-item-cont" data-category="creating-new-tm">
-                <div class="services-item">
-                    <video autoplay loop muted>
-                        <source src="video/1_cut.mp4" type="video/mp4">
-                    </video>
-                    <div class="poster-img-cont">
-                        <img src="images/main/services-poster-1.jpg" alt="services-poster">
-                    </div>
-                    <div class="hover-layer">
-                        <p class="achievments clearfix">
-                            <span class="price">162 000 грн</span>
-                            <span class="executed-works">102 выполненных работ</span>
-                        </p>
-                        <p class="header">Дизайн упаковки</p>
-                        <p class="info">
-                            Дизайн упаковки – один из основных компонентов успешного бренда.
-                            Сегодня упаковка товара является важнейшим маркетинговым инструментом и
-                            каналом коммуникации бренда с потребителями (как лояльными, так и потенциальными).
-                        </p>
-                        <a href="https://koloro.ua/novyj-dizajn-upakovki.html" class="go-service-btn">Перейти к
-                            услуге</a>
-                    </div>
-                </div>
-            </div>
-            <div class="services-item-cont" data-category="brand-design-packaging">
-                <div class="services-item">
-                    <video autoplay loop muted>
-                        <source src="video/2_cut.mp4" type="video/mp4">
-                    </video>
-                    <div class="poster-img-cont">
-                        <img src="images/main/services-poster-2.jpg" alt="services-poster">
-                    </div>
-                    <div class="hover-layer">
-                        <p class="achievments clearfix">
-                            <span class="price">132 300 грн</span>
-                            <span class="executed-works">56 выполненных работ</span>
-                        </p>
-                        <p class="header">Брендинг (разработка бренда)</p>
-                        <p class="info">
-                            Брендинг – процесс создания и развития бренда.
-                            Он включает все этапы: от создания продукта – до продвижения и рекламы.
-                        </p>
-                        <a href="https://koloro.ua/brending.html" class="go-service-btn">Перейти к услуге</a>
-                    </div>
-                </div>
-            </div>
-            <div class="services-item-cont" data-category="brand-design-packaging">
-                <div class="services-item">
-                    <video autoplay loop muted>
-                        <source src="video/3_cut.mp4" type="video/mp4">
-                    </video>
-                    <div class="poster-img-cont">
-                        <img src="images/main/services-poster-3.jpg" alt="services-poster">
-                    </div>
-                    <div class="hover-layer">
-                        <p class="achievments clearfix">
-                            <span class="price">90 000 грн</span>
-                            <span class="executed-works">11 выполненных работ</span>
-                        </p>
-                        <p class="header">Создание брендбука</p>
-                        <p class="info">
-                            Брендбук – это внутрикорпоративный документ, который систематизирует
-                            все идеологические элементы бренда, формирует его комплексную картину,
-                            а также содержит свод правил по использованию графических и вербальных компонентов бренда.
-                        </p>
-                        <a href="https://koloro.ua/sozdanie-brendbuka.html" class="go-service-btn">Перейти к услуге</a>
-                    </div>
-                </div>
-            </div>
-            <div class="services-item-cont" data-category="creating-new-tm">
-                <div class="services-item">
-                    <video autoplay loop muted>
-                        <source src="video/4_cut.mp4" type="video/mp4">
-                    </video>
-                    <div class="poster-img-cont">
-                        <img src="images/main/services-poster-4.jpg" alt="services-poster">
-                    </div>
-                    <div class="hover-layer">
-                        <p class="achievments clearfix">
-                            <span class="price">40 500 грн</span>
-                            <span class="executed-works">36 выполненных работ</span>
-                        </p>
-                        <p class="header">Стратегия бренда (продвижение бренда компании)</p>
-                        <p class="info">
-                            Создали бренд, а что делать дальше Вы не знаете?
-                            Что включает комплексное продвижение бренда? Как увеличить его активы?
-                        </p>
-                        <a href="https://koloro.ua/strategiya-brenda.html" class="go-service-btn">Перейти к услуге</a>
-                    </div>
-                </div>
-            </div>
-            <div class="services-item-cont" data-category="corporate-retail-branding">
-                <div class="services-item">
-                    <video autoplay loop muted>
-                        <source src="video/5_cut.mp4" type="video/mp4">
-                    </video>
-                    <div class="poster-img-cont">
-                        <img src="images/main/services-poster-5.jpg" alt="services-poster">
-                    </div>
-                    <div class="hover-layer">
-                        <p class="achievments clearfix">
-                            <span class="price"> 121 500 грн</span>
-                            <span class="executed-works">10 выполненных работ</span>
-                        </p>
-                        <p class="header">Ритейл-брендинг</p>
-                        <p class="info">
-                            Ритейл-брендинг – это разработка бренда для торгово-розничной сети.
-                            Он включает комплекс работ по созданию графических и вербальных компонентов бренда.
-                        </p>
-                        <a href="https://koloro.ua/ritejl-brending.html" class="go-service-btn">Перейти к услуге</a>
-                    </div>
-                </div>
-            </div>
-            <div class="services-item-cont" data-category="website-development">
-                <div class="services-item">
-                    <video autoplay loop muted>
-                        <source src="video/6_cut.mp4" type="video/mp4">
-                    </video>
-                    <div class="poster-img-cont">
-                        <img src="images/main/services-poster-6.jpg" alt="services-poster">
-                    </div>
-                    <div class="hover-layer">
-                        <p class="achievments clearfix">
-                            <span class="price">75 000 грн</span>
-                            <span class="executed-works">31 выполненных работ</span>
-                        </p>
-                        <p class="header">Разработка сайта компании</p>
-                        <p class="info">
-                            Разработка корпоративного сайта – это возможность для компании получить
-                            онлайн-представительство своего бизнеса. Успешный корпоративный сайт
-                            будет актуальным продолжительное время и позволит активно вовлекать клиентов,
-                            повышая их уровень лояльности.
-                        </p>
-                        <a href="https://koloro.ua/razrabotka-sayta-companii.html" class="go-service-btn">Перейти к
-                            услуге</a>
-                    </div>
-                </div>
-            </div>
-            <div class="services-item-cont" data-category="creating-new-tm">
-                <div class="services-item">
-                    <video autoplay loop muted>
-                        <source src="video/7_cut.mp4" type="video/mp4">
-                    </video>
-                    <div class="poster-img-cont">
-                        <img src="images/main/services-poster-7.jpg" alt="services-poster">
-                    </div>
-                    <div class="hover-layer">
-                        <p class="achievments clearfix">
-                            <span class="price">61 600 грн</span>
-                            <span class="executed-works">56 выполненных работ</span>
-                        </p>
-                        <p class="header">Нейминг (разработка названия бренда)</p>
-                        <p class="info">
-                            Понятие «нейминг» является производным от английского слова «name» - имя,
-                            название или наименование. Naming (нейминг) – процесс разработки названия для чего-либо.
-                            Нейминг бренда – это соединение креатива и маркетинга.
-                        </p>
-                        <a href="https://koloro.ua/nejming.html" class="go-service-btn">Перейти к услуге</a>
-                    </div>
-                </div>
-            </div>
-            <div class="services-item-cont" data-category="creating-new-tm">
-                <div class="services-item">
-                    <video autoplay loop muted>
-                        <source src="video/8_cut.mp4" type="video/mp4">
-                    </video>
-                    <div class="poster-img-cont">
-                        <img src="images/main/services-poster-8.jpg" alt="services-poster">
-                    </div>
-                    <div class="hover-layer">
-                        <p class="achievments clearfix">
-                            <span class="price">7900 грн</span>
-                            <span class="executed-works">3 004 выполненных работ</span>
-                        </p>
-                        <p class="header">Кабинетные маркетинговые исследования</p>
-                        <p class="info">
-                            Кабинетные маркетинговые исследования – это сбор и анализ вторичной
-                            информации по заданной теме. Цель исследования - получить точную информацию для
-                            принятия правильных бизнес-решений.
-                        </p>
-                        <a href="https://koloro.ua/kabinetnue-marketingovue-issledovaniya.html" class="go-service-btn">Перейти
-                            к услуге</a>
-                    </div>
-                </div>
-            </div>
+
+            @foreach($serviceCategories as $id => $item)
+                @foreach($item['services'] as $key => $service)
+                    @if($service['video'] != null AND $key < 6)
+                        <div class="services-item-cont" data-category="{{$id}}">
+                            <div class="services-item">
+                                <video autoplay loop muted>
+                                    <source src="video/{{ $service['video'] }}" type="video/mp4">
+                                </video>
+                                <div class="poster-img-cont">
+                                    <img src="images/main/services-poster-1.jpg" alt="services-poster">
+                                </div>
+                                <div class="hover-layer">
+                                    <p class="achievments clearfix">
+                                        <span class="price">{{ $service['price'] }} руб</span>
+                                        <span class="executed-works">{{ $service['work_count'] }} выполненных работ</span>
+                                    </p>
+                                    <p class="header">{{ $service['name'. $langSuf ] }}</p>
+                                    <p class="info">
+                                        {!! strip_tags($service['description' . $langSuf]) !!}
+                                    </p>
+                                    <a href="/{{ $service['slug'] }}" class="go-service-btn">Перейти
+                                        к
+                                        услуге</a>
+                                </div>
+                            </div>
+                        </div>
+                        @php($key++)
+                    @endif
+                @endforeach
+            @endforeach
+
+
+            {{--<div class="services-item-cont" data-category="brand-design-packaging">--}}
+                {{--<div class="services-item">--}}
+                    {{--<video autoplay loop muted>--}}
+                        {{--<source src="video/2_cut.mp4" type="video/mp4">--}}
+                    {{--</video>--}}
+                    {{--<div class="poster-img-cont">--}}
+                        {{--<img src="images/main/services-poster-2.jpg" alt="services-poster">--}}
+                    {{--</div>--}}
+                    {{--<div class="hover-layer">--}}
+                        {{--<p class="achievments clearfix">--}}
+                            {{--<span class="price">132 300 грн</span>--}}
+                            {{--<span class="executed-works">56 выполненных работ</span>--}}
+                        {{--</p>--}}
+                        {{--<p class="header">Брендинг (разработка бренда)</p>--}}
+                        {{--<p class="info">--}}
+                            {{--Брендинг – процесс создания и развития бренда.--}}
+                            {{--Он включает все этапы: от создания продукта – до продвижения и рекламы.--}}
+                        {{--</p>--}}
+                        {{--<a href="https://koloro.ua/brending.html" class="go-service-btn">Перейти к услуге</a>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="services-item-cont" data-category="brand-design-packaging">--}}
+                {{--<div class="services-item">--}}
+                    {{--<video autoplay loop muted>--}}
+                        {{--<source src="video/3_cut.mp4" type="video/mp4">--}}
+                    {{--</video>--}}
+                    {{--<div class="poster-img-cont">--}}
+                        {{--<img src="images/main/services-poster-3.jpg" alt="services-poster">--}}
+                    {{--</div>--}}
+                    {{--<div class="hover-layer">--}}
+                        {{--<p class="achievments clearfix">--}}
+                            {{--<span class="price">90 000 грн</span>--}}
+                            {{--<span class="executed-works">11 выполненных работ</span>--}}
+                        {{--</p>--}}
+                        {{--<p class="header">Создание брендбука</p>--}}
+                        {{--<p class="info">--}}
+                            {{--Брендбук – это внутрикорпоративный документ, который систематизирует--}}
+                            {{--все идеологические элементы бренда, формирует его комплексную картину,--}}
+                            {{--а также содержит свод правил по использованию графических и вербальных компонентов бренда.--}}
+                        {{--</p>--}}
+                        {{--<a href="https://koloro.ua/sozdanie-brendbuka.html" class="go-service-btn">Перейти к услуге</a>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="services-item-cont" data-category="creating-new-tm">--}}
+                {{--<div class="services-item">--}}
+                    {{--<video autoplay loop muted>--}}
+                        {{--<source src="video/4_cut.mp4" type="video/mp4">--}}
+                    {{--</video>--}}
+                    {{--<div class="poster-img-cont">--}}
+                        {{--<img src="images/main/services-poster-4.jpg" alt="services-poster">--}}
+                    {{--</div>--}}
+                    {{--<div class="hover-layer">--}}
+                        {{--<p class="achievments clearfix">--}}
+                            {{--<span class="price">40 500 грн</span>--}}
+                            {{--<span class="executed-works">36 выполненных работ</span>--}}
+                        {{--</p>--}}
+                        {{--<p class="header">Стратегия бренда (продвижение бренда компании)</p>--}}
+                        {{--<p class="info">--}}
+                            {{--Создали бренд, а что делать дальше Вы не знаете?--}}
+                            {{--Что включает комплексное продвижение бренда? Как увеличить его активы?--}}
+                        {{--</p>--}}
+                        {{--<a href="https://koloro.ua/strategiya-brenda.html" class="go-service-btn">Перейти к услуге</a>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="services-item-cont" data-category="corporate-retail-branding">--}}
+                {{--<div class="services-item">--}}
+                    {{--<video autoplay loop muted>--}}
+                        {{--<source src="video/5_cut.mp4" type="video/mp4">--}}
+                    {{--</video>--}}
+                    {{--<div class="poster-img-cont">--}}
+                        {{--<img src="images/main/services-poster-5.jpg" alt="services-poster">--}}
+                    {{--</div>--}}
+                    {{--<div class="hover-layer">--}}
+                        {{--<p class="achievments clearfix">--}}
+                            {{--<span class="price"> 121 500 грн</span>--}}
+                            {{--<span class="executed-works">10 выполненных работ</span>--}}
+                        {{--</p>--}}
+                        {{--<p class="header">Ритейл-брендинг</p>--}}
+                        {{--<p class="info">--}}
+                            {{--Ритейл-брендинг – это разработка бренда для торгово-розничной сети.--}}
+                            {{--Он включает комплекс работ по созданию графических и вербальных компонентов бренда.--}}
+                        {{--</p>--}}
+                        {{--<a href="https://koloro.ua/ritejl-brending.html" class="go-service-btn">Перейти к услуге</a>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="services-item-cont" data-category="website-development">--}}
+                {{--<div class="services-item">--}}
+                    {{--<video autoplay loop muted>--}}
+                        {{--<source src="video/6_cut.mp4" type="video/mp4">--}}
+                    {{--</video>--}}
+                    {{--<div class="poster-img-cont">--}}
+                        {{--<img src="images/main/services-poster-6.jpg" alt="services-poster">--}}
+                    {{--</div>--}}
+                    {{--<div class="hover-layer">--}}
+                        {{--<p class="achievments clearfix">--}}
+                            {{--<span class="price">75 000 грн</span>--}}
+                            {{--<span class="executed-works">31 выполненных работ</span>--}}
+                        {{--</p>--}}
+                        {{--<p class="header">Разработка сайта компании</p>--}}
+                        {{--<p class="info">--}}
+                            {{--Разработка корпоративного сайта – это возможность для компании получить--}}
+                            {{--онлайн-представительство своего бизнеса. Успешный корпоративный сайт--}}
+                            {{--будет актуальным продолжительное время и позволит активно вовлекать клиентов,--}}
+                            {{--повышая их уровень лояльности.--}}
+                        {{--</p>--}}
+                        {{--<a href="https://koloro.ua/razrabotka-sayta-companii.html" class="go-service-btn">Перейти к--}}
+                            {{--услуге</a>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="services-item-cont" data-category="creating-new-tm">--}}
+                {{--<div class="services-item">--}}
+                    {{--<video autoplay loop muted>--}}
+                        {{--<source src="video/7_cut.mp4" type="video/mp4">--}}
+                    {{--</video>--}}
+                    {{--<div class="poster-img-cont">--}}
+                        {{--<img src="images/main/services-poster-7.jpg" alt="services-poster">--}}
+                    {{--</div>--}}
+                    {{--<div class="hover-layer">--}}
+                        {{--<p class="achievments clearfix">--}}
+                            {{--<span class="price">61 600 грн</span>--}}
+                            {{--<span class="executed-works">56 выполненных работ</span>--}}
+                        {{--</p>--}}
+                        {{--<p class="header">Нейминг (разработка названия бренда)</p>--}}
+                        {{--<p class="info">--}}
+                            {{--Понятие «нейминг» является производным от английского слова «name» - имя,--}}
+                            {{--название или наименование. Naming (нейминг) – процесс разработки названия для чего-либо.--}}
+                            {{--Нейминг бренда – это соединение креатива и маркетинга.--}}
+                        {{--</p>--}}
+                        {{--<a href="https://koloro.ua/nejming.html" class="go-service-btn">Перейти к услуге</a>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="services-item-cont" data-category="creating-new-tm">--}}
+                {{--<div class="services-item">--}}
+                    {{--<video autoplay loop muted>--}}
+                        {{--<source src="video/8_cut.mp4" type="video/mp4">--}}
+                    {{--</video>--}}
+                    {{--<div class="poster-img-cont">--}}
+                        {{--<img src="images/main/services-poster-8.jpg" alt="services-poster">--}}
+                    {{--</div>--}}
+                    {{--<div class="hover-layer">--}}
+                        {{--<p class="achievments clearfix">--}}
+                            {{--<span class="price">7900 грн</span>--}}
+                            {{--<span class="executed-works">3 004 выполненных работ</span>--}}
+                        {{--</p>--}}
+                        {{--<p class="header">Кабинетные маркетинговые исследования</p>--}}
+                        {{--<p class="info">--}}
+                            {{--Кабинетные маркетинговые исследования – это сбор и анализ вторичной--}}
+                            {{--информации по заданной теме. Цель исследования - получить точную информацию для--}}
+                            {{--принятия правильных бизнес-решений.--}}
+                        {{--</p>--}}
+                        {{--<a href="https://koloro.ua/kabinetnue-marketingovue-issledovaniya.html" class="go-service-btn">Перейти--}}
+                            {{--к услуге</a>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
             <div class="services-item-cont" data-category="">
                 <div class="services-item">
                     <video autoplay loop muted>

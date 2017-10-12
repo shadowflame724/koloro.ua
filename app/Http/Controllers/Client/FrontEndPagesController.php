@@ -18,6 +18,7 @@ use App\Models\Portfolio;
 use App\Models\Service;
 use App\Models\ServiceCategory;
 use App\User;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 
 class FrontEndPagesController extends Controller
@@ -25,13 +26,37 @@ class FrontEndPagesController extends Controller
     public function index($serviceSlug = null)
     {
         if ($serviceSlug == null) {
-            $serviceCategories = ServiceCategory::all();
-            $portfolioWorks = Portfolio::where('on_main_page', '=', '1')->get();
+            $arr = DB::table('service')
+                ->join('servicecategory', 'service.category_id', '=', 'servicecategory.id')
+                ->select('service.name_ru', 'service.name_ua', 'service.description_ru', 'service.description_ua', 'service.slug', 'service.video', 'service.work_count', 'service.price',
+                    'servicecategory.id as parentId',
+                    'servicecategory.order as parentOrder',
+                    'servicecategory.name_ru as parentName_ru', 'servicecategory.name_ua as parentName_ua'
+                    )
+                ->orderBy('parentOrder')
+                ->get();
+
+            $serviceCategories = [];
+
+            foreach ($arr as $data) {
+                $id = $data->parentId;
+                $serviceCategories[$id]['parentName_ru'] = $data->parentName_ru;
+                $serviceCategories[$id]['parentName_ua'] = $data->parentName_ua;
+                $serviceCategories[$id]['services'][] = [
+                    'name_ru' => $data->name_ru,
+                    'name_ua' => $data->name_ua,
+                    'description_ru' => $data->description_ru,
+                    'description_ua' => $data->description_ua,
+                    'price' => $data->price,
+                    'slug' => $data->slug,
+                    'video' => $data->video,
+                    'work_count' => $data->work_count
+                ];
+            }
             $page = Page::find(2);
 
             return view('client.index', [
                 'serviceCategories' => $serviceCategories,
-                'portfolioWorks' => $portfolioWorks,
                 'page' => $page
             ]);
         } else {

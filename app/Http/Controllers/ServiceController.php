@@ -79,7 +79,6 @@ class ServiceController extends Controller
             $serviceCategories[$id]['parentName_ua'] = $data->parentName_ua;
             $serviceCategories[$id]['parentDescription_ru'] = $data->parentDescription_ru;
             $serviceCategories[$id]['parentDescription_ua'] = $data->parentDescription_ua;
-            $serviceCategories[$id]['parentDescription_ua'] = $data->parentDescription_ua;
             $serviceCategories[$id]['parentImageLink'] = $data->parentImageLink;
             $serviceCategories[$id]['parentImageAlt'] = $data->parentImageAlt;
             $serviceCategories[$id]['services'][] = [
