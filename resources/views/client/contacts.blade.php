@@ -28,8 +28,8 @@
     <div class="maps-container">
         <p class="maska"></p>
 
-        <div id="kiev-map" class="koloro-map animated kiev active"></div>
-        <div id="moscow-map" class="koloro-map animated moscow"></div>
+        <div id="kiev-map" class="koloro-map animated kiev"></div>
+        <div id="moscow-map" class="koloro-map animated moscow active"></div>
 
         <div class="contacts-cont">
             <div class="gl-container">
@@ -40,8 +40,8 @@
         <!-- start of fly-block -->
         <div class="fly-block">
             <ul class="contacts-menu">
-                <li class="kiev active">Киев</li>
-                <li class="moscow">Москва</li>
+                <li class="kiev" style="display: none">Киев</li>
+                <li class="moscow active">Москва</li>
             </ul>
 
             <span class="close-contacts-btn">
@@ -50,14 +50,14 @@
 
             <div class="tab-panel">
                 <!-- start of kiev tab-pane -->
-                <div class="tab-pane animated kiev active">
+                <div class="tab-pane animated kiev">
                     <div class="main-info">
                         <div class="city-cont">
                             <i class="icon icon-kiev"></i>
                         </div>
                         <div class="contact-info">
-                            <p class="phone">+38 (044) 223 51 20</p>
-                            <p class="email">hi@koloro.ua</p>
+                            <p class="phone">{{ env('OUR_PHONE_NUMBER') }}</p>
+                            <p class="email">{{ env('OUR_EMAIL') }}</p>
                         </div>
                     </div>
 
@@ -95,8 +95,7 @@
                         </div>
                         <div class="schedule-info-right">
                             <p class="right-text">
-                                ул. Трехсвятительская 5/1-А,
-                                офис 1, 2-й этаж
+                                {!! trans('messages.adress') !!}
                             </p>
                         </div>
                     </div>
@@ -127,14 +126,14 @@
                 <!-- end of kiev tab-pane -->
 
                 <!-- start of moscow tab-pane -->
-                <div class="tab-pane animated moscow">
+                <div class="tab-pane animated moscow active">
                     <div class="main-info">
                         <div class="city-cont">
                             <i class="icon icon-moscow"></i>
                         </div>
                         <div class="contact-info">
-                            <p class="phone">+7 (499) 112 08 50</p>
-                            <p class="email">hi@koloro.ru</p>
+                            <p class="phone">{{ env('OUR_PHONE_NUMBER') }}</p>
+                            <p class="email">{{ env('OUR_EMAIL') }}</p>
                         </div>
                     </div>
 
@@ -172,7 +171,7 @@
                         </div>
                         <div class="schedule-info-right">
                             <p class="right-text">
-                                119049, Москва, ул. Новый Арбат, 1
+                                {!! trans('messages.adress') !!}
                             </p>
                         </div>
                     </div>
@@ -222,9 +221,9 @@
             </div>
             <p class="name">Игорь Гема </p>
             <p class="place">Директор</p>
-            <p class="phone">+38 (044) 223 51 20</p>
+            <p class="phone">{{ env('OUR_PHONE_NUMBER') }}</p>
             <p class="phone">+7 (499) 677 58 69</p>
-            <a href="mailto:gema@koloro.ua" class="mailto">gema@koloro.ua</a>
+            <a href="mailto:gema@koloro.ru" class="mailto">gema@koloro.ru</a>
         </div>
         <!-- end one_manager -->
         <!-- begin one_manager -->
@@ -234,9 +233,9 @@
             </div>
             <p class="name">Мария Баранова</p>
             <p class="place">Менеджер по работе с клиентами</p>
-            <p class="phone">+38 (044) 223 51 20</p>
+            <p class="phone">{{ env('OUR_PHONE_NUMBER') }}</p>
             <p class="phone">+7 (499) 677 58 69</p>
-            <a href="mailto:gema@koloro.ua" class="mailto">baranova@koloro.ua</a>
+            <a href="mailto:baranova@koloro.ru" class="mailto">baranova@koloro.ru</a>
         </div>
         <!-- end one_manager -->
         <!-- begin one_manager -->
@@ -246,9 +245,9 @@
             </div>
             <p class="name">Андрей Костюк</p>
             <p class="place">Менеджер по работе с клиентами</p>
-            <p class="phone">+38 (044) 223 51 20</p>
+            <p class="phone">{{ env('OUR_PHONE_NUMBER') }}</p>
             <p class="phone">+7 (499) 677 58 69</p>
-            <a href="mailto:gema@koloro.ua" class="mailto">kostiuk@koloro.ua</a>
+            <a href="mailto:kostiuk@koloro.ru" class="mailto">kostiuk@koloro.ru</a>
         </div>
         <!-- end one_manager -->
 

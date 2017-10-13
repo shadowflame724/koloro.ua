@@ -18,8 +18,12 @@
             <p class="col-name">{{ trans('messages.contacts') }}</p>
 
             <div class="contact-info">
-                <p class="contact-telephone">{{ env('OUR_PHONE_NUMBER') }}</p>
-                <p class="contact-email">{{ env('OUR_EMAIL') }}</p> {{-- todo trans ru+ua --}}
+                <p class="contact-telephone">
+                    <a class="call-us-phone" href="tel:{{-- */ $data = str_replace(' ', '', env('OUR_PHONE_NUMBER')); /* --}}{{$data}}">{{ env('OUR_PHONE_NUMBER') }}</a>
+                </p>
+                <p class="contact-email">
+                    <a href="mailto:{{ env('OUR_EMAIL') }}">{{ env('OUR_EMAIL') }}</a>
+                </p> {{-- todo trans ru+ua --}}
             </div>
 
             <div class="contact-info">
@@ -50,8 +54,12 @@
             <p class="col-name">{{ trans('messages.contacts') }}</p>
 
             <div class="contact-info">
-                <p class="contact-telephone">{{ env('OUR_PHONE_NUMBER') }}</p>
-                <p class="contact-email">{{ env('OUR_EMAIL') }}</p> {{-- todo trans ru+ua --}}
+                <p class="contact-telephone">
+                    <a class="call-us-phone" href="tel:{{-- */ $data = str_replace(' ', '', env('OUR_PHONE_NUMBER')); /* --}}{{$data}}">{{ env('OUR_PHONE_NUMBER') }}</a>
+                </p>
+                <p class="contact-email">
+                    <a href="mailto:{{ env('OUR_EMAIL') }}">{{ env('OUR_EMAIL') }}</a>
+                </p> {{-- todo trans ru+ua --}}
             </div>
 
             <div class="contact-info">

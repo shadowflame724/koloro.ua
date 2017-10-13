@@ -307,8 +307,8 @@
             {!! Form::text('phone', null, ['required','class' => 'call-back-phone', 'placeholder' => 'Ваш телефон', 'tabindex' => '1']) !!}
             <input type="submit" value="{{trans('messages.callback')}}" class="call-back-btn" tabindex="2">
         </div>
-        <p class="call-us-text">{{trans('messages.callback_or')}}: <span
-                    class="call-us-phone">{{ env('OUR_PHONE_NUMBER') }}</span>
+        <p class="call-us-text">{{trans('messages.callback_or')}}:
+            <a class="call-us-phone" href="tel:{{-- */ $data = str_replace(' ', '', env('OUR_PHONE_NUMBER')); /* --}}{{$data}}">{{ env('OUR_PHONE_NUMBER') }}</a>
         </p>
     </div>
     {!! Form::close() !!}

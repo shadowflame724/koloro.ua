@@ -405,11 +405,23 @@ p, span, li, table {
   cursor: pointer; }
 
 a {
+  transition: all 0.4s;
   color: inherit;
   font: inherit; }
 
 a:hover {
   cursor: pointer; }
+
+a[href^="tel"] {
+  text-decoration: none; }
+  a[href^="tel"]:hover {
+    color: #f0cf16; }
+
+a[href^="mailto"] {
+  text-decoration: none; }
+  a[href^="mailto"]:hover {
+    color: #f0cf16;
+    text-decoration: underline; }
 
 .name_block {
   font-family: "SegoeUIBold", sans-serif;
@@ -6974,7 +6986,8 @@ h1.top-title {
         width: 100%; } }
     #contacts .fly-block .contacts-menu {
       width: 100%;
-      font-size: 0; }
+      font-size: 0;
+      text-align: center; }
       #contacts .fly-block .contacts-menu li {
         display: inline-block;
         width: 50%;
