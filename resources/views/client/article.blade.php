@@ -224,31 +224,52 @@
                     <div class="clear"></div>
                 </div>
                 <!-- end similar_material -->
-                <!-- begin comment_widget -->
-                <div class="comment_widget">
-                    <div id="disqus_thread"></div>
-                    <script>
+                {{--<!-- begin comment_widget -->--}}
+                {{--<div class="comment_widget">--}}
+                    {{--<div id="disqus_thread"></div>--}}
+                    {{--<script>--}}
 
-                        /**
-                         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-                        /*
-                         var disqus_config = function () {
-                         this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-                         this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                         };
-                         */
-                        (function () { // DON'T EDIT BELOW THIS LINE
-                            var d = document, s = d.createElement('script');
-                            s.src = 'https://testkoloro.disqus.com/embed.js';
-                            s.setAttribute('data-timestamp', + new Date());
-                            (d.head || d.body).appendChild(s);
+                        {{--/**--}}
+                         {{--*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.--}}
+                         {{--*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/--}}
+                        {{--/*--}}
+                         {{--var disqus_config = function () {--}}
+                         {{--this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable--}}
+                         {{--this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable--}}
+                         {{--};--}}
+                         {{--*/--}}
+                        {{--(function () { // DON'T EDIT BELOW THIS LINE--}}
+                            {{--var d = document, s = d.createElement('script');--}}
+                            {{--s.src = 'https://testkoloro.disqus.com/embed.js';--}}
+                            {{--s.setAttribute('data-timestamp', + new Date());--}}
+                            {{--(d.head || d.body).appendChild(s);--}}
+                        {{--})();--}}
+                    {{--</script>--}}
+                    {{--<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments--}}
+                            {{--powered by Disqus.</a></noscript>--}}
+                {{--</div>--}}
+                {{--<!-- end comment_widget -->--}}
+                <div class="comments-block-container">
+                    <div id="hypercomments_widget"></div>
+                    <script type="text/javascript">
+                        _hcwp = window._hcwp || [];
+                        _hcwp.push({widget: "Stream", widget_id: 73852});
+                        (function () {
+                            if ("HC_LOAD_INIT" in window)return;
+                            HC_LOAD_INIT = true;
+                            var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
+                            var hcc = document.createElement("script");
+                            hcc.type = "text/javascript";
+                            hcc.async = true;
+                            hcc.src = ("https:" == document.location.protocol ? "https" : "http") + "://w.hypercomments.com/widget/hc/73852/" + lang + "/widget.js";
+                            var s = document.getElementsByTagName("script")[0];
+                            s.parentNode.insertBefore(hcc, s.nextSibling);
                         })();
                     </script>
-                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments
-                            powered by Disqus.</a></noscript>
+                    <a href="http://hypercomments.com" class="hc-link" title="comments widget">comments powered by
+                        HyperComments</a>
+                    </p>
                 </div>
-                <!-- end comment_widget -->
             </div>
             <!-- end article_container -->
         </div>
