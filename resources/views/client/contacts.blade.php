@@ -56,8 +56,12 @@
                             <i class="icon icon-kiev"></i>
                         </div>
                         <div class="contact-info">
-                            <p class="phone">{{ env('OUR_PHONE_NUMBER') }}</p>
-                            <p class="email">{{ env('OUR_EMAIL') }}</p>
+                            <p class="phone">
+                                <a class="call-us-phone" href="tel:{{-- */ $data = str_replace(' ', '', env('OUR_PHONE_NUMBER')); /* --}}{{$data}}">{{ env('OUR_PHONE_NUMBER') }}</a>
+                            </p>
+                            <p class="email">
+                                <a href="mailto:{{ env('OUR_EMAIL') }}">{{ env('OUR_EMAIL') }}</a>
+                            </p>
                         </div>
                     </div>
 
@@ -132,8 +136,12 @@
                             <i class="icon icon-moscow"></i>
                         </div>
                         <div class="contact-info">
-                            <p class="phone">{{ env('OUR_PHONE_NUMBER') }}</p>
-                            <p class="email">{{ env('OUR_EMAIL') }}</p>
+                            <p class="phone">
+                                <a class="call-us-phone" href="tel:{{-- */ $data = str_replace(' ', '', env('OUR_PHONE_NUMBER')); /* --}}{{$data}}">{{ env('OUR_PHONE_NUMBER') }}</a>
+                            </p>
+                            <p class="email">
+                                <a href="mailto:{{ env('OUR_EMAIL') }}">{{ env('OUR_EMAIL') }}</a>
+                            </p>
                         </div>
                     </div>
 
@@ -221,8 +229,12 @@
             </div>
             <p class="name">Игорь Гема </p>
             <p class="place">Директор</p>
-            <p class="phone">{{ env('OUR_PHONE_NUMBER') }}</p>
-            <p class="phone">+7 (499) 677 58 69</p>
+            <p class="phone">
+                <a class="call-us-phone" href="tel:{{-- */ $data = str_replace(' ', '', env('OUR_PHONE_NUMBER')); /* --}}{{$data}}">{{ env('OUR_PHONE_NUMBER') }}</a>
+            </p>
+            <p class="phone">
+                <a class="call-us-phone" href="tel:{{-- */ $data = str_replace(' ', '', +7 (499) 677 58 69); /* --}}{{$data}}">+7 (499) 677 58 69</a>
+            </p>
             <a href="mailto:gema@koloro.ru" class="mailto">gema@koloro.ru</a>
         </div>
         <!-- end one_manager -->
@@ -233,8 +245,12 @@
             </div>
             <p class="name">Мария Баранова</p>
             <p class="place">Менеджер по работе с клиентами</p>
-            <p class="phone">{{ env('OUR_PHONE_NUMBER') }}</p>
-            <p class="phone">+7 (499) 677 58 69</p>
+            <p class="phone">
+                <a class="call-us-phone" href="tel:{{-- */ $data = str_replace(' ', '', env('OUR_PHONE_NUMBER')); /* --}}{{$data}}">{{ env('OUR_PHONE_NUMBER') }}</a>
+            </p>
+            <p class="phone">
+                <a class="call-us-phone" href="tel:{{-- */ $data = str_replace(' ', '', +7 (499) 677 58 69); /* --}}{{$data}}">+7 (499) 677 58 69</a>
+            </p>
             <a href="mailto:baranova@koloro.ru" class="mailto">baranova@koloro.ru</a>
         </div>
         <!-- end one_manager -->
@@ -245,8 +261,12 @@
             </div>
             <p class="name">Андрей Костюк</p>
             <p class="place">Менеджер по работе с клиентами</p>
-            <p class="phone">{{ env('OUR_PHONE_NUMBER') }}</p>
-            <p class="phone">+7 (499) 677 58 69</p>
+            <p class="phone">
+                <a class="call-us-phone" href="tel:{{-- */ $data = str_replace(' ', '', env('OUR_PHONE_NUMBER')); /* --}}{{$data}}">{{ env('OUR_PHONE_NUMBER') }}</a>
+            </p>
+            <p class="phone">
+                <a class="call-us-phone" href="tel:{{-- */ $data = str_replace(' ', '', +7 (499) 677 58 69); /* --}}{{$data}}">+7 (499) 677 58 69</a>
+            </p>
             <a href="mailto:kostiuk@koloro.ru" class="mailto">kostiuk@koloro.ru</a>
         </div>
         <!-- end one_manager -->
@@ -269,41 +289,12 @@
 <script src="/js/owl.carousel.min.js"></script>
 
 <!-- only this page -->
-<script type="text/javascript">
-    $('.nav-tabs a').click(function (e) {
-        e.preventDefault();
-        $(this).tab('show');
-        initMap();
-    });
-    $(".mobile_tab").on("click", function () {
-        $("li").removeClass("active");
-    });
-
-</script>
-<script type="text/javascript">
-    $(".maska").on("click", function (e) {
-        $(".maska").css("z-index", "-1");
-    });
-    $("div:not('#YMapsID')").on("click", function (e) {
-        $(".maska").css("z-index", "2");
-    });
-
-
-</script>
-<script type="text/javascript">
-    $("#toggleFeedback, .l-message .close").on("click",
-        function () {
-            $(this).parents(".message-wrapper").toggleClass("flipped");
-
-        });
-
-</script>
 
 <!-- black Google maps, via API, starts -->
 <!--You need to include this script tag on any page that has a Google Map.-->
 <!--After you sign up, use the following script tag with YOUR_GOOGLE_API_KEY replaced with your actual key.-->
 <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_API_KEY"></script>-->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxp0_tlV4Dc7H80AVmFWO4yEVoeQckEpI&callback=initMap">
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxp0_tlV4Dc7H80AVmFWO4yEVoeQckEpI">
 </script>
 <!-- black Google maps, via API, ends-->
 
