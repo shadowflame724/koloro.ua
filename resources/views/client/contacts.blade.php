@@ -301,66 +301,6 @@
 
 <!-- black Google maps, via API, starts -->
 <!--You need to include this script tag on any page that has a Google Map.-->
-<script type="text/javascript">
-
-    var kievMap;
-    var moscowMap;
-
-    function initMap() {
-        var myLatLngKiev = {lat: parseFloat("50.453122"), lng: parseFloat("30.525794")};
-        var myLatLngMoscow = {lat: parseFloat("55.752873"), lng: parseFloat("37.599039")};
-
-        var kievMapOptions = {
-            // How zoomed in you want the map to start at (always required)
-            zoom: 15,
-
-            // The latitude and longitude to center the map (always required)
-            center: myLatLngKiev, // Трехсвятительская 5
-
-            // How you would like to style the map.
-            // This is where you would paste any style found on Snazzy Maps.
-            styles: [{"stylers": [{"hue": "#ff1a00"}, {"invert_lightness": true}, {"saturation": -100}, {"lightness": 33}, {"gamma": 0.5}]}, {
-                "featureType": "water",
-                "elementType": "geometry",
-                "stylers": [{"color": "#2D333C"}]
-            }]
-        };
-
-        var moscowMapOptions = {
-            // How zoomed in you want the map to start at (always required)
-            zoom: 15,
-
-            // The latitude and longitude to center the map (always required)
-            center: myLatLngMoscow, // Новый Арбат
-
-            // How you would like to style the map.
-            // This is where you would paste any style found on Snazzy Maps.
-            styles: [{"stylers": [{"hue": "#ff1a00"}, {"invert_lightness": true}, {"saturation": -100}, {"lightness": 33}, {"gamma": 0.5}]}, {
-                "featureType": "water",
-                "elementType": "geometry",
-                "stylers": [{"color": "#2D333C"}]
-            }]
-        };
-
-        kievMap = new google.maps.Map(document.getElementById('kiev-map'), kievMapOptions);
-
-        var kievMarker = new google.maps.Marker({
-            position: myLatLngKiev,
-            map: kievMap,
-            title: "KOLORO in Kiev"
-        });
-        kievMarker.setMap(kievMap);
-
-        moscowMap = new google.maps.Map(document.getElementById('moscow-map'), moscowMapOptions);
-
-        var moscowMarker = new google.maps.Marker({
-            position: myLatLngMoscow,
-            map: moscowMap,
-            title: "KOLORO in Moscow"
-        });
-        moscowMarker.setMap(moscowMap);
-    }
-</script>
 <!--After you sign up, use the following script tag with YOUR_GOOGLE_API_KEY replaced with your actual key.-->
 <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_API_KEY"></script>-->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxp0_tlV4Dc7H80AVmFWO4yEVoeQckEpI&callback=initMap">
