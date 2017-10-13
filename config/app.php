@@ -175,6 +175,8 @@ return [
         //Unisharp\Ckeditor\ServiceProvider::class,
         Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+
+        Roumen\Sitemap\SitemapServiceProvider::class,
     ],
 
     /*

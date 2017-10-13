@@ -30,7 +30,13 @@
                                  class="autor_link">@if($article->user){{ $article->user->name }}@endif</a></p>
                     <!-- begin right_block -->
                     <div class="right_block">
-                        <p><i class="icon icon-clock"></i>{{ $article->created_at->diffForHumans() }}</p>
+                        @php
+                            $carbon = new \Carbon\Carbon();
+                            $carbon->setLocale('ru');
+                        @endphp
+                        <p>
+                            <i class="icon icon-clock"></i>{{ $carbon->parse($article->created_at)->format('d F Y ') }}
+                        </p>
                         <p><i class="icon icon-eye"></i>{{ $article->views }} просмотров</p>
                     </div>
                     <!-- end right_block -->
@@ -133,6 +139,11 @@
             <!-- begin article_container -->
             <div class="article_container">
                 {!! $article->{'content' . $langSuf} !!}
+                <div class="info-right">
+                    <p>{{ trans('client.service.contact_info') }}:</p>
+                    <p class="contact-info koloro-email">{{ env('OUR_EMAIL') }}</p>
+                    <p class="contact-info koloro-tel">{{ env('OUR_PHONE_NUMBER') }}</p>
+                </div>
             </div>
             <!-- end article_container -->
 
@@ -150,7 +161,8 @@
                 <div class="creator">
                     <div class="creator_photo">
                         <img src="/files/images/users/@if($user->file){{ $user->file->link }}"
-                             data-original="/files/images/users/{{ $user->file->link }}" alt="{{ $user->file->alt }}@endif"
+                             data-original="/files/images/users/{{ $user->file->link }}"
+                             alt="{{ $user->file->alt }}@endif"
                              class="lazy">
                     </div>
                     <div class="creator_info">
@@ -241,7 +253,7 @@
                         (function () { // DON'T EDIT BELOW THIS LINE
                             var d = document, s = d.createElement('script');
                             s.src = 'https://testkoloro.disqus.com/embed.js';
-                            s.setAttribute('data-timestamp', + new Date());
+                            s.setAttribute('data-timestamp', +new Date());
                             (d.head || d.body).appendChild(s);
                         })();
                     </script>

@@ -8,6 +8,7 @@
 
 namespace App\Repositories\ServiceCategory;
 
+use App\Events\DbChanged;
 use App\Http\Controllers\FileController;
 use App\Models\ServiceCategory;
 use App\Repositories\BaseRepository;
@@ -57,6 +58,7 @@ class ServiceCategoryRepository extends BaseRepository
 //            }
 
             if ($serviceCategory->save()) {
+                new DbChanged();
 
                 return true;
             }
@@ -88,6 +90,9 @@ class ServiceCategoryRepository extends BaseRepository
 //        }
 
         if ($serviceCategory->save()) {
+            new DbChanged();
+
+
             return true;
         }
         return false;

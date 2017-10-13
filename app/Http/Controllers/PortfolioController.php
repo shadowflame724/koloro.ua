@@ -9,6 +9,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Events\DbChanged;
 use App\Models\Meta;
 use App\Models\Portfolio;
 use App\Models\PortfolioCategory;
@@ -131,6 +132,8 @@ class PortfolioController extends Controller
         $metaId = $portfolio->meta_id;
 
         if ($portfolio->delete()) {
+            new DbChanged();
+
             Meta::destroy($metaId);
             $path = public_path('files/images/portfolio/img/');
             if($imageId != null) {

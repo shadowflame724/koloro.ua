@@ -8,6 +8,7 @@
 
 namespace App\Repositories\PortfolioCategory;
 
+use App\Events\DbChanged;
 use App\Http\Controllers\MetaController;
 use App\Models\Meta;
 use App\Models\PortfolioCategory;
@@ -52,6 +53,9 @@ class PortfolioCategoryRepository extends BaseRepository
 
 
             if ($portfolioCategory->save()) {
+                new DbChanged();
+
+
                 return true;
             }
             return false;
@@ -78,6 +82,8 @@ class PortfolioCategoryRepository extends BaseRepository
         $portfolioCategory->slug = $slug;
 
         if ($portfolioCategory->save()) {
+            new DbChanged();
+
             return true;
         }
         return false;

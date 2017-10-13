@@ -8,6 +8,7 @@
 
 namespace App\Repositories\BlogCategory;
 
+use App\Events\DbChanged;
 use App\Http\Controllers\MetaController;
 use App\Models\BlogCategory;
 use App\Models\Meta;
@@ -53,6 +54,8 @@ class BlogCategoryRepository extends BaseRepository
 
 
             if ($blogCategory->save()) {
+                new DbChanged();
+
                 return true;
             }
             return false;
@@ -77,6 +80,8 @@ class BlogCategoryRepository extends BaseRepository
         $blogCategory->slug = $slug;
 
         if ($blogCategory->save()) {
+            new DbChanged();
+
             return true;
         }
         return false;

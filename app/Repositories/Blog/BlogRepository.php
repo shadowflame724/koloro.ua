@@ -9,6 +9,7 @@
 namespace App\Repositories\Blog;
 
 
+use App\Events\DbChanged;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\MetaController;
 use App\Models\Blog;
@@ -57,12 +58,23 @@ class BlogRepository extends BaseRepository
                 $blog->image_id = $dbImage->id;
             }
 
-            $slug = str_slug($input['name_ru']);
-            $blog->slug = $slug;
+            if ($input['slug'] != null) {
+                $slug = $input['slug'];
+            } else {
+                $slug = str_slug($input['name_ru']);
+            }
+            $slug_info = new \SplFileInfo($slug);
+
+            if ($slug_info->getExtension() != 'html') {
+                $blog->slug = $slug . '.html';
+            } else {
+                $blog->slug = $slug;
+            }
 
             $blog->meta_id = MetaController::createMeta($input['meta']);
 
             if ($blog->save()) {
+                new DbChanged();
 
                 return true;
             }
@@ -87,8 +99,18 @@ class BlogRepository extends BaseRepository
         $blog->content_ru = clean($input['content_ru']);
         $blog->content_ua = clean($input['content_ua']);
 
-        $slug = str_slug($input['name_ru']);
-        $blog->slug = $slug;
+        if ($input['slug'] != null) {
+            $slug = $input['slug'];
+        } else {
+            $slug = str_slug($input['name_ru']);
+        }
+        $slug_info = new \SplFileInfo($slug);
+
+        if ($slug_info->getExtension() != 'html') {
+            $blog->slug = $slug . '.html';
+        } else {
+            $blog->slug = $slug;
+        }
 
         $meta = MetaController::updateMeta($blog->meta_id, $input['meta']);
         if ($meta instanceof Meta) {
@@ -104,6 +126,7 @@ class BlogRepository extends BaseRepository
 
         DB::transaction(function () use ($blog, $input) {
             if ($blog->save()) {
+                new DbChanged();
 
                 return true;
             }
@@ -118,6 +141,8 @@ class BlogRepository extends BaseRepository
             $metaId = $blog->meta_id;
 
             if ($blog->delete()) {
+                new DbChanged();
+
                 Meta::destroy($metaId);
                 $path = public_path('files/images/blog/');
                 if ($imageId != null) {

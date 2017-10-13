@@ -8,6 +8,7 @@
 
 namespace App\Repositories\Service;
 
+use App\Events\DbChanged;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\MetaController;
 use App\Models\File;
@@ -85,6 +86,9 @@ class ServiceRepository extends BaseRepository
             $service->meta_id = MetaController::createMeta($input['meta']);
 
             if ($service->save()) {
+                new DbChanged();
+
+
                 $serviceId = $service->id;
 
                 /*
@@ -189,6 +193,9 @@ class ServiceRepository extends BaseRepository
         DB::transaction(function () use ($service, $input) {
             if ($service->save()) {
 
+                new DbChanged();
+
+
                 /*
                 * Start Blocks management
                 */
@@ -257,6 +264,9 @@ class ServiceRepository extends BaseRepository
             $blocks = $service->blocks;
 
             if ($service->delete()) {
+                new DbChanged();
+
+
                 Meta::destroy($metaId);
                 $path = public_path('files/images/service/');
                 if ($imageId != null) {

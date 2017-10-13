@@ -42,6 +42,10 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('/page', 'PageController', ['except' => ['show']]);
         Route::get('/settings/edit', ['as' => 'settings.edit', 'uses' => 'SettingsController@edit']);
         Route::post('/settings/update/{settings}', ['as' => 'settings.update', 'uses' => 'SettingsController@update']);
+
+        Route::get('/sitemap', function () {
+
+        });
     });
 });
 
@@ -57,19 +61,19 @@ Route::get('/portfolio/category/{category}', ['as' => 'client.portfoliocategory'
 Route::get('/portfolio/{portfolio}', ['as' => 'client.portfoliopage', 'uses' => 'Client\PortfolioController@getPortfolioPage']);
 Route::get('/contacts.html', ['as' => 'client.contacts', 'uses' => 'ContactsController@getContacts']);
 Route::get('/search', 'SearchController@search');
-Route::get('/services', function (){
+Route::get('/services', function () {
     return redirect('services.html');
 });
-Route::get('/blog', function (){
+Route::get('/blog', function () {
     return redirect('blog.html');
 });
-Route::get('/portfolio', function (){
+Route::get('/portfolio', function () {
     return redirect('portfolio.html');
 });
-Route::get('/contacts', function (){
+Route::get('/contacts', function () {
     return redirect('contacts.html');
 });
-Route::get('about', function (){
+Route::get('about', function () {
     return redirect('company.html');
 });
 

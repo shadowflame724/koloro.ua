@@ -9,6 +9,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Events\DbChanged;
 use App\Models\Meta;
 use App\Models\PortfolioCategory;
 use App\Repositories\PortfolioCategory\PortfolioCategoryRepository;
@@ -107,6 +108,9 @@ class PortfolioCategoryController extends Controller
     public function destroy(PortfolioCategory $portfoliocategory)
     {
         if ($portfoliocategory->delete()) {
+            new DbChanged();
+
+
             Meta::destroy($portfoliocategory->meta_id);
         }
 

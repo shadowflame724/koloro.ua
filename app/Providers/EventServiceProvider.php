@@ -16,6 +16,9 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\ArticleViewed' => [
             'App\Listeners\ArticleViewedCounter',
         ],
+        'App\Events\DbChanged' => [
+            'App\Listeners\DbChangedEventListeners',
+        ],
     ];
 
     /**

@@ -8,6 +8,7 @@
 
 namespace App\Repositories\Portfolio;
 
+use App\Events\DbChanged;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\MetaController;
 use App\Models\File;
@@ -78,6 +79,9 @@ class PortfolioRepository extends BaseRepository
             }
 
             if ($portfolio->save()) {
+                new DbChanged();
+
+
                 return true;
             }
             return false;
@@ -134,6 +138,9 @@ class PortfolioRepository extends BaseRepository
         }
 
         if ($portfolio->save()) {
+            new DbChanged();
+
+
             return true;
         }
         return false;

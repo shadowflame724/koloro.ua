@@ -9,6 +9,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Events\DbChanged;
 use App\Http\Requests\Admin\Page\UpdatePageRequest;
 use App\Models\Meta;
 use App\Models\Page;
@@ -80,6 +81,8 @@ class PageController extends Controller
         }
 
         $page->save();
+        new DbChanged();
+
 
         return redirect()->route('admin.page.index')
             ->with('success', 'Page updated successfully');

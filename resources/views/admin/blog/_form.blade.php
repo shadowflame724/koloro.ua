@@ -37,6 +37,12 @@
 </div>
 <div class="col-xs-12 col-sm-12 col-md-12">
     <div class="form-group">
+        <strong>Адрес:</strong>
+        {!! Form::text('slug', null, ['class' => 'form-control', 'placeholder' => 'Если не заполнен, будет сгенерирован автоматически']) !!}
+    </div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-12">
+    <div class="form-group">
         <strong>Автор:</strong>
         {{ Form::select('user_id', $users, null, ['class' => 'form-control']) }}
     </div>

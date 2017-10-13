@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\DbChanged;
 use App\Models\Meta;
 use App\Models\ServiceCategory;
 use App\Repositories\ServiceCategory\ServiceCategoryRepository;
@@ -103,6 +104,8 @@ class ServiceCategoryController extends Controller
     {
         $serviceCategory = ServiceCategory::find($id);
         $serviceCategory->delete();
+        new DbChanged();
+
 
         return redirect()->route('admin.servicecategory.index')
             ->with('success', 'Service Category deleted successfully');
