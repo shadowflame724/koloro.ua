@@ -253,7 +253,7 @@
                     <div id="hypercomments_widget"></div>
                     <script type="text/javascript">
                         _hcwp = window._hcwp || [];
-                        _hcwp.push({widget: "Stream", widget_id: 73852});
+                        _hcwp.push({widget: "Stream", widget_id: 73852, hc_disable: 1});
                         (function () {
                             if ("HC_LOAD_INIT" in window)return;
                             HC_LOAD_INIT = true;
@@ -261,12 +261,12 @@
                             var hcc = document.createElement("script");
                             hcc.type = "text/javascript";
                             hcc.async = true;
-                            hcc.src = ("https:" == document.location.protocol ? "https" : "http") + "://w.hypercomments.com/widget/hc/73852/" + lang + "/widget.js";
+                            hcc.src = ("https:" == document.location.protocol ? "https" : "https") + "://w.hypercomments.com/widget/hc/73852/" + lang + "/widget.js";
                             var s = document.getElementsByTagName("script")[0];
                             s.parentNode.insertBefore(hcc, s.nextSibling);
                         })();
                     </script>
-                    <a href="http://hypercomments.com" class="hc-link" title="comments widget">comments powered by
+                    <a href="https://hypercomments.com" class="hc-link" title="comments widget">comments powered by
                         HyperComments</a>
                     </p>
                 </div>
