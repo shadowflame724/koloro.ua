@@ -233,7 +233,7 @@
                 <a class="call-us-phone" href="tel:{{-- */ $data = str_replace(' ', '', env('OUR_PHONE_NUMBER')); /* --}}{{$data}}">{{ env('OUR_PHONE_NUMBER') }}</a>
             </p>
             <p class="phone">
-                <a class="call-us-phone" href="tel:{{-- */ $data = str_replace(' ', '', +7 (499) 677 58 69); /* --}}{{$data}}">+7 (499) 677 58 69</a>
+                <a class="call-us-phone" href="tel:+7(499)6775869">+7 (499) 677 58 69</a>
             </p>
             <a href="mailto:gema@koloro.ru" class="mailto">gema@koloro.ru</a>
         </div>
@@ -249,7 +249,7 @@
                 <a class="call-us-phone" href="tel:{{-- */ $data = str_replace(' ', '', env('OUR_PHONE_NUMBER')); /* --}}{{$data}}">{{ env('OUR_PHONE_NUMBER') }}</a>
             </p>
             <p class="phone">
-                <a class="call-us-phone" href="tel:{{-- */ $data = str_replace(' ', '', +7 (499) 677 58 69); /* --}}{{$data}}">+7 (499) 677 58 69</a>
+                <a class="call-us-phone" href="tel:+7(499)6775869">+7 (499) 677 58 69</a>
             </p>
             <a href="mailto:baranova@koloro.ru" class="mailto">baranova@koloro.ru</a>
         </div>
@@ -265,7 +265,7 @@
                 <a class="call-us-phone" href="tel:{{-- */ $data = str_replace(' ', '', env('OUR_PHONE_NUMBER')); /* --}}{{$data}}">{{ env('OUR_PHONE_NUMBER') }}</a>
             </p>
             <p class="phone">
-                <a class="call-us-phone" href="tel:{{-- */ $data = str_replace(' ', '', +7 (499) 677 58 69); /* --}}{{$data}}">+7 (499) 677 58 69</a>
+                <a class="call-us-phone" href="tel:+7(499)6775869">+7 (499) 677 58 69</a>
             </p>
             <a href="mailto:kostiuk@koloro.ru" class="mailto">kostiuk@koloro.ru</a>
         </div>
