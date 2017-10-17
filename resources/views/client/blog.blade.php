@@ -51,7 +51,7 @@
                                     <a href="/blog/{{ $blog->categorySlug }}/{{$blog->slug}}" class="article_namel">
                                         <h2>{{ $blog->{'name' . $langSuf} }}</h2></a>
                                     <p class="date">{{ isset($blog->published_at) ? \Carbon\Carbon::parse($blog->published_at)->format('d/m/Y') : '' }}</p>
-                                    <p>{{ $blog->{'description' . $langSuf} }}</p>
+                                    <p>{{ strip_tags($blog->{'description' . $langSuf}) }}</p>
                                 </div>
                                 <!-- end short_desc -->
 

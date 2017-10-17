@@ -23,7 +23,7 @@
     @include('layouts.whiteheader')
 
 
-<section id="indelika">
+<section id="indelika" class="portfolio-page unique-page">
     <!--class="portfolio_block"-->
     <div class="bg-container image-top">
         <div class="dark-mask top-mask"></div>

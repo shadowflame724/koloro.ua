@@ -11,13 +11,15 @@
 |
 */
 
+
+
 Route::group(['middleware' => ['auth']], function () {
 
     Route::group(['prefix' => 'admin'], function () {
         Route::get('/', 'HomeController@index');
-
-        Route::get('/laravel-filemanager', '\Unisharp\Laravelfilemanager\controllers\LfmController@show');
-        Route::post('/laravel-filemanager/upload', '\Unisharp\Laravelfilemanager\controllers\LfmController@upload');
+Route::get('/laravel-filemanager', '\Unisharp\Laravelfilemanager\controllers\LfmController@show');
+Route::post('/laravel-filemanager/upload', '\Unisharp\Laravelfilemanager\controllers\LfmController@upload');
+        
 
         Route::resource('/users', 'UserController');
         Route::resource('/roles', 'RoleController');

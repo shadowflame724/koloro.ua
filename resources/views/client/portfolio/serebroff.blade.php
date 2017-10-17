@@ -23,49 +23,8 @@
     <div id="preloader"></div>
 
     @include('layouts.whiteheader')
-<header class="fixmenu">
-    <!-- begin container -->
-    <div class="container">
-        <a href="/index.html" class="logo_link">
-            <img src="/images/portfolio/general/logo.png" class="logo white_logo" width="166" height="51" alt="coloro">
-            <img src="/images/portfolio/general/logo2.png" class="logo color_logo" width="166" height="51" alt="coloro"
-                 style="display: none;">
-        </a>
 
-        <!-- begin languge -->
-        <div class="menu_triger visible_on_mobile">
-            <div class="first"></div>
-            <div class="second"></div>
-            <div class="third"></div>
-        </div>
-        <!-- end languge -->
-        <nav class="main_menu">
-            <ul>
-                <li><a href="/index.html">Главная</a></li>
-                <li><a href="/portfolio.html" class="active">портфолио</a></li>
-                <li><a href="/services.html">услуги</a></li>
-                <li><a href="/blog.html">блог</a></li>
-                <li><a href="/company_page.html">компания</a></li>
-                <li><a href="/contacts.html">контакты</a></li>
-
-            </ul>
-            <a href="/" target="_blank" class="btn_calculate order-form-btn">расcчитать проект</a>
-            <div class="languge">
-                <ul>
-                    <li>
-                        <a href="">ua</a>
-                    </li>
-                    <li>
-                        <a href="" class="active">ru</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-    <!-- end container -->
-</header>
-
-<section id="chistaya-pravda">
+<section id="serebroff" class="portfolio-page non-unique-page">
     <div class="bg-container top-container" style="background-image: url('/images/portfolio/serebroff/serebroff-picture-1.jpg')">
         <div class="dark-mask"></div>
         <div class="gl-container title-container">

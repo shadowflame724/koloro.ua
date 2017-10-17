@@ -25,7 +25,7 @@
 
     @include('layouts.whiteheader')
 
-<section id="chistaya-pravda">
+<section id="chistaya-pravda" class="portfolio-page non-unique-page">
     <div class="bg-container top-container" style="background-image: url('/images/portfolio/chistaya-pravda/main-picture.jpg')">
         <div class="dark-mask"></div>
         <div class="gl-container title-container">

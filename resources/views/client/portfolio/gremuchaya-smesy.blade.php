@@ -22,7 +22,7 @@
 
     @include('layouts.whiteheader')
 
-<section id="gremuchaya-smes">
+<section id="gremuchaya-smes" class="portfolio-page unique-page">
     <div class="bg-container top-container">
         <div class="gl-container title-container">
             <h1 class="top-title">Гремучая смесь</h1>

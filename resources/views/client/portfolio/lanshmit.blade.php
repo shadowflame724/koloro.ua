@@ -25,7 +25,7 @@
 <div id="preloader"></div>
 
 <!-- section lanshmit starts -->
-<section id="lanshmit">
+<section id="lanshmit" class="portfolio-page unique-page">
 
     <div class="bg-container top-container">
         <div class="dark-mask top-mask"></div>

@@ -14,6 +14,7 @@ return [
     // For laravel 5.1 and before, remove 'web' from the array.
     'middlewares' => ['web', 'auth'],
 
+
     // The url to this package. Change it if necessary.
     'prefix' => 'laravel-filemanager',
 

@@ -24,7 +24,7 @@
 
 @include('layouts.blackheader')
 
-<section id="led-rodnik">
+<section id="led-rodnik" class="portfolio-page unique-page">
     <div class="bg-container top-container">
         <div class="gl-container title-container">
             <h1 class="top-title">Ледяной родник</h1>
