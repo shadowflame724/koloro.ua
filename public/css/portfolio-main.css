@@ -55,3 +55,6 @@
 
 .image-container {
   max-height: inherit; }
+  .image-container img {
+    width: auto;
+    max-width: 100%; }
