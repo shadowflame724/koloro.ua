@@ -21,7 +21,7 @@
 
     @include('layouts.whiteheader')
 
-<section id="russkiy-element">
+<section id="russkiy-element" class="portfolio-page non-unique-page">
     <div class="bg-container top-container" style="background-image: url('/images/portfolio/russkiy-element/russkiy-element-4.jpg')">
         <div class="dark-mask"></div>
         <div class="gl-container title-container">

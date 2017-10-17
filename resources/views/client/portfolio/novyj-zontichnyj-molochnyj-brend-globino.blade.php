@@ -24,7 +24,7 @@
 
     @include('layouts.whiteheader')
     <!-- begin background -->
-    <section class="background portfolio_page"
+    <section class="background portfolio_page portfolio-page unique-page"
              style="background-image: url('/images/portfolio/globino/main_back_chease.jpg');">
         <!-- begin container -->
         <div class="container">

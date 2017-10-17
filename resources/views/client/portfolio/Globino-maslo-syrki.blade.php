@@ -24,7 +24,7 @@
 
     @include('layouts.blackheader')
 
-    <section id="globino-maslo">
+    <section id="globino-maslo" class="portfolio-page unique-page">
         <div class="top-container">
 
             <div class="container title-container">

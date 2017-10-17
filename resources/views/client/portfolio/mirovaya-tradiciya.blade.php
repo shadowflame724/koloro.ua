@@ -25,7 +25,7 @@
     @include('layouts.whiteheader')
     <!--PRELOADER!!! -->
 
-    <section id="mirovaya-tradicia">
+    <section id="mirovaya-tradicia" class="portfolio-page unique-page">
         <!--class="portfolio_block"-->
         <div class="image-container top-container">
             <div class="dark-mask top-mask"></div>
