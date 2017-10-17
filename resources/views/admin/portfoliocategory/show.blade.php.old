@@ -1,0 +1,61 @@
+@extends('layouts.app')
+
+@section('main-content')
+    <div class="row">
+        <div class="col-lg-12 margin-tb">
+            <div class="pull-left">
+                {{--<h2> Show Blog</h2>--}}
+            </div>
+            <div class="pull-right">
+                <a class="btn btn-primary" href="{{ route('admin.blog.index') }}"> Назад</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Картинка:</strong>
+                {{ Html::image('files/images/blog/' . $blog->file->link) }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Название:</strong>
+                {{ $blog->name }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Описание:</strong>
+                {{ $blog->description }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Автор:</strong>
+                {{ $user->name }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Категория:</strong>
+                {{--TODO--}}
+                {{--OLD ARTICLES DON'T HAVE CATEGORY--}}
+                {{ $blog->blogcategory->name }}
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Опубликовано:</strong>
+                {{ $blog->published_at }}
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                {!! $blog->content !!}
+            </div>
+        </div>
+    </div>
+@endsection

@@ -1,0 +1,146 @@
+#portfolio-mava .read-more-btn {
+  font-family: "SegoeUIBold", sans-serif;
+  color: #d5b173; }
+
+#portfolio-mava .h2-title {
+  font-size: 60px; }
+  @media all and (max-width: 1000px) {
+    #portfolio-mava .h2-title {
+      padding: 40px 0; } }
+  @media all and (max-width: 768px) {
+    #portfolio-mava .h2-title {
+      font-size: 36px;
+      padding: 20px 0; } }
+  @media all and (max-width: 600px) {
+    #portfolio-mava .h2-title {
+      font-size: 30px;
+      padding: 20px 0; } }
+
+@media all and (min-width: 1400px) {
+  #portfolio-mava .info-left .info-left-title {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; } }
+
+#portfolio-mava .bg-container {
+  background-attachment: scroll; }
+
+#portfolio-mava .top-container {
+  position: relative;
+  padding-top: 50px; }
+  #portfolio-mava .top-container .image-container img {
+    max-width: 1388px; }
+  #portfolio-mava .top-container .coffee-beans-gold, #portfolio-mava .top-container .coffee-beans-1, #portfolio-mava .top-container .coffee-beans-2, #portfolio-mava .top-container .coffee-beans-gold-3 {
+    position: absolute;
+    z-index: 5;
+    width: 30%; }
+  #portfolio-mava .top-container .coffee-beans-gold {
+    top: 20%;
+    left: 10%;
+    max-width: 158px; }
+  #portfolio-mava .top-container .coffee-beans-1 {
+    top: 50%;
+    left: 10%;
+    max-width: 155px; }
+  #portfolio-mava .top-container .coffee-beans-2 {
+    top: 30%;
+    right: 10%;
+    max-width: 98px; }
+  #portfolio-mava .top-container .coffee-beans-gold-3 {
+    top: 70%;
+    right: 10%;
+    max-width: 153px; }
+
+#portfolio-mava .image-1 {
+  background-image: url("../../images/portfolio/mava/image-2.jpg"); }
+  #portfolio-mava .image-1 .coffee-beans-gold-2, #portfolio-mava .image-1 .coffee-beans-4, #portfolio-mava .image-1 .coffee-beans-3, #portfolio-mava .image-1 .coffee-beans-gold-4 {
+    position: absolute;
+    z-index: 5;
+    width: 30%; }
+  #portfolio-mava .image-1 .coffee-beans-gold-2 {
+    top: -20%;
+    left: 5%;
+    max-width: 52px; }
+  #portfolio-mava .image-1 .coffee-beans-4 {
+    top: 50%;
+    left: 5%;
+    max-width: 156px; }
+  #portfolio-mava .image-1 .coffee-beans-3 {
+    top: -10%;
+    right: 5%;
+    max-width: 74px; }
+  #portfolio-mava .image-1 .coffee-beans-gold-4 {
+    top: 50%;
+    right: 5%;
+    max-width: 60px; }
+
+#portfolio-mava .image-2 {
+  background-image: url("../../images/portfolio/mava/banner-gold-beans-background.jpg"); }
+  #portfolio-mava .image-2 .banner-gold-beans {
+    padding-top: 5%;
+    max-width: 1227px; }
+
+#portfolio-mava .image-3 {
+  height: 60vh;
+  background-image: url("../../images/portfolio/mava/image-b.jpg"); }
+
+#portfolio-mava .image-4 {
+  background-image: url("../../images/portfolio/mava/image-c.jpg"); }
+
+#portfolio-mava .image-5 {
+  background-image: url("../../images/portfolio/mava/coffee-vis-1.jpg"); }
+
+#portfolio-mava .mava-mask-cont {
+  margin: 50px 0; }
+  #portfolio-mava .mava-mask-cont img {
+    max-width: 240px; }
+
+#portfolio-mava .mava-logo-cont {
+  margin: 50px 0; }
+  #portfolio-mava .mava-logo-cont img {
+    max-width: 320px; }
+
+#portfolio-mava .mava-packages-cont-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 0; }
+  #portfolio-mava .mava-packages-cont-1 .package-img-cont {
+    width: calc(100%/3);
+    overflow: hidden; }
+    #portfolio-mava .mava-packages-cont-1 .package-img-cont img {
+      width: 100%;
+      height: 100%;
+      transition: all 0.4s; }
+  @media all and (min-width: 768px) {
+    #portfolio-mava .mava-packages-cont-1 .package-img-cont:nth-child(even):hover img {
+      -webkit-transform: scale(1.2) rotate(5deg);
+              transform: scale(1.2) rotate(5deg); }
+    #portfolio-mava .mava-packages-cont-1 .package-img-cont:nth-child(odd):hover img {
+      -webkit-transform: scale(1.2) rotate(-5deg);
+              transform: scale(1.2) rotate(-5deg); } }
+
+#portfolio-mava .mava-packages-cont-2, #portfolio-mava .mava-packages-cont-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap; }
+  #portfolio-mava .mava-packages-cont-2 .image-left, #portfolio-mava .mava-packages-cont-2 .image-right, #portfolio-mava .mava-packages-cont-3 .image-left, #portfolio-mava .mava-packages-cont-3 .image-right {
+    width: auto; }
+
+#portfolio-mava .two-vertical-images {
+  font-size: 0; }
+
+#portfolio-mava .contact-us-form .form-title {
+  color: #000; }
+
+#portfolio-mava .contact-us-form button {
+  color: #fff;
+  background-color: #8c553b; }
