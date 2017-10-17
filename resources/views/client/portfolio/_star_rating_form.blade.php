@@ -5,7 +5,7 @@
         <form>
             <input value="{{$portfolio->votes == 0 ? 0 : $portfolio->rating/$portfolio->votes}}"
                    data-id="{{$portfolio->id}}" type="number" class="rating" min=0 max=5 step=0.5
-                   data-size="sm">
+                   data-size="md">
         </form>
         <p class="voice"><span class="yellow">{{ $portfolio->votes }}</span> голосов</p>
     </div>
