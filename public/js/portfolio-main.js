@@ -3,12 +3,11 @@
  */
 'use strict';
 
+var busyFlag = false,
+    scrollPreviousPosition = 0,
+    pageFirstLoadingFlag = true;
+
 window.addEventListener('load', function() {
-
-    var busyFlag = false,
-        mobileViewWidth = 768,
-
-        pageFirstLoadingFlag = true;
 
     // ********************************************************************************
     scrollWindowHandler(); // initial call!!!
