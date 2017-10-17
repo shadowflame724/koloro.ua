@@ -56,7 +56,7 @@
                     {data: 'actions', name: 'actions', searchable: false, orderable: false}
                 ],
                 order:
-                    [[3, "asc"]],
+                    [[3, "DESC"]],
                 lengthMenu:
                     [25, 50, 100],
                 searchDelay:

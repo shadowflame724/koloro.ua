@@ -12,14 +12,13 @@
 */
 
 
-
 Route::group(['middleware' => ['auth']], function () {
 
     Route::group(['prefix' => 'admin'], function () {
         Route::get('/', 'HomeController@index');
-Route::get('/laravel-filemanager', '\Unisharp\Laravelfilemanager\controllers\LfmController@show');
-Route::post('/laravel-filemanager/upload', '\Unisharp\Laravelfilemanager\controllers\LfmController@upload');
-        
+        Route::get('/laravel-filemanager', '\Unisharp\Laravelfilemanager\controllers\LfmController@show');
+        Route::post('/laravel-filemanager/upload', '\Unisharp\Laravelfilemanager\controllers\LfmController@upload');
+
 
         Route::resource('/users', 'UserController');
         Route::resource('/roles', 'RoleController');
@@ -44,16 +43,6 @@ Route::post('/laravel-filemanager/upload', '\Unisharp\Laravelfilemanager\control
         Route::resource('/page', 'PageController', ['except' => ['show']]);
         Route::get('/settings/edit', ['as' => 'settings.edit', 'uses' => 'SettingsController@edit']);
         Route::post('/settings/update/{settings}', ['as' => 'settings.update', 'uses' => 'SettingsController@update']);
-
-        Route::get('/sitemap', function () {
-
-            if (is_callable("exif_read_data")) {
-                return response('enable');
-            } else {
-                return response('not');
-            }
-
-        });
     });
 });
 
