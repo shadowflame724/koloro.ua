@@ -28,6 +28,10 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('/servicecategory', 'ServiceCategoryController', ['except' => ['show']]);
         Route::resource('/service', 'ServiceController', ['except' => ['show']]);
 
+        Route::get('/service-prices', ['as' => 'admin.service-prices.index', 'uses' => 'ServicePricesController@index']);
+        Route::patch('/service-prices/set-price/{service}', ['as' => 'admin.service-prices.set-price', 'uses' => 'ServicePricesController@setPrice']);
+
+
         Route::post('/increment-count-service', ['as' => 'increment-count', 'uses' => 'ServiceController@incrementCount']);
         Route::resource('/portfolio', 'PortfolioController', ['except' => ['show']]);
         Route::post('/table/portfolio', ['as' => 'portfolio-table', 'uses' => 'PortfolioController@table']);

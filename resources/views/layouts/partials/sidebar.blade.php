@@ -46,6 +46,7 @@
             </li>
             <li><a href="{{ url('admin/blog') }}"><i class='fa fa-file-text'></i> <span>{{ 'Статьи' }}</span></a></li>
             <li><a href="{{ url('admin/service') }}"><i class='fa fa-line-chart'></i> <span>{{ 'Услуги' }}</span></a></li>
+            <li><a href="{{ url('admin/service-prices') }}"><i class='fa fa-usd'></i> <span>{{ 'Услуги цены' }}</span></a></li>
             <li><a href="{{ url('admin/portfolio') }}"><i class='fa fa-briefcase'></i> <span>{{ 'Портфолио' }}</span></a></li>
             <li><a href="{{ url('admin/page') }}"><i class='fa fa-file-text'></i> <span>{{ 'Страницы' }}</span></a></li>
             <li><a href="{{ url('admin/settings/edit') }}"><i class='fa fa-cogs'></i> <span>{{ 'Настройки' }}</span></a></li>
