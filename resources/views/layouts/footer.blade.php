@@ -4,7 +4,7 @@
         <div class="footer-col">
             <div class="footer-img">
                 <a href="/" target="_self">
-                    <img src="/files/images/logo_footer.png" alt="KOLORO footer logo">
+                    <img src="/files/images/koloro-logo-footer.svg" alt="KOLORO footer logo">
                 </a>
             </div>
         </div>
@@ -80,7 +80,7 @@
         <div class="footer-col">
             <div class="footer-img">
                 <a href="/" target="_self">
-                    <img src="/files/images/logo_footer.png" alt="KOLORO footer logo">
+                    <img src="/files/images/koloro-logo-footer.svg" alt="KOLORO footer logo">
                 </a>
             </div>
         </div>

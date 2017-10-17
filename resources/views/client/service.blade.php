@@ -366,8 +366,12 @@
                 </div>
                 <div class="info-right">
                     <p>{{ trans('client.service.contact_info') }}:</p>
-                    <p class="contact-info koloro-email">{{ env('OUR_EMAIL') }}</p>
-                    <p class="contact-info koloro-tel">{{ env('OUR_PHONE_NUMBER') }}</p>
+                    <p class="contact-info koloro-email">
+                        <a href="mailto:{{ env('OUR_EMAIL') }}">{{ env('OUR_EMAIL') }}</a>
+                    </p>
+                    <p class="contact-info koloro-tel">
+                        <a class="call-us-phone" href="tel:{{-- */ $data = str_replace(' ', '', env('OUR_PHONE_NUMBER')); /* --}}{{$data}}">{{ env('OUR_PHONE_NUMBER') }}</a>
+                    </p>
                 </div>
             </div>
         </div>
