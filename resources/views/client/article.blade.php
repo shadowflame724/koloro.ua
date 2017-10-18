@@ -41,6 +41,9 @@
                                 $carbon->setLocale('ru');
                             @endphp
                             <p>
+                                <meta itemprop="dateModified" content="{{ $article->updated_at }}">
+                                <meta itemprop="datePublished" content="{{ $article->created_at }}">
+                                
                                 <i class="icon icon-clock"></i>{{ $carbon->parse($article->created_at)->format('d F Y ') }}
                             </p>
                             <p><i class="icon icon-eye"></i>{{ $article->views }} просмотров</p>
