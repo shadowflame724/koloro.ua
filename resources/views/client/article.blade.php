@@ -13,7 +13,7 @@
     @include('layouts.blackheader')
 
     <div itemscope itemtype="http://schema.org/Article">
-        <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="https://koloro.ua/blog"/>
+        <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="https://test.koloro.com.ua/blog"/>
         <span itemprop="name" style="display: none">
                     {{ $article->{'name' . $langSuf} }}
         </span>
@@ -60,7 +60,7 @@
 
                     <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
                         <meta itemprop="url"
-                              content="https://koloro.ua/files/images/blog/{{ $article->image_id }}">
+                              content="https://test.koloro.com.ua/files/images/blog/{{ $article->image_id }}">
                         <meta itemprop="width" content="300">
                         <meta itemprop="height" content="300">
                     </div>
@@ -68,10 +68,10 @@
 
                     <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
                         <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-                            <meta itemprop="url" content="https://koloro.ua/files/images/koloro-logo.svg">
+                            <meta itemprop="url" content="https://test.koloro.com.ua/files/images/koloro-logo.svg">
                         </div>
-                        <meta itemprop="name" content="koloro.ua">
-                        <meta itemprop="url" content="https://koloro.ua">
+                        <meta itemprop="name" content="test.koloro.com.ua">
+                        <meta itemprop="url" content="https://test.koloro.com.ua">
                     </div>
 
 
