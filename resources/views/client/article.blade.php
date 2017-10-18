@@ -60,7 +60,7 @@
 
                     <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
                         <meta itemprop="url"
-                              content="https://koloro.ua/files/images/blog/{{ $article->image_id->link }}">
+                              content="/files/images/blog/{{ $article->image_id }}">
                         <meta itemprop="width" content="300">
                         <meta itemprop="height" content="300">
                     </div>
@@ -68,7 +68,7 @@
 
                     <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
                         <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-                            <meta itemprop="url" content="https://koloro.ua/files/images/koloro-logo.svg">
+                            <meta itemprop="url" content="/files/images/koloro-logo.svg">
                         </div>
                         <meta itemprop="name" content="koloro.ua">
                         <meta itemprop="url" content="https://koloro.ua">
