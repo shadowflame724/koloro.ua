@@ -24,7 +24,7 @@
 
     @include('layouts.blackheader')
 
-    <section id="portfolio-mava">
+    <section id="portfolio-mava" class="portfolio-page unique-page">
         <div class="top-container">
             <img src="/images/portfolio/mava/coffee-beans-gold.png" alt="coffee-beans" class="coffee-beans-gold">
             <img src="/images/portfolio/mava/coffee-beans-1.png" alt="coffee-beans" class="coffee-beans-1">

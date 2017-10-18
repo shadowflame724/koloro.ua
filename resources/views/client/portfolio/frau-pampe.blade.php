@@ -26,7 +26,7 @@
 
 @include('layouts.whiteheader')
 
-<section id="frau-pampe">
+<section id="frau-pampe" class="portfolio-page unique-page">
     <!--class="portfolio_block"-->
 
     <div class="image-container top-container">

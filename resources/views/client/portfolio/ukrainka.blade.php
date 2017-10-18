@@ -20,7 +20,7 @@
 
     @include('layouts.whiteheader')
 
-<section id="ukrainka">
+<section id="ukrainka" class="portfolio-page non-unique-page">
     <div class="bg-container top-container" style="background-image: url('/images/portfolio/ukrainka/ukrainka-picture-5.jpg')">
         <div class="dark-mask"></div>
         <div class="gl-container title-container">

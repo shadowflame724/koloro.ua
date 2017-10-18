@@ -24,7 +24,7 @@
 
     @include('layouts.whiteheader')
 
-<section id="absolute-standard">
+<section id="absolute-standard" class="portfolio-page non-unique-page">
     <div class="bg-container top-container" style="background-image: url('/images/portfolio/absolute-standard/absolute-standard-3.jpg')">
         <div class="dark-mask"></div>
         <div class="gl-container title-container">

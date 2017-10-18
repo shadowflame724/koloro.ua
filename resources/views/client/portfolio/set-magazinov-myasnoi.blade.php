@@ -23,7 +23,7 @@
 
     @include('layouts.whiteheader')
 
-<section id="set-magazinov-myasnoi">
+<section id="set-magazinov-myasnoi" class="portfolio-page unique-page">
     <div class="bg-container top-container">
         <div class="gl-container title-container">
             <h1 class="top-title">

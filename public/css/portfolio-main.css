@@ -53,8 +53,8 @@
         .top-container .title-container .top-title-small {
           font-size: 16px; } }
 
-.image-container {
+.portfolio-page.non-unique-page .image-container {
   max-height: inherit; }
-  .image-container img {
+  .portfolio-page.non-unique-page .image-container img {
     width: auto;
     max-width: 100%; }

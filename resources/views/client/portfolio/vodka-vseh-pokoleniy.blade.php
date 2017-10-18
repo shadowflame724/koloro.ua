@@ -23,7 +23,7 @@
     @include('layouts.whiteheader')
 
 
-<section id="vodka-vseh-pokoleniy">
+<section id="vodka-vseh-pokoleniy" class="portfolio-page non-unique-page">
     <div class="bg-container top-container" style="background-image: url('/images/portfolio/vodka-vseh-pokoleniy/vodka-vseh-pokoleniy-4.jpg')">
         <div class="dark-mask"></div>
         <div class="gl-container title-container">
