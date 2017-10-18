@@ -1,2 +1,26 @@
 User-agent: *
+<<<<<<< HEAD
 Disallow: /
+=======
+Disallow: /404/
+Disallow: /admin/
+Disallow: /controller/
+Disallow: /functions/
+Disallow: /model/
+Disallow: /pma/
+Disallow: /*.php
+Disallow: /*?*
+Sitemap: https://koloro.ru/sitemap.xml
+
+User-agent: Yandex
+Disallow: /404/
+Disallow: /admin/
+Disallow: /controller/
+Disallow: /functions/
+Disallow: /model/
+Disallow: /pma/
+Disallow: /*.php
+Disallow: /*?*
+Host: https://koloro.ru
+Sitemap: https://koloro.ru/sitemap.xml
+>>>>>>> 8e16e1d108bf7f995f2ad027b6ff85bb714282b5

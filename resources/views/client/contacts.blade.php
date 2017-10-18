@@ -28,8 +28,8 @@
     <div class="maps-container">
         <p class="maska"></p>
 
-        <div id="kiev-map" class="koloro-map animated kiev"></div>
-        <div id="moscow-map" class="koloro-map animated moscow active"></div>
+        <div id="kiev-map" class="koloro-map animated kiev active"></div>
+        <div id="moscow-map" class="koloro-map animated moscow"></div>
 
         <div class="contacts-cont">
             <div class="gl-container">
@@ -40,8 +40,8 @@
         <!-- start of fly-block -->
         <div class="fly-block">
             <ul class="contacts-menu">
-                <li class="kiev" style="display: none">Киев</li>
-                <li class="moscow active">Москва</li>
+                <li class="kiev active">Киев</li>
+                <li class="moscow">Москва</li>
             </ul>
 
             <span class="close-contacts-btn">

@@ -48,8 +48,8 @@ class BlogRepository extends BaseRepository
             $blog->name_ua = strip_tags($input['name_ua']);
             $blog->description_ru = clean($input['description_ru']);
             $blog->description_ua = clean($input['description_ua']);
-            $blog->content_ru = clean($input['content_ru']);
-            $blog->content_ua = clean($input['content_ua']);
+            $blog->content_ru = $input['content_ru'];
+            $blog->content_ua = $input['content_ua'];
 
 
             if (isset($input['image'])) {
@@ -96,8 +96,8 @@ class BlogRepository extends BaseRepository
         $blog->name_ua = strip_tags($input['name_ua']);
         $blog->description_ru = clean($input['description_ru']);
         $blog->description_ua = clean($input['description_ua']);
-        $blog->content_ru = clean($input['content_ru']);
-        $blog->content_ua = clean($input['content_ua']);
+        $blog->content_ru = $input['content_ru'];
+        $blog->content_ua = $input['content_ua'];
 
         if ($input['slug'] != null) {
             $slug = $input['slug'];

@@ -1,7 +1,7 @@
 <div class="image_container">
     @php($langSuf = '_' . App::getLocale())
     @foreach($portfolio as $item)
-        <a href="/portfolio/{{ $item->slug }}" class="one_block animated">
+        <a href="{{ route('client.portfoliopage', ['portfolio' => $item->slug]) }}" class="one_block animated">
             <img src="images/portfolio/{{ $item->link }}"
                  data-original="/images/portfolio/{{ $item->link }}" alt="{{ $item->link }}" class="lazy">
             <!-- begin hidden_content -->

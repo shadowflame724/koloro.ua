@@ -16,9 +16,6 @@
       font-size: 30px;
       padding: 20px 0; } }
 
-#portfolio-mava .info-block-container {
-  margin-bottom: 3vh; }
-
 @media all and (min-width: 1400px) {
   #portfolio-mava .info-left .info-left-title {
     width: 80%;
@@ -38,9 +35,6 @@
     z-index: 5;
     width: 30%;
     transition: all 0.4s; }
-    @media all and (max-width: 768px) {
-      #portfolio-mava .top-container .coffee-beans-gold, #portfolio-mava .top-container .coffee-beans-1, #portfolio-mava .top-container .coffee-beans-2, #portfolio-mava .top-container .coffee-beans-gold-3 {
-        width: 15%; } }
   #portfolio-mava .top-container .coffee-beans-gold {
     top: 20%;
     left: 10%;
@@ -65,9 +59,6 @@
     z-index: 5;
     width: 30%;
     transition: all 0.4s; }
-    @media all and (max-width: 768px) {
-      #portfolio-mava .image-1 .coffee-beans-gold-2, #portfolio-mava .image-1 .coffee-beans-4, #portfolio-mava .image-1 .coffee-beans-3, #portfolio-mava .image-1 .coffee-beans-gold-4 {
-        width: 15%; } }
   #portfolio-mava .image-1 .coffee-beans-gold-2 {
     top: -20%;
     left: 5%;

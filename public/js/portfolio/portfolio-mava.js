@@ -54,25 +54,25 @@ $(function () {
             if ( ((currentPosition) >= topContainer.offsetTop) &&
                 ((currentPosition - tempOffset) < topContainer.offsetTop + topContainer.clientHeight)
             ) {
-                glalexParallax(coffeeBeansGold, -1, 50, currentPosition, scrollPreviousPosition);
+                glalexParallax(coffeeBeansGold, 1, 50, currentPosition, scrollPreviousPosition);
                 glalexParallax(coffeeBeans1, -1, 100, currentPosition, scrollPreviousPosition);
-                glalexParallax(coffeeBeans2, -1, 20, currentPosition, scrollPreviousPosition);
+                glalexParallax(coffeeBeans2, 1, 20, currentPosition, scrollPreviousPosition);
                 glalexParallax(coffeeBeansGold3, -1, 40, currentPosition, scrollPreviousPosition);
             }
 
             if ( ((currentPosition) >= imageCont1.offsetTop) &&
                 ((currentPosition - tempOffset) < imageCont1.offsetTop + imageCont1.clientHeight)
             ) {
-                glalexParallax(coffeeBeansGold2, -1, 50, currentPosition, scrollPreviousPosition);
+                glalexParallax(coffeeBeansGold2, 1, 50, currentPosition, scrollPreviousPosition);
                 glalexParallax(coffeeBeans4, -1, 100, currentPosition, scrollPreviousPosition);
-                glalexParallax(coffeeBeans3, -1, 20, currentPosition, scrollPreviousPosition);
+                glalexParallax(coffeeBeans3, 1, 20, currentPosition, scrollPreviousPosition);
                 glalexParallax(coffeeBeansGold4, -1, 40, currentPosition, scrollPreviousPosition);
             }
 
             if ( ((currentPosition) >= imageCont2.offsetTop) &&
                 ((currentPosition - tempOffset) < imageCont2.offsetTop + imageCont2.clientHeight)
             ) {
-                glalexParallax(bannerGoldBeans, -1, 100, currentPosition, scrollPreviousPosition);
+                glalexParallax(bannerGoldBeans, 1, 100, currentPosition, scrollPreviousPosition);
             }
         }
 

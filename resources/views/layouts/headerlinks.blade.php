@@ -6,25 +6,25 @@
 
 <nav class="main_menu">
     <ul>
-        <li><a href="/" {{setActive('/')}}>{{ trans('messages.main') }}</a></li>
-        <li><a href="/portfolio" {{setActive('portfolio')}}>{{ trans('messages.portfolio') }}</a></li>
-        <li><a href="/services" {{setActive('services')}}>{{ trans('messages.services') }}</a></li>
-        <li><a href="/blog" {{setActive('blog')}}>{{ trans('messages.blog') }}</a></li>
-        <li><a href="/about" {{setActive('about')}}>{{ trans('messages.company') }}</a></li>
-        <li><a href="/contacts" {{setActive('contacts')}}>{{ trans('messages.contacts') }}</a></li>
+        <li><a href="{{ route('client.index') }}" {{setActive('/')}}>{{ trans('messages.main') }}</a></li>
+        <li><a href="{{ route('client.portfolio') }}" {{setActive('portfolio')}}>{{ trans('messages.portfolio') }}</a></li>
+        <li><a href="{{ route('client.services') }}" {{setActive('services')}}>{{ trans('messages.services') }}</a></li>
+        <li><a href="{{ route('client.blog.index') }}" {{setActive('blog')}}>{{ trans('messages.blog') }}</a></li>
+        <li><a href="{{ route('client.company') }}" {{setActive('about')}}>{{ trans('messages.company') }}</a></li>
+        <li><a href="{{ route('client.contacts') }}" {{setActive('contacts')}}>{{ trans('messages.contacts') }}</a></li>
 
     </ul>
     <a href="/" target="_blank" class="btn_calculate order-form-btn">{{ trans('messages.brief') }}</a>
-    {{-- hide languages tabs on koloro.RU, russian lang just only! --}}
-    {{--<div class="languge">--}}
-        {{--<ul>--}}
-            {{--<li>--}}
-                {{--<a href="{{ '/setlocale/ua' }}" {{localeActive('ua')}}>ua</a>--}}
-            {{--</li>--}}
-            {{--<li>--}}
-                {{--<a href="{{ '/setlocale/ru' }}" {{localeActive('ru')}}>ru</a>--}}
-            {{--</li>--}}
-        {{--</ul>--}}
-    {{--</div>--}}
+    <div class="languge">
+        <ul>
+            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                <li>
+                    <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                        {{ $properties['native'] }}
+                    </a>
+                </li>
+            @endforeach
+        </ul>
+    </div>
 
 </nav>

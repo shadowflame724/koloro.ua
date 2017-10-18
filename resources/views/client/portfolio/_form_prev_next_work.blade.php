@@ -21,17 +21,17 @@
 <div class="projects-btns-container">
     <div class="left-btn">
         <div class="inner-cont">
-            <a href="/portfolio/{{ $prevSlug }}">
-                <i class="icon icon-arrow-left"></i>
+            <a href="{{ route('client.portfoliopage', ['portfolio' => $prevSlug]) }}">
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
                 <span>предыдущий проект</span>
             </a>
         </div>
     </div><!--
             --><div class="right-btn">
         <div class="inner-cont">
-            <a href="/portfolio/{{ $nextSlug }}">
+            <a href="{{ route('client.portfoliopage', ['portfolio' => $nextSlug]) }}">
                 <span>следующий проект</span>
-                <i class="icon icon-arrow-right"></i>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
             </a>
         </div>
     </div>

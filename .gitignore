@@ -16,6 +16,7 @@ yarn-error.log
 /public/uploaded_images/
 /public/images/
 /public/files/
+/public/video/
 /images/
 .env
 public/sitemap.xml
