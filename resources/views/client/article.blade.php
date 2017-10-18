@@ -173,6 +173,16 @@
                 <!-- begin article_container -->
                 <div class="article_container" itemprop="articleBody">
                     {!! $article->{'content' . $langSuf} !!}
+
+                    <div class="contact-info-cont">
+                        <h3>Контактная информация:</h3>
+                        <p class="contact-info koloro-email">
+                            <a href="mailto:{{ env('OUR_EMAIL') }}">{{ env('OUR_EMAIL') }}</a>
+                        </p>
+                        <p class="contact-info koloro-tel">
+                            <a class="call-us-phone" href="tel:{{-- */ $data = str_replace(' ', '', env('OUR_PHONE_NUMBER')); /* --}}{{$data}}">{{ env('OUR_PHONE_NUMBER') }}</a>
+                        </p>
+                    </div>
                 </div>
                 <!-- end article_container -->
 
