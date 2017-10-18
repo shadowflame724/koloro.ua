@@ -32,8 +32,8 @@
                     <!-- begin info -->
                     <div class="info">
                         <p>Категория: <span>{{ $article->blogcategory->{'name' . $langSuf} }}</span></p>
-                        <p itemprop="author" itemscope itemtype="http://schema.org/Person">Автор: <a itemprop="name" href="/author/{{ $article->user->id }}"
-                                     class="autor_link">@if($article->user){{ $article->user->name }}@endif</a></p>
+                        <p itemprop="author" itemscope itemtype="http://schema.org/Person">Автор: <a href="/author/{{ $article->user->id }}"
+                                     class="autor_link">@if($article->user)<span itemprop="name">{{ $article->user->name }}</span>@endif</a></p>
                         <!-- begin right_block -->
                         <div class="right_block">
                             @php
