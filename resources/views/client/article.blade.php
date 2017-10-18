@@ -32,7 +32,7 @@
                     <!-- begin info -->
                     <div class="info">
                         <p>Категория: <span>{{ $article->blogcategory->{'name' . $langSuf} }}</span></p>
-                        <p>Автор: <a href="/author/{{ $article->user->id }}"
+                        <p itemprop="author" itemscope itemtype="http://schema.org/Person">Автор: <a itemprop="name" href="/author/{{ $article->user->id }}"
                                      class="autor_link">@if($article->user){{ $article->user->name }}@endif</a></p>
                         <!-- begin right_block -->
                         <div class="right_block">
@@ -61,7 +61,7 @@
         </div>
         <!-- end article_info -->
         <!-- begin article -->
-        <section class="article" itemprop="articleBody">
+        <section class="article">
             <!-- begin container -->
             <div class="container">
                 <!-- begin right_sidebar -->
@@ -143,7 +143,7 @@
                 </div>
                 <!-- end right_sidebar -->
                 <!-- begin article_container -->
-                <div class="article_container">
+                <div class="article_container" itemprop="articleBody">
                     {!! $article->{'content' . $langSuf} !!}
                 </div>
                 <!-- end article_container -->
