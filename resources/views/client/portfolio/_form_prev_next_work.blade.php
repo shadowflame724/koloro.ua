@@ -22,7 +22,7 @@
     <div class="left-btn">
         <div class="inner-cont">
             <a href="/portfolio/{{ $prevSlug }}">
-                <i class="fa fa-angle-left" aria-hidden="true"></i>
+                <i class="icon icon-arrow-left"></i>
                 <span>предыдущий проект</span>
             </a>
         </div>
@@ -31,7 +31,7 @@
         <div class="inner-cont">
             <a href="/portfolio/{{ $nextSlug }}">
                 <span>следующий проект</span>
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                <i class="icon icon-arrow-right"></i>
             </a>
         </div>
     </div>
