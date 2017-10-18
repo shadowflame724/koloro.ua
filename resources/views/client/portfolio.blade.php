@@ -25,11 +25,11 @@
         <nav class="blog_nav">
             <ul class="flex">
                 <li>
-                    <a href="{{url('portfolio')}}" @if($categoryId == null) class="active" @endif>Все работы</a>
+                    <a href="{{ route('client.portfolio') }}" @if($categoryId == null) class="active" @endif>Все работы</a>
                 </li>
                 @foreach($categories as $category)
                     <li>
-                        <a href="{{url('portfolio/category')}}/{{$category->slug}}" @if($categoryId == $category->id) class="active" @endif>{{ $category->{'name' . $langSuf} }}</a>
+                        <a href="{{ route('client.portfoliocategory', ['category' => $category->slug]) }}" @if($categoryId == $category->id) class="active" @endif>{{ $category->{'name' . $langSuf} }}</a>
                     </li>
                 @endforeach
             </ul>
@@ -43,7 +43,7 @@
             <!-- begin image_container -->
             <div class="image_container image_conatainer_full">
                 @foreach($portfolios as $portfolio)
-                    <a href="{{ url('/portfolio')}}/{{ $portfolio->slug }}" class="one_block animated">
+                    <a href="{{ route('client.portfoliopage', ['portfolio' => $portfolio->slug]) }}" class="one_block animated">
                         <img src="/images/portfolio/{{ $portfolio->link }}"
                              data-original="/images/portfolio/{{ $portfolio->link }}"
                              alt="{{ $portfolio->alt }}"

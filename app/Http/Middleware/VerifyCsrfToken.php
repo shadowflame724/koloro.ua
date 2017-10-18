@@ -12,7 +12,7 @@ class VerifyCsrfToken extends BaseVerifier
      * @var array
      */
     protected $except = [
-        //
+                '/admin/laravel-filemanager/upload'
     ];
 
     protected function tokensMatch($request)
@@ -21,9 +21,11 @@ class VerifyCsrfToken extends BaseVerifier
 
         // If request is an ajax request, then check to see if token matches token provider in
         // the header. This way, we can use CSRF protection in ajax requests also.
-        if($request->ajax())
-            $token = $request->header('X-CSRF-TOKEN');
 
-        return $request->session()->token() == $token;
+    if(empty($token) && $request->ajax())
+        $token = $request->header('X-CSRF-TOKEN');
+
+    return $request->session()->token() == $token;
+
     }
 }

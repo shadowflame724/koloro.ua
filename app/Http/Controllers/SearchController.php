@@ -40,15 +40,19 @@ class SearchController extends Controller
                     switch ($searchCondition) {
                         case 'in-header':
                             $sql['portfolio'] = Portfolio::where('title_ru', 'LIKE', '%' . $query . '%')
+                                ->orWhere('title_ua', 'LIKE', '%' . $query . '%')
                                 ->get();
                             break;
                         case 'in-text':
                             $sql['portfolio'] = Portfolio::where('text_ru', 'LIKE', '%' . $query . '%')
+                                ->orWhere('text_ua', 'LIKE', '%' . $query . '%')
                                 ->get();
                             break;
                         default:
                             $sql['portfolio'] = Portfolio::where('title_ru', 'LIKE', '%' . $query . '%')
                                 ->orWhere('text_ru', 'LIKE', '%' . $query . '%')
+                                ->orWhere('title_ua', 'LIKE', '%' . $query . '%')
+                                ->orWhere('text_ua', 'LIKE', '%' . $query . '%')
                                 ->get();
                             break;
                     }
@@ -56,16 +60,20 @@ class SearchController extends Controller
                 case 'blog':
                     switch ($searchCondition) {
                         case 'in-header':
-                            $sql['blog'] = Blog::where('title_ru', 'LIKE', '%' . $query . '%')
+                            $sql['blog'] = Blog::where('name_ru', 'LIKE', '%' . $query . '%')
+                                ->orWhere('name_ua', 'LIKE', '%' . $query . '%')
                                 ->get();
                             break;
                         case 'in-text':
                             $sql['blog'] = Blog::where('content_ru', 'LIKE', '%' . $query . '%')
+                                ->orWhere('content_ua', 'LIKE', '%' . $query . '%')
                                 ->get();
                             break;
                         default:
                             $sql['blog'] = Blog::where('name_ru', 'LIKE', '%' . $query . '%')
                                 ->orWhere('content_ru', 'LIKE', '%' . $query . '%')
+                                ->orWhere('name_ua', 'LIKE', '%' . $query . '%')
+                                ->orWhere('content_ua', 'LIKE', '%' . $query . '%')
                                 ->get();
                             break;
                     }
@@ -74,15 +82,19 @@ class SearchController extends Controller
                     switch ($searchCondition) {
                         case 'in-header':
                             $sql['services'] = Service::where('title_ru', 'LIKE', '%' . $query . '%')
+                                ->orWhere('title_ua', 'LIKE', '%' . $query . '%')
                                 ->get();
                             break;
                         case 'in-text':
                             $sql['services'] = Service::where('description_ru', 'LIKE', '%' . $query . '%')
+                                ->orWhere('description_ua', 'LIKE', '%' . $query . '%')
                                 ->get();
                             break;
                         default:
                             $sql['services'] = Service::where('name_ru', 'LIKE', '%' . $query . '%')
                                 ->orWhere('description_ru', 'LIKE', '%' . $query . '%')
+                                ->orWhere('title_ua', 'LIKE', '%' . $query . '%')
+                                ->orWhere('description_ua', 'LIKE', '%' . $query . '%')
                                 ->get();
                             break;
                     }
@@ -90,12 +102,18 @@ class SearchController extends Controller
                 default:
                     $sql['portfolio'] = Portfolio::where('title_ru', 'LIKE', '%' . $query . '%')
                         ->orWhere('text_ru', 'LIKE', '%' . $query . '%')
+                        ->orWhere('title_ua', 'LIKE', '%' . $query . '%')
+                        ->orWhere('text_ua', 'LIKE', '%' . $query . '%')
                         ->get();
                     $sql['blog'] = Blog::where('name_ru', 'LIKE', '%' . $query . '%')
                         ->orWhere('content_ru', 'LIKE', '%' . $query . '%')
+                        ->orWhere('name_ua', 'LIKE', '%' . $query . '%')
+                        ->orWhere('content_ua', 'LIKE', '%' . $query . '%')
                         ->get();
                     $sql['services'] = Service::where('name_ru', 'LIKE', '%' . $query . '%')
                         ->orWhere('description_ru', 'LIKE', '%' . $query . '%')
+                        ->orWhere('name_ua', 'LIKE', '%' . $query . '%')
+                        ->orWhere('description_ua', 'LIKE', '%' . $query . '%')
                         ->get();
                     break;
             }

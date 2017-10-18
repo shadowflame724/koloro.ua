@@ -25,7 +25,7 @@ class FrontEndPagesController extends Controller
 {
     public function index($serviceSlug = null)
     {
-        if ($serviceSlug == null) {
+        if ($serviceSlug == null OR $serviceSlug == 'ua') {
             $arr = DB::table('service')
                 ->join('servicecategory', 'service.category_id', '=', 'servicecategory.id')
                 ->select('service.name_ru', 'service.name_ua', 'service.description_ru', 'service.description_ua', 'service.slug', 'service.video', 'service.work_count', 'service.price',

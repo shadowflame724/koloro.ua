@@ -36,7 +36,7 @@
                                 <div class="slide-links">
                                     <hr class="slide-hr">
                                     @foreach(array_slice($serviceCategory['services'], 0,7) as $service)
-                                        <a href="/{{ $service['slug'] }}">{{ $service['name' . $langSuf] }}</a>
+                                        <a href="{{ route('client.index', ['serviceSlug' => $service['slug']]) }}">{{ $service['name' . $langSuf] }}</a>
                                     @endforeach
                                 </div>
                             </li>
@@ -121,7 +121,7 @@
                                         <p class="additional-info-text">
                                             {!! strip_tags($service['description' . $langSuf]) !!}
                                         </p>
-                                        <a href="/{{ $service['slug'] }}"
+                                        <a href="{{ route('client.index', ['serviceSlug' => $service['slug']]) }}"
                                            class="additional-info-btn">{{ trans('client.services.go_to_service') }}</a>
                                     </div>
                                 </li>

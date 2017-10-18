@@ -76,7 +76,7 @@
                             <h2 class="news-item-header">{{ $result->{'name' . $langSuf} }}</h2>
                             <div class="news-item">
                                 <div class="left-cont">
-                                    <a href="/blog/{{ $result->blogcategory->slug }}/{{ $result->slug }}"
+                                    <a href="{{ route('client.article', ['category' => $result->blogcategory->slug, 'article' => $result->slug]) }}"
                                        class="preview"
                                        target="_self">
                                         <div class="preview-bg-image"
@@ -108,16 +108,16 @@
                                     <div class="bottom-side">
                                         <div class="info-block">
                                             <p class="article-category">Категория:
-                                                <a href="/blog/{{ $result->blogcategory->slug }}"
+                                                <a href="{{ route('client.blog.byCategory', ['category' => $result->blogcategory->slug]) }}"
                                                    class="link">{{ $result->blogcategory->{'name' . $langSuf} }}</a>
                                             </p>
                                             <p class="article-author">Автор:
-                                                <a href="/author/{{ $result->user->id }}"
+                                                <a href="{{ route('client.author', ['user' => $result->user->id ]) }}"
                                                    class="link">@if($result->user){{ $result->user->name }}@endif</a>
                                             </p>
                                         </div>
                                         <div class="info-btn">
-                                            <a href="/blog/{{ $result->blogcategory->slug }}" class="gl-yellow-btn">больше информации</a>
+                                            <a href="{{ route('client.article', ['category' => $result->blogcategory->slug, 'article' => $result->slug]) }}" class="gl-yellow-btn">больше информации</a>
                                         </div>
                                     </div>
                                 </div>
@@ -131,7 +131,7 @@
                             <h2 class="news-item-header">{{ $result->{'name' . $langSuf} }}</h2>
                             <div class="news-item">
                                 <div class="left-cont">
-                                    <a href="/{{ $result->slug }}" class="preview" target="_self">
+                                    <a href="{{ route('client.index', ['serviceSlug' => $result->slug]) }}" class="preview" target="_self">
                                         <div class="preview-bg-image"
                                              style="background-image: url('/files/images/service/@if($result->image){{ $result->image->link }}@endif');"></div>
                                     </a>
@@ -158,12 +158,12 @@
                                     <div class="bottom-side">
                                         <div class="info-block">
                                             <p class="service-category">Категория:
-                                                <a href="/services"
+                                                <a href="{{ route('client.services') }}"
                                                    class="link">{{ $result->serviceCategory->{'name' . $langSuf} }}</a>
                                             </p>
                                         </div>
                                         <div class="info-btn">
-                                            <a href="/{{ $result->slug }}" class="gl-yellow-btn">больше информации</a>
+                                            <a href="{{ route('client.index', ['serviceSlug' => $result->slug]) }}" class="gl-yellow-btn">больше информации</a>
                                         </div>
                                     </div>
                                 </div>
@@ -176,7 +176,7 @@
                             <h2 class="news-item-header">{{ $result->{'title' . $langSuf} }}</h2>
                             <div class="news-item">
                                 <div class="left-cont">
-                                    <a href="/portfolio/{{ $result->slug }}" class="preview" target="_self">
+                                    <a href="{{ route('client.portfoliopage', ['portfolio' => $result->slug]) }}" class="preview" target="_self">
                                         <div class="preview-bg-image"
                                              style="background-image: url('/images/portfolio/@if($result->image){{ $result->image->link }}@endif');"></div>
                                     </a>
@@ -203,10 +203,10 @@
                                     </div>
                                     <div class="bottom-side">
                                         <div class="info-block">
-                                            <a href="/portfolio/{{ $result->slug }}" class="portfolio-category">Портфолио</a>
+                                            <a href="{{ route('client.portfolio') }}" class="portfolio-category">Портфолио</a>
                                         </div>
                                         <div class="info-btn">
-                                            <a href="/portfolio/{{ $result->slug }}" class="gl-yellow-btn">больше
+                                            <a href="{{ route('client.portfoliopage', ['portfolio' => $result->slug]) }}" class="gl-yellow-btn">больше
                                                 информации</a>
                                         </div>
                                     </div>

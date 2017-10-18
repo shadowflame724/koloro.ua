@@ -335,18 +335,6 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 50px;
   height: 38px; }
 
-.icon-arrow-left {
-  background-image: url(../images/general/arrow-left.svg);
-  background-size: contain;
-  width: 13px;
-  height: 20px; }
-
-.icon-arrow-right {
-  background-image: url(../images/general/arrow-right.svg);
-  background-size: contain;
-  width: 13px;
-  height: 20px; }
-
 /*
 .foo {
   @include placeholder {
@@ -1870,8 +1858,7 @@ footer {
 
 .icon {
   display: inline-block;
-  vertical-align: bottom;
-  background-repeat: no-repeat; }
+  vertical-align: bottom; }
 
 /*main page end    main page end      main page end       main page end     main page end */
 /*page blog   page blog    page blog    page blog     page blog     page blog   */
@@ -5627,10 +5614,11 @@ a.gl-link {
           transition: all 0.4s;
           text-decoration: none;
           border-radius: 20px; }
-          .contact-us-form .projects-btns-container .left-btn .inner-cont a .icon, .contact-us-form .projects-btns-container .right-btn .inner-cont a .icon {
-            vertical-align: top;
-            position: relative;
-            top: 10px; }
+          .contact-us-form .projects-btns-container .left-btn .inner-cont a .fa, .contact-us-form .projects-btns-container .right-btn .inner-cont a .fa {
+            display: inline-block;
+            color: white;
+            font-size: 24px;
+            line-height: 35px; }
           .contact-us-form .projects-btns-container .left-btn .inner-cont a span, .contact-us-form .projects-btns-container .right-btn .inner-cont a span {
             display: inline-block;
             color: #fff;
@@ -5648,18 +5636,18 @@ a.gl-link {
       background-color: #4e5a5d; }
     .contact-us-form .projects-btns-container .left-btn {
       text-align: left; }
-      .contact-us-form .projects-btns-container .left-btn .inner-cont a .icon {
-        margin-left: 15px; }
+      .contact-us-form .projects-btns-container .left-btn .inner-cont a .fa {
+        padding-left: 15px; }
         @media all and (max-width: 600px) {
-          .contact-us-form .projects-btns-container .left-btn .inner-cont a .icon {
-            margin-left: 0; } }
+          .contact-us-form .projects-btns-container .left-btn .inner-cont a .fa {
+            padding: 2px 16px 0 14px; } }
     .contact-us-form .projects-btns-container .right-btn {
       text-align: right; }
-      .contact-us-form .projects-btns-container .right-btn .inner-cont a .icon {
-        margin-right: 15px; }
+      .contact-us-form .projects-btns-container .right-btn .inner-cont a .fa {
+        padding-right: 15px; }
         @media all and (max-width: 600px) {
-          .contact-us-form .projects-btns-container .right-btn .inner-cont a .icon {
-            margin-right: 0; } }
+          .contact-us-form .projects-btns-container .right-btn .inner-cont a .fa {
+            padding: 2px 14px 0 16px; } }
 
 .animated {
   -webkit-animation-duration: 1.5s;
