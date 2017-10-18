@@ -68,10 +68,10 @@
 
                     <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
                         <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-                            <meta itemprop="url" content="https://test.koloro.com.ua/files/images/logo.png">
+                            <meta itemprop="url" content="{{ url('files/images/logo.png') }} ">
                         </div>
                         <meta itemprop="name" content="test.koloro.com.ua">
-                        <meta itemprop="url" content="https://test.koloro.com.ua">
+                        <meta itemprop="url" content="{{ url('') }}">
                     </div>
 
 
