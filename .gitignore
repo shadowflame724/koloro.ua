@@ -27,6 +27,8 @@ public/sitemap.html
 composer.json
 composer.lock
 #---------------------
+public/video
+
 
 #Есть такие на локалке
 /.idea
