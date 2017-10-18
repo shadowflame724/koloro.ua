@@ -2178,6 +2178,11 @@ footer {
   font-size: inherit;
   color: inherit; }
 
+.article .contact-info-cont .contact-info {
+  margin: 15px 0;
+  font-family: "SegoeUIBold", sans-serif;
+  color: #a44699; }
+
 .right_sidebar {
   float: right;
   display: inline-block;
