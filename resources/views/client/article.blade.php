@@ -20,7 +20,7 @@
 
         <!-- begin container -->
         <div class="container">
-            <h1 class="page_name">{{ $article->{'name' . $langSuf} }}</h1>
+            <h1 itemprop="headline" class="page_name">{{ $article->{'name' . $langSuf} }}</h1>
         </div>
         <!-- end container -->
         <!-- begin article_info -->
@@ -43,7 +43,7 @@
                             <p>
                                 <meta itemprop="dateModified" content="{{ $article->updated_at }}">
                                 <meta itemprop="datePublished" content="{{ $article->created_at }}">
-                                
+
                                 <i class="icon icon-clock"></i>{{ $carbon->parse($article->created_at)->format('d F Y ') }}
                             </p>
                             <p><i class="icon icon-eye"></i>{{ $article->views }} просмотров</p>
@@ -57,6 +57,31 @@
                         <input value="{{$article->votes == 0 ? 0 : $article->rating/$article->votes}}"
                                data-id="{{$article->id}}" type="number" class="rating" min=0 max=5 step=0.5 data-size="md">
                     </form>
+
+                    <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url"
+                              content="https://koloro.ua/uploaded_images/server/php/files/{{ $article->image_id }}">
+                        <meta itemprop="width" content="300">
+                        <meta itemprop="height" content="300">
+                    </div>
+
+
+                    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                        <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                            <meta itemprop="url" content="https://koloro.ua/images/logo.png">
+                        </div>
+                        <meta itemprop="name" content="koloro.ua">
+                        <meta itemprop="url" content="https://koloro.ua">
+                    </div>
+
+
+                    <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                                <span itemprop="ratingCount" style="display: none">{{$article->voice_count}}</span>
+                                <span itemprop="ratingValue" style="display: none">{{ $rating }}</span>
+
+                        <meta itemprop="worstRating" content="0">
+                        <span itemprop="bestRating" style="display: none;">5</span>
+                    </div>
                 </div>
                 <!-- end article_container -->
             </div>
