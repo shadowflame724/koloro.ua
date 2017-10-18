@@ -60,7 +60,7 @@
 
                     <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
                         <meta itemprop="url"
-                              content="https://test.koloro.com.ua/files/images/blog/{{ $article->image->link }}">
+                              content="https://test.koloro.com.ua/files/images/blog/{{ $article->file->link }}">
                         <meta itemprop="width" content="300">
                         <meta itemprop="height" content="300">
                     </div>
