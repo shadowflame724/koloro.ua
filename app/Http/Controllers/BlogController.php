@@ -100,6 +100,7 @@ class BlogController extends Controller
                 ->join('file as f', 'blog.image_id', '=', 'f.id')
                 ->select('blog.*', 'blogcategory.name_ru as categoryName_ru', 'blogcategory.name_ua as categoryName_ua', 'blogcategory.slug as categorySlug',
                     'u.name as userName', 'u.id as userId', 'f.link as imageLink', 'f.alt as imageAlt')
+                ->orderBy('created_at', 'DESC')
                 ->paginate(10);
         }
 

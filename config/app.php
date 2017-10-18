@@ -127,6 +127,8 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
+        Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,
+
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
@@ -173,7 +175,6 @@ return [
         Yajra\Datatables\DatatablesServiceProvider::class,
 
         //Unisharp\Ckeditor\ServiceProvider::class,
-        Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
 
         Roumen\Sitemap\SitemapServiceProvider::class,

@@ -16,6 +16,7 @@ yarn-error.log
 /public/uploaded_images/
 /public/images/
 /public/files/
+/public/video/
 /images/
 .env
 public/sitemap.xml
@@ -27,8 +28,6 @@ public/sitemap.html
 composer.json
 composer.lock
 #---------------------
-public/video
-
 
 #Есть такие на локалке
 /.idea
