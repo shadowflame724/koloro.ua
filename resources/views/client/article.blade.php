@@ -13,7 +13,7 @@
     @include('layouts.blackheader')
 
     <div itemscope itemtype="http://schema.org/Article">
-        <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="https://test.koloro.com.ua/blog"/>
+        <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="{{ url('/blog') }}" />
         <span itemprop="name" style="display: none">
                     {{ $article->{'name' . $langSuf} }}
         </span>
