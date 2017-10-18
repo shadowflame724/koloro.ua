@@ -61,7 +61,7 @@
         </div>
         <!-- end article_info -->
         <!-- begin article -->
-        <section class="article">
+        <section class="article" itemprop="articleBody">
             <!-- begin container -->
             <div class="container">
                 <!-- begin right_sidebar -->
@@ -150,7 +150,7 @@
 
             </div>
             <!-- end container -->
-        </section>
+        </section >
         <!-- end article -->
         <!-- begin after_article -->
         <section class="after_article">
