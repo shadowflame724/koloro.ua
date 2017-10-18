@@ -77,7 +77,7 @@
 
                     <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
                                 <span itemprop="ratingCount" style="display: none">{{$article->voice_count}}</span>
-                                <span itemprop="ratingValue" style="display: none">{{ rating }}</span>
+                                <span itemprop="ratingValue" style="display: none">{{ $article->rating }}</span>
 
                         <meta itemprop="worstRating" content="0">
                         <span itemprop="bestRating" style="display: none;">5</span>
