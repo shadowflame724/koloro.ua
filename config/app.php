@@ -158,6 +158,7 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\ComposerServiceProvider::class,
 
         Zizaco\Entrust\EntrustServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
@@ -178,6 +179,9 @@ return [
         Intervention\Image\ImageServiceProvider::class,
 
         Roumen\Sitemap\SitemapServiceProvider::class,
+        Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
+
+
     ],
 
     /*
@@ -238,6 +242,8 @@ return [
         'Datatables' => Yajra\Datatables\Facades\Datatables::class,
 
         'Image' => Intervention\Image\Facades\Image::class,
+        'LaravelLocalization' => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
+
     ],
 
 ];

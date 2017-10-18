@@ -30,46 +30,34 @@ class ComposerServiceProvider extends ServiceProvider
         );
 
         /*
-         * Frontend
-         */
-        $isAjax = false;
-        if($request->ajax()){
-            $isAjax = true;
-        }
-
-        /*
          * Languages in global config
          */
         $lang = get_lang_from_domain_name($request);
-        $domain = ENV('APP_DOMAIN');
+        $domain = ENV('APP_URL');
         $appLangs = [
             'lang' => $lang,
             'paths' => [
-                'en' => 'http://' . $domain,
-                'it' => 'http://it.' . $domain,
-                'ru' => 'http://ru.' . $domain,
+                'ru' => $domain,
+                'ua' => $domain . '/ua',
             ],
-            'suf' => ($lang == 'en') ? '' : '_' . $lang,
+            'suf' => '_' . $lang,
         ];
         config([
             'app.langs' => $appLangs
         ]);
         // ******
 
-        View::composer(['*'], function ($view) use ($request, $isAjax, $appLangs) {
+        View::composer(['*'], function ($view) use ($request, $appLangs) {
             // геолокация
             $path = $request->path();
+
             if ($path == '/') {
                 $path = '';
             }
-            if (isset($getParams)) {
-                $path .= $getParams['link'];
-            }
+
 
             $view
                 ->with([
-                    'isAjax' => $isAjax,
-                    'pageLayout' => ($isAjax)?'ajax':'app_dev',
                     'curPath' => $path,
                     'langPaths' => $appLangs['paths'],
                     'langSuf' => $appLangs['suf'],

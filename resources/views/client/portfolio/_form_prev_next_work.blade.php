@@ -21,7 +21,7 @@
 <div class="projects-btns-container">
     <div class="left-btn">
         <div class="inner-cont">
-            <a href="/portfolio/{{ $prevSlug }}">
+            <a href="{{ route('client.portfoliopage', ['portfolio' => $prevSlug]) }}">
                 <i class="fa fa-angle-left" aria-hidden="true"></i>
                 <span>предыдущий проект</span>
             </a>
@@ -29,7 +29,7 @@
     </div><!--
             --><div class="right-btn">
         <div class="inner-cont">
-            <a href="/portfolio/{{ $nextSlug }}">
+            <a href="{{ route('client.portfoliopage', ['portfolio' => $nextSlug]) }}">
                 <span>следующий проект</span>
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
             </a>

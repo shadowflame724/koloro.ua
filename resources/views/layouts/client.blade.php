@@ -25,7 +25,7 @@
 
 </head>
 <body>
-@php($langSuf = '_' . App::getLocale())
+{{--@php($langSuf = '_' . App::getLocale())--}}
 @yield('page-content', $langSuf)
 
 @include('layouts.social')

@@ -2,6 +2,7 @@
 
 namespace App\Http\Composers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
 /**
@@ -18,6 +19,6 @@ class GlobalComposer
      */
     public function compose(View $view)
     {
-        $view->with('logged_in_user', access()->user());
+        $view->with('logged_in_user', Auth::user());
     }
 }
