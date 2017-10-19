@@ -8,7 +8,7 @@
     <ul>
         <li><a href="{{ route('client.index') }}" {{setActive('/')}}>{{ trans('messages.main') }}</a></li>
         <li><a href="{{ route('client.portfolio') }}" {{setActive('portfolio')}}>{{ trans('messages.portfolio') }}</a></li>
-        <li><a href="{{ route('client.services') }}" {{setActive('services')}}>{{ trans('messages.services') }}</a></li>
+        <li><a href="{{ route('client.services') }}" @if(isset($serviceActive)) class="active" @endif>{{ trans('messages.services') }}</a></li>
         <li><a href="{{ route('client.blog.index') }}" {{setActive('blog')}}>{{ trans('messages.blog') }}</a></li>
         <li><a href="{{ route('client.company') }}" {{setActive('about')}}>{{ trans('messages.company') }}</a></li>
         <li><a href="{{ route('client.contacts') }}" {{setActive('contacts')}}>{{ trans('messages.contacts') }}</a></li>

@@ -65,6 +65,7 @@ class FrontEndPagesController extends Controller
             ]);
         } else {
             $service = Service::where('slug', $serviceSlug)->first();
+            $serviceActive = '';
             if ($service) {
                 $blocks = $service->blocks;
                 $similarServices = Service::where('category_id', '=', $service->category_id)
@@ -73,7 +74,7 @@ class FrontEndPagesController extends Controller
                     ->with('image')
                     ->inRandomOrder()->take(4)->get();
 
-                return view('client.service', compact('service', 'blocks', 'similarServices'));
+                return view('client.service', compact('service', 'blocks', 'similarServices', 'serviceActive'));
             } else {
 
                 return view('errors.404');
