@@ -67,6 +67,7 @@ class FrontEndPagesController extends Controller
                 $blocks = $service->blocks;
                 $similarServices = Service::where('category_id', '=', $service->category_id)
                     ->whereNotIn('id', [$service->id])
+                    ->with('image')
                     ->inRandomOrder()->take(4)->get();
 
                 return view('client.service', compact('service', 'blocks', 'similarServices'));

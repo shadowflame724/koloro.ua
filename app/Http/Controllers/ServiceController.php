@@ -96,22 +96,6 @@ class ServiceController extends Controller
     }
 
     /**
-     * @param $slug
-     * @return mixed
-     */
-    public function getService($slug)
-    {
-        $service = Service::where('slug', $slug)->first();
-        $blocks = $service->blocks;
-        $similarServices = Service::where('category_id', '=', $service->category_id)
-            ->inRandomOrder()->take(4)->get();
-
-//        dd($similarServices->image);
-
-        return view('client.service', compact('service', 'blocks', 'similarServices'));
-    }
-
-    /**
      * @return mixed
      */
     public function create()
