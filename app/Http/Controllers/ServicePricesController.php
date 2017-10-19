@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use GuzzleHttp;
 
 /**
  * Class ServicePricesController
@@ -18,7 +19,7 @@ class ServicePricesController extends Controller
      */
     public function index()
     {
-        $services = DB::table('service')->select('id', 'name_ru', 'price')->get();
+        $services = Service::select('id', 'name_ru', 'price')->get();
 
         return view('admin.service.prices.index', compact('services'));
     }

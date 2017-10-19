@@ -17,9 +17,10 @@
     <a href="/" target="_blank" class="btn_calculate order-form-btn">{{ trans('messages.brief') }}</a>
     <div class="languge">
         <ul>
+            @php($locale = LaravelLocalization::getCurrentLocale() )
             @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                 <li>
-                    <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                    <a rel="alternate" @if($locale == $localeCode) class="active" @endif hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
                         {{ $properties['native'] }}
                     </a>
                 </li>

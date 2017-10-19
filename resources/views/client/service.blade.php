@@ -33,7 +33,7 @@
                     <div class="gl-container">
                         <div class="left-cont">
                             <p class="price-title">{{ trans('client.service.costs') }} {{ $service->{'name_parent_case' . $langSuf} }}</p>
-                            <p class="price">{{ $service->price }} руб.</p>
+                            <p class="price">{{ $service->getPriceInNationalCurrency() }} грн.</p>
                             <div class="btns-container">
                                 <a href="/"
                                    class="gl-transparent-btn order-service-btn order-form-btn">{{ trans('client.service.order-service') }}</a>

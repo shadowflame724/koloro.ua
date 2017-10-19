@@ -13,13 +13,10 @@
 
 
 Route::group(['middleware' => ['auth']], function () {
-
     Route::group(['prefix' => 'admin'], function () {
         Route::get('/', 'HomeController@index');
         Route::get('/laravel-filemanager', '\Unisharp\Laravelfilemanager\controllers\LfmController@show');
         Route::post('/laravel-filemanager/upload', '\Unisharp\Laravelfilemanager\controllers\UploadController@upload');
-
-
         Route::resource('/users', 'UserController');
         Route::resource('/roles', 'RoleController');
         Route::resource('/blog', 'BlogController', ['except' => ['show']]);
@@ -27,11 +24,8 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('/blogcategory', 'BlogCategoryController', ['except' => ['show']]);
         Route::resource('/servicecategory', 'ServiceCategoryController', ['except' => ['show']]);
         Route::resource('/service', 'ServiceController', ['except' => ['show']]);
-
         Route::get('/service-prices', ['as' => 'admin.service-prices.index', 'uses' => 'ServicePricesController@index']);
         Route::patch('/service-prices/set-price/{service}', ['as' => 'admin.service-prices.set-price', 'uses' => 'ServicePricesController@setPrice']);
-
-
         Route::post('/increment-count-service', ['as' => 'increment-count', 'uses' => 'ServiceController@incrementCount']);
         Route::resource('/portfolio', 'PortfolioController', ['except' => ['show']]);
         Route::post('/table/portfolio', ['as' => 'portfolio-table', 'uses' => 'PortfolioController@table']);
@@ -49,6 +43,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('/settings/update/{settings}', ['as' => 'settings.update', 'uses' => 'SettingsController@update']);
     });
 });
+Route::auth();
 
 Route::get('setlocale/{locale}', function ($locale) {
     if (in_array($locale, Config::get('app.locales'))) {
@@ -74,41 +69,39 @@ Route::post('callback', ['as' => 'callback_store', 'uses' => 'CallbackController
 Route::get('/subscription', ['as' => 'subscription', 'uses' => 'SubscriptionController@create']);
 Route::post('/subscription', ['as' => 'subscription_store', 'uses' => 'SubscriptionController@store']);
 
-//Route::group(['middleware' => ['web']], function () {
-//client
-Route::group([
-    'prefix' => LaravelLocalization::setLocale(),
-    'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
-], function()
-{
-    Route::get('/services.html', ['as' => 'client.services', 'uses' => 'ServiceController@getServices']);
-    Route::get('/blog.html', ['as' => 'client.blog.index', 'uses' => 'BlogController@getBlog']);
-    Route::get('/blog/{category}/{article}', ['as' => 'client.article', 'uses' => 'BlogController@getArticle']);
-    Route::get('/blog/{category}', ['as' => 'client.blog.byCategory', 'uses' => 'BlogController@getBlog']);
-    Route::get('/portfolio.html', ['as' => 'client.portfolio', 'uses' => 'Client\PortfolioController@portfolio']);
-    Route::get('/portfolio/category/{category}', ['as' => 'client.portfoliocategory', 'uses' => 'Client\PortfolioController@getPortfolioCategory']);
-    Route::get('/portfolio/{portfolio}', ['as' => 'client.portfoliopage', 'uses' => 'Client\PortfolioController@getPortfolioPage']);
-    Route::get('/contacts.html', ['as' => 'client.contacts', 'uses' => 'ContactsController@getContacts']);
-    Route::get('/company.html', ['as' => 'client.company', 'uses' => 'Client\FrontEndPagesController@about']);
-    Route::get('/search', 'SearchController@search');
-    Route::get('/services', function () {
-        return redirect('services.html');
-    });
-    Route::get('blog', function () {
-        return redirect('blog.html');
-    });
-    Route::get('portfolio', function () {
-        return redirect('portfolio.html');
-    });
-    Route::get('contacts', function () {
-        return redirect('contacts.html');
-    });
-    Route::get('about', function () {
-        return redirect('company.html');
-    });
-    Route::get('author/{user}/{slug?}', ['as' => 'client.author', 'uses' => 'Client\FrontEndPagesController@author']);
+Route::group(['middleware' => ['web']], function () {
+    Route::group([
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
+    ], function () {
+        Route::get('/services.html', ['as' => 'client.services', 'uses' => 'ServiceController@getServices']);
+        Route::get('/blog.html', ['as' => 'client.blog.index', 'uses' => 'BlogController@getBlog']);
+        Route::get('/blog/{category}/{article}', ['as' => 'client.article', 'uses' => 'BlogController@getArticle']);
+        Route::get('/blog/{category}', ['as' => 'client.blog.byCategory', 'uses' => 'BlogController@getBlog']);
+        Route::get('/portfolio.html', ['as' => 'client.portfolio', 'uses' => 'Client\PortfolioController@portfolio']);
+        Route::get('/portfolio/category/{category}', ['as' => 'client.portfoliocategory', 'uses' => 'Client\PortfolioController@getPortfolioCategory']);
+        Route::get('/portfolio/{portfolio}', ['as' => 'client.portfoliopage', 'uses' => 'Client\PortfolioController@getPortfolioPage']);
+        Route::get('/contacts.html', ['as' => 'client.contacts', 'uses' => 'ContactsController@getContacts']);
+        Route::get('/company.html', ['as' => 'client.company', 'uses' => 'Client\FrontEndPagesController@about']);
+        Route::get('/search', 'SearchController@search');
+        Route::get('/services', function () {
+            return redirect('services.html');
+        });
+        Route::get('blog', function () {
+            return redirect('blog.html');
+        });
+        Route::get('portfolio', function () {
+            return redirect('portfolio.html');
+        });
+        Route::get('contacts', function () {
+            return redirect('contacts.html');
+        });
+        Route::get('about', function () {
+            return redirect('company.html');
+        });
+        Route::get('author/{user}/{slug?}', ['as' => 'client.author', 'uses' => 'Client\FrontEndPagesController@author']);
 
-    Route::get('/{serviceSlug?}', ['as' => 'client.index', 'uses' => 'Client\FrontEndPagesController@index']);
-
+        Route::get('/{serviceSlug?}', ['as' => 'client.index', 'uses' => 'Client\FrontEndPagesController@index', 'except' => ['login']]);
+    });
 });
 
