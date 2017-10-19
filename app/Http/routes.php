@@ -13,6 +13,7 @@
 
 
 Route::group(['middleware' => ['auth']], function () {
+    Route::auth();
     Route::group(['prefix' => 'admin'], function () {
         Route::get('/', 'HomeController@index');
         Route::get('/laravel-filemanager', '\Unisharp\Laravelfilemanager\controllers\LfmController@show');
@@ -43,7 +44,6 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('/settings/update/{settings}', ['as' => 'settings.update', 'uses' => 'SettingsController@update']);
     });
 });
-Route::auth();
 
 Route::get('setlocale/{locale}', function ($locale) {
     if (in_array($locale, Config::get('app.locales'))) {
@@ -72,7 +72,7 @@ Route::post('/subscription', ['as' => 'subscription_store', 'uses' => 'Subscript
 Route::group(['middleware' => ['web']], function () {
     Route::group([
         'prefix' => LaravelLocalization::setLocale(),
-        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
+        'middleware' => ['localizationRedirect', 'localeViewPath']
     ], function () {
         Route::get('/services.html', ['as' => 'client.services', 'uses' => 'ServiceController@getServices']);
         Route::get('/blog.html', ['as' => 'client.blog.index', 'uses' => 'BlogController@getBlog']);
