@@ -180,7 +180,7 @@ return [
 
         Roumen\Sitemap\SitemapServiceProvider::class,
         Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
-
+        Laravelrus\LocalizedCarbon\LocalizedCarbonServiceProvider::class,
 
     ],
 
@@ -243,7 +243,8 @@ return [
 
         'Image' => Intervention\Image\Facades\Image::class,
         'LaravelLocalization' => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
-
+        'LocalizedCarbon' => Laravelrus\LocalizedCarbon\LocalizedCarbon::class,
+        'DiffFormatter'   => Laravelrus\LocalizedCarbon\DiffFactoryFacade::class,
     ],
 
 ];

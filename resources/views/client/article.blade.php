@@ -13,7 +13,7 @@
     @include('layouts.blackheader')
 
     <div itemscope itemtype="http://schema.org/Article">
-        <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="{{ url('/blog') }}" />
+        <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="{{ url('/blog') }}"/>
         <span itemprop="name" style="display: none">
                     {{ $article->{'name' . $langSuf} }}
         </span>
@@ -32,19 +32,20 @@
                     <!-- begin info -->
                     <div class="info">
                         <p>Категория: <span>{{ $article->blogcategory->{'name' . $langSuf} }}</span></p>
-                        <p itemprop="author" itemscope itemtype="http://schema.org/Person">Автор: <a href="/author/{{ $article->user->id }}"
-                                     class="autor_link">@if($article->user)<span itemprop="name">{{ $article->user->name }}</span>@endif</a></p>
+                        <p itemprop="author" itemscope itemtype="http://schema.org/Person">Автор: <a
+                                    href="/author/{{ $article->user->id }}"
+                                    class="autor_link">@if($article->user)<span
+                                        itemprop="name">{{ $article->user->name }}</span>@endif</a></p>
                         <!-- begin right_block -->
                         <div class="right_block">
                             @php
-                                $carbon = new \Carbon\Carbon();
-                                $carbon->setLocale('ru');
+                                setlocale(LC_TIME, 'ru_RU.utf8');
                             @endphp
                             <p>
                                 <meta itemprop="dateModified" content="{{ $article->updated_at }}">
                                 <meta itemprop="datePublished" content="{{ $article->created_at }}">
 
-                                <i class="icon icon-clock"></i>{{ $carbon->parse($article->created_at)->format('d F Y ') }}
+                                <i class="icon icon-clock"></i>{{ $article->created_at->formatLocalized ('%d %B %Y') }}
                             </p>
                             <p><i class="icon icon-eye"></i>{{ $article->views }} просмотров</p>
                         </div>
@@ -55,7 +56,8 @@
                     <form class="mstar">
                         {{--<input id="input-id" value="2" type="number" class="rating" min=0 max=5 step=0.5 data-size="md">--}}
                         <input value="{{$article->votes == 0 ? 0 : $article->rating/$article->votes}}"
-                               data-id="{{$article->id}}" type="number" class="rating" min=0 max=5 step=0.5 data-size="md">
+                               data-id="{{$article->id}}" type="number" class="rating" min=0 max=5 step=0.5
+                               data-size="md">
                     </form>
 
                     <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
@@ -76,8 +78,9 @@
 
 
                     <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                <span itemprop="ratingCount" style="display: none">{{$article->votes}}</span>
-                                <span itemprop="ratingValue" style="display: none">{{$article->votes == 0 ? 0 : $article->rating/$article->votes}}</span>
+                        <span itemprop="ratingCount" style="display: none">{{$article->votes}}</span>
+                        <span itemprop="ratingValue"
+                              style="display: none">{{$article->votes == 0 ? 0 : $article->rating/$article->votes}}</span>
 
                         <meta itemprop="worstRating" content="0">
                         <span itemprop="bestRating" style="display: none;">5</span>
@@ -114,7 +117,7 @@
                         <ol>
                             @foreach($serviceCategories as $serviceCategory)
                                 <li>
-                                    <a href="/services">
+                                    <a href="{{ route('client.services') }}">
                                         {{ $serviceCategory->{'name' . $langSuf} }}
                                     </a>
                                 </li>
@@ -180,7 +183,8 @@
                             <a href="mailto:{{ env('OUR_EMAIL') }}">{{ env('OUR_EMAIL') }}</a>
                         </p>
                         <p class="contact-info koloro-tel">
-                            <a class="call-us-phone" href="tel:{{-- */ $data = str_replace(' ', '', env('OUR_PHONE_NUMBER')); /* --}}{{$data}}">{{ env('OUR_PHONE_NUMBER') }}</a>
+                            <a class="call-us-phone"
+                               href="tel:{{-- */ $data = str_replace(' ', '', env('OUR_PHONE_NUMBER')); /* --}}{{$data}}">{{ env('OUR_PHONE_NUMBER') }}</a>
                         </p>
                     </div>
                 </div>
@@ -188,7 +192,7 @@
 
             </div>
             <!-- end container -->
-        </section >
+        </section>
         <!-- end article -->
         <!-- begin after_article -->
         <section class="after_article">
@@ -200,7 +204,8 @@
                     <div class="creator">
                         <div class="creator_photo">
                             <img src="/files/images/users/@if($user->file){{ $user->file->link }}"
-                                 data-original="/files/images/users/{{ $user->file->link }}" alt="{{ $user->file->alt }}@endif"
+                                 data-original="/files/images/users/{{ $user->file->link }}"
+                                 alt="{{ $user->file->alt }}@endif"
                                  class="lazy">
                         </div>
                         <div class="creator_info">
@@ -281,7 +286,7 @@
                             _hcwp = window._hcwp || [];
                             _hcwp.push({widget: "Stream", widget_id: 73852});
                             (function () {
-                                if ("HC_LOAD_INIT" in window)return;
+                                if ("HC_LOAD_INIT" in window) return;
                                 HC_LOAD_INIT = true;
                                 var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
                                 var hcc = document.createElement("script");

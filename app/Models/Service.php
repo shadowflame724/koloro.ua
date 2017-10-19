@@ -65,7 +65,7 @@ class Service extends Model implements SluggableInterface
     {
         $rate = $this->getExcRate();
         $price = $this->price * $rate;
-        $ceilPriceArr = explode('.', ceil($price));
+        $ceilPriceArr = explode('.', round($price, -2));
 
         return $ceilPriceArr[0];
     }
