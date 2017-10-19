@@ -24,7 +24,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 class FrontEndPagesController extends Controller
 {
-    public function index($serviceSlug = null, $flag = null)
+    public function index($serviceSlug = null)
     {
 
         if ($serviceSlug == null) {
@@ -64,9 +64,8 @@ class FrontEndPagesController extends Controller
                 'page' => $page
             ]);
         } else {
-            $service = Service::where('slug', $serviceSlug)->orWhere('slug_ua', $serviceSlug)->first();
+            $service = Service::where('slug', $serviceSlug)->first();
             if ($service) {
-
                 $blocks = $service->blocks;
                 $similarServices = Service::where('category_id', '=', $service->category_id)
 
