@@ -20,12 +20,14 @@ use App\Models\ServiceCategory;
 use App\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 class FrontEndPagesController extends Controller
 {
-    public function index($serviceSlug = null)
+    public function index($serviceSlug = null, $flag = null)
     {
-        if ($serviceSlug == null OR $serviceSlug == 'ua') {
+
+        if ($serviceSlug == null) {
             $arr = DB::table('service')
                 ->join('servicecategory', 'service.category_id', '=', 'servicecategory.id')
                 ->select('service.name_ru', 'service.name_ua', 'service.description_ru', 'service.description_ua', 'service.slug', 'service.video', 'service.work_count', 'service.price',
@@ -62,10 +64,12 @@ class FrontEndPagesController extends Controller
                 'page' => $page
             ]);
         } else {
-            $service = Service::where('slug', $serviceSlug)->first();
+            $service = Service::where('slug', $serviceSlug)->orWhere('slug_ua', $serviceSlug)->first();
             if ($service) {
+
                 $blocks = $service->blocks;
                 $similarServices = Service::where('category_id', '=', $service->category_id)
+
                     ->whereNotIn('id', [$service->id])
                     ->with('image')
                     ->inRandomOrder()->take(4)->get();
