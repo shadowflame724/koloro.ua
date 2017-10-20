@@ -19,7 +19,12 @@ class ServiceBlocks extends Model
 
     public function images()
     {
-        return File::whereIn('id', explode(',', $this->image_ids))->get();
+        $imageIds = $this->image_ids;
+
+        if (strlen($imageIds) > 0) {
+
+            return File::whereIn('id', explode(',', $this->image_ids))->get();
+        } else return [];
     }
 
 }

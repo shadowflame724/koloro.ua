@@ -53,7 +53,7 @@ class Service extends Model implements SluggableInterface
 
     public function blogArticles()
     {
-        return Blog::whereIn('id', explode(',', $this->blog_ids))->get();
+        return Blog::whereIn('id', explode(',', $this->blog_ids))->with('blogcategory')->with('file')->get();
     }
 
     public function meta()

@@ -63,12 +63,12 @@ class FrontEndPagesController extends Controller
                 'page' => $page
             ]);
         } else {
-            $service = Service::where('slug', $serviceSlug)->first();
+            $service = Service::where('slug', $serviceSlug)->with('image')->with('meta')->with('blocks')->first();
+            $blocks = $service->blocks;
+
             $serviceActive = '';
             if ($service) {
-                $blocks = $service->blocks;
                 $similarServices = Service::where('category_id', '=', $service->category_id)
-
                     ->whereNotIn('id', [$service->id])
                     ->with('image')
                     ->inRandomOrder()->take(4)->get();
