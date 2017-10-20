@@ -12,16 +12,16 @@ class ArticleViewed extends Event
 {
     use SerializesModels;
 
-    public $article;
+    public $articleId;
 
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct(Blog $article)
+    public function __construct($id)
     {
-        $this->article = $article;
+        $this->articleId = $id;
     }
 
     /**

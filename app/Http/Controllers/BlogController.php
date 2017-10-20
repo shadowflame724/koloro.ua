@@ -14,6 +14,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Http\Requests;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
@@ -79,7 +80,7 @@ class BlogController extends Controller
 
         if (strlen($category) > 0) {
             $category = BlogCategory::where('slug', $category)->first();
-            if($category == null){
+            if ($category == null) {
                 return view('errors.404');
             }
             $categoryId = $category->id;
@@ -135,19 +136,38 @@ class BlogController extends Controller
 
     public function getArticle($category, $article)
     {
-        $category = BlogCategory::where('slug', $category)->first();
-        $article = Blog::where('slug', $article)->where('category_id', $category->id)->first();
-        if($article == null){
+        //$category = BlogCategory::where('slug', $category)->first();
+        //$article = Blog::where('slug', $article)->where('category_id', $category->id)->first();
+        $article = DB::table('blog')
+            ->join('blogcategory as category', 'blog.category_id', '=', 'category.id')
+            ->join('meta', 'blog.meta_id', '=', 'meta.id')
+            ->join('file as articleImg', 'blog.image_id', '=', 'articleImg.id')
+            ->join('users', 'blog.user_id', '=', 'users.id')
+            ->join('file as userImg', 'users.image_id', '=', 'userImg.id')
+            ->select('blog.id', 'blog.name_ru', 'blog.name_ua', 'blog.created_at', 'blog.updated_at', 'blog.views', 'blog.votes', 'blog.rating', 'blog.content_ru', 'blog.content_ua',
+                'meta.title_ru as metaTitle_ru', 'meta.title_ru as metaTitle_ua', 'meta.title_ru as metaDesc_ru', 'meta.title_ru as metaDesc_ua', 'meta.title_ru as metaKeys_ru', 'meta.title_ru as metaKeys_ua',
+                'category.name_ru as categoryName_ru', 'category.name_ru as categoryName_ua', 'category.id as categoryId',
+                'users.name as userName', 'users.id as userId',
+                'articleImg.alt as articleImgAlt', 'articleImg.link as articleImgLink', 'userImg.alt as userImgAlt', 'userImg.link as userImgLink')
+            ->where('blog.slug', '=', $article)
+            ->first();
+
+        $similarArticles = DB::table('blog')
+            ->join('file as articleImg', 'blog.image_id', '=', 'articleImg.id')
+            ->join('blogcategory as category', 'blog.category_id', '=', 'category.id')
+            ->select('blog.name_ru', 'blog.name_ua', 'blog.slug', 'category.slug as categorySlug','articleImg.link', 'articleImg.alt')
+            ->where('category_id', '=', $article->categoryId)
+            ->where('blog.id', '!=', $article->id)
+            ->inRandomOrder()
+            ->limit(4)
+            ->get();
+
+        if ($article == null) {
             return view('errors.404');
         }
         $serviceCategories = ServiceCategory::all();
 
-        event(new ArticleViewed($article));
-
-        if ($article) {
-            $user = User::find($article->user_id);
-            $image = File::find($article->image_id);
-        }
+        event(new ArticleViewed($article->id));
 
         $portfolios = \DB::table('portfolio')
             ->join('file', 'portfolio.image_id', '=', 'file.id')
@@ -156,10 +176,10 @@ class BlogController extends Controller
             ->limit(3)
             ->get();
 
-        $montharticles = Blog::where('created_at', '>=', Carbon::now()->subMonth())->orderBy('views', 'desc')->take(2)->get();
-        $twomontharticles = Blog::where('created_at', '>=', Carbon::now()->subMonth(3))->orderBy('views', 'desc')->take(2)->get();
+        $montharticles = Blog::where('created_at', '>=', Carbon::now()->subMonth())->with('blogcategory')->orderBy('views', 'desc')->take(2)->get();
+        $twomontharticles = Blog::where('created_at', '>=', Carbon::now()->subMonth(3))->with('blogcategory')->orderBy('views', 'desc')->take(2)->get();
 
-        return view('client.article', compact('article', 'user', 'category', 'image', 'montharticles', 'twomontharticles', 'serviceCategories', 'portfolios'));
+        return view('client.article', compact('article', 'similarArticles', 'montharticles', 'twomontharticles', 'serviceCategories', 'portfolios'));
     }
 
 

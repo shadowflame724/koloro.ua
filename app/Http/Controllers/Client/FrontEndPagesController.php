@@ -24,9 +24,8 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 class FrontEndPagesController extends Controller
 {
-    public function index($serviceSlug = null)
+    public function index(\Illuminate\Http\Request $request, $serviceSlug = null)
     {
-
         if ($serviceSlug == null) {
             $arr = DB::table('service')
                 ->join('servicecategory', 'service.category_id', '=', 'servicecategory.id')

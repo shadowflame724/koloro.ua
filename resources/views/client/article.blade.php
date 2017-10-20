@@ -1,13 +1,11 @@
 @extends('layouts.client')
 
-@if($article->meta)
-    @section('page-title', $article->meta->{'title' . $langSuf} )
+    @section('page-title', $article->{'metaTitle' . $langSuf} )
 
 @section('page-meta')
-    <meta name="description" content="{{ $article->meta->{'description' . $langSuf} }}">
-    <meta name="keywords" content="{{ $article->meta->{'keywords' . $langSuf} }}">
+    <meta name="description" content="{{ $article->{'metaDesc' . $langSuf} }}">
+    <meta name="keywords" content="{{ $article->{'metaKeys' . $langSuf} }}">
 @stop
-@endif
 
 @section('page-content')
     @include('layouts.blackheader')
@@ -31,11 +29,11 @@
                 <div class="article_container">
                     <!-- begin info -->
                     <div class="info">
-                        <p>Категория: <span>{{ $article->blogcategory->{'name' . $langSuf} }}</span></p>
+                        <p>Категория: <span>{{ $article->{'categoryName' . $langSuf} }}</span></p>
                         <p itemprop="author" itemscope itemtype="http://schema.org/Person">Автор: <a
-                                    href="/author/{{ $article->user->id }}"
-                                    class="autor_link">@if($article->user)<span
-                                        itemprop="name">{{ $article->user->name }}</span>@endif</a></p>
+                                    href="/author/{{ $article->userName }}"
+                                    class="autor_link"><span
+                                        itemprop="name">{{ $article->userName }}</span></a></p>
                         <!-- begin right_block -->
                         <div class="right_block">
                             @php
@@ -45,7 +43,7 @@
                                 <meta itemprop="dateModified" content="{{ $article->updated_at }}">
                                 <meta itemprop="datePublished" content="{{ $article->created_at }}">
 
-                                <i class="icon icon-clock"></i>{{ $article->created_at->formatLocalized ('%d %B %Y') }}
+                                <i class="icon icon-clock"></i>{{ $article->created_at }}
                             </p>
                             <p><i class="icon icon-eye"></i>{{ $article->views }} просмотров</p>
                         </div>
@@ -62,7 +60,7 @@
 
                     <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
                         <meta itemprop="url"
-                              content="{{ url('files/images/blog/'. $article->file->link ) }}">
+                              content="{{ url('files/images/blog/'. $article->articleImgLink ) }}">
                         <meta itemprop="width" content="300">
                         <meta itemprop="height" content="300">
                     </div>
@@ -203,14 +201,14 @@
                     <!-- begin creator -->
                     <div class="creator">
                         <div class="creator_photo">
-                            <img src="/files/images/users/@if($user->file){{ $user->file->link }}"
-                                 data-original="/files/images/users/{{ $user->file->link }}"
-                                 alt="{{ $user->file->alt }}@endif"
+                            <img src="/files/images/users/{{ $article->userImgLink }}"
+                                 data-original="/files/images/users/{{ $article->userImgLink }}"
+                                 alt="{{ $article->userImgAlt }}"
                                  class="lazy">
                         </div>
                         <div class="creator_info">
                             <p class="who">Подготовил <a
-                                        href="/author/{{ $user->id }}">@if($article->user){{ $article->user->name }}@endif</a>
+                                        href="/author/{{ $article->userId }}">{{ $article->userName }}</a>
                             </p>
                             <p>Копирайтер</p>
                         </div>
@@ -258,23 +256,19 @@
                     <div class="similar_material">
                         <p class="name_block">Похожие материалы</p>
                         <!-- begin one_material -->
-                        @foreach($category->blog as $key => $similarArticle)
-                            @if($similarArticle->id != $article->id)
-                                @if($key < 4)
+                        @foreach($similarArticles as $key => $similarArticle)
                                     <div class="one_material">
-                                        <a href="/blog/{{ $similarArticle->blogcategory->slug }}/{{ $similarArticle->slug }}"
+                                        <a href="/blog/{{ $similarArticle->categorySlug }}/{{ $similarArticle->slug }}"
                                            target="_blank"
                                            title="{{ $similarArticle->{'name' . $langSuf} }}">
 
-                                            <img src="/files/images/blog/@if($similarArticle->file){{ $similarArticle->file->link }}"
-                                                 data-original="/files/images/blog/{{ $similarArticle->file->link }}"
-                                                 alt="{{ $similarArticle->file->alt }}@endif"
+                                            <img src="/files/images/blog/{{ $similarArticle->link }}"
+                                                 data-original="/files/images/blog/{{ $similarArticle->link }}"
+                                                 alt="{{ $similarArticle->alt }}"
                                                  class="lazy">
                                             <p>{{ $similarArticle->{'name' . $langSuf} }}</p>
                                         </a>
                                     </div>
-                                @endif
-                            @endif
                         @endforeach
                         <div class="clear"></div>
                     </div>
