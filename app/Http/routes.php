@@ -18,6 +18,8 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/', 'HomeController@index');
         Route::get('/laravel-filemanager', '\Unisharp\Laravelfilemanager\controllers\LfmController@show');
         Route::post('/laravel-filemanager/upload', '\Unisharp\Laravelfilemanager\controllers\UploadController@upload');
+        Route::resource('/managers', 'ManagerController', ['except' => ['show']]);
+
         Route::resource('/users', 'UserController');
         Route::resource('/roles', 'RoleController');
         Route::resource('/blog', 'BlogController', ['except' => ['show']]);

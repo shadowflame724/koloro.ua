@@ -71,7 +71,10 @@ class FileController extends Controller
         self::makeImg($image, $location);
 
         rename($location, $path . $filename);
-        rename($locationThumb, $path . 'thumb_' . $filename);
+        if (file_exists($locationThumb)) {
+            rename($locationThumb, $path . 'thumb_' . $filename);
+        }
+
 
         return true;
     }

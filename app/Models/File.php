@@ -35,6 +35,11 @@ class File extends Model
         return $this->hasMany(Service::class, 'image_id');
     }
 
+    public function manager()
+    {
+        return $this->hasMany(Manager::class, 'image_id');
+    }
+
     public function servicecategory()
     {
         return $this->hasMany(ServiceCategory::class, 'image_id');
