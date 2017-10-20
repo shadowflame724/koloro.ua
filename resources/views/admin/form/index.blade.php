@@ -6,6 +6,7 @@
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
                 <h2>Форма</h2>
+                <a class="btn btn-primary" href="{{ route('form-export') }}">Export BD to .xls</a>
             </div>
         </div>
     </div>

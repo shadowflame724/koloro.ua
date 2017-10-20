@@ -19,7 +19,6 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/laravel-filemanager', '\Unisharp\Laravelfilemanager\controllers\LfmController@show');
         Route::post('/laravel-filemanager/upload', '\Unisharp\Laravelfilemanager\controllers\UploadController@upload');
         Route::resource('/managers', 'ManagerController', ['except' => ['show']]);
-
         Route::resource('/users', 'UserController');
         Route::resource('/roles', 'RoleController');
         Route::resource('/blog', 'BlogController', ['except' => ['show']]);
@@ -36,6 +35,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('/table/portfoliocategory', ['as' => 'portfoliocategory-table', 'uses' => 'PortfolioCategoryController@table']);
         Route::resource('/meta', 'MetaController', ['except' => ['show']]);
         Route::resource('/form', 'FormController', ['except' => ['show']]);
+        Route::get('form/export', ['as' => 'form-export', 'uses' => 'FormController@export']);
         Route::resource('/brief', 'BriefController', ['except' => ['show']]);
         Route::resource('/callback', 'CallbackController', ['except' => ['show']]);
         Route::resource('/subscription', 'SubscriptionController', ['except' => ['show']]);
@@ -46,6 +46,8 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('/settings/update/{settings}', ['as' => 'settings.update', 'uses' => 'SettingsController@update']);
     });
 });
+
+
 
 Route::get('setlocale/{locale}', function ($locale) {
     if (in_array($locale, Config::get('app.locales'))) {

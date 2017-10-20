@@ -43,6 +43,19 @@ class FormController extends Controller
         return view('admin.form.index', compact('forms'));
     }
 
+    public function export()
+    {
+        \Maatwebsite\Excel\Facades\Excel::create('Forms_export_' . \Carbon\Carbon::now(), function($excel) {
+            $excel->sheet('1', function($sheet) {
+                $forms = \App\Models\Form::all()->toArray();
+                $sheet->fromArray($forms);
+            });
+        })->export('xls');
+
+        return redirect()->route('admin.form.index')
+            ->with('success', 'Excel file generated successfully');
+    }
+
     public function destroy($id)
     {
         Form::find($id)->delete();
