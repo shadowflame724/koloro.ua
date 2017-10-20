@@ -31,7 +31,7 @@
                     <div class="info">
                         <p>Категория: <span>{{ $article->{'categoryName' . $langSuf} }}</span></p>
                         <p itemprop="author" itemscope itemtype="http://schema.org/Person">Автор: <a
-                                    href="/author/{{ $article->userName }}"
+                                    href="/author/{{ $article->userId }}"
                                     class="autor_link"><span
                                         itemprop="name">{{ $article->userName }}</span></a></p>
                         <!-- begin right_block -->
@@ -43,7 +43,7 @@
                                 <meta itemprop="dateModified" content="{{ $article->updated_at }}">
                                 <meta itemprop="datePublished" content="{{ $article->created_at }}">
 
-                                <i class="icon icon-clock"></i>{{ $article->created_at }}
+                                <i class="icon icon-clock"></i>{{ \Carbon\Carbon::parse($article->created_at)->formatLocalized('%d / %m / %Y') }}
                             </p>
                             <p><i class="icon icon-eye"></i>{{ $article->views }} просмотров</p>
                         </div>
