@@ -62,7 +62,7 @@
             {{--<li><a href="{{ url('admin/meta') }}"><i class='fa fa-tags'></i> <span>{{ 'Meta-теги' }}</span></a></li>--}}
             {{--<li><a href="{{ url('admin/pages') }}"><i class='fa fa-desktop'></i> <span>{{ 'Страницы' }}</span></a></li>--}}
             <li><a href="{{ url('admin/users') }}"><i class='fa fa-user'></i> <span>{{ 'Пользователи' }}</span></a></li>
-            <li><a href="{{ url('admin/managers') }}"><i class='fa fa-user'></i> <span>{{ 'Менеджеры' }}</span></a></li>
+            <li><a href="{{ url('admin/managers') }}"><i class='fa fa-address-card'></i> <span>{{ 'Менеджеры' }}</span></a></li>
             <li><a href="{{ url('admin/roles') }}"><i class='fa fa-minus-circle'></i> <span>{{ 'Роли' }}</span></a></li>
             {{--<li><a href="#"><i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.anotherlink') }}</span></a></li>--}}
             {{--<li class="treeview">--}}
