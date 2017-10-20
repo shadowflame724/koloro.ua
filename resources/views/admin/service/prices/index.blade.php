@@ -29,7 +29,7 @@
                 <td>
                     {!! Form::model($service, ['method' => 'PATCH','files' => true,'route' => ['admin.service-prices.set-price', $service->id]]) !!}
                     <div class="input-group">
-                        <input type="number" value="{{ $service->price }}" class="form-control"
+                        <input name="price" type="number" value="{{ $service->price }}" class="form-control"
                                aria-describedby="basic-addon1">
                         <span class="input-group-addon">$</span>
                     </div>

@@ -34,7 +34,7 @@ class ServicePricesController extends Controller
         $name = $service->name_ru;
 
         return redirect()->route('admin.service-prices.index')
-            ->with('success', 'Service "' . $name . '" created successfully');
+            ->with('success', 'Service "' . $name . '" updated successfully');
     }
 
 
