@@ -23,6 +23,7 @@ use App\Events\ArticleViewed;
 use App\Traits\MakeSlug;
 use App\Http\Requests\Admin\Blog\StoreBlogRequest;
 use App\Http\Requests\Admin\Blog\UpdateBlogRequest;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Yajra\Datatables\Facades\Datatables;
 
 class BlogController extends Controller
@@ -136,8 +137,6 @@ class BlogController extends Controller
 
     public function getArticle($category, $article)
     {
-        //$category = BlogCategory::where('slug', $category)->first();
-        //$article = Blog::where('slug', $article)->where('category_id', $category->id)->first();
         $article = DB::table('blog')
             ->join('blogcategory as category', 'blog.category_id', '=', 'category.id')
             ->join('meta', 'blog.meta_id', '=', 'meta.id')

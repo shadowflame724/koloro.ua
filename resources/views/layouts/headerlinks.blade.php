@@ -18,6 +18,7 @@
         <ul>
             @php($locale = LaravelLocalization::getCurrentLocale() )
             @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+
                 <li>
                     <a rel="alternate" @if($locale == $localeCode) class="active" @endif hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
                         {{ $properties['native'] }}

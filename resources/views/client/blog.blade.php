@@ -21,7 +21,8 @@
         <nav class="blog_nav">
             <ul class="flex">
                 <li>
-                    <a href="{{ route('client.blog.index') }}" @if($categoryId == null) class="active" @endif>Все категории</a>
+                    <a href="{{ route('client.blog.index') }}" @if($categoryId == null) class="active" @endif>Все
+                        категории</a>
                 </li>
                 @foreach ($blogcategories as $blogcategory)
                     <li>
@@ -32,12 +33,15 @@
             </ul>
         </nav>
         <!-- begin news_lenght -->
+        @php($locale = LaravelLocalization::getCurrentLocale() )
         @foreach ($blogs as $key => $blog)
-            <section class="news_lenght">
-                <!-- begin one_news -->
-                <div class="one_news">
+            @if($locale == 'ua' AND strlen($blog->{'name_ua'}) > 1)
+                <section class="news_lenght">
+                    <!-- begin one_news -->
+                    <div class="one_news">
 
-                        <a href="{{ route('client.article', ['category' => $blog->categorySlug, 'article' => $blog->slug]) }}" class="preview">
+                        <a href="{{ route('client.article', ['category' => $blog->categorySlug, 'article' => $blog->slug]) }}"
+                           class="preview">
                             <img src="{{ ('/files/images/blog/' . $blog->imageLink) }}"
                                  data-original="{{ ('/files/images/blog/' . $blog->imageLink) }}"
                                  alt="{{ $blog->imageAlt }}"
@@ -48,7 +52,8 @@
                             <!-- begin short_desc -->
                             <div>
                                 <div class="short_desc">
-                                    <a href="{{ route('client.article', ['category' => $blog->categorySlug, 'article' => $blog->slug]) }}" class="article_namel">
+                                    <a href="{{ route('client.article', ['category' => $blog->categorySlug, 'article' => $blog->slug]) }}"
+                                       class="article_namel">
                                         <h2>{{ $blog->{'name' . $langSuf} }}</h2></a>
                                     <p class="date">{{ isset($blog->published_at) ? \Carbon\Carbon::parse($blog->published_at)->format('d/m/Y') : '' }}</p>
                                     <p>{{ strip_tags($blog->{'description' . $langSuf}) }}</p>
@@ -83,8 +88,64 @@
                             <!-- end info -->
                         </div>
                         <!-- end news_description -->
-                </div>
-            </section>
+                    </div>
+                </section>
+            @elseif($locale == 'ru')
+                <section class="news_lenght">
+                    <!-- begin one_news -->
+                    <div class="one_news">
+
+                        <a href="{{ route('client.article', ['category' => $blog->categorySlug, 'article' => $blog->slug]) }}"
+                           class="preview">
+                            <img src="{{ ('/files/images/blog/' . $blog->imageLink) }}"
+                                 data-original="{{ ('/files/images/blog/' . $blog->imageLink) }}"
+                                 alt="{{ $blog->imageAlt }}"
+                                 class="lazy">
+                        </a>
+                        <!-- begin news_description -->
+                        <div class="news_description">
+                            <!-- begin short_desc -->
+                            <div>
+                                <div class="short_desc">
+                                    <a href="{{ route('client.article', ['category' => $blog->categorySlug, 'article' => $blog->slug]) }}"
+                                       class="article_namel">
+                                        <h2>{{ $blog->{'name' . $langSuf} }}</h2></a>
+                                    <p class="date">{{ isset($blog->published_at) ? \Carbon\Carbon::parse($blog->published_at)->format('d/m/Y') : '' }}</p>
+                                    <p>{{ strip_tags($blog->{'description' . $langSuf}) }}</p>
+                                </div>
+                                <!-- end short_desc -->
+
+                                <!-- begin rating -->
+                                <div class="rating_container">
+                                    <div class="views">
+                                        <i class="icon icon icon-eye"></i>
+                                        <p><span>{{ $blog->views }}</span> просмотров</p>
+                                    </div>
+                                    <form>
+                                        <input value="{{$blog->votes == 0 ? 0 : $blog->rating/$blog->votes}}"
+                                               data-id="{{$blog->id}}" type="number" class="rating" min=0 max=5 step=0.5
+                                               data-size="sm">
+                                        <p class="reviews_count"><span>{{$blog->votes}}</span> отзыв</p>
+                                    </form>
+                                </div>
+                                <!-- end rating -->
+                            </div>
+                            <!-- begin info -->
+                            <div class="info">
+                                <div>
+                                    <p>Категория: <span>{{ $blog->{'categoryName' . $langSuf} }}</span></p>
+                                    <p>Автор: <a href="{{ route('client.author', ['user' => $blog->userId ]) }}"
+                                                 class="autor_link">{{ $blog->userName }}</a></p>
+                                </div>
+                                <a href="{{ route('client.article', ['category' => $blog->categorySlug, 'article' => $blog->slug]) }}"
+                                   class="yellow_button link_read">читать</a>
+                            </div>
+                            <!-- end info -->
+                        </div>
+                        <!-- end news_description -->
+                    </div>
+                </section>
+            @endif
         @endforeach
         {{ $blogs->links() }}
     </div>
@@ -93,14 +154,14 @@
 
 {{--@section('page-scripts')--}}
 
-    {{--@if(isset($blog))--}}
-        {{--@php($data = [--}}
+{{--@if(isset($blog))--}}
+{{--@php($data = [--}}
 {{--'type' => 'blog',--}}
 {{--'id' => $blog->id--}}
 {{--])--}}
 
-        {{--@include('layouts.partials.star-rating', ['data'=>$data])--}}
-    {{--@endif--}}
+{{--@include('layouts.partials.star-rating', ['data'=>$data])--}}
+{{--@endif--}}
 {{--@stop--}}
 @section('page-scripts')
     <script type="text/javascript">
