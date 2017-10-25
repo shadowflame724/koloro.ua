@@ -222,19 +222,21 @@ class ServiceRepository extends BaseRepository
                     if ($key == 1) {
                         foreach (array_slice($block, 2) as $i => $item) {
                             $dbImage = File::find($imageIds[$i]);
-                            $dbImage->title_ru = $item['title_ru'];
-                            $dbImage->title_ua = $item['title_ua'];
-                            $dbImage->alt = $item['image_alt'];
-                            if ($item['image'] != null) {
-                                $newImage = FileController::uploadImg($item['image'], public_path('files/images/service-page/'));
-                                $imageIds = array_replace($imageIds,
-                                    array_fill_keys(
-                                        array_keys($imageIds, $dbImage->id),
-                                        $newImage->id
-                                    )
-                                );
+                            if($dbImage != null) {
+                                $dbImage->title_ru = $item['title_ru'];
+                                $dbImage->title_ua = $item['title_ua'];
+                                $dbImage->alt = $item['image_alt'];
+                                if ($item['image'] != null) {
+                                    $newImage = FileController::uploadImg($item['image'], public_path('files/images/service-page/'));
+                                    $imageIds = array_replace($imageIds,
+                                        array_fill_keys(
+                                            array_keys($imageIds, $dbImage->id),
+                                            $newImage->id
+                                        )
+                                    );
+                                }
+                                $dbImage->save();
                             }
-                            $dbImage->save();
                         }
                     } elseif ($key == 3) {
 
