@@ -80,7 +80,7 @@
                                 </ul>
 
                                 <div class="tab-content">
-                                    <div id="block_two_tab_{{ $count }}_ru" class="tab-pane fade in active">
+                                    <div id="block_two_{{ $count }}_tab_ru" class="tab-pane fade in active">
                                         <div class="form-group">
                                             <strong>Заголовок[RU]:</strong>
                                             <div class="input-group">

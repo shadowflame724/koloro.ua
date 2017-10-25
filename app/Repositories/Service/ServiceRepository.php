@@ -203,7 +203,7 @@ class ServiceRepository extends BaseRepository
 
                 foreach ($input['blocks'] as $key => $block) {
                     $oldBlock = ServiceBlocks::find($block['id']);
-                    $imageIds = explode(',', $oldBlock->image_ids);
+                    $imageIds = array_values(array_filter(explode(',', $oldBlock->image_ids)));
 
                     if ($key == 1 || $key == 3) {
                         if (isset($block['image_ids'])) {
@@ -220,15 +220,21 @@ class ServiceRepository extends BaseRepository
                     }
 
                     if ($key == 1) {
-                        foreach (array_slice($block, 2) as $item) {
+                        foreach (array_slice($block, 2) as $i => $item) {
+                            $dbImage = File::find($imageIds[$i]);
+                            $dbImage->title_ru = $item['title_ru'];
+                            $dbImage->title_ua = $item['title_ua'];
+                            $dbImage->alt = $item['image_alt'];
                             if ($item['image'] != null) {
-                                $dbImage = FileController::uploadImg($item['image'], public_path('files/images/service-page/'));
-                                $dbImage->title_ru = $item['title_ru'];
-                                $dbImage->title_ua = $item['title_ua'];
-                                $dbImage->alt = $item['image_alt'];
-                                $dbImage->save();
-                                array_push($imageIds, $dbImage->id);
+                                $newImage = FileController::uploadImg($item['image'], public_path('files/images/service-page/'));
+                                $imageIds = array_replace($imageIds,
+                                    array_fill_keys(
+                                        array_keys($imageIds, $dbImage->id),
+                                        $newImage->id
+                                    )
+                                );
                             }
+                            $dbImage->save();
                         }
                     } elseif ($key == 3) {
 
