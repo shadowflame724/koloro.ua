@@ -33,15 +33,15 @@
 
             <div class="contacts-cont">
                 <div class="gl-container">
-                    <h2 class="section-header">Контакты</h2>
+                    <h2 class="section-header">@lang('message.contact')</h2>
                 </div>
             </div>
 
             <!-- start of fly-block -->
             <div class="fly-block">
                 <ul class="contacts-menu">
-                    <li class="kiev active">Киев</li>
-                    <li class="moscow">Москва</li>
+                    <li class="kiev active">@lang('messages.kiev')</li>
+                    <li class="moscow">@lang('messages.moscow')</li>
                 </ul>
 
                 <span class="close-contacts-btn">
@@ -69,10 +69,10 @@
                         <!-- photo slider starts -->
                         <div class="contacts-slider-cont">
                                 <span class="arrow-left-btn">
-                                    <img src="images/general/slide_left_yellow_mob.png">
+                                    <img src="/images/general/slide_left_yellow_mob.png">
                                 </span>
                             <span class="arrow-right-btn">
-                                    <img src="images/general/slide_right_yellow_mob.png">
+                                    <img src="/images/general/slide_right_yellow_mob.png">
                                 </span>
 
                             <div id="kiev-slider" class="contacts-slider owl-carousel owl-theme">
@@ -90,13 +90,13 @@
                         <!-- photo slider ends -->
 
                         <a href="/" class="gl-transparent-btn route-btn">
-                            Проложить маршрут
+                            @lang('messages.road_calculate')
                         </a>
 
                         <!-- schedule-info-address starts -->
                         <div class="schedule-info">
                             <div class="schedule-info-left">
-                                <p class="left-text">Адрес</p>
+                                <p class="left-text">@lang('messages.address')</p>
                             </div>
                             <div class="schedule-info-right">
                                 <p class="right-text">
@@ -109,7 +109,7 @@
                         <!-- schedule-info-time starts -->
                         <div class="schedule-info">
                             <div class="schedule-info-left">
-                                <p class="left-text">Время работы</p>
+                                <p class="left-text">@lang('messages.work_time')</p>
                             </div>
                             <div class="schedule-info-right">
                                 <p class="right-text days-time">
@@ -117,15 +117,15 @@
                                     <span class="col-right">9:00 - 18:00</span>
                                 </p>
                                 <p class="right-text days-time">
-                                    <span class="col-left">Сб - Вс</span>
-                                    <span class="col-right red-time">выходной</span>
+                                    <span class="col-left">@lang('messages.st-wd')</span>
+                                    <span class="col-right red-time">@lang('messages.weekend')</span>
                                 </p>
                             </div>
                         </div>
                         <!-- schedule-info-time ends -->
 
                         <a href="/" class="gl-yellow-btn order-form-btn">
-                            Связаться
+                            @lang('messages.contact_us')
                         </a>
                     </div>
                     <!-- end of kiev tab-pane -->
@@ -150,10 +150,10 @@
                         <!-- photo slider starts -->
                         <div class="contacts-slider-cont">
                                 <span class="arrow-left-btn">
-                                    <img src="images/general/slide_left_yellow_mob.png">
+                                    <img src="/images/general/slide_left_yellow_mob.png">
                                 </span>
                             <span class="arrow-right-btn">
-                                    <img src="images/general/slide_right_yellow_mob.png">
+                                    <img src="/images/general/slide_right_yellow_mob.png">
                                 </span>
 
                             <div id="moscow-slider" class="contacts-slider owl-carousel owl-theme">
@@ -171,13 +171,13 @@
                         <!-- photo slider ends -->
 
                         <a href="/" class="gl-transparent-btn route-btn">
-                            Проложить маршрут
+                            @lang('messages.road_calculate')
                         </a>
 
                         <!-- schedule-info-address starts -->
                         <div class="schedule-info">
                             <div class="schedule-info-left">
-                                <p class="left-text">Адрес</p>
+                                <p class="left-text">@lang('messages.address')</p>
                             </div>
                             <div class="schedule-info-right">
                                 <p class="right-text">
@@ -190,7 +190,7 @@
                         <!-- schedule-info-time starts -->
                         <div class="schedule-info">
                             <div class="schedule-info-left">
-                                <p class="left-text">Время работы</p>
+                                <p class="left-text">@lang('messages.work_time')</p>
                             </div>
                             <div class="schedule-info-right">
                                 <p class="right-text days-time">
@@ -198,15 +198,15 @@
                                     <span class="col-right">9:00 - 18:00</span>
                                 </p>
                                 <p class="right-text days-time">
-                                    <span class="col-left">Сб - Вс</span>
-                                    <span class="col-right red-time">выходной</span>
+                                    <span class="col-left">@lang('messages.st-wd')</span>
+                                    <span class="col-right red-time">@lang('messages.weekend')</span>
                                 </p>
                             </div>
                         </div>
                         <!-- schedule-info-time ends -->
 
                         <a href="/" class="gl-yellow-btn order-form-btn">
-                            Связаться
+                            @lang('messages.contact_us')
                         </a>
                     </div>
                     <!-- end of moscow tab-pane -->
@@ -223,7 +223,7 @@
         <!-- begin container -->
         <div class="container">
             <!--<p class="name_block">Наши менеджеры</p>-->
-            <h2 class="section-header">Наши менеджеры</h2>
+            <h2 class="section-header">@lang('messages.our_managers')</h2>
         @foreach($managers as $manager)
             <!-- begin one_manager -->
                 <div class="one_manager">
@@ -231,7 +231,7 @@
                         <img src="/files/images/managers/{{ $manager->image->link }}" alt="Gema photo" class="lazy">
                     </div>
                     <p class="name">{{ $manager->name }}</p>
-                    <p class="place">{{ $manager->position }}</p>
+                    <p class="place">{{ $manager->{'position' .$langSuf} }}</p>
                     <p class="phone">
                         <a class="call-us-phone"
                            href="tel:{{ $manager->phone }}">{{ $manager->phone }}</a>
@@ -246,8 +246,8 @@
 
 
             <div class="price-block">
-                <span>Стоимость заказа</span>
-                <a href="#" target="_blank" class="btn-calculate order-form-btn">Рассчитать</a>
+                <span>@lang('messages.order_price')</span>
+                <a href="#" target="_blank" class="btn-calculate order-form-btn">@lang('messages.calculate')</a>
             </div>
 
         </div>

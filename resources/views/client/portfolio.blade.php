@@ -21,11 +21,11 @@
 
     <!-- begin container -->
     <div class="container">
-        <h1 class="page_name">Портфолио</h1>
+        <h1 class="page_name">@lang('messages.portfolio')</h1>
         <nav class="blog_nav">
             <ul class="flex">
                 <li>
-                    <a href="{{ route('client.portfolio') }}" @if($categoryId == null) class="active" @endif>Все работы</a>
+                    <a href="{{ route('client.portfolio') }}" @if($categoryId == null) class="active" @endif>@lang('messages.all_works')</a>
                 </li>
                 @foreach($categories as $category)
                     <li>
@@ -60,7 +60,7 @@
             </div>
             <!-- end image_container -->
             <section class="manager_connect">
-                <a href="#" class="gl-yellow-btn order-form-btn">Хочу также!</a>
+                <a href="#" class="gl-yellow-btn order-form-btn">@lang('messages.want_same')</a>
             </section>
         </div>
         <!-- end container -->

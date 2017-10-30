@@ -303,14 +303,14 @@
     <section class="portfolio_block">
         <!-- begin container -->
         <div class="container">
-            <p class="name_block">Примеры наших работ</p>
+            <p class="name_block">{{trans('messages.work_examples')}}</p>
             <!-- begin image_container -->
             <div class="image_container">
                 @widget('jobs_example')
             </div>
             <!-- end image_container -->
             <!--<a href="" class="btn transparent_btn" id="show_more">Еще работы</a>-->
-            <a href="{{ route('client.portfolio') }}" class="gl-yellow-btn show-more-portfolio-btn">Еще работы</a>
+            <a href="{{ route('client.portfolio') }}" class="gl-yellow-btn show-more-portfolio-btn">@lang('messages.more_work')</a>
 
         </div>
         <!-- end container -->

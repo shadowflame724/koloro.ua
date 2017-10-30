@@ -65,9 +65,9 @@
                     <h2 class="main-slider-header">Новый зонтичный молочный бренд “Глобино”</h2>
                     <div class="order-btns">
                         <a href="{{ route('client.portfoliopage', ['portfolio' => 'novyj-zontichnyj-molochnyj-brend-globino.html']) }}"
-                           class="gl-yellow-btn view-work-btn animated bounce">Посмотреть работу</a>
+                           class="gl-yellow-btn view-work-btn animated bounce">@lang('messages.show_work')</a>
                         <a href="/" class="gl-transparent-btn want-expertise-btn order-form-btn">
-                            Хочу бесплатную <br>быструю экспертизу
+                            @lang('messages.free_exp')
                         </a>
                     </div>
                     <div class="special-offer">
@@ -89,10 +89,9 @@
                 <div class="gl-container">
                     <h2 class="main-slider-header">Традиционный вкус с современным дизайном. Колбаса "Ланшмит"</h2>
                     <div class="order-btns">
-                        <a href="{{ route('client.portfoliopage', ['portfolio' => 'lanshmit.html']) }}" class="gl-yellow-btn view-work-btn animated bounce">Посмотреть
-                            работу</a>
+                        <a href="{{ route('client.portfoliopage', ['portfolio' => 'lanshmit.html']) }}" class="gl-yellow-btn view-work-btn animated bounce">@lang('messages.show_work')</a>
                         <a href="/" class="gl-transparent-btn want-expertise-btn order-form-btn">
-                            Хочу бесплатную <br>быструю экспертизу
+                            @lang('messages.free_exp')
                         </a>
                     </div>
                     <div class="special-offer">
@@ -133,9 +132,9 @@
                     <h2 class="main-slider-header">СЕТЬ МАГАЗИНОВ «МЯСНОЙ» <br>САМОБЫТНЫЙ УКРАИНСКИЙ БРЕНД</h2>
                     <div class="order-btns">
                         <a href="{{ route('client.portfoliopage', ['portfolio' => 'set-magazinov-myasnoi.html']) }}"
-                           class="gl-yellow-btn view-work-btn animated bounce">Посмотреть работу</a>
+                           class="gl-yellow-btn view-work-btn animated bounce">@lang('messages.show_work')</a>
                         <a href="/" class="gl-transparent-btn want-expertise-btn order-form-btn">
-                            Хочу бесплатную <br>быструю экспертизу
+                            @lang('messages.free_exp')
                         </a>
                     </div>
                     <div class="special-offer">
@@ -157,9 +156,9 @@
                     <h2 class="main-slider-header">«Мировая традиция» — <br>бренд-путешественник</h2>
                     <div class="order-btns">
                         <a href="{{ route('client.portfoliopage', ['portfolio' => 'mirovaya-tradiciya.html']) }}"
-                           class="gl-yellow-btn view-work-btn animated bounce">Посмотреть работу</a>
+                           class="gl-yellow-btn view-work-btn animated bounce">@lang('messages.show_work')</a>
                         <a href="/" class="gl-transparent-btn want-expertise-btn order-form-btn">
-                            Хочу бесплатную <br>быструю экспертизу
+                            @lang('messages.free_exp')
                         </a>
                     </div>
                     <div class="special-offer">
@@ -179,10 +178,9 @@
                 <div class="gl-container">
                     <h2 class="main-slider-header">«Инделика». Мясо — индейки,<br> этикетка — КОЛОРО</h2>
                     <div class="order-btns">
-                        <a href="{{ route('client.portfoliopage', ['portfolio' => 'indelika.html']) }}" class="gl-yellow-btn view-work-btn animated bounce">Посмотреть
-                            работу</a>
+                        <a href="{{ route('client.portfoliopage', ['portfolio' => 'indelika.html']) }}" class="gl-yellow-btn view-work-btn animated bounce">@lang('messages.show_work')</a>
                         <a href="/" class="gl-transparent-btn want-expertise-btn order-form-btn">
-                            Хочу бесплатную <br>быструю экспертизу
+                            @lang('messages.free_exp')
                         </a>
                     </div>
                     <div class="special-offer">
@@ -204,21 +202,7 @@
     <section class="about-koloro">
         <div class="gl-container">
             <div class="icon-icon_crown animated bounce"></div>
-            <h2 class="section-header">Брендинговое агентство <span>KOLORO</span></h2>
-            <hr>
-            <p class="about_koloro-text">
-                Услуги KOLORO ориентированы на лидеров, либо желающих ими стать.
-                Ежегодная выручка от продаж брендов, <span>созданных KOLORO,</span> составляет более 1 миллиарда
-                долларов.
-                Что превышает годовые бюджеты некоторых стран мира!
-            </p>
-            <p class="about_koloro-text for-read-more">
-                <span>Залог успеха</span> – это <span>создание</span> информативного,
-                <span>«говорящего» дизайна</span>, в котором каждый изгиб упаковки и каждая
-                растровая точка <span>несет</span> свой уникальный <span>посыл</span>,
-                <span>обладает пользой и удобством для пользователя</span>,
-                объединенный общей коммуникацией позиционирования.
-            </p>
+            @lang('messages.gl_container')
             <span class="read-more-btn">{{trans('messages.more')}}</span>
         </div>
     </section>
@@ -244,21 +228,21 @@
     <!-- begin download-book-form -->
     {!! Form::open(['route' => 'subscription_store', 'class' => 'download-book-form', 'id'=>'download-book-form']) !!}
     <div class="gl-container">
-        <h2 class="download-book-header">Давайте сделаем что-то вместе!</h2>
+        <h2 class="download-book-header">@lang('messages.lets_do_together')!</h2>
         <div class="wrapper">
             <div class="left-block">
-                <img src="files/images/main/book.png" alt="koloro book" class="book">
+                <img src="/files/images/main/book.png" alt="koloro book" class="book">
             </div>
             <div class="center-block">
-                <p class="download-book-text mobile-visible">Ваши данные в безопасности. Никакого SPAM!</p>
+                <p class="download-book-text mobile-visible">@lang('messages.no_spam')</p>
                 {!! Form::text('name', null, ['required','placeholder' => 'Ваше имя', 'class' => 'download-book-phone', 'tabindex' => '1']) !!}
                 {!! Form::email('email', null, ['required','placeholder' => 'Ваш email','class' => 'download-book-email', 'tabindex' => '2']) !!}
-                <p class="download-book-text mobile-hidden">Ваши данные в безопасности. Никакого SPAM!</p>
+                <p class="download-book-text mobile-hidden">@lang('messages.no_spam')</p>
             </div>
             <div class="right-block">
-                <p class="download-book-text no-margin">Не теряйте время, жмите на кнопку!</p>
+                <p class="download-book-text no-margin">@lang('messages.push_btn')</p>
                 <input type="submit" value="скачать" class="download-book-btn" tabindex="3">
-                <p class="download-book-text orange-life-hucks">12 лайфхаков маркетологов нового поколения</p>
+                <p class="download-book-text orange-life-hucks">@lang('messages.lifehack')</p>
             </div>
         </div>
     </div>
@@ -319,9 +303,7 @@
         <div class="gl-container">
             <h2 class="section-header">{{trans('messages.our_clients')}}</h2>
             <h3 class="koloro-history">
-                <span>KOLORO – международная компания, которая уже более 7 лет на рынке.</span>
-                Нам доверили создание и развитие своего бренда команды из Украины,
-                Австрии, России, Беларуси и Азербайджана.
+                @lang('messages.koloro_history')
             </h3>
             <div class="our-clients-gallery">
                 <div class="client-img-cont mob-vis">
@@ -349,7 +331,7 @@
                     <img src="/files/images/main/myasnoy-logo.png" alt="client-img">
                 </div>
             </div>
-            <a href="/" class="client-btn order-form-btn">хочу стать клиентом</a>
+            <a href="/" class="client-btn order-form-btn">@lang('messages.want_to_be_pokemon')</a>
         </div>
     </section>
     <!-- end section our-clients -->
@@ -357,11 +339,11 @@
     <!-- begin of section our-services-->
     <section class="services">
         <div class="gl-container">
-            <h2 class="section-header">Услуги</h2>
+            <h2 class="section-header">@lang('messages.services')</h2>
             <nav class="services-menu">
                 <ul>
                     <li class="active">
-                        <a href="#" data-category="all-services"><span>Основные услуги</span></a>
+                        <a href="#" data-category="all-services"><span>@lang('client.services.main_services')</span></a>
                     </li>
 
                     @foreach($serviceCategories as $id => $serviceCategory)
@@ -384,20 +366,19 @@
                                     <source src="video/{{ $service['video'] }}" type="video/mp4">
                                 </video>
                                 <div class="poster-img-cont">
-                                    <img src="images/main/services-poster-1.jpg" alt="services-poster">
+                                    <img src="/images/main/services-poster-1.jpg" alt="services-poster">
                                 </div>
                                 <div class="hover-layer">
                                     <p class="achievments clearfix">
                                         <span class="price">{{ $service['price'] }} руб</span>
-                                        <span class="executed-works">{{ $service['work_count'] }} выполненных работ</span>
+                                        <span class="executed-works">{{ $service['work_count'] }} @lang('messages.service_work_count')</span>
                                     </p>
                                     <p class="header">{{ $service['name'. $langSuf ] }}</p>
                                     <p class="info">
                                         {!! strip_tags($service['description' . $langSuf]) !!}
                                     </p>
-                                    <a href="{{ route('client.index', ['serviceSlug' => $service['slug']]) }}" class="go-service-btn">Перейти
-                                        к
-                                        услуге</a>
+                                    <a href="{{ route('client.index', ['serviceSlug' => $service['slug']]) }}" class="go-service-btn">
+                                        @lang('client.services.go_to_service')</a>
                                 </div>
                             </div>
                         </div>
@@ -408,7 +389,7 @@
 
         </div>
         <a href="{{ route('client.services') }}" class="see-more-services-btn">
-            <span>показать другие услуги</span>
+            <span>@lang('messages.show_another_services')</span>
             <i class="icon icon-round_arrows"></i>
         </a>
     </section>
@@ -417,7 +398,7 @@
     <!-- begin of section our-advantages-->
     <section class="our-advantages">
         <div class="gl-container">
-            <h2 class="section-header">Почему нас выбирают</h2>
+            <h2 class="section-header">@lang('messages.why_we')</h2>
             <div class="our-advantages-gallery">
 
                 <div class="advantage-item" data-index="0">

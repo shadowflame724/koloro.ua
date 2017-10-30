@@ -61,10 +61,6 @@ Route::post('vote/{type?}/{id}', ['as' => 'vote', 'uses' => 'VoteController@vote
 Route::any('form', ['as' => 'form', 'uses' => 'FormController@create']);
 Route::post('form', ['as' => 'form_store', 'uses' => 'FormController@store']);
 
-//brief form
-Route::get('brief', ['as' => 'brief', 'uses' => 'BriefController@create']);
-Route::post('brief', ['as' => 'brief_store', 'uses' => 'BriefController@store']);
-
 //callback
 Route::get('callback', ['as' => 'callback', 'uses' => 'CallbackController@create']);
 Route::post('callback', ['as' => 'callback_store', 'uses' => 'CallbackController@store']);
@@ -97,7 +93,9 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('/contacts.html', ['as' => 'client.contacts', 'uses' => 'ContactsController@getContacts']);
         Route::get('/company.html', ['as' => 'client.company', 'uses' => 'Client\FrontEndPagesController@about']);
 
-
+//brief form
+        Route::get('brief', ['as' => 'brief', 'uses' => 'BriefController@create']);
+        Route::post('brief', ['as' => 'brief_store', 'uses' => 'BriefController@store']);
 
         Route::get('/services', function () {
             return redirect('services.html');

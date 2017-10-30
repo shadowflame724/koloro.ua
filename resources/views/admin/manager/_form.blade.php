@@ -7,8 +7,14 @@
 
 <div class="col-xs-12 col-sm-12 col-md-12">
     <div class="form-group">
-        <strong>Должность:</strong>
-        {!! Form::text('position', null, array('class' => 'form-control')) !!}
+        <strong>Должность [RU]:</strong>
+        {!! Form::text('position_ru', null, array('class' => 'form-control')) !!}
+    </div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-12">
+    <div class="form-group">
+        <strong>Должность [UA]:</strong>
+        {!! Form::text('position_ua', null, array('class' => 'form-control')) !!}
     </div>
 </div>
 <div class="col-xs-12 col-sm-12 col-md-12">

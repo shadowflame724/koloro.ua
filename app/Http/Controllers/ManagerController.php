@@ -44,7 +44,8 @@ class ManagerController extends Controller
 
         $manager = new Manager();
         $manager->name = $request->name;
-        $manager->position = $request->position;
+        $manager->position_ru = $request->position_ru;
+        $manager->position_ua = $request->position_ua;
         $manager->email = $request->email;
         $manager->phone = $request->phone;
         $manager->add_phone = $request->add_phone;
@@ -73,7 +74,8 @@ class ManagerController extends Controller
     {
         $manager = Manager::find($manager);
         $manager->name = $request->name;
-        $manager->position = $request->position;
+        $manager->position_ru = $request->position_ru;
+        $manager->position_ua = $request->position_ua;
         $manager->email = $request->email;
         $manager->phone = $request->phone;
         $manager->add_phone = $request->add_phone;
