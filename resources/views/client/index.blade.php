@@ -89,7 +89,8 @@
                 <div class="gl-container">
                     <h2 class="main-slider-header">Традиционный вкус с современным дизайном. Колбаса "Ланшмит"</h2>
                     <div class="order-btns">
-                        <a href="{{ route('client.portfoliopage', ['portfolio' => 'lanshmit.html']) }}" class="gl-yellow-btn view-work-btn animated bounce">@lang('messages.show_work')</a>
+                        <a href="{{ route('client.portfoliopage', ['portfolio' => 'lanshmit.html']) }}"
+                           class="gl-yellow-btn view-work-btn animated bounce">@lang('messages.show_work')</a>
                         <a href="/" class="gl-transparent-btn want-expertise-btn order-form-btn">
                             @lang('messages.free_exp')
                         </a>
@@ -178,7 +179,8 @@
                 <div class="gl-container">
                     <h2 class="main-slider-header">«Инделика». Мясо — индейки,<br> этикетка — КОЛОРО</h2>
                     <div class="order-btns">
-                        <a href="{{ route('client.portfoliopage', ['portfolio' => 'indelika.html']) }}" class="gl-yellow-btn view-work-btn animated bounce">@lang('messages.show_work')</a>
+                        <a href="{{ route('client.portfoliopage', ['portfolio' => 'indelika.html']) }}"
+                           class="gl-yellow-btn view-work-btn animated bounce">@lang('messages.show_work')</a>
                         <a href="/" class="gl-transparent-btn want-expertise-btn order-form-btn">
                             @lang('messages.free_exp')
                         </a>
@@ -219,7 +221,8 @@
             </div>
             <!-- end image_container -->
             {{--<a href="" class="btn transparent_btn" id="show_more">{!! trans('messages.more_work') !!}</a>--}}
-            <a href="{{ route('client.portfolio') }}" class="gl-yellow-btn show-more-portfolio-btn">{!! trans('messages.more_work') !!}</a>
+            <a href="{{ route('client.portfolio') }}"
+               class="gl-yellow-btn show-more-portfolio-btn">{!! trans('messages.more_work') !!}</a>
         </div>
         <!-- end container -->
     </section>
@@ -235,7 +238,7 @@
             </div>
             <div class="center-block">
                 <p class="download-book-text mobile-visible">@lang('messages.no_spam')</p>
-                {!! Form::text('name', null, ['required','placeholder' => 'Ваше имя', 'class' => 'download-book-phone', 'tabindex' => '1']) !!}
+                {!! Form::text('name', null, ['required','placeholder' => trans('messages.form_user_name'), 'class' => 'download-book-phone', 'tabindex' => '1']) !!}
                 {!! Form::email('email', null, ['required','placeholder' => 'Ваш email','class' => 'download-book-email', 'tabindex' => '2']) !!}
                 <p class="download-book-text mobile-hidden">@lang('messages.no_spam')</p>
             </div>
@@ -292,7 +295,8 @@
             <input type="submit" value="{{trans('messages.callback')}}" class="call-back-btn" tabindex="2">
         </div>
         <p class="call-us-text">{{trans('messages.callback_or')}}:
-            <a class="call-us-phone" href="tel:{{-- */ $data = str_replace(' ', '', env('OUR_PHONE_NUMBER')); /* --}}{{$data}}">{{ env('OUR_PHONE_NUMBER') }}</a>
+            <a class="call-us-phone"
+               href="tel:{{-- */ $data = str_replace(' ', '', env('OUR_PHONE_NUMBER')); /* --}}{{$data}}">{{ env('OUR_PHONE_NUMBER') }}</a>
         </p>
     </div>
     {!! Form::close() !!}
@@ -377,7 +381,8 @@
                                     <p class="info">
                                         {!! strip_tags($service['description' . $langSuf]) !!}
                                     </p>
-                                    <a href="{{ route('client.index', ['serviceSlug' => $service['slug']]) }}" class="go-service-btn">
+                                    <a href="{{ route('client.index', ['serviceSlug' => $service['slug']]) }}"
+                                       class="go-service-btn">
                                         @lang('client.services.go_to_service')</a>
                                 </div>
                             </div>

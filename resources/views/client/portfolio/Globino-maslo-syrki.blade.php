@@ -302,7 +302,7 @@
         </div>
 
         <div class="company-stage-2">
-            <a href="globino" class="pachka-cheese-link">
+            <a href="{{ route('client.portfoliopage', ['portfolio' => "novyj-zontichnyj-molochnyj-brend-globino.html"]) }}" class="pachka-cheese-link">
                 <img src="/images/portfolio/globino-maslo/pachka-cheese.png" alt="photo-image" class="pachka-cheese">
             </a>
 
