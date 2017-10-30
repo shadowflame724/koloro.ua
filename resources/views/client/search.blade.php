@@ -73,7 +73,7 @@
 
                     @if($result instanceof \App\Models\Blog)
                         <div class="news-item-cont article-item-cont">
-                            <h2 class="news-item-header">{{ $result->{'name' . $langSuf} }}</h2>
+                            <h2 class="news-item-header">{{ $result->name_ru }}</h2>
                             <div class="news-item">
                                 <div class="left-cont">
                                     <a href="{{ route('client.article', ['category' => $result->blogcategory->slug, 'article' => $result->slug]) }}"
@@ -86,9 +86,9 @@
                                 <div class="right-cont">
                                     <div class="left-side">
                                         @php(\Carbon\Carbon::setLocale('ru'))
-                                        <p class="date">{{ $result->created_at->diffForHumans() }}</p>
+                                        <p class="date">{{ $result->created_at->format('d-M-Y') }}</p>
                                         <p class="text">
-                                            {{ strip_tags($result->{'description' . $langSuf}) }}
+                                            {{ strip_tags($result->description_ru) }}
                                         </p>
                                     </div>
                                     <div class="right-side">
@@ -100,16 +100,17 @@
                                             <form class="stars">
                                                 <input value="{{$result->votes == 0 ? 0 : $result->rating/$result->votes}}"
                                                        data-id="{{$result->id}}" type="number" class="rating" min=0 max=5 step=0.5
-                                                       data-size="md">
+                                                       data-size="sm">
                                                 <p class="reviews-count"><span>{{ $result->votes }}</span> отзыв</p>
                                             </form>
                                         </div>
+
                                     </div>
                                     <div class="bottom-side">
                                         <div class="info-block">
                                             <p class="article-category">Категория:
                                                 <a href="{{ route('client.blog.byCategory', ['category' => $result->blogcategory->slug]) }}"
-                                                   class="link">{{ $result->blogcategory->{'name' . $langSuf} }}</a>
+                                                   class="link">{{ $result->blogcategory->name_ru }}</a>
                                             </p>
                                             <p class="article-author">Автор:
                                                 <a href="{{ route('client.author', ['user' => $result->user->id ]) }}"
@@ -128,7 +129,7 @@
 
                     @if($result instanceof \App\Models\Service)
                         <div class="news-item-cont service-item-cont">
-                            <h2 class="news-item-header">{{ $result->{'name' . $langSuf} }}</h2>
+                            <h2 class="news-item-header">{{ $result->name_ru }}</h2>
                             <div class="news-item">
                                 <div class="left-cont">
                                     <a href="{{ route('client.index', ['serviceSlug' => $result->slug]) }}" class="preview" target="_self">
@@ -140,7 +141,7 @@
                                     <div class="left-side">
                                         <p class="service-price">{{ $result->price }} грн</p>
                                         <p class="text">
-                                            {{ strip_tags($result->{'description' . $langSuf}) }}
+                                            {{ strip_tags($result->description_ru) }}
                                         </p>
                                     </div>
                                     <div class="right-side">
@@ -159,7 +160,7 @@
                                         <div class="info-block">
                                             <p class="service-category">Категория:
                                                 <a href="{{ route('client.services') }}"
-                                                   class="link">{{ $result->serviceCategory->{'name' . $langSuf} }}</a>
+                                                   class="link">{{ $result->serviceCategory->name_ru }}</a>
                                             </p>
                                         </div>
                                         <div class="info-btn">
@@ -173,7 +174,7 @@
 
                     @if($result instanceof \App\Models\Portfolio)
                         <div class="news-item-cont portfolio-item-cont">
-                            <h2 class="news-item-header">{{ $result->{'title' . $langSuf} }}</h2>
+                            <h2 class="news-item-header">{{ $result->title_ru }}</h2>
                             <div class="news-item">
                                 <div class="left-cont">
                                     <a href="{{ route('client.portfoliopage', ['portfolio' => $result->slug]) }}" class="preview" target="_self">

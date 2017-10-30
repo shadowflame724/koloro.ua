@@ -106,7 +106,7 @@
                                      data-serviceBlockId="1">
                                     <img src="/files/images/service-page/{{ $scBlockImg[$count]->link }}">
                                 </div>
-
+                                {!! Form::hidden('blocks[1]['. $count .'][image_id]', $scBlockImg[$count]->id) !!}
                                 {!! Form::file('blocks[1]['. $count .'][image]', ['class' => 'form-control']) !!}
                                 {!! Form::text('blocks[1]['. $count .'][image_alt]', $scBlockImg[$count]->alt, ['class' => 'form-control', 'placeholder' => 'ALT']) !!}
 

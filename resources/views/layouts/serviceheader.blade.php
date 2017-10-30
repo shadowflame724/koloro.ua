@@ -31,20 +31,16 @@
             <div class="languge">
                 <ul>
                     @php($locale = LaravelLocalization::getCurrentLocale() )
-                    <li>
-                        <a rel="alternate" @if($locale == 'ru') class="active" @endif hreflang="ru"
-                           href="{{ LaravelLocalization::getLocalizedURL('ru', null, [], true) }}">
-                            RU
-                        </a>
-                    </li>
-                    @if(strlen($article->{'name_ua'}) > 1)
+                    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+
                         <li>
-                            <a rel="alternate" @if($locale == 'ua') class="active" @endif hreflang="ua"
-                               href="{{ LaravelLocalization::getLocalizedURL('ua', null, [], true) }}">
-                                UA
+                            <a rel="alternate" @if($locale == $localeCode) class="active"
+                               @endif hreflang="{{ $localeCode }}"
+                               href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                {{ $properties['native'] }}
                             </a>
                         </li>
-                    @endif
+                    @endforeach
                 </ul>
             </div>
 

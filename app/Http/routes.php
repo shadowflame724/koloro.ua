@@ -73,21 +73,32 @@ Route::post('callback', ['as' => 'callback_store', 'uses' => 'CallbackController
 Route::get('/subscription', ['as' => 'subscription', 'uses' => 'SubscriptionController@create']);
 Route::post('/subscription', ['as' => 'subscription_store', 'uses' => 'SubscriptionController@store']);
 
+
+
+
+Route::get('/blog.html', ['as' => 'client.blog.index', 'uses' => 'BlogController@getBlog']);
+Route::get('/blog/{category}/{article}', ['as' => 'client.article', 'uses' => 'BlogController@getArticle']);
+Route::get('/blog/{category}', ['as' => 'client.blog.byCategory', 'uses' => 'BlogController@getBlog']);
+
+Route::get('/search', 'SearchController@search');
+
 Route::group(['middleware' => ['web']], function () {
     Route::group([
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => ['localizationRedirect', 'localeViewPath']
     ], function () {
         Route::get('/services.html', ['as' => 'client.services', 'uses' => 'ServiceController@getServices']);
-        Route::get('/blog.html', ['as' => 'client.blog.index', 'uses' => 'BlogController@getBlog']);
-        Route::get('/blog/{category}/{article}', ['as' => 'client.article', 'uses' => 'BlogController@getArticle']);
-        Route::get('/blog/{category}', ['as' => 'client.blog.byCategory', 'uses' => 'BlogController@getBlog']);
+
+
         Route::get('/portfolio.html', ['as' => 'client.portfolio', 'uses' => 'Client\PortfolioController@portfolio']);
         Route::get('/portfolio/category/{category}', ['as' => 'client.portfoliocategory', 'uses' => 'Client\PortfolioController@getPortfolioCategory']);
         Route::get('/portfolio/{portfolio}', ['as' => 'client.portfoliopage', 'uses' => 'Client\PortfolioController@getPortfolioPage']);
+
         Route::get('/contacts.html', ['as' => 'client.contacts', 'uses' => 'ContactsController@getContacts']);
         Route::get('/company.html', ['as' => 'client.company', 'uses' => 'Client\FrontEndPagesController@about']);
-        Route::get('/search', 'SearchController@search');
+
+
+
         Route::get('/services', function () {
             return redirect('services.html');
         });

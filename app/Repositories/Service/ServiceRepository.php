@@ -221,22 +221,29 @@ class ServiceRepository extends BaseRepository
 
                     if ($key == 1) {
                         foreach (array_slice($block, 2) as $i => $item) {
-                            $dbImage = File::find($imageIds[$i]);
-                            if($dbImage != null) {
-                                $dbImage->title_ru = $item['title_ru'];
-                                $dbImage->title_ua = $item['title_ua'];
-                                $dbImage->alt = $item['image_alt'];
-                                if ($item['image'] != null) {
-                                    $newImage = FileController::uploadImg($item['image'], public_path('files/images/service-page/'));
-                                    $imageIds = array_replace($imageIds,
-                                        array_fill_keys(
-                                            array_keys($imageIds, $dbImage->id),
-                                            $newImage->id
-                                        )
-                                    );
-                                }
-                                $dbImage->save();
+
+                            if($item['image_id'] != null){
+                                $dbImage = File::find($item['image_id']);
+                            }else{
+                                $dbImage = new File();
                             }
+
+                            if ($item['image'] != null) {
+
+                                if($item['image_id'] == null){
+                                    $newImage = FileController::uploadImg($item['image'], public_path('files/images/service-page/'));
+                                    array_push($imageIds, $newImage->id);
+                                }else {
+                                    FileController::updateImg($item['image'], $item['image_id'], public_path('files/images/service-page/'));
+                                }
+                            }
+
+                            $dbImage->title_ru = $item['title_ru'];
+                            $dbImage->title_ua = $item['title_ua'];
+                            $dbImage->alt = $item['image_alt'];
+
+                            $dbImage->save();
+
                         }
                     } elseif ($key == 3) {
 
@@ -262,38 +269,39 @@ class ServiceRepository extends BaseRepository
             }
             return false;
         });
-    }
+}
 
-    public function delete(Service $service)
-    {
-        DB::transaction(function () use ($service) {
-            $imageId = $service->image_id;
-            $metaId = $service->meta_id;
-            $blocks = $service->blocks;
+public
+function delete(Service $service)
+{
+    DB::transaction(function () use ($service) {
+        $imageId = $service->image_id;
+        $metaId = $service->meta_id;
+        $blocks = $service->blocks;
 
-            if ($service->delete()) {
-                new DbChanged();
+        if ($service->delete()) {
+            new DbChanged();
 
 
-                Meta::destroy($metaId);
-                $path = public_path('files/images/service/');
-                if ($imageId != null) {
-                    FileController::deleteImg($imageId, $path);
-                }
-                foreach ($blocks as $block) {
-                    $path = public_path('files/images/service-page/');
-                    $images = File::whereIn('id', explode(',', $block->image_ids))->get();
-                    foreach ($images as $image) {
-                        FileController::deleteImg($image->id, $path);
-                    }
-                    $block->delete();
-                }
-
-                return true;
+            Meta::destroy($metaId);
+            $path = public_path('files/images/service/');
+            if ($imageId != null) {
+                FileController::deleteImg($imageId, $path);
             }
-            return false;
-        });
+            foreach ($blocks as $block) {
+                $path = public_path('files/images/service-page/');
+                $images = File::whereIn('id', explode(',', $block->image_ids))->get();
+                foreach ($images as $image) {
+                    FileController::deleteImg($image->id, $path);
+                }
+                $block->delete();
+            }
+
+            return true;
+        }
         return false;
-    }
+    });
+    return false;
+}
 
 }

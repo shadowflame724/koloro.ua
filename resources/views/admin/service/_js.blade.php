@@ -116,6 +116,7 @@
             '                            </div>\n' +
             '                        </div>\n' +
             '\n' +
+            '<input name="blocks[1][' + count + '][image_id]" type="hidden" class="form-control">' +
             '<input name="blocks[1][' + count + '][image]" type="file" class="form-control">' +
             '<input name="blocks[1][' + count + '][image_alt]" type="text" class="form-control" placeholder="ALT">' +
             '                        <div class="btn btn-box-tool"><i class="fa fa-minus remove-carousel"></i></div>\n' +

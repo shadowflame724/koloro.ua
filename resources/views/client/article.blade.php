@@ -8,7 +8,7 @@
 @stop
 
 @section('page-content')
-    @include('layouts.serviceheader')
+    @include('layouts.blackheader')
 
     <div itemscope itemtype="http://schema.org/Article">
         <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="{{ url('/blog') }}"/>
