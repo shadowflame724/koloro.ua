@@ -223,12 +223,12 @@
                         <div class="example-item"
                              style="background-image: url('/files/images/blog/@if($article->file){{ $article->file->link }}@endif')">
                             <div class="gray-mask"></div>
-                            <h3 class="example-header @if($key == 0) orange-bg @elseif($key == 1) blue-bg @else pink-bg @endif">{{ $article->{'name' . $langSuf} }}</h3>
+                            <h3 class="example-header @if($key == 0) orange-bg @elseif($key == 1) blue-bg @else pink-bg @endif">{{ $article->name_ru }}</h3>
                             <p class="example-text orange-bg">
-                                {!!  $article->{'description' . $langSuf} !!}
+                                {!!  $article->description_ru !!}
                             </p>
                             <div class="hover-layer @if($key == 0) orange-bg @elseif($key == 1) blue-bg @else pink-bg @endif">
-                                <h3 class="example-header">{{ $article->{'name' . $langSuf} }}</h3>
+                                <h3 class="example-header">{{ $article->name_ru }}</h3>
                                 <a href="/blog/{{ $article->blogcategory->slug }}/{{ $article->slug }}"
                                    class="gl-transparent-btn go-search-btn">{{ trans('client.service.go_to') }}</a>
                             </div>
