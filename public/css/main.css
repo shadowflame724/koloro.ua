@@ -335,6 +335,18 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 50px;
   height: 38px; }
 
+.icon-arrow-left {
+  background-image: url(../images/general/arrow-left.svg);
+  background-size: contain;
+  width: 13px;
+  height: 20px; }
+
+.icon-arrow-right {
+  background-image: url(../images/general/arrow-right.svg);
+  background-size: contain;
+  width: 13px;
+  height: 20px; }
+
 /*
 .foo {
   @include placeholder {
@@ -1858,7 +1870,8 @@ footer {
 
 .icon {
   display: inline-block;
-  vertical-align: bottom; }
+  vertical-align: bottom;
+  background-repeat: no-repeat; }
 
 /*main page end    main page end      main page end       main page end     main page end */
 /*page blog   page blog    page blog    page blog     page blog     page blog   */
@@ -2140,7 +2153,7 @@ footer {
 
 .article p {
   font-size: 2.4rem;
-  color: #969696;
+  color: #000;
   margin-bottom: 37px; }
   @media screen and (max-width: 768px) {
     .article p {
@@ -2154,7 +2167,7 @@ footer {
       margin-bottom: 20px; } }
   .article ul li, .article ol li {
     font-size: 2.4rem;
-    color: #969696;
+    color: #000;
     padding-bottom: 20px; }
     @media screen and (max-width: 768px) {
       .article ul li, .article ol li {
@@ -5180,7 +5193,8 @@ a.gl-link {
 .image-container {
   width: 100%;
   max-height: 100vh;
-  text-align: center; }
+  text-align: center;
+  font-size: 0; }
   .image-container img {
     width: 100%; }
 
@@ -5338,11 +5352,70 @@ a.gl-link {
   .info-block-container .gl-container {
     width: 80%;
     margin: 0 auto;
-    padding: 60px 0 20px 0; }
+    padding: 60px 0 20px 0;
+    font-size: 20px;
+    font-family: "SegoeUILight", sans-serif;
+    color: black;
+    line-height: 1.2;
+    text-align: left; }
     @media all and (max-width: 768px) {
       .info-block-container .gl-container {
         padding: 20px 0 10px 0;
         width: 90%; } }
+    @media all and (max-width: 600px) {
+      .info-block-container .gl-container {
+        font-size: 16px; } }
+    .info-block-container .gl-container p, .info-block-container .gl-container ul, .info-block-container .gl-container ol {
+      position: relative;
+      z-index: 5;
+      font: inherit;
+      color: inherit;
+      margin-bottom: 10px; }
+      .info-block-container .gl-container p br, .info-block-container .gl-container ul br, .info-block-container .gl-container ol br {
+        line-height: 1.5; }
+      .info-block-container .gl-container p li, .info-block-container .gl-container p a, .info-block-container .gl-container ul li, .info-block-container .gl-container ul a, .info-block-container .gl-container ol li, .info-block-container .gl-container ol a {
+        color: inherit;
+        font: inherit; }
+      .info-block-container .gl-container p span, .info-block-container .gl-container p strong, .info-block-container .gl-container ul span, .info-block-container .gl-container ul strong, .info-block-container .gl-container ol span, .info-block-container .gl-container ol strong {
+        font-family: "SegoeUIBold", sans-serif;
+        font-size: inherit;
+        color: inherit; }
+    .info-block-container .gl-container ul, .info-block-container .gl-container ol {
+      padding-left: 40px; }
+      .info-block-container .gl-container ul li, .info-block-container .gl-container ol li {
+        padding-bottom: 10px; }
+    .info-block-container .gl-container ul {
+      list-style: disc; }
+    .info-block-container .gl-container ol {
+      list-style: decimal; }
+    .info-block-container .gl-container .for-read-more {
+      display: none;
+      padding-top: 15px; }
+    .info-block-container .gl-container .for-read-more-visible {
+      display: block; }
+    .info-block-container .gl-container .read-more-btn {
+      position: relative;
+      z-index: 5;
+      display: inline-block;
+      font-size: 30px;
+      font-family: "SegoeUIRegular", sans-serif;
+      color: #f0cf16;
+      line-height: 1.2;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.4s; }
+      @media all and (max-width: 768px) {
+        .info-block-container .gl-container .read-more-btn {
+          display: block;
+          text-align: center; } }
+      @media all and (max-width: 600px) {
+        .info-block-container .gl-container .read-more-btn {
+          font-size: 20px; } }
+    .info-block-container .gl-container .read-more-btn.align-center {
+      display: block;
+      text-align: center; }
+    .info-block-container .gl-container .read-more-btn:hover {
+      text-decoration: underline; }
     .info-block-container .gl-container .info-left {
       width: 50%;
       float: left;
@@ -5356,6 +5429,9 @@ a.gl-link {
         text-align: center;
         margin-bottom: 20px;
         transition: all 1s; }
+        @media all and (min-width: 1200px) {
+          .info-block-container .gl-container .info-left .info-left-title {
+            width: 80%; } }
         @media all and (max-width: 600px) {
           .info-block-container .gl-container .info-left .info-left-title {
             font-size: 20px; } }
@@ -5368,68 +5444,13 @@ a.gl-link {
     .info-block-container .gl-container .info-right {
       padding-left: 20px;
       width: 50%;
-      float: left;
-      font-size: 20px;
-      font-family: "SegoeUILight", sans-serif;
-      color: black;
-      line-height: 1.2;
-      text-align: left; }
-      @media all and (max-width: 600px) {
-        .info-block-container .gl-container .info-right {
-          font-size: 16px; } }
-      .info-block-container .gl-container .info-right p, .info-block-container .gl-container .info-right ul, .info-block-container .gl-container .info-right ol {
-        position: relative;
-        z-index: 5;
-        font: inherit;
-        color: inherit;
-        margin-bottom: 10px; }
-        .info-block-container .gl-container .info-right p br, .info-block-container .gl-container .info-right ul br, .info-block-container .gl-container .info-right ol br {
-          line-height: 1.5; }
-        .info-block-container .gl-container .info-right p li, .info-block-container .gl-container .info-right p a, .info-block-container .gl-container .info-right ul li, .info-block-container .gl-container .info-right ul a, .info-block-container .gl-container .info-right ol li, .info-block-container .gl-container .info-right ol a {
-          color: inherit;
-          font: inherit; }
-        .info-block-container .gl-container .info-right p span, .info-block-container .gl-container .info-right p strong, .info-block-container .gl-container .info-right ul span, .info-block-container .gl-container .info-right ul strong, .info-block-container .gl-container .info-right ol span, .info-block-container .gl-container .info-right ol strong {
-          font-family: "SegoeUIBold", sans-serif;
-          font-size: inherit;
-          color: inherit; }
-      .info-block-container .gl-container .info-right ul, .info-block-container .gl-container .info-right ol {
-        padding-left: 40px; }
-        .info-block-container .gl-container .info-right ul li, .info-block-container .gl-container .info-right ol li {
-          padding-bottom: 10px; }
-      .info-block-container .gl-container .info-right ul {
-        list-style: disc; }
-      .info-block-container .gl-container .info-right ol {
-        list-style: decimal; }
-      .info-block-container .gl-container .info-right .for-read-more {
-        display: none;
-        padding-top: 15px; }
-      .info-block-container .gl-container .info-right .for-read-more-visible {
-        display: block; }
-      .info-block-container .gl-container .info-right .read-more-btn {
-        position: relative;
-        z-index: 5;
-        display: inline-block;
-        font-size: 30px;
-        font-family: "SegoeUIRegular", sans-serif;
-        color: #f0cf16;
-        line-height: 1.2;
-        text-align: left;
-        cursor: pointer;
-        transition: all 0.4s; }
-        @media all and (max-width: 600px) {
-          .info-block-container .gl-container .info-right .read-more-btn {
-            font-size: 20px; } }
-      .info-block-container .gl-container .info-right .read-more-btn:hover {
-        text-decoration: underline; }
+      float: left; }
       @media all and (max-width: 768px) {
         .info-block-container .gl-container .info-right {
           width: 100%;
           float: none;
           margin: 0 auto;
-          padding-left: 0; }
-          .info-block-container .gl-container .info-right .read-more-btn {
-            display: block;
-            text-align: center; } }
+          padding-left: 0; } }
 
 .h2-title {
   position: relative;
@@ -5619,11 +5640,10 @@ a.gl-link {
           transition: all 0.4s;
           text-decoration: none;
           border-radius: 20px; }
-          .contact-us-form .projects-btns-container .left-btn .inner-cont a .fa, .contact-us-form .projects-btns-container .right-btn .inner-cont a .fa {
-            display: inline-block;
-            color: white;
-            font-size: 24px;
-            line-height: 35px; }
+          .contact-us-form .projects-btns-container .left-btn .inner-cont a .icon, .contact-us-form .projects-btns-container .right-btn .inner-cont a .icon {
+            vertical-align: top;
+            position: relative;
+            top: 10px; }
           .contact-us-form .projects-btns-container .left-btn .inner-cont a span, .contact-us-form .projects-btns-container .right-btn .inner-cont a span {
             display: inline-block;
             color: #fff;
@@ -5641,18 +5661,18 @@ a.gl-link {
       background-color: #4e5a5d; }
     .contact-us-form .projects-btns-container .left-btn {
       text-align: left; }
-      .contact-us-form .projects-btns-container .left-btn .inner-cont a .fa {
-        padding-left: 15px; }
+      .contact-us-form .projects-btns-container .left-btn .inner-cont a .icon {
+        margin-left: 15px; }
         @media all and (max-width: 600px) {
-          .contact-us-form .projects-btns-container .left-btn .inner-cont a .fa {
-            padding: 2px 16px 0 14px; } }
+          .contact-us-form .projects-btns-container .left-btn .inner-cont a .icon {
+            margin-left: 0; } }
     .contact-us-form .projects-btns-container .right-btn {
       text-align: right; }
-      .contact-us-form .projects-btns-container .right-btn .inner-cont a .fa {
-        padding-right: 15px; }
+      .contact-us-form .projects-btns-container .right-btn .inner-cont a .icon {
+        margin-right: 15px; }
         @media all and (max-width: 600px) {
-          .contact-us-form .projects-btns-container .right-btn .inner-cont a .fa {
-            padding: 2px 14px 0 16px; } }
+          .contact-us-form .projects-btns-container .right-btn .inner-cont a .icon {
+            margin-right: 0; } }
 
 .animated {
   -webkit-animation-duration: 1.5s;
