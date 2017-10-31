@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Config;
 use Cviebrock\EloquentSluggable\SluggableInterface;
 use Cviebrock\EloquentSluggable\SluggableTrait;
 use GuzzleHttp;
+use Psy\Exception\ErrorException;
 
 class Service extends Model implements SluggableInterface
 {
@@ -83,14 +84,18 @@ class Service extends Model implements SluggableInterface
 
         if ($result == -1) {
             $client = new GuzzleHttp\Client();
-            $res = $client->request('GET', 'https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode=USD&json');
-            $body = GuzzleHttp\json_decode($res->getBody());
+            try {
+                $res = $client->request('GET', 'https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode=USD&json');
+                $body = GuzzleHttp\json_decode($res->getBody());
 
-            $settings->rate = $body[0]->rate;
-            $settings->rate_updated_at = $currentDate;
-            $settings->save();
-            $rate = $body[0]->rate;
-        }else{
+                $settings->rate = $body[0]->rate;
+                $settings->rate_updated_at = $currentDate;
+                $settings->save();
+                $rate = $body[0]->rate;
+            } catch (ErrorException $ex) {
+                $rate = $settings->rate;
+            }
+        } else {
             $rate = $settings->rate;
         }
 
