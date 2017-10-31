@@ -231,8 +231,8 @@ class ServiceRepository extends BaseRepository
                             if ($item['image'] != null) {
 
                                 if($item['image_id'] == null){
-                                    $newImage = FileController::uploadImg($item['image'], public_path('files/images/service-page/'));
-                                    array_push($imageIds, $newImage->id);
+                                    $dbImage = FileController::uploadImg($item['image'], public_path('files/images/service-page/'));
+                                    array_push($imageIds, $dbImage->id);
                                 }else {
                                     FileController::updateImg($item['image'], $item['image_id'], public_path('files/images/service-page/'));
                                 }
