@@ -568,7 +568,7 @@ $(function () {
     var glDiv = document.createElement('div');
 
     glDiv.style = "display: none; padding: 20px; font-family: sans-serif; font-size: 14px; color: #fff; background-color: #000; text-align: center";
-    glDiv.innerHTML = "Front-End part made by Glalex, 2017.";
+    glDiv.innerHTML = "<p style='font: inherit; margin: 10px'>Front-End part is made by Glalex, 2017.</p><p style='font: inherit; margin: 10px'>GitHub: <a href='https://github.com/OleksiiHlaholiev'>https://github.com/OleksiiHlaholiev</a></p><p style='font: inherit; margin: 10px'>e-mail: oleksii.hlaholiev@gmail.com</p>";
     parentElem.appendChild(glDiv);
 })();
 
