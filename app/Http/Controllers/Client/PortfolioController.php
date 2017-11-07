@@ -11,6 +11,7 @@ use App\Models\PortfolioConnectCategory;
 use App\Http\Requests;
 use Illuminate\Support\Facades\DB;
 
+
 class PortfolioController extends Controller
 {
     public function portfolio(Request $request)
@@ -52,7 +53,7 @@ class PortfolioController extends Controller
     {
         $viewName = str_replace('.html', '', $slug);
         $portfolio = Portfolio::where('slug', $slug)->first();
-        if($portfolio == null){
+        if ($portfolio == null) {
             return view('errors.404');
         }
 
@@ -69,6 +70,9 @@ class PortfolioController extends Controller
         $prevSlug = $previous->slug;
         $nextSlug = $next->slug;
 
-        return view('client.portfolio.' . $viewName, compact('category', 'portfolio', 'nextSlug', 'prevSlug'));
+
+        $locale = \App::getLocale();
+
+        return view('client.portfolio.' . $locale . '.' . $viewName, compact('category', 'portfolio', 'nextSlug', 'prevSlug'));
     }
 }
