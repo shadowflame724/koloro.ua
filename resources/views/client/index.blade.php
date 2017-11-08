@@ -58,7 +58,7 @@
 
     <!-- main portfolio slider starts -->
     <ul class="bxslider main-slider-container">
-        <li>
+        <li class="mobile-visible">
             <div class="bg-container" style="background-image: url('images/main/slide-koloro-ua-1.jpg')">
                 <div class="dark-mask"></div>
                 <div class="gl-container">

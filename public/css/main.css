@@ -347,6 +347,11 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 13px;
   height: 20px; }
 
+.icon-koloro-crown {
+  background-image: url(../images/koloro-crown.svg);
+  width: 120px;
+  height: 160px; }
+
 /*
 .foo {
   @include placeholder {
@@ -703,6 +708,10 @@ header {
   background-color: #000;
   border: 2px solid #000; }
 
+@media all and (max-width: 768px) {
+  .main-slider-container li:not(.mobile-visible) {
+    display: none; } }
+
 .main-slider-container .gl-container {
   position: relative;
   height: 100%; }
@@ -964,115 +973,6 @@ header {
     left: 35px;
     transition: all 0.8s ease; }
 
-.download-book-form {
-  position: relative;
-  background-color: #1c1c20;
-  text-align: center; }
-  @media all and (max-width: 1000px) {
-    .download-book-form {
-      padding-bottom: 35px; } }
-  .download-book-form .download-book-header {
-    padding-top: 50px;
-    font-size: 36px;
-    font-family: "SegoeUIBold", sans-serif;
-    color: white;
-    text-transform: uppercase;
-    line-height: 1.2;
-    text-align: center; }
-    @media all and (max-width: 1000px) {
-      .download-book-form .download-book-header {
-        font-size: 24px;
-        padding: 25px 0; } }
-  .download-book-form .wrapper {
-    margin: -5% 0; }
-    @media all and (max-width: 1400px) {
-      .download-book-form .wrapper {
-        margin: -2.5% 0; } }
-    @media all and (max-width: 1200px) {
-      .download-book-form .wrapper {
-        margin: 0; } }
-  .download-book-form .left-block, .download-book-form .center-block, .download-book-form .right-block {
-    padding: 20px;
-    display: inline-block;
-    vertical-align: middle;
-    width: 33%;
-    text-align: center; }
-    @media all and (max-width: 1000px) {
-      .download-book-form .left-block, .download-book-form .center-block, .download-book-form .right-block {
-        display: block;
-        padding: 10px;
-        width: 100%; } }
-  .download-book-form .left-block {
-    position: relative; }
-    .download-book-form .left-block img {
-      width: 100%;
-      max-width: 456px; }
-    .download-book-form .left-block img.book {
-      position: relative;
-      bottom: -25px; }
-      @media all and (max-width: 1600px) {
-        .download-book-form .left-block img.book {
-          bottom: -25px; } }
-      @media all and (max-width: 1200px) {
-        .download-book-form .left-block img.book {
-          bottom: -75px; } }
-      @media all and (max-width: 1000px) {
-        .download-book-form .left-block img.book {
-          bottom: 0; } }
-  .download-book-form .download-book-phone, .download-book-form .download-book-email, .download-book-form .download-book-btn {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 300px;
-    font-size: 18px;
-    font-family: "SegoeUIRegular", sans-serif;
-    line-height: 1.2; }
-    @media all and (max-width: 768px) {
-      .download-book-form .download-book-phone, .download-book-form .download-book-email, .download-book-form .download-book-btn {
-        width: 100%; } }
-  .download-book-form .download-book-phone, .download-book-form .download-book-email {
-    margin: 10px auto;
-    padding: 10px 15px;
-    color: #878686;
-    text-align: left; }
-  .download-book-form .download-book-btn {
-    padding: 15px 0;
-    margin: 20px auto;
-    font-size: 24px;
-    font-family: "SegoeUIBold", sans-serif;
-    color: black;
-    text-transform: uppercase;
-    text-align: center;
-    background-color: #f0cf16;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    transition: all 0.4s; }
-  .download-book-form .download-book-btn:hover {
-    color: #f0cf16;
-    background-color: #000; }
-  .download-book-form .download-book-text {
-    margin: 20px 0;
-    font-size: 18px;
-    font-family: "SegoeUIRegular", sans-serif;
-    color: white;
-    line-height: 1.2;
-    text-align: center; }
-  .download-book-form .download-book-text.no-margin {
-    margin: 0; }
-  .download-book-form .download-book-text.orange-life-hucks {
-    color: #f4bd00; }
-  @media all and (min-width: 1000px) {
-    .download-book-form .mobile-visible {
-      display: none; }
-    .download-book-form .mobile-hidden {
-      display: block; } }
-  @media all and (max-width: 1000px) {
-    .download-book-form .mobile-visible {
-      display: block; }
-    .download-book-form .mobile-hidden {
-      display: none; } }
-
 .create-and-dev {
   padding-bottom: 50px; }
   @media all and (max-width: 768px) {
@@ -1086,6 +986,38 @@ header {
     text-transform: lowercase; }
   .create-and-dev .section-header span.orange {
     color: #f36d4a; }
+  .create-and-dev .section-header .size-72 {
+    font-size: 72px; }
+    @media all and (max-width: 768px) {
+      .create-and-dev .section-header .size-72 {
+        font-size: 30px; } }
+  .create-and-dev .section-header .size-60 {
+    font-size: 60px; }
+    @media all and (max-width: 768px) {
+      .create-and-dev .section-header .size-60 {
+        font-size: 26px; } }
+  .create-and-dev .section-header .size-48 {
+    font-size: 48px; }
+    @media all and (max-width: 768px) {
+      .create-and-dev .section-header .size-48 {
+        font-size: 20px; } }
+  .create-and-dev .section-header .size-36 {
+    font-size: 36px; }
+    @media all and (max-width: 768px) {
+      .create-and-dev .section-header .size-36 {
+        font-size: 16px; } }
+  .create-and-dev .section-header .size-30 {
+    font-size: 30px; }
+    @media all and (max-width: 768px) {
+      .create-and-dev .section-header .size-30 {
+        font-size: 12px; } }
+  .create-and-dev .section-header .font-regular {
+    font-family: "SegoeUIRegular", sans-serif; }
+  .create-and-dev .section-header .yellow-bg {
+    background-color: #f0cf16;
+    margin-left: 10px; }
+  .create-and-dev .section-header .yellow-underline {
+    border-bottom: 4px solid #f0cf16; }
   .create-and-dev .gallery {
     text-align: center; }
     .create-and-dev .gallery .gallery-item {
@@ -1145,26 +1077,16 @@ header {
   .call-back-form .gl-container {
     text-align: left; }
   .call-back-form .call-back-header {
-    padding-bottom: 40px;
+    margin-bottom: 3vh;
     font-size: 36px;
     font-family: "SegoeUIBold", sans-serif;
-    color: white;
+    color: black;
     text-transform: uppercase;
     line-height: 1.2;
     text-align: center; }
     @media all and (max-width: 768px) {
       .call-back-form .call-back-header {
         font-size: 24px; } }
-  .call-back-form .icon-phone_tube {
-    margin-bottom: 20px;
-    margin-right: 10%; }
-    @media all and (max-width: 768px) {
-      .call-back-form .icon-phone_tube {
-        margin-right: 0; } }
-  .call-back-form .icon-phone_tube.animated {
-    webkit-animation-duration: 2s;
-    -webkit-animation-duration: 2s;
-            animation-duration: 2s; }
   .call-back-form .left-block {
     text-align: right;
     width: 33%; }
@@ -1179,7 +1101,7 @@ header {
         text-align: center;
         display: block;
         width: 100%; } }
-  .call-back-form .call-back-phone, .call-back-form .call-back-btn {
+  .call-back-form .call-back-input, .call-back-form .call-back-btn {
     display: block;
     margin: 0 auto;
     width: 300px;
@@ -1187,9 +1109,9 @@ header {
     font-family: "SegoeUIRegular", sans-serif;
     line-height: 1.2; }
     @media all and (max-width: 768px) {
-      .call-back-form .call-back-phone, .call-back-form .call-back-btn {
+      .call-back-form .call-back-input, .call-back-form .call-back-btn {
         width: 100%; } }
-  .call-back-form .call-back-phone {
+  .call-back-form .call-back-input {
     margin: 10px auto;
     padding: 10px 15px;
     color: #878686;
@@ -1198,16 +1120,17 @@ header {
     padding: 15px 0;
     margin: 20px auto;
     font-family: "SegoeUIBold", sans-serif;
-    color: white;
+    color: black;
     text-transform: uppercase;
     text-align: center;
-    background-color: #a34699;
+    background-color: #f0cf16;
     cursor: pointer;
     border: none;
     outline: none;
     transition: all 0.4s; }
   .call-back-form .call-back-btn:hover {
-    color: #f0cf16; }
+    color: #f0cf16;
+    background-color: #000; }
   .call-back-form .call-us-text {
     font-size: 24px;
     font-family: "SegoeUIRegular", sans-serif;
@@ -1223,9 +1146,42 @@ header {
           display: block;
           padding: 10px 0; } }
 
+.call-back-form-1 {
+  background-color: #eff3f7; }
+  .call-back-form-1 .call-back-header {
+    color: #000; }
+  .call-back-form-1 .hidden-layer {
+    display: none; }
+
+.call-back-form-2 {
+  background-color: #1c1c20; }
+  .call-back-form-2 .call-back-header {
+    color: #fff; }
+  .call-back-form-2 .small-title {
+    margin-bottom: 4vh;
+    font-size: 20px;
+    font-family: "SegoeUIRegular", sans-serif;
+    color: white;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center; }
+  .call-back-form-2 .left-block {
+    -webkit-transform: rotateZ(-10deg);
+            transform: rotateZ(-10deg); }
+    .call-back-form-2 .left-block .icon-koloro-crown {
+      margin-bottom: 20px;
+      margin-right: 10%; }
+      @media all and (max-width: 768px) {
+        .call-back-form-2 .left-block .icon-koloro-crown {
+          margin-right: 0; } }
+    .call-back-form-2 .left-block .icon-koloro-crown.animated {
+      webkit-animation-duration: 2s;
+      -webkit-animation-duration: 2s;
+              animation-duration: 2s; }
+
 .our-clients {
   padding-bottom: 70px;
-  background-color: #f3f3f3; }
+  background-color: #fff; }
   @media all and (max-width: 768px) {
     .our-clients {
       padding-bottom: 20px; } }
@@ -1304,6 +1260,75 @@ header {
   .our-clients .client-btn:hover {
     background-color: #000;
     color: #f0cf16; }
+
+.koloro-quotes {
+  padding-bottom: 10vh;
+  background-color: #eff3f7; }
+  .koloro-quotes .quotes-slider-cont {
+    position: relative;
+    max-width: 1300px;
+    width: 80%;
+    margin: auto; }
+    .koloro-quotes .quotes-slider-cont .arrow-left-btn, .koloro-quotes .quotes-slider-cont .arrow-right-btn {
+      display: inline-block;
+      vertical-align: top;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%); }
+      @media all and (max-width: 768px) {
+        .koloro-quotes .quotes-slider-cont .arrow-left-btn, .koloro-quotes .quotes-slider-cont .arrow-right-btn {
+          -webkit-transform: translateY(-50%) scale(0.7);
+          transform: translateY(-50%) scale(0.7); } }
+    .koloro-quotes .quotes-slider-cont .arrow-left-btn {
+      left: -50px; }
+      @media all and (max-width: 768px) {
+        .koloro-quotes .quotes-slider-cont .arrow-left-btn {
+          left: -35px; } }
+    .koloro-quotes .quotes-slider-cont .arrow-right-btn {
+      right: -50px; }
+      @media all and (max-width: 768px) {
+        .koloro-quotes .quotes-slider-cont .arrow-right-btn {
+          right: -35px; } }
+    .koloro-quotes .quotes-slider-cont .quotes-slider .item {
+      text-align: center; }
+      .koloro-quotes .quotes-slider-cont .quotes-slider .item p {
+        width: 90%;
+        margin: 0 auto; }
+      .koloro-quotes .quotes-slider-cont .quotes-slider .item .quote-text {
+        position: relative;
+        margin: 30px auto;
+        text-indent: 2vw;
+        font-size: 24px;
+        font-family: "SegoeUILight", sans-serif;
+        color: #646464;
+        line-height: 1.2;
+        text-align: left; }
+        .koloro-quotes .quotes-slider-cont .quotes-slider .item .quote-text span {
+          font: inherit;
+          font-family: "SegoeUIBold", sans-serif; }
+        .koloro-quotes .quotes-slider-cont .quotes-slider .item .quote-text:before, .koloro-quotes .quotes-slider-cont .quotes-slider .item .quote-text:after {
+          position: absolute;
+          display: inline-block;
+          font-family: "seguibl", sans-serif;
+          font-size: 60px;
+          color: #f0cf16;
+          line-height: 0; }
+        .koloro-quotes .quotes-slider-cont .quotes-slider .item .quote-text:before {
+          content: "‘‘";
+          bottom: 100%;
+          left: 0; }
+        .koloro-quotes .quotes-slider-cont .quotes-slider .item .quote-text:after {
+          content: "’’";
+          top: 100%;
+          right: 0; }
+      .koloro-quotes .quotes-slider-cont .quotes-slider .item .quote-author {
+        font-size: 24px;
+        font-family: "SegoeUIBold", sans-serif;
+        color: black;
+        line-height: 1.2;
+        text-align: right; }
 
 .services .gl-container {
   width: 95%; }
@@ -5179,7 +5204,7 @@ a.gl-link {
   cursor: pointer;
   transition: all 0.4s;
   padding: 0 2px;
-  border-bottom: 2px solid #a34699; }
+  border-bottom: 2px solid currentColor; }
 
 .gl-container {
   position: relative;
@@ -5416,25 +5441,25 @@ a.gl-link {
       text-align: center; }
     .info-block-container .gl-container .read-more-btn:hover {
       text-decoration: underline; }
+    .info-block-container .gl-container .info-left-title {
+      font-size: 36px;
+      font-family: "SegoeUIBold", sans-serif;
+      color: #000;
+      line-height: 1.2;
+      text-align: center;
+      margin-bottom: 20px;
+      transition: all 1s; }
+      @media all and (min-width: 1200px) {
+        .info-block-container .gl-container .info-left-title {
+          width: 80%; } }
+      @media all and (max-width: 600px) {
+        .info-block-container .gl-container .info-left-title {
+          font-size: 20px; } }
     .info-block-container .gl-container .info-left {
       width: 50%;
       float: left;
       text-align: center;
       padding-right: 20px; }
-      .info-block-container .gl-container .info-left .info-left-title {
-        font-size: 36px;
-        font-family: "SegoeUIBold", sans-serif;
-        color: #000;
-        line-height: 1.2;
-        text-align: center;
-        margin-bottom: 20px;
-        transition: all 1s; }
-        @media all and (min-width: 1200px) {
-          .info-block-container .gl-container .info-left .info-left-title {
-            width: 80%; } }
-        @media all and (max-width: 600px) {
-          .info-block-container .gl-container .info-left .info-left-title {
-            font-size: 20px; } }
       @media all and (max-width: 768px) {
         .info-block-container .gl-container .info-left {
           width: 100%;
